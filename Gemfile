@@ -19,5 +19,6 @@ group :misc do
   # gem 'susy', require: 'susy'
   # gem 'redcarpet', require: 'redcarpet'
   gem 'locomotivecms_liquid_extensions', github: 'bluepixelmike/liquid_extensions', branch: 'gravatar'
+  gem 'font-awesome-sass'
 end
 
