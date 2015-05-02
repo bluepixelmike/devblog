@@ -20,5 +20,6 @@ group :misc do
   # gem 'redcarpet', require: 'redcarpet'
   gem 'locomotivecms_liquid_extensions', github: 'bluepixelmike/liquid_extensions', branch: 'gravatar'
   gem 'font-awesome-sass'
+  gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 end
 
