@@ -1,0 +1,97 @@
+name: Authors
+slug: authors
+description: A writer for the site
+label_field_name: handle
+order_by: handle
+order_direction: asc
+public_submission_enabled: false
+
+fields: 
+- handle:
+    label: Handle
+    type: string
+    required: true
+    hint: Preferred username
+    localized: false
+
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Public real name
+    localized: false
+
+- email:
+    label: Email
+    type: email
+    required: true
+    localized: false
+
+- avatar:
+    label: Avatar
+    type: file
+    required: false
+    hint: Custom avatar if Avatar Type is set to "Uploaded" below
+    localized: false
+
+- avatar_type:
+    label: Avatar Type
+    type: select
+    required: true
+    localized: false
+    select_options: ['Gravatar', 'Uploaded']
+
+- brief:
+    label: Brief
+    type: string
+    required: true
+    hint: Short description of the author
+    localized: true
+
+- content:
+    label: content
+    type: text
+    required: true
+    hint: Main profile content
+    localized: true
+    text_formatting: html
+
+- links:
+    label: Links
+    type: has_many
+    required: false
+    localized: false
+    class_name: author_links
+    inverse_of: author
+    ui_enabled: true
+
+- roles:
+    label: Roles
+    type: has_many
+    required: false
+    hint: Development role in probjects
+    localized: false
+    class_name: project_developer_roles
+    inverse_of: author
+    ui_enabled: false
+
+- posts:
+    label: Posts
+    type: has_many
+    required: false
+    hint: Posts written by the author
+    localized: false
+    class_name: posts
+    inverse_of: author
+    ui_enabled: false
+
+- tutorials:
+    label: Tutorials
+    type: has_many
+    required: false
+    hint: Tutorials written by the author
+    localized: false
+    class_name: tutorials
+    inverse_of: author
+    ui_enabled: false
+

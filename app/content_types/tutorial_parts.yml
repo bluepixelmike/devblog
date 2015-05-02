@@ -1,0 +1,53 @@
+name: Tutorial Parts
+slug: tutorial_parts
+description: A logical part of a tutorial
+label_field_name: subtitle
+order_by: manually
+order_direction: asc
+group_by: tutorial
+public_submission_enabled: false
+
+fields: 
+- subtitle:
+    label: Subtitle
+    type: string
+    required: true
+    hint: Name of this part of the tutorial
+    localized: true
+
+- tutorial:
+    label: Tutorial
+    type: belongs_to
+    required: true
+    hint: Tutorial this part is a piece of
+    localized: false
+    class_name: tutorials
+
+- allow_comments:
+    label: Comments
+    type: boolean
+    required: false
+    hint: Allow comments on this part of the tutorial
+    localized: false
+
+- brief:
+    label: Brief
+    type: string
+    required: true
+    hint: Short explanation of content covered in this part of the tutorial
+    localized: true
+
+- image:
+    label: Image
+    type: file
+    required: false
+    hint: Featured image displayed for this part of the tutorial
+    localized: false
+
+- content:
+    label: Content
+    type: text
+    required: true
+    localized: true
+    text_formatting: html
+

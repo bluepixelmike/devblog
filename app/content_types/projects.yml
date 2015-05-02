@@ -1,0 +1,143 @@
+name: Projects
+slug: projects
+description: Development projects
+label_field_name: name
+order_by: name
+order_direction: asc
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Displayed name of the project
+    localized: false
+
+- brief:
+    label: Brief
+    type: string
+    required: true
+    hint: Short description about the project
+    localized: true
+
+- phase:
+    label: Phase
+    type: select
+    required: true
+    hint: Development phase the project is currently in
+    localized: true
+    select_options:
+        en: ['Prototype', 'Alpha', 'Beta', 'Released']
+
+- tags:
+    label: Tags
+    type: tags
+    required: false
+    localized: false
+
+- tools:
+    label: Tools
+    type: many_to_many
+    required: false
+    hint: Tools, software, languages, engines, etc. used in the project
+    localized: false
+    class_name: tools
+    inverse_of: projects
+    ui_enabled: true
+
+- links:
+    label: Links
+    type: has_many
+    required: false
+    localized: false
+    class_name: project_links
+    inverse_of: project
+    ui_enabled: true
+
+- developers:
+    label: Developers
+    type: has_many
+    required: false
+    hint: Developers involved in the project and their role
+    localized: false
+    class_name: project_developer_roles
+    inverse_of: project
+    ui_enabled: true
+
+- allow_comments:
+    label: Comments
+    type: boolean
+    required: false
+    hint: Allow comments to be posted on this project
+    localized: false
+
+- icon:
+    label: Icon
+    type: file
+    required: false
+    hint: Small image displayed whenever the project is referenced elsewhere on the site
+    localized: false
+
+- image:
+    label: Image
+    type: file
+    required: false
+    hint: Featured image displayed on the project page
+    localized: false
+
+- content:
+    label: Content
+    type: text
+    required: true
+    hint: Main content displayed on the project page
+    localized: false
+    text_formatting: html
+
+- tabs:
+    label: Tabs
+    type: has_many
+    required: false
+    hint: Additional content tabs displayed when viewing the project
+    localized: false
+    class_name: project_tabs
+    inverse_of: project
+    ui_enabled: true
+
+- pictures:
+    label: Pictures
+    type: has_many
+    required: false
+    localized: false
+    class_name: project_pictures
+    inverse_of: project
+    ui_enabled: true
+
+- components:
+    label: Breakdown
+    type: has_many
+    required: false
+    hint: Logical parts of the project and their status
+    localized: false
+    class_name: project_components
+    inverse_of: project
+    ui_enabled: true
+
+- updates:
+    label: Updates
+    type: has_many
+    required: false
+    localized: false
+    class_name: project_updates
+    inverse_of: project
+    ui_enabled: false
+
+- donations:
+    label: Donations
+    type: has_many
+    required: false
+    localized: false
+    class_name: project_donations
+    inverse_of: project
+    ui_enabled: true
+

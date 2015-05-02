@@ -1,0 +1,66 @@
+name: Updates
+slug: project_updates
+description: Posts about the status of a project
+label_field_name: title
+order_by: created_at
+order_direction: desc
+group_by: project
+public_submission_enabled: false
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Title of the post
+    localized: true
+
+- project:
+    label: Project
+    type: belongs_to
+    required: true
+    hint: Project the post is about
+    localized: false
+    class_name: projects
+
+- author:
+    label: Author
+    type: belongs_to
+    required: true
+    localized: false
+    class_name: authors
+
+- allow_comments:
+    label: Comments
+    type: boolean
+    required: false
+    hint: Allow comments on this post
+    localized: false
+
+- brief:
+    label: Brief
+    type: string
+    required: true
+    hint: Short preview of the contents of the post
+    localized: true
+
+- image:
+    label: Image
+    type: file
+    required: false
+    hint: Featured image displayed in the post
+    localized: false
+
+- tags:
+    label: Tags
+    type: tags
+    required: false
+    localized: false
+
+- content:
+    label: Content
+    type: text
+    required: true
+    localized: true
+    text_formatting: html
+

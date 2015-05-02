@@ -1,0 +1,33 @@
+name: Developer Roles
+slug: project_developer_roles
+description: Describes the role of each developer in a project
+label_field_name: role
+order_by: role
+order_direction: asc
+group_by: project
+public_submission_enabled: false
+
+fields: 
+- role:
+    label: role
+    type: string
+    required: true
+    hint: Name of the role
+    localized: true
+
+- project:
+    label: Project
+    type: belongs_to
+    required: true
+    hint: Role the project belongs to
+    localized: false
+    class_name: projects
+
+- author:
+    label: Developer
+    type: belongs_to
+    required: true
+    hint: Developer fulfilling the role
+    localized: false
+    class_name: authors
+

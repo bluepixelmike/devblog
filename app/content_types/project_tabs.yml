@@ -1,0 +1,31 @@
+name: Project Tabs
+slug: project_tabs
+description: Additional content tabs displayed with the project
+label_field_name: name
+order_by: manually
+group_by: project
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Text displayed on the tab
+    localized: true
+
+- project:
+    label: Project
+    type: belongs_to
+    required: false
+    hint: Project the tab belongs to
+    localized: true
+    class_name: projects
+
+- content:
+    label: Content
+    type: text
+    required: true
+    localized: true
+    text_formatting: html
+

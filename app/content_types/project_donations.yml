@@ -1,0 +1,53 @@
+name: Project Donations
+slug: project_donations
+description: Supporter donations for projects
+label_field_name: name
+order_by: created_at
+order_direction: desc
+group_by: project
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Name of the donor
+    localized: false
+
+- project:
+    label: Project
+    type: belongs_to
+    required: true
+    hint: Project donated on
+    localized: false
+    class_name: projects
+
+- date:
+    label: Date
+    type: date
+    required: true
+    hint: Date the donation was received
+    localized: false
+
+- email:
+    label: Email
+    type: email
+    required: true
+    hint: Email address of the donor
+    localized: false
+
+- amount:
+    label: Amount
+    type: float
+    required: true
+    hint: Amount of money donated in USD
+    localized: false
+
+- message:
+    label: Message
+    type: string
+    required: false
+    hint: Message from the donor
+    localized: false
+

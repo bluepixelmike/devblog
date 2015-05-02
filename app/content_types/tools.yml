@@ -1,0 +1,70 @@
+name: Tools
+slug: tools
+description: A language, software, engine, or framework
+label_field_name: name
+order_by: name
+order_direction: asc
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Displayed name of the tool
+    localized: false
+
+- type:
+    label: Type
+    type: select
+    required: true
+    localized: false
+    select_options: ['Language', 'Software', 'Engine', 'Framework']
+
+- icon:
+    label: Icon
+    type: file
+    required: false
+    hint: Image displayed when referencing the tool
+    localized: false
+
+- projects:
+    label: Projects
+    type: many_to_many
+    required: false
+    hint: Projects that use the tool
+    localized: false
+    class_name: projects
+    inverse_of: tools
+    ui_enabled: false
+
+- posts:
+    label: Posts
+    type: many_to_many
+    required: false
+    hint: Posts that refer to the tool
+    localized: false
+    class_name: posts
+    inverse_of: tools
+    ui_enabled: false
+
+- tutorials:
+    label: Tutorials
+    type: many_to_many
+    required: false
+    hint: Tutorials that use or reference the tool
+    localized: false
+    class_name: tutorials
+    inverse_of: tools
+    ui_enabled: false
+
+- authors:
+    label: Authors
+    type: many_to_many
+    required: false
+    hint: Authors that use the tool
+    localized: false
+    class_name: authors
+    inverse_of: tools
+    ui_enabled: false
+

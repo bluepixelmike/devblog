@@ -1,0 +1,37 @@
+name: Project Pictures
+slug: project_pictures
+description: Pictures (i.e. screenshots) of a project
+label_field_name: title
+order_by: manually
+order_direction: asc
+group_by: project
+public_submission_enabled: false
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Name of the picture
+    localized: true
+
+- project:
+    label: Project
+    type: belongs_to
+    required: true
+    hint: Project the picture is of
+    localized: false
+    class_name: projects
+
+- image:
+    label: Image
+    type: file
+    required: true
+    localized: false
+
+- caption:
+    label: Caption
+    type: string
+    required: false
+    localized: true
+

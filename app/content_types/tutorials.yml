@@ -1,0 +1,88 @@
+name: Tutorials
+slug: tutorials
+description: Guides
+label_field_name: title
+order_by: created_at
+order_direction: desc
+group_by: category
+public_submission_enabled: false
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Name of the tutorial
+    localized: true
+
+- author:
+    label: Author
+    type: belongs_to
+    required: true
+    hint: Author that wrote the guide
+    localized: false
+    class_name: authors
+
+- brief:
+    label: Brief
+    type: string
+    required: true
+    hint: Short explanation of what the tutorial is about
+    localized: true
+
+- image:
+    label: Image
+    type: file
+    required: false
+    hint: Featured image displayed with the tutorial
+    localized: false
+
+- category:
+    label: Category
+    type: belongs_to
+    required: false
+    localized: false
+    class_name: categories
+
+- tags:
+    label: Tags
+    type: tags
+    required: false
+    localized: false
+
+- tools:
+    label: Tools
+    type: many_to_many
+    required: false
+    hint: Tools, software, languages, etc. used in this tutorial
+    localized: false
+    class_name: tools
+    inverse_of: tutorials
+    ui_enabled: true
+
+- difficulty:
+    label: Difficulty
+    type: select
+    required: true
+    localized: true
+    select_options:
+        - en: ['Beginner', 'Intermediate', 'Advanced']
+
+- description:
+    label: Description
+    type: text
+    required: true
+    hint: Introductory content displayed on the entry point of the tutorial
+    localized: true
+    text_formatting: html
+
+- parts:
+    label: Parts
+    type: has_many
+    required: true
+    hint: Various parts of the tutorial
+    localized: false
+    class_name: tutorial_parts
+    inverse_of: tutorial
+    ui_enabled: true
+

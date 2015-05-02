@@ -1,0 +1,38 @@
+name: Author Links
+slug: author_links
+description: Links to external resources for an author
+label_field_name: name
+order_by: name
+order_direction: asc
+group_by: author
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Displayed name of the link
+    localized: true
+
+- author:
+    label: Author
+    type: belongs_to
+    required: true
+    hint: Author the link belongs to
+    localized: false
+    class_name: projects
+
+- url:
+    label: URL
+    type: string
+    required: true
+    localized: false
+
+- icon:
+    label: Icon
+    type: string
+    required: false
+    hint: "Font Awesome icon type (see: http://fontawesome.io/cheatsheet/)"
+    localized: false
+

@@ -1,0 +1,76 @@
+name: Posts
+slug: posts
+description: Off topic ramblings
+label_field_name: title
+order_by: created_at
+order_direction: desc
+group_by: category
+public_submission_enabled: false
+
+fields: 
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Name of the post
+    localized: true
+
+- author:
+    label: Author
+    type: belongs_to
+    required: true
+    hint: Author that wrote the post
+    localized: false
+    class_name: authors
+
+- allow_comments:
+    label: Comments
+    type: boolean
+    required: false
+    hint: Allow comments on this post
+    localized: false
+
+- brief:
+    label: Brief
+    type: string
+    required: true
+    hint: Short description of the contents of the post
+    localized: true
+
+- image:
+    label: Image
+    type: file
+    required: false
+    hint: Featured image displayed in the post
+    localized: false
+
+- category:
+    label: Category
+    type: belongs_to
+    required: false
+    localized: false
+    class_name: categories
+
+- tags:
+    label: Tags
+    type: tags
+    required: false
+    localized: false
+
+- tools:
+    label: Tools
+    type: many_to_many
+    required: false
+    hint: Tools, software, languages, etc. mentioned in this post
+    localized: false
+    class_name: tools
+    inverse_of: posts
+    ui_enabled: true
+
+- content:
+    label: Content
+    type: text
+    required: true
+    localized: true
+    text_formatting: html
+

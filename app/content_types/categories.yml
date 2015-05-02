@@ -1,0 +1,35 @@
+name: Categories
+slug: categories
+description: Groups of posts and tutorials
+label_field_name: name
+order_by: name
+order_direction: asc
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    localized: false
+
+- posts:
+    label: Posts
+    type: has_many
+    required: false
+    hint: Posts made under this category
+    localized: false
+    class_name: posts
+    inverse_of: category
+    ui_enabled: false
+
+- tutorials:
+    label: Tutorials
+    type: has_many
+    required: false
+    hint: Tutorials made under this category
+    localized: false
+    class_name: tutorials
+    inverse_of: category
+    ui_enabled: false
+
