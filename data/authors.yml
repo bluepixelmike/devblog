@@ -1,4 +1,5 @@
-- "Author1":
+- "author-1":
+    handle: Author 1
     name: Sample Author
     email: sample@example.com
     avatar: null
@@ -14,7 +15,8 @@ Vestibulum facilisis eleifend orci, vitae mollis ex pharetra quis. Vivamus commo
 
 Donec commodo rhoncus tellus. Donec facilisis eros in hendrerit molestie. Phasellus euismod dui in felis vestibulum, ut dapibus est vulputate. Nulla ultricies fermentum lacinia. Ut ac consequat mi. Sed in lectus et mi sagittis elementum sed nec purus. Duis ac massa erat. Vestibulum at metus sed eros cursus sollicitudin in sed augue."
 
-- "Author2":
+- "author-2":
+    handle: Author 2
     name: Average Author
     email: foobar@example.com
     avatar: null
