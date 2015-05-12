@@ -6,14 +6,16 @@ published: true
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ site.name }}</title>
-    <meta name="keywords" value="{{ site.meta_keywords }}" />
-    <meta name="description" value="{{ site.meta_description }}" />
+    <title>{{ site.name | escape }}</title>
+    <meta name="keywords" value="{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}" />
+    <meta name="description" value="{% if page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}" />
+    {{ 'application.css' | stylesheet_tag }}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{% block 'html_head' %}{% endblock %}
   </head>
   <body>
-    <h1>{{ page.title }}</h1>
-    {% block 'main' %}
-    <p>Lorem ipsum....</p>
-    {% endblock %}
+{% block 'main' %}
+{% endblock %}
   </body>
 </html>
+
