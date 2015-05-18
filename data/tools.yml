@@ -1,0 +1,128 @@
+- "Language 1":
+    type: Language
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-1", "post-6", "post-9", "post-14"]
+    tutorials: []
+    authors: []
+
+- "Language 2":
+    type: Language
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-2", "post-10", "post-14"]
+    tutorials: []
+    authors: []
+
+- "Language 3":
+    type: Language
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-2", "post-6", "post-16"]
+    tutorials: []
+    authors: []
+
+- "Language 4":
+    type: Language
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-5"]
+    tutorials: []
+    authors: []
+
+- "Software 1":
+    type: Software
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-7"]
+    tutorials: []
+    authors: []
+
+- "Software 2":
+    type: Software
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-1", "post-3", "post-6", "post-14"]
+    tutorials: []
+    authors: []
+
+- "Software 3":
+    type: Software
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: []
+    tutorials: []
+    authors: []
+
+- "Software 4":
+    type: Software
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-6", "post-7", "post-11"]
+    tutorials: []
+    authors: []
+
+- "Engine 1":
+    type: Engine
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-5", "post-6", "post-8", "post-12"]
+    tutorials: []
+    authors: []
+
+- "Engine 2":
+    type: Engine
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-8"]
+    tutorials: []
+    authors: []
+
+- "Engine 3":
+    type: Engine
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-1", "post-9", "post-13"]
+    tutorials: []
+    authors: []
+
+- "Engine 4":
+    type: Engine
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-6"]
+    tutorials: []
+    authors: []
+
+- "Framework 1":
+    type: Framework
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: []
+    tutorials: []
+    authors: []
+
+- "Framework 2":
+    type: Framework
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-5", "post-6", "post-11", "post-13"]
+    tutorials: []
+    authors: []
+
+- "Framework 3":
+    type: Framework
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-6", "post-12", "post-14"]
+    tutorials: []
+    authors: []
+
+- "Framework 4":
+    type: Framework
+    icon: null # Path to a file in the public/samples folder or to a remote and external file.
+    projects: []
+    posts: ["post-1", "post-9", "post-13"]
+    tutorials: []
+    authors: []
+
