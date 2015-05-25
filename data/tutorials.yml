@@ -1,0 +1,40 @@
+- "Tutorial 1":
+    author: "author-2"
+    brief: "Ipsam nobis quam commodi minima omnis velit quo."
+    image: "https://placeimg.com/640/480/arch"
+    category: "category-4"
+    tags: ["tag-1", "tag-2", "tag-3"]
+    tools: ["language-1", "language-2"]
+    difficulty: Beginner
+    description: "Numquam voluptatem eum deserunt quas omnis quo. Quasi quisquam voluptatem facere autem. Eaque velit omnis magni impedit officiis sapiente blanditiis non. Commodi animi quo laborum. Soluta enim consequatur voluptas quia."
+
+- "Tutorial 2":
+    author: "author-1"
+    brief: "Aut debitis soluta nihil voluptatem maxime et esse sint."
+    image: null
+    category: "category-3"
+    tags: []
+    tools: ["framework-2"]
+    difficulty: Intermediate
+    description: "Et repudiandae qui nulla est aperiam. Maxime eum pariatur ipsa voluptatem. Itaque dignissimos et rerum laborum qui aliquam. Delectus et fuga dignissimos ut ullam."
+
+- "Tutorial 3":
+    author: "author-2"
+    brief: "Enim sit temporibus inventore ut quia eius et."
+    image: "https://placeimg.com/640/480/tech"
+    category: "category-2"
+    tags: []
+    tools: []
+    difficulty: Intermediate
+    description: "Quas numquam eveniet consequatur ut et aliquam unde soluta. Quod sequi consequuntur maiores eos recusandae sed. Et magni atque enim voluptatum. Quo soluta id officiis. Omnis neque consequatur natus ad."
+
+- "Tutorial 4":
+    author: "author-1"
+    brief: "Aut praesentium molestiae facilis nihil ut."
+    image: "https://placeimg.com/640/480/animals"
+    category: "category-1"
+    tags: ["tag-1", "tag-3", "tag-4"]
+    tools: ["language-4", "framework-3", "software-1", "software-2", "engine-1", "engine-2"]
+    difficulty: Advanced
+    description: "Quia nam ut unde. Est qui odio doloribus perspiciatis molestiae. Sit rem suscipit velit amet."
+
