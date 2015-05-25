@@ -4,6 +4,7 @@
     brief: "Esse reiciendis veniam aut aut expedita exercitationem."
     image: "https://placeimg.com/1000/300/arch"
     category: "category-1"
+    tags: ["tag-1", "tag-2", "tag-3", "tag-4"]
     tools: ["language-1", "software-2", "engine-3", "framework-4"]
     content: "Fusce vel quam at massa bibendum pellentesque in quis mauris. Vivamus interdum diam egestas quam varius elementum. Sed ac ex quis elit placerat lacinia id vel risus. Pellentesque at urna vestibulum, rutrum libero non, molestie risus. Nam elementum tellus nec libero ultrices efficitur sit amet ac sapien. Sed elementum tincidunt tellus, eget finibus massa porttitor nec. Quisque sodales nisl eget ligula pharetra, sit amet tristique elit imperdiet. Curabitur sit amet condimentum ipsum. Proin convallis, nisl at sodales lobortis, lectus risus lobortis arcu, vel tincidunt dui turpis vel lacus. Curabitur quis sollicitudin mauris.
 
@@ -31,6 +32,7 @@ Ut magna nisi, convallis ut elit eu, ullamcorper tristique neque. Phasellus in v
     brief: "Minima deserunt qui vero."
     image: "https://placeimg.com/1000/300/animals"
     category: "category-2"
+    tags: ["tag-5", "tag-6"]
     tools: ["language-2", "language-3"]
     content: "Integer sit amet magna posuere, malesuada odio vitae, ornare arcu. Etiam ullamcorper a felis in pellentesque. Aliquam varius magna quam, nec consectetur erat suscipit nec. Vestibulum efficitur pretium turpis in ullamcorper. Sed dui sem, viverra non bibendum eget, sodales sed tortor. Integer lacinia turpis in lobortis euismod. Sed sit amet risus eleifend, euismod ante ac, faucibus quam.
 
@@ -58,6 +60,7 @@ Nam a eros non ante sagittis ornare. Nunc eget feugiat purus. Nulla dignissim pr
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
+    tags: []
     tools: ["software-2"]
     content: "Nam vel feugiat dolor. Suspendisse potenti. Nulla a urna auctor, condimentum neque in, dapibus ante. In hac habitasse platea dictumst. Maecenas semper fringilla magna bibendum viverra. Suspendisse accumsan pharetra ullamcorper. Donec luctus, metus a rhoncus vestibulum, massa nunc pellentesque mi, ut pulvinar enim felis eget nisi. Fusce porttitor ex eu libero tincidunt facilisis. Pellentesque urna nisi, dictum eget consequat nec, dignissim id magna. Donec consectetur felis magna, id eleifend enim tincidunt non. Vestibulum euismod ut tellus id sagittis. Nulla risus ex, pellentesque quis facilisis vel, dapibus a nulla.
 
@@ -85,6 +88,7 @@ Morbi dignissim vulputate massa, vitae condimentum turpis maximus eget. Ut quis 
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
+    tags: []
     tools: []
     content: "Curabitur nec quam vitae neque sodales tincidunt. Sed ut purus sit amet eros iaculis cursus vel et felis. Nunc nec urna ac sapien convallis condimentum non eu arcu. Suspendisse at lobortis ligula, vel facilisis purus. In condimentum sem a odio vestibulum, et ultrices sem vestibulum. Vestibulum lobortis congue odio, sit amet consequat nisl dapibus eu. Nulla pharetra sagittis eros, sit amet commodo metus ultricies sed. Morbi nec blandit ipsum, quis tincidunt tellus.
 
@@ -112,6 +116,7 @@ Sed sagittis mollis turpis ac laoreet. Fusce ac ultrices magna. Morbi quis susci
     brief: "Fuga consequatur nobis rerum qui."
     image: "https://placeimg.com/1000/300/nature"
     category: "category-1"
+    tags: ["tag-2", "tag-3", "tag-6"]
     tools: ["language-4", "engine-1", "framework-2"]
     content: "Etiam vulputate rhoncus convallis. Mauris eu tellus tempor, efficitur sapien quis, volutpat neque. Suspendisse venenatis quam in elementum vehicula. Aenean in nisi congue orci gravida tristique. Praesent vehicula est ut nulla rhoncus, quis pretium eros tincidunt. Integer quis finibus erat, vel fringilla lectus. Proin ornare est massa, sed faucibus eros iaculis sit amet. Sed interdum maximus arcu, ut lobortis tortor. Phasellus pulvinar lectus id lectus eleifend, sit amet blandit urna dictum. Quisque sit amet molestie urna, quis viverra dui. Nam id sodales diam.
 
@@ -139,6 +144,7 @@ Cras nunc lectus, gravida eget tempor in, ultrices id nunc. Ut dictum ornare imp
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "https://placeimg.com/1000/300/tech"
     category: "category-2"
+    tags: ["tag-2", "tag-1", "tag-5", "tag-4", "tag-7"]
     tools: ["language-1", "language-3", "software-2", "software-4", "engine-1", "engine-4", "framework-2", "framework-3"]
     content: "Vestibulum egestas mi est, et mattis sapien fringilla hendrerit. Integer varius vulputate nulla quis hendrerit. Mauris nec velit vitae elit accumsan suscipit. Ut facilisis diam eget dui varius, sed faucibus diam consectetur. Donec mattis dui nisi, quis malesuada erat aliquet at. Mauris pulvinar purus ut mattis lobortis. Aliquam eu velit ac odio venenatis porta. Vivamus ante erat, mollis rutrum faucibus non, aliquam id nisi. Curabitur eget turpis in ligula viverra dignissim. Proin ac sollicitudin mi.
 
@@ -166,6 +172,7 @@ Nulla eu pellentesque mi, sed condimentum diam. Etiam tincidunt est arcu, sed ia
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
+    tags: []
     tools: ["software-4", "software-1"]
     content: "Aliquam condimentum elit vitae sapien cursus mattis. Quisque porta elit justo, non semper enim eleifend fringilla. Nunc tristique cursus neque, ac venenatis lacus rutrum nec. Suspendisse varius semper tempus. Nulla cursus purus sed risus imperdiet, nec eleifend erat pellentesque. Aliquam erat volutpat. Nunc rhoncus odio lectus, eget aliquet odio finibus id. Nulla aliquam eros vel magna volutpat fermentum. Nullam aliquet erat mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -193,6 +200,7 @@ Aliquam sodales nisi at orci pharetra, quis egestas dui porta. Maecenas quis sem
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
+    tags: ["tag-1", "tag-3", "tag-5", "tag-7"]
     tools: ["engine-1", "engine-2"]
     content: "Vestibulum maximus ac sapien id cursus. Maecenas pretium semper risus sed semper. Nullam a nisi eget purus semper egestas et eget sem. Ut risus leo, viverra et ornare sagittis, rutrum sit amet justo. Donec dapibus lacus at leo pulvinar blandit. Sed et mauris in risus suscipit dapibus a in nisl. Nulla mattis laoreet augue consequat interdum. Phasellus eget odio sit amet justo tincidunt aliquet. Aliquam rutrum nulla ut mi scelerisque, eget egestas ante porttitor. Fusce odio elit, semper a libero aliquam, auctor auctor justo.
 
@@ -220,6 +228,7 @@ Sed lacus sapien, sodales commodo dolor quis, porttitor dignissim urna. In hac h
     brief: "Fuga consequatur nobis rerum qui."
     image: "https://placeimg.com/1000/300/nature"
     category: "category-1"
+    tags: ["tag-9", "tag-8", "tag-7"]
     tools: ["framework-4", "engine-3", "language-1"]
     content: "Duis placerat turpis sed massa condimentum rutrum. Integer lacus nisl, vehicula vitae vulputate at, vulputate ut quam. Curabitur vehicula nulla et nisl scelerisque varius. Sed placerat suscipit magna. Maecenas ullamcorper magna vehicula eros malesuada, vel malesuada dolor porttitor. Suspendisse porta purus non blandit aliquam. Mauris nulla mi, tempus nec malesuada a, ornare at ipsum. Nunc nec dui nulla. Cras a ipsum eget turpis scelerisque gravida. Donec tincidunt, ligula nec sollicitudin elementum, nibh ex sollicitudin tortor, sed sollicitudin ex ipsum et neque. Sed ornare iaculis turpis at commodo. Duis a blandit ex. Sed feugiat euismod mauris, non ullamcorper diam iaculis non. Etiam sodales tortor non diam bibendum interdum.
 
@@ -247,6 +256,7 @@ Morbi efficitur lectus eget turpis commodo volutpat. In pellentesque velit trist
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "https://placeimg.com/1000/300/arch"
     category: "category-2"
+    tags: ["tag-2", "tag-7"]
     tools: ["language-2", "software-3"]
     content: "Phasellus sed sem quis lectus auctor iaculis et lacinia metus. In hac habitasse platea dictumst. Nunc convallis vulputate pretium. Integer feugiat risus sit amet urna hendrerit, et semper orci fringilla. Integer convallis, augue accumsan molestie fermentum, purus justo molestie enim, a dapibus nibh neque sed arcu. In eget pharetra ipsum. Sed ligula lectus, placerat vitae turpis sed, tempus dictum ipsum. Morbi quis eleifend nunc. Aenean sollicitudin sem vitae scelerisque dictum. Aenean fringilla ullamcorper lorem. Sed quis bibendum mauris, sed finibus lectus. Mauris suscipit sem at malesuada suscipit.
 
@@ -274,6 +284,7 @@ In hac habitasse platea dictumst. Integer eget ultricies eros. Vivamus varius ex
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
+    tags: []
     tools: ["software-4", "framework-2"]
     content: "Vestibulum et est auctor, ornare lectus pulvinar, semper elit. Morbi mattis bibendum egestas. Nunc aliquet, leo in mollis imperdiet, nisi dolor placerat nisi, non tempor lorem leo in justo. Proin faucibus nec diam non vehicula. Suspendisse euismod risus eu vehicula scelerisque. Aliquam ac eleifend turpis, lacinia fringilla ipsum. Praesent in ex neque. Aenean varius diam id augue convallis vulputate. Donec arcu nibh, dictum in nibh id, mollis aliquet nisi. Sed tempus ante vitae varius congue.
 
@@ -301,6 +312,7 @@ Mauris nulla nunc, interdum et posuere a, aliquet sit amet massa. Cras ipsum met
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
+    tags: ["tag-3", "tag-5", "tag-6"]
     tools: ["engine-1", "framework-3"]
     content: "Vestibulum posuere massa ut lacus consequat, sit amet tristique erat dictum. Pellentesque nec fermentum nunc. Cras molestie sem eget luctus laoreet. Nullam sollicitudin lorem libero, eu ultrices tellus scelerisque et. Nunc mauris enim, vulputate sed quam nec, rutrum dignissim neque. In gravida felis at dolor tempor maximus. Integer varius in metus sed convallis. Duis porta sapien augue, eu bibendum nunc rutrum sit amet. Suspendisse bibendum maximus eleifend. Nulla facilisi. Nunc in erat orci. Aliquam consectetur magna vitae lorem rutrum faucibus. Nulla eu mattis sapien. Proin interdum pretium leo ut blandit. Suspendisse posuere metus vel iaculis laoreet.
 
@@ -328,6 +340,7 @@ Vestibulum ultrices, ipsum quis maximus interdum, lorem sem eleifend magna, ut s
     brief: "Fuga consequatur nobis rerum qui."
     image: "https://placeimg.com/1000/300/animals"
     category: "category-1"
+    tags: ["tag-1", "tag-2", "tag-7"]
     tools: ["engine-3", "framework-4", "framework-2"]
     content: "Nulla faucibus congue lacus id tincidunt. Nunc sit amet augue mauris. Cras tristique varius augue at pulvinar. Fusce vitae bibendum massa. Morbi id mattis arcu. In sed auctor lorem. In placerat velit eros, quis porta quam rhoncus a. Donec elementum condimentum est, ut congue purus scelerisque eget. Cras eu justo quis diam tincidunt viverra. Nulla sagittis tellus in scelerisque consequat. Vivamus ut elit nec ligula euismod viverra ac ac purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce suscipit mi ut nisl mollis, et cursus tellus fringilla. Donec enim nibh, aliquam at mi vel, hendrerit vulputate quam.
 
@@ -355,6 +368,7 @@ Nulla sit amet felis turpis. Vestibulum ante ipsum primis in faucibus orci luctu
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "https://placeimg.com/1000/300/tech"
     category: "category-2"
+    tags: ["tag-7"]
     tools: ["language-1", "language-2", "software-2", "framework-3"]
     content: "Etiam varius ipsum sem, a ullamcorper lorem ultrices quis. Aliquam eget arcu ut neque maximus efficitur. Etiam quis condimentum magna. Donec aliquet dui eu cursus fermentum. Donec nisi justo, sodales non varius nec, aliquet vel lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque maximus nisi arcu, ac bibendum lectus imperdiet at. Aenean auctor odio nec massa pulvinar viverra eu non neque. Sed congue bibendum ligula, lacinia dapibus nibh. Nam feugiat euismod placerat. Integer vel neque in ex ullamcorper tristique. Vivamus euismod vitae metus sed lacinia. Nunc non dui non eros facilisis gravida. Etiam gravida eleifend sapien, nec ullamcorper dui ultricies sit amet.
 
@@ -382,6 +396,7 @@ Donec sit amet gravida dui, at efficitur dui. Proin hendrerit, risus eu commodo 
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
+    tags: ["tag-6", "tag-3"]
     tools: []
     content: "Fusce efficitur mauris at semper malesuada. Sed id convallis enim, imperdiet ornare ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ligula justo, ultricies a elit non, finibus rhoncus libero. Sed vitae libero nisl. Mauris quam mauris, pharetra id viverra quis, vehicula at nulla. Donec eget tincidunt tortor, in aliquet sapien. Cras rhoncus hendrerit massa, et viverra quam tincidunt eget. Phasellus sollicitudin commodo egestas. Vivamus ac diam scelerisque, blandit nulla vel, tempor mauris.
 
@@ -409,6 +424,7 @@ Ut rutrum gravida nunc ac interdum. Nam venenatis metus massa, quis eleifend jus
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
+    tags: ["tag-5"]
     tools: ["language-3"]
     content: "Donec accumsan sollicitudin elit, ac elementum ligula iaculis nec. Aliquam sit amet molestie nunc, eu egestas nisl. In dictum, ligula a interdum malesuada, metus nibh consequat nulla, sit amet mollis orci enim eu libero. Nam faucibus suscipit eros blandit vehicula. Praesent a semper sem. Mauris blandit justo sed dignissim porta. Sed rutrum orci sagittis, vehicula lacus sit amet, scelerisque nunc. Nulla leo ex, vulputate non maximus nec, facilisis non dolor.
 
