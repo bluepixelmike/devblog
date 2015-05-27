@@ -3,7 +3,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-1", "post-6", "post-9", "post-14"]
-    tutorials: []
+    tutorials: ["tutorial-1"]
     authors: []
 
 - "Language 2":
@@ -11,7 +11,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-2", "post-10", "post-14"]
-    tutorials: []
+    tutorials: ["tutorial-1"]
     authors: []
 
 - "Language 3":
@@ -27,7 +27,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-5"]
-    tutorials: []
+    tutorials: ["tutorial-4"]
     authors: []
 
 - "Software 1":
@@ -35,7 +35,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-7"]
-    tutorials: []
+    tutorials: ["tutorial-4"]
     authors: []
 
 - "Software 2":
@@ -43,7 +43,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-1", "post-3", "post-6", "post-14"]
-    tutorials: []
+    tutorials: ["tutorial-4"]
     authors: []
 
 - "Software 3":
@@ -67,7 +67,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-5", "post-6", "post-8", "post-12"]
-    tutorials: []
+    tutorials: ["tutorial-1"]
     authors: []
 
 - "Engine 2":
@@ -75,7 +75,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-8"]
-    tutorials: []
+    tutorials: ["tutorial-2"]
     authors: []
 
 - "Engine 3":
@@ -107,7 +107,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-5", "post-6", "post-11", "post-13"]
-    tutorials: []
+    tutorials: ["tutorial-2"]
     authors: []
 
 - "Framework 3":
@@ -115,7 +115,7 @@
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-6", "post-12", "post-14"]
-    tutorials: []
+    tutorials: ["tutorial-4"]
     authors: []
 
 - "Framework 4":
