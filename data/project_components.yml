@@ -1,0 +1,81 @@
+- "Component 1":
+    project: "project-1"
+    brief: "Aliquam placerat neque ut dolor bibendum commodo."
+    state: "Not Started"
+    progress: 0
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim dignissim fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed lacinia eget nibh vitae accumsan. Suspendisse euismod finibus erat, sit amet rhoncus lorem eleifend in. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent tempor erat eget venenatis dignissim."
+
+- "Component 2":
+    project: "project-1"
+    brief: "Ut gravida orci ac ultrices sagittis."
+    state: Designing
+    progress: 20
+    details: "Phasellus eget dapibus lorem. Curabitur ultricies augue ac feugiat pretium. Ut nec urna ut ex scelerisque volutpat. Pellentesque pulvinar dignissim ante vitae pharetra. Suspendisse potenti. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+
+- "Component 3":
+    project: "project-1"
+    brief: "Ut eleifend, nunc sit amet efficitur rutrum, ante tellus accumsan augue, molestie volutpat nisl ante vel sem."
+    state: "In Progress"
+    progress: 80
+    details: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus tempor ipsum a malesuada interdum. Maecenas id rhoncus turpis, id varius mi. Nullam nec mauris blandit, finibus enim a, dapibus enim."
+
+- "Component 4":
+    project: "project-1"
+    brief: "Vestibulum vitae tristique purus, a vehicula ex."
+    state: Finished
+    progress: 100
+
+- "Component 5":
+    project: "project-1"
+    brief: "Sed lacinia eget nibh vitae accumsan."
+    state: Reworking
+    progress: 50
+    details: "Nam eu tincidunt lectus. Integer gravida nibh leo, nec hendrerit nisl hendrerit mollis. Nulla scelerisque iaculis efficitur. Nunc non maximus massa. Sed id metus vitae leo pretium porttitor mattis in mauris. Donec id quam lorem."
+
+- "Component 6":
+    project: "project-1"
+    brief: "Mauris a turpis at eros scelerisque ultrices."
+    state: Halted
+    progress: 70
+    details: "Aliquam placerat neque ut dolor bibendum commodo. Nunc sollicitudin diam elit. Sed nec ante sollicitudin, gravida mi quis, imperdiet arcu. Nam vulputate ultricies interdum. Pellentesque convallis lorem a sollicitudin accumsan. Praesent quis vehicula diam. Cras venenatis orci turpis, eget pellentesque sapien porta iaculis. Etiam neque lorem, ultricies sed maximus quis, rutrum in leo."
+
+- "Component 7":
+    project: "project-3"
+    brief: "Aliquam placerat neque ut dolor bibendum commodo."
+    state: Reworking
+    progress: 30
+    details: "Suspendisse ultricies sed massa quis imperdiet. Mauris blandit mollis ipsum id consectetur. Vivamus fermentum cursus nibh, nec tristique libero maximus at. Ut gravida orci ac ultrices sagittis. Vivamus varius vulputate tellus tristique congue."
+
+- "Component 8":
+    project: "project-3"
+    brief: "Ut gravida orci ac ultrices sagittis."
+    state: Finished
+    progress: 0
+    details: "Vivamus scelerisque nunc erat, sed hendrerit augue porta sit amet. Nullam laoreet aliquam lorem, a ultricies leo scelerisque sit amet. In purus nunc, tincidunt tempus quam at, sodales consectetur est."
+
+- "Component 9":
+    project: "project-4"
+    brief: "Ut eleifend, nunc sit amet efficitur rutrum, ante tellus accumsan augue, molestie volutpat nisl ante vel sem."
+    state: Finished
+    progress: 50
+
+- "Component 10":
+    project: "project-4"
+    brief: "Vestibulum vitae tristique purus, a vehicula ex."
+    state: Finished
+    progress: 100
+    details: "Nulla quam ligula, laoreet eget sollicitudin vel, consectetur sit amet mauris. Integer in felis at dolor tincidunt pretium a sed quam. Mauris sit amet felis vitae dui venenatis consequat. Fusce consequat arcu fringilla augue posuere pharetra."
+
+- "Component 11":
+    project: "project-5"
+    brief: "Sed lacinia eget nibh vitae accumsan."
+    state: Finished
+    progress: 100
+
+- "Component 12":
+    project: "project-5"
+    brief: "Mauris a turpis at eros scelerisque ultrices."
+    state: Finished
+    progress: 100
+    details: "Proin velit dui, tristique ut facilisis non, viverra ac elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur pellentesque quam enim, at molestie sapien hendrerit id. Sed vehicula ex nec porttitor posuere."
+

@@ -1,0 +1,29 @@
+- "Link 1":
+    project: "project-1"
+    url: "http://reddit.com"
+    icon: reddit
+
+- "Link 2":
+    project: "project-1"
+    url: "https://github.com"
+    icon: github
+
+- "Link 3":
+    project: "project-1"
+    url: "http://www.example.com"
+
+- "Link 4":
+    project: "project-3"
+    url: "https://youtube.com"
+    icon: "youtube-play"
+
+- "Link 5":
+    project: "project-4"
+    url: "https://twitter.com"
+    icon: twitter
+
+- "Link 6":
+    project: "project-4"
+    url: "https://google.com"
+    icon: google
+

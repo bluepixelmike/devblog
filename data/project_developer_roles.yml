@@ -1,0 +1,24 @@
+- "Role 1":
+    project: "project-1"
+    author: "author-1"
+
+- "Role 2":
+    project: "project-1"
+    author: "author-2"
+
+- "Role 3":
+    project: "project-1"
+    author: "author-1"
+
+- "Role 4":
+    project: "project-2"
+    author: "author-2"
+
+- "Role 5":
+    project: "project-4"
+    author: "author-1"
+
+- "Role 6":
+    project: "project-4"
+    author: "author-2"
+
