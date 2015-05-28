@@ -11,10 +11,15 @@ published: true
     <meta name="description" value="{% if page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}" />
     {{ 'application.css' | stylesheet_tag }}
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{% block 'html_head' %}{% endblock %}
+{% block 'html_head' %}    {{ '/feed' | auto_discovery_link_tag }}{% endblock %}
   </head>
   <body>
+{% block 'body' %}
+<!-- TODO: Page Header -->
+<!-- TODO: Nav -->
 {% block 'main' %}
+{% endblock %}
+<!-- TODO: Page Footer -->
 {% endblock %}
   </body>
 </html>
