@@ -1,6 +1,7 @@
 - "Post 1":
     author: "author-1"
     allow_comments: true
+    featured: true
     brief: "Esse reiciendis veniam aut aut expedita exercitationem."
     image: "https://placeimg.com/1000/300/arch"
     category: "category-1"
@@ -29,6 +30,7 @@ Ut magna nisi, convallis ut elit eu, ullamcorper tristique neque. Phasellus in v
 - "Post 2":
     author: "author-1"
     allow_comments: true
+    featured: false
     brief: "Minima deserunt qui vero."
     image: "https://placeimg.com/1000/300/animals"
     category: "category-2"
@@ -57,6 +59,7 @@ Nam a eros non ante sagittis ornare. Nunc eget feugiat purus. Nulla dignissim pr
 - "Post 3":
     author: "author-2"
     allow_comments: true
+    featured: false
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
@@ -85,6 +88,7 @@ Morbi dignissim vulputate massa, vitae condimentum turpis maximus eget. Ut quis 
 - "Post 4":
     author: "author-1"
     allow_comments: true
+    featured: true
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
@@ -113,6 +117,7 @@ Sed sagittis mollis turpis ac laoreet. Fusce ac ultrices magna. Morbi quis susci
 - "Post 5":
     author: "author-2"
     allow_comments: true
+    featured: false
     brief: "Fuga consequatur nobis rerum qui."
     image: "https://placeimg.com/1000/300/nature"
     category: "category-1"
@@ -141,6 +146,7 @@ Cras nunc lectus, gravida eget tempor in, ultrices id nunc. Ut dictum ornare imp
 - "Post 6":
     author: "author-2"
     allow_comments: true
+    featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "https://placeimg.com/1000/300/tech"
     category: "category-2"
@@ -169,6 +175,7 @@ Nulla eu pellentesque mi, sed condimentum diam. Etiam tincidunt est arcu, sed ia
 - "Post 7":
     author: "author-1"
     allow_comments: true
+    featured: true
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
@@ -197,6 +204,7 @@ Aliquam sodales nisi at orci pharetra, quis egestas dui porta. Maecenas quis sem
 - "Post 8":
     author: "author-1"
     allow_comments: true
+    featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
@@ -225,6 +233,7 @@ Sed lacus sapien, sodales commodo dolor quis, porttitor dignissim urna. In hac h
 - "Post 9":
     author: "author-2"
     allow_comments: false
+    featured: false
     brief: "Fuga consequatur nobis rerum qui."
     image: "https://placeimg.com/1000/300/nature"
     category: "category-1"
@@ -253,6 +262,7 @@ Morbi efficitur lectus eget turpis commodo volutpat. In pellentesque velit trist
 - "Post 10":
     author: "author-1"
     allow_comments: false
+    featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "https://placeimg.com/1000/300/arch"
     category: "category-2"
@@ -281,6 +291,7 @@ In hac habitasse platea dictumst. Integer eget ultricies eros. Vivamus varius ex
 - "Post 11":
     author: "author-2"
     allow_comments: false
+    featured: false
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
@@ -309,6 +320,7 @@ Mauris nulla nunc, interdum et posuere a, aliquet sit amet massa. Cras ipsum met
 - "Post 12":
     author: "author-2"
     allow_comments: false
+    featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
@@ -337,6 +349,7 @@ Vestibulum ultrices, ipsum quis maximus interdum, lorem sem eleifend magna, ut s
 - "Post 13":
     author: "author-1"
     allow_comments: false
+    featured: false
     brief: "Fuga consequatur nobis rerum qui."
     image: "https://placeimg.com/1000/300/animals"
     category: "category-1"
@@ -365,6 +378,7 @@ Nulla sit amet felis turpis. Vestibulum ante ipsum primis in faucibus orci luctu
 - "Post 14":
     author: "author-2"
     allow_comments: false
+    featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "https://placeimg.com/1000/300/tech"
     category: "category-2"
@@ -393,6 +407,7 @@ Donec sit amet gravida dui, at efficitur dui. Proin hendrerit, risus eu commodo 
 - "Post 15":
     author: "author-2"
     allow_comments: false
+    featured: false
     brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
@@ -421,6 +436,7 @@ Ut rutrum gravida nunc ac interdum. Nam venenatis metus massa, quis eleifend jus
 - "Post 16":
     author: "author-1"
     allow_comments: false
+    featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"

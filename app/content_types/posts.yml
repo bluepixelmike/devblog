@@ -23,6 +23,13 @@ fields:
     localized: false
     class_name: authors
 
+- featured:
+    label: Featured
+    type: boolean
+    required: false
+    hint: Feature this post on the website
+    localized: false
+
 - allow_comments:
     label: Comments
     type: boolean
