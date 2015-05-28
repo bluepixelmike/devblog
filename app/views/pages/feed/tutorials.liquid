@@ -1,0 +1,12 @@
+---
+title: Tutorials Feed
+listed: false
+published: true
+response_type: application/rss+xml
+---
+{% extends 'parent' %}
+{% block 'info' %}    <title>{{ site.seo_title | escape }} - Posts</title>
+    <description>{% for page in site.pages %}{% if page.slug == 'tutorials' %}{{ page.meta_description | escape }}{% endif %}{% endfor %}</description>{% endblock %}
+
+{% block 'items' %}{% include 'feed_tutorials' %}{% endblock %}
+

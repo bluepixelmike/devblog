@@ -1,0 +1,12 @@
+---
+title: Posts Feed
+listed: false
+published: true
+response_type: application/rss+xml
+---
+{% extends 'parent' %}
+{% block 'info' %}    <title>{{ site.seo_title | escape }} - Posts</title>
+    <description>{% for page in site.pages %}{% if page.slug == 'posts' %}{{ page.meta_description | escape }}{% endif %}{% endfor %}</description>{% endblock %}
+
+{% block 'items' %}{% include 'feed_posts' %}{% endblock %}
+

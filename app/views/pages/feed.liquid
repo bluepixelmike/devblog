@@ -1,0 +1,26 @@
+---
+title: Site Feed
+listed: false
+published: true
+response_type: application/rss+xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+
+{% block 'info' %}    <title>{{ site.seo_title | escape }}</title>
+    <description>{{ site.meta_description | escape }}</description>{% endblock %}
+    <link>http://{{ host | escape }}/</link>
+    <language>{{ locale | escape }}</language>
+    <copyright>{{ site.name | escape }}</copyright>
+    <ttl>60</ttl>
+    <atom:link href="{{ url | escape }}" rel="self" type="application/rss+xml" />
+{% block 'items' %}
+{% include 'feed_posts' %}
+{% include 'feed_updates' %}
+{% include 'feed_tutorials' %}
+{% include 'feed_projects' %}
+{% endblock %}
+  </channel>
+</rss>
+
