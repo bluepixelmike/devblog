@@ -1,0 +1,11 @@
+{% for update in contents.project_updates %}
+    <item>
+      <title>{{ update.project.name | escape }} - {{ update.title | escape }}</title>
+      <description>{{ update.brief | escape }}</description>
+      <link>http://{{ host | escape }}/updates/{{ update._slug }}</link>
+      <guid isPermaLink="true">http://{{ host | escape }}/updates/{{ update._slug }}</guid>
+      <pubDate>{{ update.created_at | format_date: '%a, %d %b %Y %H:%M:%S %z' }}</pubDate>
+      <category>{{ update.project.name }}</category>{% if update.allow_comments %}
+      <comments>http://{{ host | escape }}/updates/{{ update._slug }}#comments</comments>{% endif %}
+    </item>
+{% endfor %}

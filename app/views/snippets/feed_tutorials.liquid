@@ -1,0 +1,21 @@
+{% for tutorial in contents.tutorials %}
+    <item>
+      <title>{{ tutorial.title | escape }}</title>
+      <description>{{ tutorial.brief | escape }}</description>
+      <link>http://{{ host | escape }}/tutorials/{{ tutorial._slug }}</link>
+      <guid isPermaLink="true">http://{{ host | escape }}/tutorials/{{ tutorial._slug }}</guid>
+      <pubDate>{{ tutorial.created_at | format_date: '%a, %d %b %Y %H:%M:%S %z' }}</pubDate>{% if tutorial.category %}
+      <category>{{ tutorial.category.name }}</category>{% endif %}
+    </item>
+{% for part in tutorial.parts %}
+    <item>
+      <title>{{ tutorial.title | escape }} - {{ part.subtitle | escape }}</title>
+      <description>{{ part.brief | escape }}</description>
+      <link>http://{{ host | escape }}/tutorials/parts/{{ part._slug }}</link>
+      <guid isPermaLink="true">http://{{ host | escape }}/tutorials/parts/{{ part._slug }}</guid>
+      <pubDate>{{ part.created_at | format_date: '%a, %d %b %Y %H:%M:%S %z' }}</pubDate>{% if tutorial.category %}
+      <category>{{ tutorial.category.name }}</category>{% endif %}{% if part.allow_comments %}
+      <comments>http://{{ host | escape }}/tutorials/parts/{{ part._slug }}#comments</comments>{% endif %}
+    </item>
+{% endfor %}
+{% endfor %}
