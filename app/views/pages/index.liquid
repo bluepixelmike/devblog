@@ -4,6 +4,7 @@ published: true
 ---
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <title>{{ site.name | escape }}</title>
@@ -13,14 +14,24 @@ published: true
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {% block 'html_head' %}    {{ '/feed' | auto_discovery_link_tag }}{% endblock %}
   </head>
+
   <body>
+
+{% include 'nav' %}
+
 {% block 'body' %}
 <!-- TODO: Page Header -->
-<!-- TODO: Nav -->
+
+<!-- TODO: Breadcrumbs -->
+
+    <div class="ui page grid">
+      <div class="sixteen wide column">
 {% block 'main' %}
 {% endblock %}
+      </div>
+    </div>
+
 <!-- TODO: Page Footer -->
 {% endblock %}
   </body>
 </html>
-
