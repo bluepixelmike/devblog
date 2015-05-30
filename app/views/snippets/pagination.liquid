@@ -1,25 +1,27 @@
 <!-- pagination -->
 
-<div class="ui tiny buttons">{% if paginate.previous %}
-  <a href="{{ paginate.previous.url | escape }}" class="ui icon button">{% else %}
-  <span class="ui disabled icon button">{% endif %}
-    <i class="left chevron icon"></i>
-    Previous{% if paginate.previous %}
-  </a>{% else %}
-  </span>{% endif %}
+<div id="pagination" class="item centered aligned">
+  <div class="ui tiny buttons">{% if paginate.previous %}
+    <a href="{{ paginate.previous.url | escape }}" class="ui icon button">{% else %}
+    <span class="ui disabled icon button">{% endif %}
+      <i class="left chevron icon"></i>
+      Previous{% if paginate.previous %}
+    </a>{% else %}
+    </span>{% endif %}
 {% for page in paginate.parts %}{% if page.is_link %}
-  <a href="{{ page.url | escape }}" class="ui button">{% else %}
-  <span class="ui teal button">{% endif %}
-    {{ page.title | escape }}{% if page.is_link %}
-  </a>{% else %}
-  </span>{% endif %}
+    <a href="{{ page.url | escape }}" class="ui button">{% else %}
+    <span class="ui teal button">{% endif %}
+      {{ page.title | escape }}{% if page.is_link %}
+    </a>{% else %}
+    </span>{% endif %}
 {% endfor %}{% if paginate.next %}
-  <a href="{{ paginate.next.url | escape }}" class="ui right icon button">{% else %}
-  <span class="ui disabled right icon button">{% endif %}
-    Next
-    <i class="right chevron icon"></i>{% if paginate.next %}
-  </a>{% else %}
-  </span>{% endif %}
+    <a href="{{ paginate.next.url | escape }}" class="ui right icon button">{% else %}
+    <span class="ui disabled right icon button">{% endif %}
+      Next
+      <i class="right chevron icon"></i>{% if paginate.next %}
+    </a>{% else %}
+    </span>{% endif %}
+  </div>
 </div>
 
 <!-- /pagination -->
