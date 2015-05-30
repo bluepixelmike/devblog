@@ -1,0 +1,21 @@
+<!-- entry -->
+
+<div class="item">{% if post.featured %}
+  <a href="/featured" class="ui red ribbon label">Featured</a>{% endif %}
+  <div class="image">{% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title | escape }}" />{% endif %}
+  </div>
+  <div class="content">
+    <a href="/posts/{{ post._slug }}" class="header">{{ post.title | escape }}</a>
+    <div class="meta">
+      <span class="date"><i class="wait icon"></i> {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if post.category %}
+      <span class="category"><a href="/categories/{{ post.category._slug }}" class="ui horizontal label">{{ post.category.name | escape }}</a></span>{% endif %}
+    </div>
+    <div class="description">
+      <p>{{ post.brief | escape }}</p>
+{% include 'tags_list' with tags: post.tags, tools: post.tools %}
+    </div>
+  </div>
+</div>
+
+<!-- /entry -->

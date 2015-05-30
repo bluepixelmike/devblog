@@ -1,0 +1,23 @@
+<!-- pagination -->
+
+<div class="ui tiny buttons">{% if paginate.previous %}
+  <a href="{{ paginate.previous.url | escape }}">{% endif %}
+    <span class="ui {% unless paginate.previous %}disabled{% endunless %} icon button">
+      <i class="left chevron icon"></i>
+      Previous
+    </span>{% if paginate.previous %}
+  </a>{% endif %}
+{% for page in paginate.parts %}
+  <span class="ui {% unless page.is_link %}teal{% endunless %} button">
+    {% if page.is_link %}<a href="{{ page.url | escape }}">{% endif %}{{ page.title | escape }}{% if page.is_link %}</a>{% endif %}
+  </span>
+{% endfor %}{% if paginate.next %}
+  <a href="{{ paginate.next.url | escape }}">{% endif %}
+    <span class="ui {% unless paginate.next %}disabled{% endunless %} right icon button">
+      Next
+      <i class="right chevron icon"></i>
+    </span>{% if paginate.next %}
+  </a>{% endif %}
+</div>
+
+<!-- /pagination -->

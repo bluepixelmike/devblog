@@ -1,0 +1,27 @@
+---
+title: Posts
+listed: true
+published: true
+---
+{% extends 'index' %}
+{% block 'html_head' %}    {{ '/feed/posts' | auto_discovery_link_tag }}{% endblock %}
+
+{% block 'body/main' %}
+<!-- TODO: Featured posts -->
+
+<!-- post-list -->
+
+<div class="ui teal stacked segment">
+  <div class="ui divided items">
+{% paginate contents.posts by 10 %}
+{% for post in paginate.collection %}
+{% include 'post_list_item' with post %}
+{% endfor %}
+{% include 'pagination' with paginate %}
+{% endpaginate %}
+  </div>
+</div>
+
+<!-- /post-list -->
+
+{% endblock %}
