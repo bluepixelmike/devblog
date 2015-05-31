@@ -3,6 +3,7 @@
     email: sample@example.com
     avatar: null
     avatar_type: Gravatar
+    tools: ["language-1", "software-1", "framework-4", "engine-4"]
     brief: "Vivamus vel venenatis erat. Pellentesque sed nibh quis nisi accumsan efficitur. Nulla dapibus mi vulputate efficitur faucibus. Nunc tellus neque, vestibulum in consequat quis, aliquam ut ligula. Donec id neque libero. Aenean semper urna id urna bibendum scelerisque. Aenean a metus quis ipsum malesuada convallis ut sed sapien. Duis molestie rutrum purus et pharetra. Integer ornare tellus tortor, vel rhoncus metus gravida at."
     content: "Phasellus bibendum dui dictum, laoreet libero vitae, maximus velit. Quisque posuere, libero in commodo vulputate, augue risus pretium sem, a congue quam eros eu est. Nunc vitae ante suscipit mauris scelerisque bibendum vitae et magna. Curabitur eu felis nec tellus ultricies ornare. Aliquam erat volutpat. Vestibulum ac tempus dui. Pellentesque velit libero, aliquam vel lectus vel, blandit commodo ante. Sed eu vehicula massa. Nunc lectus est, sagittis id vestibulum a, pharetra at ligula. Aenean at nunc tincidunt, eleifend tellus at, bibendum nibh. Aliquam feugiat, enim accumsan iaculis finibus, lectus odio ullamcorper est, a mollis tellus quam non felis. Sed molestie arcu sed arcu tincidunt, vitae scelerisque risus sollicitudin.
 
@@ -19,6 +20,7 @@ Donec commodo rhoncus tellus. Donec facilisis eros in hendrerit molestie. Phasel
     email: foobar@example.com
     avatar: "https://placeimg.com/200/200/people"
     avatar_type: Uploaded
+    tools: ["language-2", "language-3", "language-4", "software-2", "framework-4"]
     brief: "Donec commodo rhoncus tellus. Donec facilisis eros in hendrerit molestie. Phasellus euismod dui in felis vestibulum, ut dapibus est vulputate. Nulla ultricies fermentum lacinia. Ut ac consequat mi. Sed in lectus et mi sagittis elementum sed nec purus. Duis ac massa erat. Vestibulum at metus sed eros cursus sollicitudin in sed augue."
     content: "Phasellus bibendum dui dictum, laoreet libero vitae, maximus velit. Quisque posuere, libero in commodo vulputate, augue risus pretium sem, a congue quam eros eu est. Nunc vitae ante suscipit mauris scelerisque bibendum vitae et magna. Curabitur eu felis nec tellus ultricies ornare. Aliquam erat volutpat. Vestibulum ac tempus dui. Pellentesque velit libero, aliquam vel lectus vel, blandit commodo ante. Sed eu vehicula massa. Nunc lectus est, sagittis id vestibulum a, pharetra at ligula. Aenean at nunc tincidunt, eleifend tellus at, bibendum nibh. Aliquam feugiat, enim accumsan iaculis finibus, lectus odio ullamcorper est, a mollis tellus quam non felis. Sed molestie arcu sed arcu tincidunt, vitae scelerisque risus sollicitudin.
 

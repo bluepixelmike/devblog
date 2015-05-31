@@ -95,3 +95,13 @@ fields:
     inverse_of: author
     ui_enabled: false
 
+- tools:
+    label: Tools
+    type: many_to_many
+    required: false
+    hint: Tools the developer has experience with
+    localized: false
+    class_name: tools
+    inverse_of: authors
+    ui_enabled: true
+

@@ -4,7 +4,7 @@
     projects: ["project-1"]
     posts: ["post-1", "post-6", "post-9", "post-14"]
     tutorials: ["tutorial-1"]
-    authors: []
+    authors: ["author-1"]
 
 - "Language 2":
     type: Language
@@ -12,7 +12,7 @@
     projects: ["project-3"]
     posts: ["post-2", "post-10", "post-14"]
     tutorials: ["tutorial-1"]
-    authors: []
+    authors: ["author-2"]
 
 - "Language 3":
     type: Language
@@ -20,7 +20,7 @@
     projects: ["project-3"]
     posts: ["post-2", "post-6", "post-16"]
     tutorials: []
-    authors: []
+    authors: ["author-2"]
 
 - "Language 4":
     type: Language
@@ -28,7 +28,7 @@
     projects: []
     posts: ["post-5"]
     tutorials: ["tutorial-4"]
-    authors: []
+    authors: ["author-2"]
 
 - "Software 1":
     type: Software
@@ -36,7 +36,7 @@
     projects: ["project-3"]
     posts: ["post-7"]
     tutorials: ["tutorial-4"]
-    authors: []
+    authors: ["author-1"]
 
 - "Software 2":
     type: Software
@@ -44,7 +44,7 @@
     projects: []
     posts: ["post-1", "post-3", "post-6", "post-14"]
     tutorials: ["tutorial-4"]
-    authors: []
+    authors: ["author-2"]
 
 - "Software 3":
     type: Software
@@ -92,7 +92,7 @@
     projects: ["project-1"]
     posts: ["post-6"]
     tutorials: []
-    authors: []
+    authors: ["author-1"]
 
 - "Framework 1":
     type: Framework
@@ -124,5 +124,5 @@
     projects: []
     posts: ["post-1", "post-9", "post-13"]
     tutorials: []
-    authors: []
+    authors: ["author-1", "author-2"]
 
