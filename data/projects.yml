@@ -1,5 +1,6 @@
 - "Project 1":
     brief: "Proin in odio quam. Nullam non aliquam metus. Donec laoreet, urna id gravida dapibus, tortor mi feugiat ipsum, eu vestibulum enim nulla vel nunc. In convallis ligula placerat, volutpat lectus at, pretium quam."
+    featured: true
     phase: Prototype
     tags: ["tag-1", "tag-3", "tag-5"]
     tools: ["language-1", "software-3", "engine-4", "framework-2"]
@@ -37,6 +38,7 @@ Donec orci lectus, ornare sit amet risus at, euismod lacinia quam. Nulla ut fauc
 
 - "Project 3":
     brief: "Aliquam a tincidunt libero. Nullam sem mauris, eleifend vitae varius at, scelerisque quis leo. Nunc vitae ex consequat leo volutpat interdum id blandit purus."
+    featured: true
     phase: Beta
     tags: []
     tools: ["language-2", "language-3", "software-1"]

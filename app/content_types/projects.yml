@@ -21,6 +21,13 @@ fields:
     hint: Short description about the project
     localized: true
 
+- featured:
+    label: Featured
+    type: boolean
+    required: false
+    hint: Feature this project on the website
+    localized: false
+
 - phase:
     label: Phase
     type: select
