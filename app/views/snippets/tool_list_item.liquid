@@ -1,0 +1,37 @@
+<!-- entry -->
+
+<div class="item">
+  <div class="content">
+    <a href="/tools/{{ tool._slug }}" class="header">{{ tool.name | escape }}</a>
+    <div class="meta">{% if tool.posts.size > 0 %}
+      <span class="post-count"><i class="newspaper icon"></i> {{ tool.posts.size }} post{% if tool.posts.size != 1 %}s{% endif %}</span>{% endif %}{% if tool.tutorials.size > 0 %}
+      <span class="tutorial-count"><i class="book icon"></i> {{ tool.tutorials.size }} tutorial{% if tool.tutorials.size != 1 %}s{% endif %}</span>{% endif %}{% if tool.projects.size > 0 %}
+      <span class="project-count"><i class="lab icon"></i> {{ tool.projects.size }} project{% if tool.projects.size != 1 %}s{% endif %}</span>{% endif %}{% if tool.authors.size > 0 %}
+      <span class="dev-count"><i class="user icon"></i> {{ tool.authors.size }} dev{% if tool.authors.size != 1 %}s{% endif %}</span>{% endif %}
+    </div>
+
+<!-- item-list -->
+
+<div class="ui divided very relaxed list">
+
+{% for post in tool.posts reverse %}{% if forloop.index <= 3 %}
+{% include 'post_list_subitem' with post %}
+{% endif %}{% endfor %}
+{% for tutorial in tool.tutorials reverse %}{% if forloop.index <= 3 %}
+{% include 'tutorial_list_subitem' with tutorial %}
+{% endif %}{% endfor %}
+{% for project in tool.projects reverse %}{% if forloop.index <= 3 %}
+{% include 'project_list_subitem' with project %}
+{% endif %}{% endfor %}
+{% for author in tool.authors reverse %}{% if forloop.index <= 3 %}
+{% include 'author_list_subitem' with author %}
+{% endif %}{% endfor %}
+
+</div>
+
+<!-- /item-list -->
+
+  </div>
+</div>
+
+<!-- /entry -->
