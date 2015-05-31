@@ -21,7 +21,7 @@ published: true
 {% for tutorial in paginate.collection %}
 {% include 'tutorial_list_item' with post %}
 {% endfor %}
-{% include 'pagination' with paginate %}
+{% include 'pagination' with paginate, color: 'purple' %}
 {% endpaginate %}
   </div>
 </div>

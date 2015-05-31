@@ -19,7 +19,7 @@ published: true
 {% for category in paginate.collection %}
 {% include 'category_list_item' with category %}
 {% endfor %}
-{% include 'pagination' with paginate %}
+{% include 'pagination' with paginate, color: 'yellow' %}
 {% endpaginate %}
   </div>
 </div>

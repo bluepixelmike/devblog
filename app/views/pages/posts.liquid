@@ -23,7 +23,7 @@ published: true
 {% for post in paginate.collection %}
 {% include 'post_list_item' with post %}
 {% endfor %}
-{% include 'pagination' with paginate %}
+{% include 'pagination' with paginate, color: 'teal' %}
 {% endpaginate %}
   </div>
 </div>

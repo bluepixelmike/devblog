@@ -10,7 +10,7 @@
     </span>{% endif %}
 {% for page in paginate.parts %}{% if page.is_link %}
     <a href="{{ page.url | escape }}" class="ui button">{% else %}
-    <span class="ui teal button">{% endif %}
+    <span class="ui {{ color }} button">{% endif %}
       {{ page.title | escape }}{% if page.is_link %}
     </a>{% else %}
     </span>{% endif %}
