@@ -1,0 +1,33 @@
+---
+title: Tutorials
+listed: true
+published: true
+---
+{% extends 'index' %}
+{% block 'html_head' %}    {{ '/feed/tutorials' | auto_discovery_link_tag }}{% endblock %}
+
+{% block 'header' %}
+    <i class="book icon"></i>
+    <div class="content">
+      {{ page.title | escape }}
+    </div>
+{% endblock %}
+
+{% block 'body/main' %}
+
+<!-- tutorials-list -->
+
+<div class="ui purple stacked segment">
+  <div class="ui divided items">
+{% paginate contents.tutorials by 5 %}
+{% for tutorial in paginate.collection %}
+{% include 'tutorial_list_item' with post %}
+{% endfor %}
+{% include 'pagination' with paginate %}
+{% endpaginate %}
+  </div>
+</div>
+
+<!-- /tutorials-list -->
+
+{% endblock %}
