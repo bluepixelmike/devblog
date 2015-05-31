@@ -19,10 +19,10 @@
 <div class="ui divided very relaxed list">
 
 {% for post in category.posts reverse %}{% if forloop.index <= 3 %}
-{% include 'category_post_list_item' with post %}
+{% include 'post_list_subitem' with post %}
 {% endif %}{% endfor %}
 {% for tutorial in category.tutorials reverse %}{% if forloop.index <= 3 %}
-{% include 'category_tutorial_list_item' with tutorial %}
+{% include 'tutorial_list_subitem' with tutorial %}
 {% endif %}{% endfor %}
 
 </div>

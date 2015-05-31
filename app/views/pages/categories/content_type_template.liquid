@@ -37,10 +37,10 @@ content_type: categories
 <div class="ui divided very relaxed list">
 
 {% for post in category.posts %}
-{% include 'category_post_list_item' with post %}
+{% include 'post_list_subitem' with post %}
 {% endfor %}
 {% for tutorial in category.tutorials %}
-{% include 'category_tutorial_list_item' with tutorial %}
+{% include 'tutorial_list_subitem' with tutorial %}
 {% endfor %}
 
 </div>
