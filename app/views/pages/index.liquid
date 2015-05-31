@@ -18,6 +18,7 @@ published: true
 
 <body>
 
+<div id="top">
 {% include 'nav' %}
 
 <!-- header -->
@@ -31,6 +32,9 @@ published: true
 </div>
 
 <!-- /header -->
+
+</div>
+<div id="content">
 
 {% block 'body' %}
 
@@ -49,6 +53,9 @@ published: true
 
 <!-- TODO: Page Footer -->
 {% endblock %}
+
+</div>
+
 </body>
 
 </html>
