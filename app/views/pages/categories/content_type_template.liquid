@@ -1,0 +1,52 @@
+---
+title: View Category
+listed: true
+published: true
+content_type: categories
+---
+{% extends parent %}
+
+{% block 'header' %}
+    <i class="open folder outline icon"></i>
+    <div class="content">
+      {{ page.title | escape }}
+    </div>
+{% endblock %}
+
+{% block 'body/main' %}
+<div class="ui yellow segment">
+  <div class="ui divided items">
+    <div class="item">
+      <div class="image">{% if category.image %}
+        <img src="{{ category.image.url }}" alt="{{ category.name | escape }}" />{% endif %}
+      </div>
+      <div class="content">
+        <a href="/categories/{{ category._slug }}" class="header">{{ category.name | escape }}</a>
+        <div class="meta">{% if category.posts.size > 0 %}
+          <span class="post-count"><i class="bookmark icon"></i> {{ category.posts.size }} post{% if category.posts.size != 1 %}s{% endif %}</span>{% endif %}{% if category.tutorials.size > 0 %}
+          <span class="tutorial-count"><i class="book icon"></i> {{ category.tutorials.size }} tutorial{% if category.tutorials.size != 1 %}s{% endif %}</span>{% endif %}
+        </div>
+        <div class="description">
+          <p>{{ category.brief | escape }}</p>
+        </div>
+
+<!-- item-list -->
+
+<div class="ui divided very relaxed ordered list">
+
+{% for post in category.posts %}
+{% include 'category_post_list_item' with post %}
+{% endfor %}
+{% for tutorial in category.tutorials %}
+{% include 'category_tutorial_list_item' with tutorial %}
+{% endfor %}
+
+</div>
+
+<!-- /item-list -->
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
