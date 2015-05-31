@@ -1,0 +1,20 @@
+<!-- entry -->
+
+<div class="item">
+  <div class="image">{% if update.image %}
+    <img src="{{ update.image.url }}" alt="{{ update.title | escape }}" />{% endif %}
+  </div>
+  <div class="content">
+    <a href="/posts/{{ update._slug }}" class="header">{{ update.title | escape }}</a>
+    <div class="meta">
+      <span class="date"><i class="wait icon"></i> {{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
+      <span class="project"><a href="/projects/{{ update.project._slug }}"><i class="code icon"></i> {{ update.project.name | escape }}</a></span>
+    </div>
+    <div class="description">
+      <p>{{ update.brief | escape }}</p>
+{% include 'tags_list' with tags: update.tags %}
+    </div>
+  </div>
+</div>
+
+<!-- /entry -->
