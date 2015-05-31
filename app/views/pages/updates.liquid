@@ -4,7 +4,8 @@ listed: true
 published: true
 ---
 {% extends 'index' %}
-{% block 'html_head' %}    {{ '/feed/updates' | auto_discovery_link_tag }}{% endblock %}
+
+{% block 'html_head' %}  {{ '/feed/updates' | auto_discovery_link_tag }}{% endblock %}
 
 {% block 'header' %}
     <i class="bullhorn icon"></i>
@@ -14,7 +15,6 @@ published: true
 {% endblock %}
 
 {% block 'body/main' %}
-
 <!-- update-list -->
 
 <div class="ui red stacked segment">
@@ -29,5 +29,4 @@ published: true
 </div>
 
 <!-- /update-list -->
-
 {% endblock %}

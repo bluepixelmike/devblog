@@ -2,9 +2,9 @@
 
 <div class="item">{% if post.featured %}
   <a href="/featured" class="ui red ribbon label">Featured</a>{% endif %}
-  <div class="image">{% if post.image %}
+  <a href="/posts/{{ post._slug }}" class="image" title="{{ post.title | escape }}">{% if post.image %}
     <img src="{{ post.image.url }}" alt="{{ post.title | escape }}" />{% endif %}
-  </div>
+  </a>
   <div class="content">
     <a href="/posts/{{ post._slug }}" class="header">{{ post.title | escape }}</a>
     <div class="meta">

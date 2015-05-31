@@ -4,7 +4,8 @@ listed: true
 published: true
 ---
 {% extends 'index' %}
-{% block 'html_head' %}    {{ '/feed/posts' | auto_discovery_link_tag }}{% endblock %}
+
+{% block 'html_head' %}  {{ '/feed/posts' | auto_discovery_link_tag }}{% endblock %}
 
 {% block 'header' %}
     <i class="bookmark icon"></i>
@@ -30,5 +31,4 @@ published: true
 </div>
 
 <!-- /post-list -->
-
 {% endblock %}

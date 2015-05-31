@@ -1,11 +1,11 @@
 <!-- entry -->
 
 <div class="item">
-  <div class="image">{% if update.image %}
+  <a href="/updates/{{ update._slug }}" class="image" title="{{ update.title | escape }}">{% if update.image %}
     <img src="{{ update.image.url }}" alt="{{ update.title | escape }}" />{% endif %}
-  </div>
+  </a>
   <div class="content">
-    <a href="/posts/{{ update._slug }}" class="header">{{ update.title | escape }}</a>
+    <a href="/updates/{{ update._slug }}" class="header">{{ update.title | escape }}</a>
     <div class="meta">
       <span class="date"><i class="wait icon"></i> {{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
       <span class="project"><a href="/projects/{{ update.project._slug }}"><i class="code icon"></i> {{ update.project.name | escape }}</a></span>

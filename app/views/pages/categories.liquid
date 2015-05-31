@@ -7,13 +7,10 @@ published: true
 
 {% block 'header' %}
     <i class="open folder outline icon"></i>
-    <div class="content">
-      {{ page.title | escape }}
-    </div>
+    <span class="content">{{ page.title | escape }}</span>
 {% endblock %}
 
 {% block 'body/main' %}
-
 <!-- category-list -->
 
 <div class="ui yellow stacked segment">
@@ -28,5 +25,4 @@ published: true
 </div>
 
 <!-- /category-list -->
-
 {% endblock %}

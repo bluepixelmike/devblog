@@ -1,9 +1,9 @@
 <!-- entry -->
 
 <div class="item">
-  <div class="image">{% if category.image %}
+  <a href="/categories/{{ category._slug }}" class="image" title="{{ category.name | escape }}">{% if category.image %}
     <img src="{{ category.image.url }}" alt="{{ category.name | escape }}" />{% endif %}
-  </div>
+  </a>
   <div class="content">
     <a href="/categories/{{ category._slug }}" class="header">{{ category.name | escape }}</a>
     <div class="meta">{% if category.posts.size > 0 %}
@@ -12,6 +12,7 @@
     </div>
     <div class="description">
       <p>{{ category.brief | escape }}</p>
+    </div>
 
 <!-- item-list -->
 
@@ -28,7 +29,6 @@
 
 <!-- /tutorial-list -->
 
-    </div>
   </div>
 </div>
 

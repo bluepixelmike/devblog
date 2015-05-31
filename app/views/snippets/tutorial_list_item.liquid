@@ -2,9 +2,9 @@
 
 <div class="item">{% if tutorial.featured %}
   <a href="/featured" class="ui red ribbon label">Featured</a>{% endif %}
-  <div class="image">{% if tutorial.image %}
+  <a href="/tutorials/{{ tutorial._slug }}" class="image" title="{{ tutorial.title | escape }}">{% if tutorial.image %}
     <img src="{{ tutorial.image.url }}" alt="{{ tutorial.title | escape }}" />{% endif %}
-  </div>
+  </a>
   <div class="content">
     <a href="/tutorials/{{ tutorial._slug }}" class="header">{{ tutorial.title | escape }}</a>
     <div class="meta">
@@ -14,16 +14,18 @@
     <div class="description">
       <p>{{ tutorial.brief | escape }}</p>
 {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
+    </div>
 
 <!-- part-list -->
+
 <div class="ui divided very relaxed ordered list">
 {% for part in tutorial.parts %}
 {% include 'tutorial_part_list_item' with part %}
 {% endfor %}
 </div>
+
 <!-- /part-list -->
 
-    </div>
   </div>
 </div>
 

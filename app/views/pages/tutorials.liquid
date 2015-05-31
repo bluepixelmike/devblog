@@ -4,7 +4,8 @@ listed: true
 published: true
 ---
 {% extends 'index' %}
-{% block 'html_head' %}    {{ '/feed/tutorials' | auto_discovery_link_tag }}{% endblock %}
+
+{% block 'html_head' %}  {{ '/feed/tutorials' | auto_discovery_link_tag }}{% endblock %}
 
 {% block 'header' %}
     <i class="book icon"></i>
@@ -14,7 +15,6 @@ published: true
 {% endblock %}
 
 {% block 'body/main' %}
-
 <!-- tutorials-list -->
 
 <div class="ui purple stacked segment">
@@ -29,5 +29,4 @@ published: true
 </div>
 
 <!-- /tutorials-list -->
-
 {% endblock %}
