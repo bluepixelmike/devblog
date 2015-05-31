@@ -1,6 +1,6 @@
 <!-- author -->
 
-<a href="/devs/{{ author._slug }}" class="ui image label author">
+<a href="/devs/{{ author._slug }}" class="ui tiny image label author">
   <img src="{% if author.avatar_type == 'Gravatar' %}{{ author.email | gravatar_url }}{% else %}{{ author.avatar.url | escape }}{% endif %}" />
   {{ author.handle | escape }}
 </a>
