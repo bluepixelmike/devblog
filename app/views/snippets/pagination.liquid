@@ -10,8 +10,8 @@
     </span>{% endif %}
 {% for page in paginate.parts %}{% if page.is_link %}
     <a href="{{ page.url | escape }}" class="ui button">{% else %}
-    <span class="ui {{ color }} button">{% endif %}
-      {{ page.title | escape }}{% if page.is_link %}
+    <span class="ui {% if forloop.index == paginate.current_page %}{{ color }}{% else %}disabled{% endif %} button">{% endif %}
+      {{ page.title }}{% if page.is_link %}
     </a>{% else %}
     </span>{% endif %}
 {% endfor %}{% if paginate.next %}
