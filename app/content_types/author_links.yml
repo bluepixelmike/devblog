@@ -33,6 +33,6 @@ fields:
     label: Icon
     type: string
     required: false
-    hint: "Font Awesome icon type (see: http://fontawesome.io/cheatsheet/)"
+    hint: "Icon type (see: http://semantic-ui.com/elements/icon.html)"
     localized: false
 
