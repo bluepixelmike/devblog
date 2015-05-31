@@ -1,8 +1,9 @@
 <!-- tutorial -->
 
 <a href="/tutorials/{{ tutorial._slug }}" class="item" title="Jump to tutorial">
+  <i class="book icon"></i>
   <div class="content">
-    <span class="title"><i class="book icon"></i> {{ tutorial.title | escape }}</span>
+    <span class="title">{{ tutorial.title | escape }}</span>
     <span class="description">{{ tutorial.brief | escape }}</span>
   </div>
 </a>
