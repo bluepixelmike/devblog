@@ -10,6 +10,7 @@
 
 - "Tutorial 2":
     author: "author-1"
+    featured: true
     brief: "Aut debitis soluta nihil voluptatem maxime et esse sint."
     image: null
     category: "category-3"
