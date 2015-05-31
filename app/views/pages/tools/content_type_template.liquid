@@ -13,13 +13,14 @@ content_type: tools
   <div class="ui divided items">
     <div class="item">
       <div class="content">
-        <a href="/tools/{{ tool._slug }}" class="header">{{ tool.name | escape }}</a>
+        <a href="/tools/{{ tool._slug }}" class="header"><h3>{{ tool.name | escape }}</h3></a>
         <div class="meta">{% if tool.posts.size > 0 %}
           <span class="post-count"><i class="newspaper icon"></i> {{ tool.posts.size }} post{% if tool.posts.size != 1 %}s{% endif %}</span>{% endif %}{% if tool.tutorials.size > 0 %}
           <span class="tutorial-count"><i class="book icon"></i> {{ tool.tutorials.size }} tutorial{% if tool.tutorials.size != 1 %}s{% endif %}</span>{% endif %}{% if tool.projects.size > 0 %}
           <span class="project-count"><i class="lab icon"></i> {{ tool.projects.size }} project{% if tool.projects.size != 1 %}s{% endif %}</span>{% endif %}{% if tool.authors.size > 0 %}
           <span class="dev-count"><i class="user icon"></i> {{ tool.authors.size }} dev{% if tool.authors.size != 1 %}s{% endif %}</span>{% endif %}
         </div>
+        <div class="extra">
 
 <!-- item-list -->
 
@@ -42,6 +43,7 @@ content_type: tools
 
 <!-- /item-list -->
 
+        </div>
       </div>
     </div>
   </div>

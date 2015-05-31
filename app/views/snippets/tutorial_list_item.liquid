@@ -6,8 +6,9 @@
     <img src="{{ tutorial.image.url }}" alt="{{ tutorial.title | escape }}" />{% endif %}
   </a>
   <div class="content">
-    <a href="/tutorials/{{ tutorial._slug }}" class="header">{{ tutorial.title | escape }}</a>
+    <a href="/tutorials/{{ tutorial._slug }}" class="header"><h3>{{ tutorial.title | escape }}</h3></a>
     <div class="meta">
+{% include 'author_label' with author: tutorial.author %}
       <span class="date"><i class="wait icon"></i> {{ tutorial.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if tutorial.category %}
       <span class="category"><a href="/categories/{{ tutorial.category._slug }}"><i class="folder open outline icon"></i> {{ tutorial.category.name | escape }}</a></span>{% endif %}
     </div>
@@ -15,6 +16,7 @@
       <p>{{ tutorial.brief | escape }}</p>
 {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
     </div>
+    <div class="extra">
 
 <!-- part-list -->
 
@@ -26,6 +28,7 @@
 
 <!-- /part-list -->
 
+    </div>
   </div>
 </div>
 

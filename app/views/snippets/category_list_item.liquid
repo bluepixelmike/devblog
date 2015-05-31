@@ -5,7 +5,7 @@
     <img src="{{ category.image.url }}" alt="{{ category.name | escape }}" />{% endif %}
   </a>
   <div class="content">
-    <a href="/categories/{{ category._slug }}" class="header">{{ category.name | escape }}</a>
+    <a href="/categories/{{ category._slug }}" class="header"><h3>{{ category.name | escape }}</h3></a>
     <div class="meta">{% if category.posts.size > 0 %}
       <span class="post-count"><i class="newspaper icon"></i> {{ category.posts.size }} post{% if category.posts.size != 1 %}s{% endif %}</span>{% endif %}{% if category.tutorials.size > 0 %}
       <span class="tutorial-count"><i class="book icon"></i> {{ category.tutorials.size }} tutorial{% if category.tutorials.size != 1 %}s{% endif %}</span>{% endif %}
@@ -13,6 +13,7 @@
     <div class="description">
       <p>{{ category.brief | escape }}</p>
     </div>
+    <div class="extra">
 
 <!-- item-list -->
 
@@ -29,6 +30,7 @@
 
 <!-- /item-list -->
 
+    </div>
   </div>
 </div>
 
