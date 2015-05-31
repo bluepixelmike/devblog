@@ -10,6 +10,7 @@ published: true
   <title>{{ site.name | escape }}</title>
   <meta name="keywords" value="{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}" />
   <meta name="description" value="{% if page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}" />
+  {{ 'semantic-ui.min.css' | stylesheet_tag }}
   {{ 'application.css' | stylesheet_tag }}
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {% block 'html_head' %}  {{ '/feed' | auto_discovery_link_tag }}{% endblock %}

@@ -19,6 +19,5 @@ group :misc do
   # gem 'susy', require: 'susy'
   # gem 'redcarpet', require: 'redcarpet'
   gem 'locomotivecms_liquid_extensions', github: 'bluepixelmike/liquid_extensions', branch: 'gravatar'
-  gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 end
 
