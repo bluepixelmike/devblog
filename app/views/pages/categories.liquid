@@ -1,0 +1,32 @@
+---
+title: Categories
+listed: true
+published: true
+---
+{% extends 'index' %}
+
+{% block 'header' %}
+    <i class="open folder outline icon"></i>
+    <div class="content">
+      {{ page.title | escape }}
+    </div>
+{% endblock %}
+
+{% block 'body/main' %}
+
+<!-- category-list -->
+
+<div class="ui yellow stacked segment">
+  <div class="ui divided items">
+{% paginate contents.categories by 5 %}
+{% for category in paginate.collection %}
+{% include 'category_list_item' with category %}
+{% endfor %}
+{% include 'pagination' with paginate %}
+{% endpaginate %}
+  </div>
+</div>
+
+<!-- /category-list -->
+
+{% endblock %}
