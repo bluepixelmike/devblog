@@ -9,9 +9,7 @@ published: true
 
 {% block 'header' %}
     <i class="book icon"></i>
-    <div class="content">
-      {{ page.title | escape }}
-    </div>
+    <span class="content">{{ page.title | escape }}</span>
 {% endblock %}
 
 {% block 'body/main' %}
