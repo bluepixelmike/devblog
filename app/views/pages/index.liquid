@@ -19,7 +19,17 @@ published: true
 
 {% include 'nav' %}
 
-{% include 'header' %}
+<!-- header -->
+
+<div id="header" class="ui bottom segment">
+  <h2 class="ui header">
+{% block 'header' %}
+<!-- TODO: Index header -->
+{% endblock %}
+  </h2>
+</div>
+
+<!-- /header -->
 
 {% block 'body' %}
 
