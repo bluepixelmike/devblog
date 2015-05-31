@@ -1,0 +1,24 @@
+<!-- entry -->
+
+<div class="item">{% if project.featured %}
+  <a href="/featured" class="ui red ribbon label">Featured</a>{% endif %}
+  <a href="/projects/{{ project._slug }}" class="image" title="{{ project.name | escape }}">{% if project.icon %}
+    <img src="{{ project.icon.url }}" alt="{{ project.name | escape }}" />{% endif %}
+  </a>
+  <div class="content">
+    <a href="/projects/{{ project._slug }}" class="header"><h3>{{ project.name | escape }}</h3></a>
+    <div class="meta">
+      <span class="ui horizontal {% case project.phase %}{% when 'Prototype' %}purple{% when 'Alpha' %}green{% when 'Beta'%}teal{% else %}blue{% endcase %} label">{{ project.phase | escape }}</span>
+      <span class="date"><i class="wait icon"></i> {{ project.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
+    </div>
+    <div class="description">
+      <p>{{ project.brief | escape }}</p>
+{% include 'tags_list' with tags: project.tags, tools: project.tools %}
+    </div>
+    <div class="extra">
+
+    </div>
+  </div>
+</div>
+
+<!-- /entry -->
