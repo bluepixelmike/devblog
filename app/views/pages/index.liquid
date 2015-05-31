@@ -7,7 +7,7 @@ published: true
 
 <head>
   <meta charset="utf-8">
-  <title>{{ site.name | escape }}</title>
+  <title>{% unless page._slug == 'index' %}{{ page.title | escape }} - {% endunless %}{{ site.name | escape }}</title>
   <meta name="keywords" value="{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}" />
   <meta name="description" value="{% if page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}" />
   {{ 'semantic-ui.min.css' | stylesheet_tag }}
