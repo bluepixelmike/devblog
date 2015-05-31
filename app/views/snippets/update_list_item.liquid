@@ -8,7 +8,7 @@
     <a href="/updates/{{ update._slug }}" class="header">{{ update.title | escape }}</a>
     <div class="meta">
       <span class="date"><i class="wait icon"></i> {{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
-      <span class="project"><a href="/projects/{{ update.project._slug }}"><i class="code icon"></i> {{ update.project.name | escape }}</a></span>
+      <span class="project"><a href="/projects/{{ update.project._slug }}"><i class="lab icon"></i> {{ update.project.name | escape }}</a></span>
     </div>
     <div class="description">
       <p>{{ update.brief | escape }}</p>
