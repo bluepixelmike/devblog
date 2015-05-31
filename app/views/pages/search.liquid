@@ -1,0 +1,13 @@
+---
+title: Search Results
+listed: true
+published: true
+---
+{% extends parent %}
+
+{% block 'header' %}
+    <i class="search icon"></i>
+    <span class="contents">{{ page.title | escape }}</span>
+{% endblock %}
+
+{% block 'body/main' %}{% if params['tag'] %}{% include 'tag_search' with tag: params['tag'] %}{% endif %}{% endblock %}
