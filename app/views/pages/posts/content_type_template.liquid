@@ -1,0 +1,23 @@
+---
+title: View Post
+listed: true
+published: true
+content_type: posts
+---
+{% extends parent %}
+
+{% block 'body/main' %}
+<!-- post -->
+
+<div class="ui teal segment">
+    <h3>{{ post.brief | escape }}</h3>
+    <div class="meta">
+{% include 'author_label' with author: post.author %}
+      <span class="date"><i class="wait icon"></i> {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if post.category %}
+      <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}
+    </div>
+{{ post.content }}
+</div>
+
+<!-- /post -->
+{% endblock %}
