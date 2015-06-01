@@ -15,9 +15,9 @@
     </div>
     <div class="description">
       <p>{{ tutorial.brief | escape }}</p>
-{% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
     </div>
     <div class="extra">
+{% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
 
 <!-- part-list -->
 
