@@ -10,13 +10,19 @@ content_type: posts
 <!-- post -->
 
 <div class="ui teal segment">
-    <h3>{{ post.brief | escape }}</h3>
-    <div class="meta">
+  <h3>{{ post.brief | escape }}</h3>
+  <div class="meta">
 {% include 'author_label' with author: post.author %}
-      <span class="date"><i class="wait icon"></i> {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if post.category %}
-      <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}
-    </div>
+    <span class="date"><i class="wait icon"></i> {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if post.category %}
+    <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}
+  </div>{% if post.image %}
+  <div class="featured-image" style="background-image: url('{{ post.image.url | escape }}');"></div>{% endif %}
+  <div class="content">
 {{ post.content }}
+  </div>
+  <div class="extra">
+{% include 'tags_list' with tags: post.tags, tools: post.tools %}
+  </div>
 </div>
 
 <!-- /post -->
