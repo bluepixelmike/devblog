@@ -18,7 +18,7 @@ content_type: project_updates
     <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="{{ fullpath | escape }}">Comments</span></a>{% endif %}
   </div>{% if project_update.image %}
   <div class="featured-image" style="background-image: url('{{ project_update.image.url | escape }}');"></div>{% endif %}
-  <div class="content">
+  <div class="main-content">
 {{ project_update.content }}
   </div>
   <div class="extra">

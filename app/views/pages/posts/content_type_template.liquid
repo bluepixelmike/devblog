@@ -18,7 +18,7 @@ content_type: posts
     <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="{{ fullpath | escape }}">Comments</span></a>{% endif %}
   </div>{% if post.image %}
   <div class="featured-image" style="background-image: url('{{ post.image.url | escape }}');"></div>{% endif %}
-  <div class="content">
+  <div class="main-content">
 {{ post.content }}
   </div>
   <div class="extra">
