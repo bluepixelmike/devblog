@@ -26,8 +26,9 @@ content_type: posts
   </div>
 </div>
 
-<div id="comments" class="ui teal segment">
-{% include 'disqus' with category: post.category %}
+<div id="comments" class="ui teal segment">{% if post.allow_comments %}
+{% include 'disqus' with category: post.category %}{% else %}
+  <p>Comments have been disabled for this post.</p>{% endif %}
 </div>
 
 <!-- /post -->
