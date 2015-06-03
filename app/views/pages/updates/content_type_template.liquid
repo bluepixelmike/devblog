@@ -1,0 +1,35 @@
+---
+title: View Update
+listed: true
+published: true
+content_type: project_updates
+---
+{% extends parent %}
+
+{% block 'body/main' %}
+<!-- update -->
+
+<div class="ui red segment">
+  <h3>{{ project_update.brief | escape }}</h3>
+  <div class="meta">
+{% include 'author_label' with author: project_update.author %}
+    <span class="date"><i class="wait icon"></i> {{ project_update.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
+    <span class="project"><a href="/projects/{{ project_update.project._slug }}"><i class="lab icon"></i> {{ project_update.project.name | escape }}</a></span>{% if project_update.allow_comments %}
+    <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="{{ fullpath | escape }}">Comments</span></a>{% endif %}
+  </div>{% if project_update.image %}
+  <div class="featured-image" style="background-image: url('{{ project_update.image.url | escape }}');"></div>{% endif %}
+  <div class="content">
+{{ project_update.content }}
+  </div>
+  <div class="extra">
+{% include 'tags_list' with tags: project_update.tags %}
+  </div>
+</div>
+
+<div id="comments" class="ui red segment">{% if project_update.allow_comments %}
+{% include 'disqus' %}{% else %}
+  <p>Comments have been disabled for this post.</p>{% endif %}
+</div>
+
+<!-- /update -->
+{% endblock %}
