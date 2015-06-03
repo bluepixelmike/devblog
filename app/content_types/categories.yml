@@ -20,6 +20,13 @@ fields:
     hint: Short description of the category
     localized: true
 
+- disqus_id:
+    label: Disqus ID
+    type: int
+    required: false
+    hint: Numerical ID of the category used by Disqus
+    localized: false
+
 - image:
     label: Image
     type: file

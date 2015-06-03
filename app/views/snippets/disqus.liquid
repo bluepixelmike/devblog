@@ -4,8 +4,8 @@
 <script type="text/javascript">
   var disqus_shortname   = '{{ site.name | dasherize }}';
   var disqus_id          = '{{ page.fullpath | escape }}';
-  var disqus_title       = '{{ page.title | escape }}';{% if category %}
-  var disqus_category_id = '{{ category | escape }}';{% endif %}
+  var disqus_title       = '{{ page.title | escape }}';{% if category and category.disqus_id %}
+  var disqus_category_id = '{{ category.disqus_id | escape }}';{% endif %}
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

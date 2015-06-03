@@ -25,9 +25,8 @@ content_type: posts
   </div>
 </div>
 
-<div class="ui teal segment">{% if post.category %}
-{% include 'disqus' with category: post.category.name %}{% else %}
-{% include 'disqus' %}{% endif %}
+<div class="ui teal segment">
+{% include 'disqus' with category: post.category %}
 </div>
 
 <!-- /post -->
