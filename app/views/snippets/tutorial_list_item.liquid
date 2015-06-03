@@ -11,7 +11,7 @@
 {% include 'author_label' with author: tutorial.author %}
       <span class="ui horizontal {% case tutorial.difficulty %}{% when 'Beginner' %}blue{% when 'Intermediate' %}purple{% else %}red{% endcase %} label">{{ tutorial.difficulty | escape }}</span>
       <span class="date"><i class="wait icon"></i> {{ tutorial.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if tutorial.category %}
-      <span class="category"><a href="/categories/{{ tutorial.category._slug }}"><i class="folder open outline icon"></i> {{ tutorial.category.name | escape }}</a></span>{% endif %}
+      <a href="/categories/{{ tutorial.category._slug }}"><i class="folder open outline icon"></i> <span class="category">{{ tutorial.category.name | escape }}</span></a>{% endif %}
     </div>
     <div class="description">
       <p>{{ tutorial.brief | escape }}</p>

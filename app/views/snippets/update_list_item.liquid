@@ -9,7 +9,7 @@
     <div class="meta">
 {% include 'author_label' with author: update.author %}
       <span class="date"><i class="wait icon"></i> {{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
-      <span class="project"><a href="/projects/{{ update.project._slug }}"><i class="lab icon"></i> {{ update.project.name | escape }}</a></span>
+      <a href="/projects/{{ update.project._slug }}"><i class="lab icon"></i> <span class="project">{{ update.project.name | escape }}</span></a>
     </div>
     <div class="description">
       <p>{{ update.brief | escape }}</p>
