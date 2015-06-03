@@ -1,0 +1,47 @@
+---
+title: Preview Tutorial
+listed: true
+published: true
+content_type: tutorials
+---
+{% extends parent %}
+
+{% block 'body/main' %}
+<!-- tutorial -->
+
+<div class="ui purple segment">
+  <h3>{{ tutorial.brief | escape }}</h3>
+  <div class="meta">
+{% include 'author_label' with author: tutorial.author %}
+    <span class="ui horizontal {% case tutorial.difficulty %}{% when 'Beginner' %}blue{% when 'Intermediate' %}purple{% else %}red{% endcase %} label">{{ tutorial.difficulty | escape }}</span>
+    <span class="date"><i class="wait icon"></i> {{ tutorial.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if tutorial.category %}
+    <span class="category"><a href="/categories/{{ tutorial.category._slug }}"><i class="folder open outline icon"></i> {{ tutorial.category.name | escape }}</a></span>{% endif %}
+  </div>{% if tutorial.image %}
+  <div class="large featured-image" style="background-image: url('{{ tutorial.image.url | escape }}');"></div>{% endif %}
+  <div class="main-content">
+{{ tutorial.description }}
+  </div>
+  <a class="small ui purple start button" href="#">Start <i class="chevron right icon"></i></a>
+  <div class="extra">
+{% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
+  </div>
+
+<!-- part-list -->
+
+<div class="ui left attached rail">
+  <div class="ui ordered vertical steps">{% for part in tutorial.parts %}
+    <div class="step">
+      <div class="content">
+        <span class="title">{{ part.subtitle | escape }}</span><br />
+        <span class="description">{{ part.brief | escape }}</span>
+      </div>
+    </div>{% endfor %}
+  </div>
+</div>
+
+<!-- /part-list -->
+
+</div>
+
+<!-- /tutorial -->
+{% endblock %}
