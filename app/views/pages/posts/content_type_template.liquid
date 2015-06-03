@@ -14,7 +14,8 @@ content_type: posts
   <div class="meta">
 {% include 'author_label' with author: post.author %}
     <span class="date"><i class="wait icon"></i> {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if post.category %}
-    <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}
+    <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}{% if post.allow_comments %}
+{% include 'disqus_link' with url: '#comments' %}{% endif %}
   </div>{% if post.image %}
   <div class="featured-image" style="background-image: url('{{ post.image.url | escape }}');"></div>{% endif %}
   <div class="content">
@@ -25,7 +26,7 @@ content_type: posts
   </div>
 </div>
 
-<div class="ui teal segment">
+<div id="comments" class="ui teal segment">
 {% include 'disqus' with category: post.category %}
 </div>
 
