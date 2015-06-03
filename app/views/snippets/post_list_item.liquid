@@ -10,7 +10,7 @@
     <div class="meta">
 {% include 'author_label' with author: post.author %}
       <span class="date"><i class="wait icon"></i> {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if post.category %}
-      <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}{% if post.allow_comments %}
+      <a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> <span class="category">{{ post.category.name | escape }}</span></a>{% endif %}{% if post.allow_comments %}
       <a href="/posts/{{ post._slug }}#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="/posts/{{ post._slug }}">Comments</span></a>{% endif %}
     </div>
     <div class="description">
