@@ -31,12 +31,12 @@ content_type: tutorials
 
 <div class="ui left attached rail">
   <div class="ui ordered vertical steps">{% for part in tutorial.parts %}
-    <div class="step">
+    <a href="/tutorials/parts/{{ part._slug }}" class="step">
       <div class="content">
         <span class="title">{{ part.subtitle | escape }}</span><br />
         <span class="description">{{ part.brief | escape }}</span>
       </div>
-    </div>{% endfor %}
+    </a>{% endfor %}
   </div>
 </div>
 

@@ -52,12 +52,12 @@ content_type: tutorial_parts
 
 <div class="ui left attached rail">
   <div class="ui ordered vertical steps">{% for part in tutorial_part.tutorial.parts %}
-    <div class="{% if part._slug == tutorial_part._slug %}active {% endif %}step">
+    <a href="/tutorials/parts/{{ part._slug }}" class="{% if part._slug == tutorial_part._slug %}active {% endif %}step">
       <div class="content">
         <span class="title">{{ part.subtitle | escape }}</span><br />
         <span class="description">{{ part.brief | escape }}</span>
       </div>
-    </div>{% endfor %}
+    </a>{% endfor %}
   </div>
 </div>
 
