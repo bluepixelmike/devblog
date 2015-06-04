@@ -3,7 +3,7 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname   = '{{ site.name | dasherize }}';
-  var disqus_id          = '{% if id %}{{ id | escape }}{% else %}{{ fullpath | escape }}{% endif %}';
+  var disqus_id          = '{% if id %}{{ id | escape }}{{ id2 | escape }}{% else %}{{ fullpath | escape }}{% endif %}';
   var disqus_title       = '{{ page.title | escape }}';{% if category and category.disqus_id %}
   var disqus_category_id = '{{ category.disqus_id | escape }}';{% endif %}
   (function() {

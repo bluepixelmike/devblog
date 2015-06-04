@@ -20,11 +20,11 @@ content_type: tutorials
   <div class="large featured-image" style="background-image: url('{{ tutorial.image.url | escape }}');"></div>{% endif %}
   <div class="main-content">
 {{ tutorial.description }}
-  </div>
-  <a class="small ui purple start button" href="#">Start <i class="chevron right icon"></i></a>
+  </div>{% if tutorial.parts and tutorial.parts.size > 1 %}
+  <a class="small ui purple start button" href="#">Start <i class="chevron right icon"></i></a>{% endif %}
   <div class="extra">
 {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
-  </div>
+  </div>{% if tutorial.parts and tutorial.parts.size > 1 %}
 
 <!-- part-list -->
 
@@ -41,7 +41,23 @@ content_type: tutorials
 
 <!-- /part-list -->
 
+{% elsif tutorial.parts and tutorial.parts.size == 1 %}
+
+<!-- tutorial-content -->
+
+<div class="content">
+  <h4>{{ tutorial.parts.first.subtitle | escape }}</h4>
+{{ tutorial.parts.first.content }}
 </div>
+
+<!-- /tutorial-content -->{% endif %}
+
+</div>{% if tutorial.parts and tutorial.parts.size == 1 %}
+
+<div id="comments" class="ui purple segment">{% if tutorial.parts.first.allow_comments %}
+{% include 'disqus' with id: '/tutorials/parts/', id2: tutorial.parts.first._slug, category: tutorial.category %}{% else %}
+  <p>Comments have been disabled for this tutorial.</p>{% endif %}
+</div>{% endif %}
 
 <!-- /tutorial -->
 {% endblock %}
