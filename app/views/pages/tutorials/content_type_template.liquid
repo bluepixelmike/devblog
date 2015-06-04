@@ -56,10 +56,14 @@ content_type: tutorials
 
 </div>{% if tutorial.parts.size == 1 %}
 
+<!-- comments -->
+
 <div id="comments" class="ui purple segment">{% if tutorial.parts.first.allow_comments %}
 {% include 'disqus' with id: '/tutorials/parts/', id2: tutorial.parts.first._slug, category: tutorial.category %}{% else %}
   <p>Comments have been disabled for this tutorial.</p>{% endif %}
 </div>{% endif %}
+
+<!-- /comments -->
 
 <!-- /tutorial -->
 {% endblock %}
