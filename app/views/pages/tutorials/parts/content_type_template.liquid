@@ -17,7 +17,7 @@ content_type: tutorial_parts
 {% block 'body/main' %}
 <!-- tutorial -->
 
-<div class="ui purple stacked segment">
+<div class="ui green stacked segment">
   <h3>{{ tutorial_part.brief | escape }}</h3>
   <div class="meta">
 {% include 'author_label' with author: tutorial_part.tutorial.author %}
@@ -37,11 +37,11 @@ content_type: tutorial_parts
 <!-- pagination -->
 
 <div id="pagination">{% for part in tutorial_part.tutorial.parts %}{% if part._slug == tutorial_part._slug %}{% if previous %}
-  <a href="/tutorials/parts/{{ tutorial_part.tutorial.parts[previous]._slug }}" class="ui purple icon button">
+  <a href="/tutorials/parts/{{ tutorial_part.tutorial.parts[previous]._slug }}" class="ui green icon button">
       <i class="left chevron icon"></i>
       Previous
   </a>{% endif %}{% if forloop.index < forloop.length %}
-  <a href="/tutorials/parts/{{ tutorial_part.tutorial.parts[forloop.index]._slug }}" class="ui right purple icon button">
+  <a href="/tutorials/parts/{{ tutorial_part.tutorial.parts[forloop.index]._slug }}" class="ui right green icon button">
     Next
     <i class="right chevron icon"></i>
   </a>{% endif %}{% endif %}{% assign previous = forloop.index0 %}{% endfor %}
@@ -68,7 +68,7 @@ content_type: tutorial_parts
 
 <!-- comments -->
 
-<div id="comments" class="ui purple segment">{% if tutorial_part.allow_comments %}
+<div id="comments" class="ui green segment">{% if tutorial_part.allow_comments %}
 {% include 'disqus' category: tutorial_part.tutorial.category %}{% else %}
   <p>Comments have been disabled for this tutorial.</p>{% endif %}
 </div>

@@ -15,13 +15,13 @@ published: true
 {% block 'body/main' %}
 <!-- tutorials-list -->
 
-<div class="ui purple stacked segment">
+<div class="ui green stacked segment">
   <div class="ui divided items">
 {% paginate contents.tutorials by 5 %}
 {% for tutorial in paginate.collection %}
 {% include 'tutorial_list_item' with tutorial %}
 {% endfor %}
-{% include 'pagination' with paginate, color: 'purple' %}
+{% include 'pagination' with paginate, color: 'green' %}
 {% endpaginate %}
   </div>
 </div>

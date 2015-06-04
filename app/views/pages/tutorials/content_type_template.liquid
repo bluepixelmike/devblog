@@ -9,7 +9,7 @@ content_type: tutorials
 {% block 'body/main' %}
 <!-- tutorial -->
 
-<div class="ui purple segment">
+<div class="ui green segment">
   <h3>{{ tutorial.brief | escape }}</h3>
   <div class="meta">
 {% include 'author_label' with author: tutorial.author %}
@@ -22,7 +22,7 @@ content_type: tutorials
   <div class="main-content">
 {{ tutorial.description }}
   </div>{% if tutorial.parts and tutorial.parts.size > 1 %}
-  <a href="/tutorials/parts/{{ tutorial.parts.first._slug }}" class="small ui purple start button">Start <i class="chevron right icon"></i></a>{% endif %}
+  <a href="/tutorials/parts/{{ tutorial.parts.first._slug }}" class="small ui green start button">Start <i class="chevron right icon"></i></a>{% endif %}
   <div class="extra">
 {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
   </div>{% if tutorial.parts.size > 1 %}
@@ -58,7 +58,7 @@ content_type: tutorials
 
 <!-- comments -->
 
-<div id="comments" class="ui purple segment">{% if tutorial.parts.first.allow_comments %}
+<div id="comments" class="ui green segment">{% if tutorial.parts.first.allow_comments %}
 {% include 'disqus' with id: '/tutorials/parts/', id2: tutorial.parts.first._slug, category: tutorial.category %}{% else %}
   <p>Comments have been disabled for this tutorial.</p>{% endif %}
 </div>{% endif %}

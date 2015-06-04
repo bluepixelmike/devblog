@@ -13,13 +13,13 @@ published: true
 {% block 'body/main' %}
 <!-- tool-list -->
 
-<div class="ui green stacked segment">
+<div class="ui purple stacked segment">
   <div class="ui divided items">
 {% paginate contents.tools by 5 %}
 {% for tool in paginate.collection %}
 {% include 'tool_list_item' with category %}
 {% endfor %}
-{% include 'pagination' with paginate, color: 'green' %}
+{% include 'pagination' with paginate, color: 'purple' %}
 {% endpaginate %}
   </div>
 </div>
