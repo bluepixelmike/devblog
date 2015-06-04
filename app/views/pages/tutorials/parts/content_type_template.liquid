@@ -35,28 +35,15 @@ content_type: tutorial_parts
 
 <!-- pagination -->
 
-<div id="pagination" class="item centered aligned">{% for part in tutorial_part.tutorial.parts %}{% if part._slug == tutorial_part._slug %}{% assign previous = tutorial_part.tutorial.parts[forloop.index0 - 1] %}{% assign next = tutorial_part.tutorial.parts[forloop.index0 + 1] %}{% endif %}{% endfor %}
-  <div class="ui tiny buttons">{% if previous %}
-    <a href="/tutorials/parts/{{ previous._slug }}" class="ui icon button">{% else %}
-    <span class="ui disabled icon button">{% endif %}
+<div id="pagination">{% for part in tutorial_part.tutorial.parts %}{% if part._slug == tutorial_part._slug %}{% if previous %}
+  <a href="/tutorials/parts/{{ tutorial_part.tutorial.parts[previous]._slug }}" class="ui purple icon button">
       <i class="left chevron icon"></i>
-      Previous{% if previous %}
-    </a>{% else %}
-    </span>{% endif %}
-{% for part in tutorial_part.tutorial.parts %}{% unless part._slug == tutorial_part._slug %}
-    <a href="/tutorials/parts/{{ part._slug }}" class="ui button">{% else %}
-    <span class="ui purple button">{% endunless %}
-      {{ forloop.index }}{% unless part._slug == tutorial_part._slug %}
-    </a>{% else %}
-    </span>{% endunless %}
-{% endfor %}{% if next %}
-    <a href="/tutorials/parts/{{ next._slug }}" class="ui right icon button">{% else %}
-    <span class="ui disabled right icon button">{% endif %}
-      Next
-      <i class="right chevron icon"></i>{% if next %}
-    </a>{% else %}
-    </span>{% endif %}
-  </div>
+      Previous
+  </a>{% endif %}{% if forloop.index < forloop.length %}
+  <a href="/tutorials/parts/{{ tutorial_part.tutorial.parts[forloop.index]._slug }}" class="ui right purple icon button">
+    Next
+    <i class="right chevron icon"></i>
+  </a>{% endif %}{% endif %}{% assign previous = forloop.index0 %}{% endfor %}
 </div>
 
 <!-- /pagination -->
