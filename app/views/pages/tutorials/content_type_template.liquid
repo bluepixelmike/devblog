@@ -47,7 +47,8 @@ content_type: tutorials
 <!-- tutorial-content -->
 
 <div class="content">
-  <h4>{{ tutorial.parts.first.subtitle | escape }}</h4>
+  <h4>{{ tutorial.parts.first.subtitle | escape }}</h4>{% if tutorial.parts.first.image %}
+  <div class="featured-image" style="background-image: url('{{ tutorial.parts.first.image.url | escape }}');"></div>{% endif %}
 {{ tutorial.parts.first.content }}
 </div>
 
