@@ -1,0 +1,82 @@
+---
+title: View Tutorial Part
+listed: true
+published: true
+content_type: tutorial_parts
+---
+{% extends 'index' %}
+
+{% block 'header' %}
+    <i class="book icon"></i>
+    <div class="content">
+      <span class="header">{{ tutorial_part.tutorial.title | escape }}</span>
+      <span class="sub header">{{ tutorial_part.subtitle | escape }}</span>
+    </div>
+{% endblock %}
+
+{% block 'body/main' %}
+<!-- tutorial -->
+
+<div class="ui purple stacked segment">
+  <h3>{{ tutorial_part.brief | escape }}</h3>
+  <div class="meta">
+{% include 'author_label' with author: tutorial_part.tutorial.author %}
+    <span class="ui horizontal {% case tutorial_part.tutorial.difficulty %}{% when 'Beginner' %}blue{% when 'Intermediate' %}purple{% else %}red{% endcase %} label">{{ tutorial_part.tutorial.difficulty | escape }}</span>
+    <span class="date"><i class="wait icon"></i> {{ tutorial_part.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if tutorial_part.tutorial.category %}
+    <span class="category"><a href="/categories/{{ tutorial_part.tutorial.category._slug }}"><i class="folder open outline icon"></i> {{ tutorial_part.tutorial.category.name | escape }}</a></span>{% endif %}
+  </div>{% if tutorial_part.image %}
+  <div class="featured-image" style="background-image: url('{{ tutorial_part.image.url | escape }}');"></div>{% endif %}
+  <div class="main-content">
+{{ tutorial_part.content }}
+  </div>
+  <div class="extra">
+{% include 'tags_list' with tags: tutorial_part.tutorial.tags, tools: tutorial_part.tutorial.tools %}
+  </div>
+
+<!-- pagination -->
+
+<div id="pagination" class="item centered aligned">{% for part in tutorial_part.tutorial.parts %}{% if part._slug == tutorial_part._slug %}{% assign previous = tutorial_part.tutorial.parts[forloop.index0 - 1] %}{% assign next = tutorial_part.tutorial.parts[forloop.index0 + 1] %}{% endif %}{% endfor %}
+  <div class="ui tiny buttons">{% if previous %}
+    <a href="/tutorials/parts/{{ previous._slug }}" class="ui icon button">{% else %}
+    <span class="ui disabled icon button">{% endif %}
+      <i class="left chevron icon"></i>
+      Previous{% if previous %}
+    </a>{% else %}
+    </span>{% endif %}
+{% for part in tutorial_part.tutorial.parts %}{% unless part._slug == tutorial_part._slug %}
+    <a href="/tutorials/parts/{{ part._slug }}" class="ui button">{% else %}
+    <span class="ui purple button">{% endunless %}
+      {{ forloop.index }}{% unless part._slug == tutorial_part._slug %}
+    </a>{% else %}
+    </span>{% endunless %}
+{% endfor %}{% if next %}
+    <a href="/tutorials/parts/{{ next._slug }}" class="ui right icon button">{% else %}
+    <span class="ui disabled right icon button">{% endif %}
+      Next
+      <i class="right chevron icon"></i>{% if next %}
+    </a>{% else %}
+    </span>{% endif %}
+  </div>
+</div>
+
+<!-- /pagination -->
+
+<!-- part-list -->
+
+<div class="ui left attached rail">
+  <div class="ui ordered vertical steps">{% for part in tutorial_part.tutorial.parts %}
+    <div class="{% if part._slug == tutorial_part._slug %}active {% endif %}step">
+      <div class="content">
+        <span class="title">{{ part.subtitle | escape }}</span><br />
+        <span class="description">{{ part.brief | escape }}</span>
+      </div>
+    </div>{% endfor %}
+  </div>
+</div>
+
+<!-- /part-list -->
+
+</div>
+
+<!-- /tutorial -->
+{% endblock %}
