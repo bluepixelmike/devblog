@@ -1,6 +1,6 @@
 <!-- part -->
 
-<a href="/tutorials/parts/{{ part._slug }}" class="item" title="Jump to part {{ forloop.index }}">
+<a href="/tutorials/{% if part.tutorial.parts.size > 1 %}parts/{{ part._slug }}{% else %}{{ part.tutorial._slug }}{% endif %}" class="item" title="Jump to part {{ forloop.index }}">
   <div class="content">
     <span class="title">{{ part.subtitle | escape }}</span>
     <span class="description">{{ part.brief | escape }}</span>
