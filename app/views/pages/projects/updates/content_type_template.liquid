@@ -22,8 +22,10 @@ content_type: projects
 
 {% block 'header' %}
     <i class="bullhorn icon"></i>
-    <span class="header">{{ project.name | escape }}</span>
-    <span class="sub header">Updates</span>
+    <div class="content">
+      {{ project.name | escape }}
+      <div class="sub header">Updates</div>
+    </div>
 {% endblock %}
 
 <!-- Pagination of has_many doesn't work with the current LocomotiveCMS.
