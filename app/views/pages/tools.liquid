@@ -5,6 +5,16 @@ published: true
 ---
 {% extends 'index' %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted purple segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'header' %}
     <i class="configure icon"></i>
     <span class="content">{{ page.title | escape }}</span>

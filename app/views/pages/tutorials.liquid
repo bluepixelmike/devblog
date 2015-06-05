@@ -7,6 +7,16 @@ published: true
 
 {% block 'html_head' %}  {{ '/feed/tutorials' | auto_discovery_link_tag }}{% endblock %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted green segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'header' %}
     <i class="book icon"></i>
     <span class="content">{{ page.title | escape }}</span>

@@ -5,6 +5,16 @@ published: true
 ---
 {% extends parent %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted orange segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'header' %}
     <i class="search icon"></i>
     <span class="contents">{{ page.title | escape }}</span>

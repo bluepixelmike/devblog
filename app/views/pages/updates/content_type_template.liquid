@@ -6,6 +6,22 @@ content_type: project_updates
 ---
 {% extends parent %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted red segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <a href="/projects" class="section">Projects</a>
+    <div class="divider"> / </div>
+    <a href="/projects/{{ project_update.project._slug}}" class="section">{{ project_update.project.name | escape }}</a>
+    <div class="divider"> / </div>
+    <a href="/projects/{{ project_update.project._slug }}/updates" class="section">Updates</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'body/main' %}
 <!-- update -->
 

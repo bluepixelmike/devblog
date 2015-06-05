@@ -5,6 +5,18 @@ published: true
 ---
 {% extends 'index' %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted red segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <a href="/projects" class="section">Projects</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'html_head' %}  {{ '/feed/updates' | auto_discovery_link_tag }}{% endblock %}
 
 {% block 'header' %}

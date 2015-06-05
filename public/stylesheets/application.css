@@ -7,6 +7,16 @@
   margin-bottom: 0;
 }
 
+#breadcrumbs {
+  border-radius: 0;
+  margin: 0;
+  padding: 0.3em 2em;
+}
+
+#breadcrumbs .ui.breadcrumb a {
+  color: rgba(0, 0, 0, 0.8);
+}
+
 #pagination {
   padding-top: 2em;
   text-align: center;

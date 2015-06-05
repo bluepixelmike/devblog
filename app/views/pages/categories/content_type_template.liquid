@@ -6,6 +6,18 @@ content_type: categories
 ---
 {% extends parent %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted yellow segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <a href="/categories" class="section">Categories</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'body/main' %}
 <!-- category -->
 

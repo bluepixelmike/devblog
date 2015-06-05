@@ -6,6 +6,18 @@ content_type: tools
 ---
 {% extends parent %}
 
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted purple segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <a href="/tools" class="section">Tools</a>
+    <div class="divider"> / </div>
+    <div class="active section">{{ page.title | escape }}</div>
+  </div>
+</div>
+{% endblock %}
+
 {% block 'body/main' %}
 <!-- tool -->
 
