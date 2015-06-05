@@ -7,7 +7,7 @@ content_type: project_updates
 {% extends parent %}
 
 {% block 'breadcrumbs' %}
-<div id="breadcrumbs" class="ui inverted red segment">
+<div id="breadcrumbs" class="ui inverted blue segment">
   <div class="ui breadcrumb">
     <a href="/" class="section">Home</a>
     <div class="divider"> / </div>
@@ -25,7 +25,7 @@ content_type: project_updates
 {% block 'body/main' %}
 <!-- update -->
 
-<div class="ui red segment">
+<div class="ui blue segment">
   <h3>{{ project_update.brief | escape }}</h3>
   <div class="meta">
 {% include 'author_label' with author: project_update.author %}
@@ -42,7 +42,7 @@ content_type: project_updates
   </div>
 </div>
 
-<div id="comments" class="ui red segment">{% if project_update.allow_comments %}
+<div id="comments" class="ui blue segment">{% if project_update.allow_comments %}
 {% include 'disqus' %}{% else %}
   <p>Comments have been disabled for this post.</p>{% endif %}
 </div>

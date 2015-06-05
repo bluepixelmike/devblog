@@ -6,7 +6,7 @@ published: true
 {% extends 'index' %}
 
 {% block 'breadcrumbs' %}
-<div id="breadcrumbs" class="ui inverted red segment">
+<div id="breadcrumbs" class="ui inverted blue segment">
   <div class="ui breadcrumb">
     <a href="/" class="section">Home</a>
     <div class="divider"> / </div>
@@ -27,7 +27,7 @@ published: true
 {% block 'body/main' %}
 <!-- update-list -->
 
-<div class="ui red stacked segment">
+<div class="ui blue stacked segment">
   <div class="ui divided items">
 {% paginate contents.project_updates by 10 %}
 {% for update in paginate.collection %}
