@@ -16,6 +16,7 @@ Curabitur vehicula magna non mauris accumsan, id volutpat mauris dapibus. Nulla 
 Aliquam a tincidunt libero. Nullam sem mauris, eleifend vitae varius at, scelerisque quis leo. Nunc vitae ex consequat leo volutpat interdum id blandit purus. Maecenas vulputate quam tincidunt metus luctus dictum. Nullam volutpat, enim ac vehicula ultricies, lorem quam dictum lorem, ut imperdiet ipsum augue vitae magna. Ut mattis mauris eu tortor ullamcorper scelerisque. Nunc quis velit tellus. Aenean scelerisque nisl sit amet lorem dictum, quis interdum ante tincidunt. Sed augue nulla, placerat eu malesuada ac, imperdiet finibus metus. Vivamus viverra in enim nec viverra. Sed nunc lorem, cursus in lacinia sit amet, ornare in turpis. Donec sagittis vel orci vitae pharetra. In pharetra neque quis efficitur luctus. Nullam eget molestie nisi.
 
 Vivamus vel turpis eu purus feugiat lobortis. Aliquam lorem velit, dapibus sit amet nulla et, gravida aliquet lectus. Sed tempus est sit amet nulla vulputate, non mattis massa lacinia. Morbi eget posuere ligula. Curabitur sagittis ut risus vel maximus. Suspendisse potenti. Donec consequat aliquet tellus, id imperdiet mi tempus ac. Integer a vestibulum lorem. Nulla eget risus commodo, gravida nisi in, sagittis nisi. Nullam arcu turpis, interdum sed pretium at, rhoncus in orci. Donec sapien ante, porttitor id mauris vel, ornare imperdiet nulla."
+    donation_total: 38.37
     donation_goal: 100.00
 
 - "Project 2":
@@ -54,6 +55,7 @@ Vestibulum tristique tristique libero, sit amet sagittis justo interdum nec. Sed
 Maecenas enim magna, porta non ipsum vitae, pellentesque elementum dui. Vestibulum id pellentesque nunc. In facilisis tincidunt diam quis porta. Sed varius metus in lobortis porttitor. Mauris bibendum mi vitae orci feugiat, in blandit lectus lacinia. Ut sit amet suscipit diam, a posuere dui. Curabitur feugiat, nunc vel commodo efficitur, arcu magna lacinia erat, eu porta leo turpis dignissim arcu. Aliquam a nisl et magna condimentum mattis. Nulla ut nisl sed massa auctor venenatis ac in orci. Fusce volutpat vestibulum quam. Cras vehicula tortor et turpis interdum faucibus. Vivamus libero lorem, imperdiet quis semper eget, pretium id dolor.
 
 Maecenas in commodo tortor, sed gravida ex. Ut ut est non massa bibendum fringilla. Nam blandit ullamcorper ullamcorper. Suspendisse elementum erat vel neque placerat, nec ornare nisi eleifend. Fusce vitae luctus nisi. Morbi tincidunt, lacus ac commodo egestas, velit justo pharetra quam, nec congue magna ex id purus. Vivamus vel viverra lacus, id imperdiet ante. Nullam quis pulvinar lacus."
+    donation_total: 10.00
 
 - "Project 4":
     brief: "Morbi eget posuere ligula. Curabitur sagittis ut risus vel maximus. Suspendisse potenti. Donec consequat aliquet tellus, id imperdiet mi tempus ac."
@@ -72,5 +74,6 @@ Aliquam placerat neque ut dolor bibendum commodo. Nunc sollicitudin diam elit. S
 Nulla quam ligula, laoreet eget sollicitudin vel, consectetur sit amet mauris. Integer in felis at dolor tincidunt pretium a sed quam. Mauris sit amet felis vitae dui venenatis consequat. Fusce consequat arcu fringilla augue posuere pharetra. Proin velit dui, tristique ut facilisis non, viverra ac elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur pellentesque quam enim, at molestie sapien hendrerit id. Sed vehicula ex nec porttitor posuere. Nam quis dictum risus, eget porttitor tellus. Mauris a turpis at eros scelerisque ultrices. Vivamus tincidunt tincidunt ipsum. Phasellus et sem sed leo eleifend tempor. Sed imperdiet eros ac placerat venenatis.
 
 Ut eleifend, nunc sit amet efficitur rutrum, ante tellus accumsan augue, molestie volutpat nisl ante vel sem. Donec sit amet tellus magna. Etiam cursus vulputate massa, in ullamcorper nunc imperdiet id. In tempus est sit amet nulla rutrum, a cursus lorem varius. Etiam aliquam et enim vel fringilla. In maximus neque enim, et euismod tortor aliquet eget. Donec facilisis nisi tortor, at venenatis leo rutrum quis. Vestibulum vitae tristique purus, a vehicula ex. Mauris auctor sed sem non aliquam. Duis at elit in urna posuere aliquam id pellentesque metus. Sed eget sagittis magna."
+    donation_total: 9013.30
     donation_goal: 250.00
 

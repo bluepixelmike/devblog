@@ -29,7 +29,7 @@
     project: "project-4"
     date: "2014-12-25"
     email: "yetanotherfake@example.com"
-    amount: 12.3
+    amount: 12.30
     message: "Vivamus tincidunt tincidunt ipsum."
 
 - "Donor 6":

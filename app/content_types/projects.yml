@@ -148,6 +148,13 @@ fields:
     inverse_of: project
     ui_enabled: true
 
+- donation_total:
+    label: Donation Total
+    type: float
+    required: false
+    hint: Due to technical limitations, the current donation total must be manually calculated and entered here.
+    localized: false
+
 - donation_goal:
     label: Donation Goal
     type: float
