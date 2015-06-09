@@ -17,7 +17,7 @@ published: true
 
 {% block 'header' %}
     <i class="search icon"></i>
-    <span class="contents">{{ page.title | escape }}</span>
+    <div class="content">{{ page.title | escape }}</div>
 {% endblock %}
 
 {% block 'body/main' %}{% if params['tag'] %}{% include 'tag_search' with tag: params['tag'] %}{% endif %}{% endblock %}

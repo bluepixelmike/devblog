@@ -23,8 +23,8 @@ content_type: tutorial_parts
 {% block 'header' %}
     <i class="book icon"></i>
     <div class="content">
-      <span class="header">{{ tutorial_part.tutorial.title | escape }}</span>
-      <span class="sub header">{{ tutorial_part.subtitle | escape }}</span>
+      <div class="header">{{ tutorial_part.tutorial.title | escape }}</div>
+      <div class="sub header">{{ tutorial_part.subtitle | escape }}</div>
     </div>
 {% endblock %}
 
