@@ -10,7 +10,7 @@
     <div class="meta">
       <span class="ui horizontal {% case project.phase %}{% when 'Prototype' %}purple{% when 'Alpha' %}green{% when 'Beta'%}teal{% else %}blue{% endcase %} label">{{ project.phase | escape }}</span>
       <span class="date"><i class="wait icon"></i> {{ project.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>{% if project.updates.size > 0 %}
-      <a href="/projects/{{ project._slug }}#updates"><i class="bullhorn icon"></i> <span class="update-count">{{ project.updates.size }} update{% if project.updates.size != 1 %}s{% endif %}</span></a>{% endif %}
+      <a href="/projects/updates/{{ project._slug }}"><i class="bullhorn icon"></i> <span class="update-count">{{ project.updates.size }} update{% if project.updates.size != 1 %}s{% endif %}</span></a>{% endif %}
     </div>
     <div class="description">
       <p>{{ project.brief | escape }}</p>
