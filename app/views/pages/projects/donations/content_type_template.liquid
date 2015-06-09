@@ -13,9 +13,9 @@ content_type: projects
     <div class="divider"> / </div>
     <a href="/projects" class="section">Projects</a>
     <div class="divider"> / </div>
-    <a href="/projects/{{ project._slug }}"> {{ project.name | escape }}</a>
+    <a href="/projects/{{ project._slug }}" class="section">{{ project.name | escape }}</a>
     <div class="divider"> / </div>
-    <div class="active section">Donations</div>
+    <span class="active section">Donations</span>
   </div>
 </div>
 {% endblock %}
