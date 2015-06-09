@@ -50,8 +50,10 @@ content_type: projects
       <div class="label">Goal</div>
     </div>{% endif %}
   </div>{% if project.donation_goal %}
-  <div data-percent="0" class="ui basic progress">
-    <div class="bar" style="width: {{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage }};"></div>
+  <div data-percent="0" class="ui basic blue progress">
+    <div class="bar" style="width: {{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage }};">
+      <div class="progress">{{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage: 'precision: 0' }}</div>
+    </div>
   </div>{% endif %}
   <div class="ui comments">
 {% with_scope project: project, order_by: 'amount.desc' %}
