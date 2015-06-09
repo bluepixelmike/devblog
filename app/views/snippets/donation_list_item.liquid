@@ -1,0 +1,19 @@
+<!-- entry -->
+
+<div class="comment">
+  <span class="avatar">
+    <img src="{{ donation.email | gravatar_url }}" alt="{{ donation.name | escape }}" />
+  </span>
+  <div class="content">
+    <span class="author">{{ donation.name | escape }}</span>
+    <div class="metadata">
+      <span class="date">{{ donation.date | localized_date: '%A, %B %d, %Y' | escape }}</span>
+    </div>
+    <div class="text">
+      <span class="amount">{{ donation.amount | money }}</span>{% if donation.message %}
+      <p>{{ donation.message | escape }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- /entry -->
