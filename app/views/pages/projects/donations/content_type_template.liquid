@@ -33,9 +33,23 @@ content_type: projects
 {% block 'body/main' %}
 <!-- donation-list -->
 
-<div class="ui blue stacked segment">{% if project.donation_goal %}
-  <span>Goal: {{ project.donation_goal | money }}</span>{% endif %}
-  <span>Total: {{ project.donation_total | money }}</span>{% if project.donation_goal %}
+<div class="ui blue stacked segment">
+  <div class="ui horizontal statistics">
+    <div class="statistic">
+      <div class="value">
+        <i class="currency icon"></i>
+        {{ project.donation_total | money }}
+      </div>
+      <div class="label">Total</div>
+    </div>{% if project.donation_goal %}
+    <div class="statistic">
+      <div class="value">
+        <i class="trophy icon"></i>
+        {{ project.donation_goal | money }}
+      </div>
+      <div class="label">Goal</div>
+    </div>{% endif %}
+  </div>{% if project.donation_goal %}
   <div data-percent="0" class="ui basic progress">
     <div class="bar" style="width: {{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage }};"></div>
   </div>{% endif %}
