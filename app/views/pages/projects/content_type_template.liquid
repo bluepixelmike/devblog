@@ -18,8 +18,9 @@ content_type: projects
 </div>
 {% endblock %}
 
-{% block 'header' %}
-    <i class="lab icon"></i>
+{% block 'header' %}{% if project.icon %}
+    <img src="{{ project.icon.url | escape }}" alt="{{ project.name | escape }}" class="project-icon" />{% else %}
+    <i class="lab icon"></i>{% endif %}
     <div class="content">
       {{ project.name | escape }}
     </div>

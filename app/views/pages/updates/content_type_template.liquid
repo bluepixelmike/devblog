@@ -22,6 +22,12 @@ content_type: project_updates
 </div>
 {% endblock %}
 
+{% block 'header' %}{% if project_update.project.icon %}
+    <img src="{{ project_update.project.icon.url | escape }}" alt="{{ project_update.project.name | escape }}" class="project-icon" />{% else %}
+    <i class="bullhorn icon"></i>{% endif %}
+    <div class="content">{{ page.title | escape }}</div>
+{% endblock %}
+
 {% block 'body/main' %}
 <!-- update -->
 
