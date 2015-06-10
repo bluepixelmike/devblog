@@ -25,6 +25,7 @@ content_type: projects
     <i class="bullhorn icon"></i>{% endif %}
     <div class="content">
       {{ project.name | escape }}
+      <span class="ui horizontal {% case project.phase %}{% when 'Prototype' %}purple{% when 'Alpha' %}green{% when 'Beta'%}teal{% else %}blue{% endcase %} label">{{ project.phase | escape }}</span>
       <div class="sub header">Updates</div>
     </div>
 {% endblock %}
