@@ -4,7 +4,7 @@ listed: true
 published: true
 content_type: projects
 ---
-{% extends 'index' %}
+{% extends parent %}
 
 {% block 'breadcrumbs' %}
 <div id="breadcrumbs" class="ui inverted blue segment">
@@ -38,7 +38,8 @@ content_type: projects
 
 <!-- sections -->
 
-<div id="project-tabs" class="ui blue buttons">{% if project.updates.size > 0 %}
+<div id="project-tabs" class="ui blue buttons">
+  <a href="/projects/{{ project._slug }}" class="ui button">About</a>{% if project.updates.size > 0 %}
   <a href="/projects/updates/{{ project._slug }}" class="ui button">Updates</a>{% endif %}{% if project.donations.size > 0 %}
   <a href="/projects/donations/{{ project._slug }}" class="ui button">Donations</a>{% endif %}{% if project.allow_comments %}
   <a href="#comments" class="ui button">Comments</a>{% endif %}
@@ -47,7 +48,8 @@ content_type: projects
 {% endfor %}
 </div>
 
-<!-- /sections -->{% if project.updates.size > 0 %}
+<!-- /sections -->
+{% block 'content' %}{% if project.updates.size > 0 %}
 
 <!-- updates -->
 
@@ -93,12 +95,12 @@ content_type: projects
   <div class="extra">
 {% include 'tags_list' with tags: project.tags, tools: project.tools %}
   </div>
+{% endblock %}
 </div>
 
 <div id="comments" class="ui blue segment">{% if project.allow_comments %}
 {% include 'disqus' %}{% else %}
   <p>Comments have been disabled for this project.</p>{% endif %}
 </div>
-
 <!-- /project -->
 {% endwith_scope %}{% endblock %}

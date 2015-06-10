@@ -4,7 +4,7 @@ listed: true
 published: true
 content_type: projects
 ---
-{% extends 'index' %}
+{% extends 'projects/content-type-template' %}
 
 {% block 'breadcrumbs' %}
 <div id="breadcrumbs" class="ui inverted blue segment">
@@ -31,32 +31,31 @@ content_type: projects
 
 <!-- Pagination of has_many doesn't work with the current LocomotiveCMS.
      See this issue for details: https://github.com/locomotivecms/engine/issues/236 -->
-{% block 'body/main' %}
+{% block 'body/main/content' %}
 <!-- donation-list -->
 
-<div class="ui blue stacked segment">
-  <div class="ui horizontal statistics">
-    <div class="statistic">
-      <div class="value">
-        <i class="currency icon"></i>
-        {{ project.donation_total | money }}
-      </div>
-      <div class="label">Total</div>
-    </div>{% if project.donation_goal %}
-    <div class="statistic">
-      <div class="value">
-        <i class="trophy icon"></i>
-        {{ project.donation_goal | money }}
-      </div>
-      <div class="label">Goal</div>
-    </div>{% endif %}
-  </div>{% if project.donation_goal %}
-  <div data-percent="0" class="ui basic {% if project.donation_total < project.donation_goal %}blue{% else %}green{% endif %} progress">
-    <div class="bar" style="width: {% if project.donation_total < project.donation_goal %}{{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage }}{% else %}100%{% endif %};">
-      <div class="progress">{{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage: 'precision: 0' }}</div>
+<div class="ui horizontal statistics">
+  <div class="statistic">
+    <div class="value">
+      <i class="currency icon"></i>
+      {{ project.donation_total | money }}
     </div>
+    <div class="label">Total</div>
+  </div>{% if project.donation_goal %}
+  <div class="statistic">
+    <div class="value">
+      <i class="trophy icon"></i>
+      {{ project.donation_goal | money }}
+    </div>
+    <div class="label">Goal</div>
   </div>{% endif %}
-  <div class="ui comments">
+</div>{% if project.donation_goal %}
+<div data-percent="0" class="ui basic {% if project.donation_total < project.donation_goal %}blue{% else %}green{% endif %} progress">
+  <div class="bar" style="width: {% if project.donation_total < project.donation_goal %}{{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage }}{% else %}100%{% endif %};">
+    <div class="progress">{{ project.donation_total | divided_by: project.donation_goal | times: 100 | percentage: 'precision: 0' }}</div>
+  </div>
+</div>{% endif %}
+<div class="ui comments">
 {% with_scope project: project, order_by: 'amount.desc' %}
 {% paginate contents.project_donations by 25 %}
 {% for donation in paginate.collection %}
@@ -65,7 +64,6 @@ content_type: projects
 {% include 'pagination' with paginate, color: 'blue' %}
 {% endpaginate %}
 {% endwith_scope %}
-  </div>
 </div>
 
 <!-- /donation-list -->
