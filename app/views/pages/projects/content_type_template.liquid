@@ -38,7 +38,7 @@ content_type: projects
 
 <!-- sections -->
 
-<div class="ui blue buttons">{% if project.updates.size > 0 %}
+<div id="project-tabs" class="ui blue buttons">{% if project.updates.size > 0 %}
   <a href="/projects/updates/{{ project._slug }}" class="ui button">Updates</a>{% endif %}{% if project.donations.size > 0 %}
   <a href="/projects/donations/{{ project._slug }}" class="ui button">Donations</a>{% endif %}{% if project.allow_comments %}
   <a href="#comments" class="ui button">Comments</a>{% endif %}
@@ -84,7 +84,12 @@ content_type: projects
   </div>
 </div>
 
-<!-- /devs -->
+<!-- /devs -->{% if project.pictures.size > 0 %}
+
+<!-- pictures -->
+
+<!-- /pictures -->{% endif %}
+
   <div class="extra">
 {% include 'tags_list' with tags: project.tags, tools: project.tools %}
   </div>
