@@ -3,7 +3,8 @@
 <a href="/updates/{{ update._slug }}" class="item" title="Jump to update">
   <i class="bullhorn icon"></i>
   <div class="content">
-    <span class="title">{{ update.title | escape }}</span>
+    <span class="title">{{ update.title | escape }}</span><br />
+    <span class="meta">{{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
     <span class="description">{{ update.brief | escape }}</span>
   </div>
 </a>

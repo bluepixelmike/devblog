@@ -3,7 +3,8 @@
 <a href="/tutorials/{{ tutorial._slug }}" class="item" title="Jump to tutorial">
   <i class="book icon"></i>
   <div class="content">
-    <span class="title">{{ tutorial.title | escape }}</span>
+    <span class="title">{{ tutorial.title | escape }}</span><br />
+    <span class="meta">{{ tutorial.created_at | localized_date: '%A, %B %d, %Y' | escape }}</span>
     <span class="description">{{ tutorial.brief | escape }}</span>
   </div>
 </a>
