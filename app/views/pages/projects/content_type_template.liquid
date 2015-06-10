@@ -71,7 +71,7 @@ content_type: projects
 <div class="links six wide column">
   <h4 class="ui header">Links</h4>
   <div class="ui divided list">
-{% for link in contents.project_links %}
+{% for link in project.links %}
     <a href="{{ link.url | escape }}" class="item">
       <i class="{% if link.icon %}{{ link.icon | escape }}{% else %}linkify{% endif %} icon"></i>
       {{ link.name | escape }}
