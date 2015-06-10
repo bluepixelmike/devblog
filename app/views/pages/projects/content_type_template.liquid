@@ -26,7 +26,7 @@ content_type: projects
     </div>
 {% endblock %}
 
-{% block 'body/main' %}
+{% block 'body/main' %}{% with_scope project: project %}
 <!-- project -->
 
 <div class="ui blue stacked segment">
@@ -42,11 +42,9 @@ content_type: projects
   <a href="/projects/updates/{{ project._slug }}" class="ui button">Updates</a>{% endif %}{% if project.donations.size > 0 %}
   <a href="/projects/donations/{{ project._slug }}" class="ui button">Donations</a>{% endif %}{% if project.allow_comments %}
   <a href="#comments" class="ui button">Comments</a>{% endif %}
-{% with_scope project: project %}
 {% for tab in contents.project_tabs %}
   <a href="/projects/info/{{ tab._slug }}" class="ui button">{{ tab.name | escape }}</a>
 {% endfor %}
-{% endwith_scope %}
 </div>
 
 <!-- /sections -->{% if project.updates.size > 0 %}
@@ -56,11 +54,9 @@ content_type: projects
 <div class="updates">
   <h4 class="ui header">Latest Updates</h4>
   <div class="ui divided very relaxed list">
-{% with_scope project: project %}
 {% for update in contents.project_updates %}{% if forloop.index0 < 3 %}
 {% include 'update_list_subitem' with update %}
 {% endif %}{% endfor %}
-{% endwith_scope %}
   </div>
 </div>
 
@@ -70,6 +66,25 @@ content_type: projects
   <h4 class="ui header">About</h4>
 {{ project.content }}
   </div>
+
+<!-- devs -->
+
+<div class="devs">
+  <h4 class="ui header">Developers</h4>
+  <div class="ui horizontal list">
+{% for dev in contents.project_developer_roles %}
+    <a href="/devs/{{ dev.author._slug }}" class="ui item">
+      <img src="{% if dev.author.avatar_type == 'Gravatar' %}{{ dev.author.email | gravatar_url: 'd:mm' }}{% else %}{{ dev.author.avatar.url | escape }}{% endif %}" class="ui avatar image" alt="{{ dev.author.handle | escape }}" />
+      <div class="content">
+        {{ dev.author.name | escape }}
+        <div class="description">{{ dev.role | escape }}</div>
+      </div>
+    </a>
+{% endfor %}
+  </div>
+</div>
+
+<!-- /devs -->
   <div class="extra">
 {% include 'tags_list' with tags: project.tags, tools: project.tools %}
   </div>
@@ -81,4 +96,4 @@ content_type: projects
 </div>
 
 <!-- /project -->
-{% endblock %}
+{% endwith_scope %}{% endblock %}
