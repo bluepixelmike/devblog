@@ -27,7 +27,7 @@ content_type: projects
     </div>
 {% endblock %}
 
-{% block 'body/main' %}{% with_scope project: project %}
+{% block 'body/main' %}{% if project_tab %}{% assign project = project_tab.project %}{% endif %}{% with_scope project: project %}
 <!-- project -->
 
 <div class="ui blue stacked segment">
@@ -45,7 +45,7 @@ content_type: projects
   <a href="/projects/donations/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/donations/content-type-template' %}active{% endif %} button">Donations</a>{% endif %}{% if project.allow_comments %}
   <a href="#comments" class="ui button">Comments</a>{% endif %}
 {% for tab in contents.project_tabs %}
-  <a href="/projects/info/{{ tab._slug }}" class="ui button">{{ tab.name | escape }}</a>
+  <a href="/projects/info/{{ tab._slug }}" class="ui {% if page.fullpath == 'projects/info/content-type-template' and page.title == tab.name %}active{% endif %} button">{{ tab.name | escape }}</a>
 {% endfor %}
 </div>
 
