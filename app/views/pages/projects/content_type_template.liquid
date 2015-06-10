@@ -50,11 +50,12 @@ content_type: projects
 </div>
 
 <!-- /sections -->
-{% block 'content' %}{% if project.updates.size > 0 %}
+{% block 'content' %}
+<div class="ui grid">{% if project.updates.size > 0 %}
 
 <!-- updates -->
 
-<div class="updates">
+<div class="updates ten wide column">
   <h4 class="ui header">Latest Updates</h4>
   <div class="ui divided very relaxed list">
 {% for update in contents.project_updates %}{% if forloop.index0 < 3 %}
@@ -63,7 +64,25 @@ content_type: projects
   </div>
 </div>
 
-<!-- /updates -->{% endif %}
+<!-- /updates -->{% endif %}{% if project.links.size > 0 %}
+
+<!-- links -->
+
+<div class="links six wide column">
+  <h4 class="ui header">Links</h4>
+  <div class="ui divided list">
+{% for link in contents.project_links %}
+    <a href="{{ link.url | escape }}" class="item">
+      <i class="{% if link.icon %}{{ link.icon | escape }}{% else %}linkify{% endif %} icon"></i>
+      {{ link.name | escape }}
+    </a>
+{% endfor %}
+  </div>
+</div>
+
+<!-- /links -->{% endif %}
+
+</div>
 
   <div class="main-content">
   <h4 class="ui header">About</h4>
