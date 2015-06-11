@@ -114,6 +114,25 @@ content_type: projects
 
 <!-- pictures -->
 
+<!-- dimmer -->
+<div class="ui page dimmer" id="img-dimmer">
+  <div class="center content">
+    <h2 class="ui inverted header"></h2>
+    <img alt="Preview image" class="ui image" />
+    <span class="ui inverted description"></span>
+  </div>
+</div>
+<!-- /dimmer -->
+
+<div id="images">
+  <h4 class="ui header">Images</h4>
+  <div class="ui small images">{% for pic in project.pictures %}
+    <a href="{{ pic.image.url | escape }}" class="ui image" data-title="{{ pic.title | escape }}" data-image="{{ pic.image.url | escape }}" data-caption="{{ pic.caption | escape }}">
+      <img src="{{ pic.image.url | escape }}" alt="{{ pic.title | escape }}" />
+    </a>{% endfor %}
+  </div>
+</div>
+
 <!-- /pictures -->{% endif %}
 
   <div class="extra">
@@ -126,5 +145,30 @@ content_type: projects
 {% include 'disqus' with id: '/projects/', id2: project._slug %}{% else %}
   <p>Comments have been disabled for this project.</p>{% endif %}
 </div>
+
+<script type="text/javascript">
+  var dimmer         = $('#img-dimmer');
+  var dimmer_title   = $('#img-dimmer .content h2');
+  var dimmer_image   = $('#img-dimmer .content img');
+  var dimmer_caption = $('#img-dimmer .content .description');
+
+  dimmer.click(function() {
+    dimmer.dimmer('hide');
+  });
+
+  $('#images .ui.images a').click(function() {
+    var link    = $(this);
+    var title   = link.data('title');
+    var image   = link.data('image');
+    var caption = link.data('caption');
+
+    dimmer_title.html(title);
+    dimmer_image.prop('src', image);
+    dimmer_caption.html(caption);
+
+    dimmer.dimmer('show');
+    return false;
+  });
+</script>
 <!-- /project -->
 {% endblock %}
