@@ -27,16 +27,16 @@ content_type: projects
     </div>
 {% endblock %}
 
-{% block 'body/main' %}{% if project_tab %}{% assign project = project_tab.project %}{% endif %}{% with_scope project: project %}
+{% block 'body/main' %}{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %}{% assign tab = t %}{% endif %}{% endfor %}{% endif %}
 <!-- project -->
 
 <div id="project-tabs" class="ui blue buttons top attached">
-  <a href="/projects/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/content-type-template' %}active{% endif %} button">About</a>{% if project.updates.size > 0 %}
+  <a href="/projects/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/content-type-template' and tab == nil %}active{% endif %} button">About</a>{% if project.updates.size > 0 %}
   <a href="/projects/{{ project._slug }}/updates" class="ui {% if page.fullpath == 'projects/content-type-template/updates' %}active{% endif %} button">Updates</a>{% endif %}{% if project.donations.size > 0 %}
   <a href="/projects/{{ project._slug }}/donations" class="ui {% if page.fullpath == 'projects/content-type-template/donations' %}active{% endif %} button">Donations</a>{% endif %}{% if project.allow_comments %}
   <a href="#comments" class="ui button">Comments</a>{% endif %}
-{% for tab in contents.project_tabs %}
-  <a href="/projects/info/{{ tab._slug }}" class="ui {% if page.fullpath == 'projects/info/content-type-template' and page.title == tab.name %}active{% endif %} button">{{ tab.name | escape }}</a>
+{% for t in project.tabs %}
+  <a href="/projects/{{ project._slug }}?tab={{ t._slug }}" class="ui {% if tab and tab._slug == t._slug %}active{% endif %} button">{{ t.name | escape }}</a>
 {% endfor %}
 </div>
 
@@ -55,7 +55,7 @@ content_type: projects
 <div class="updates ten wide column">
   <h4 class="ui header">Latest Updates</h4>
   <div class="ui divided very relaxed list">
-{% for update in contents.project_updates %}{% if forloop.index0 < 3 %}
+{% for update in project.updates %}{% if forloop.index0 < 3 %}
 {% include 'update_list_subitem' with update %}
 {% endif %}{% endfor %}
   </div>
@@ -82,8 +82,8 @@ content_type: projects
 </div>
 
   <div class="main-content">
-  <h4 class="ui header">About</h4>
-{{ project.content }}
+  <h4 class="ui header">{% if tab %}{{ tab.name | escape }}{% else %}About{% endif %}</h4>
+{% if tab %}{{ tab.content }}{% else %}{{ project.content }}{% endif %}
   </div>
 
 <!-- devs -->
@@ -91,7 +91,7 @@ content_type: projects
 <div class="devs">
   <h4 class="ui header">Developers</h4>
   <div class="ui horizontal list">
-{% for dev in contents.project_developer_roles %}
+{% for dev in project.developers %}
     <a href="/devs/{{ dev.author._slug }}" class="ui item">
       <img src="{% if dev.author.avatar_type == 'Gravatar' %}{{ dev.author.email | gravatar_url: 'd:mm' }}{% else %}{{ dev.author.avatar.url | escape }}{% endif %}" class="ui avatar image" alt="{{ dev.author.handle | escape }}" />
       <div class="content">
@@ -120,4 +120,4 @@ content_type: projects
   <p>Comments have been disabled for this project.</p>{% endif %}
 </div>
 <!-- /project -->
-{% endwith_scope %}{% endblock %}
+{% endblock %}
