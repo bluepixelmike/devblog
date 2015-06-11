@@ -7,27 +7,34 @@ content_type: projects
 {% extends parent %}
 
 {% block 'breadcrumbs' %}
+{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %}{% assign tab = t %}{% endif %}{% endfor %}{% endif %}
 <div id="breadcrumbs" class="ui inverted blue segment">
   <div class="ui breadcrumb">
     <a href="/" class="section">Home</a>
     <div class="divider"> / </div>
     <a href="/projects" class="section">Projects</a>
+    <div class="divider"> / </div>{% if tab %}
+    <a href="/projects/{{ project._slug }}" class="section">{{ project.name | escape }}</a>
     <div class="divider"> / </div>
-    <span class="active section">{{ page.title | escape }}</span>
+    <span class="active section">{{ tab.name | escape }}</span>{% else %}
+    <span class="active section">{{ page.title | escape }}</span>{% endif %}
   </div>
 </div>
 {% endblock %}
 
-{% block 'header' %}{% if project.icon %}
+{% block 'header' %}
+{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %}{% assign tab = t %}{% endif %}{% endfor %}{% endif %}{% if project.icon %}
     <img src="{{ project.icon.url | escape }}" alt="{{ project.name | escape }}" class="project-icon" />{% else %}
     <i class="lab icon"></i>{% endif %}
     <div class="content">
       {{ project.name | escape }}
-      <span class="ui horizontal {% case project.phase %}{% when 'Prototype' %}purple{% when 'Alpha' %}green{% when 'Beta'%}teal{% else %}blue{% endcase %} label">{{ project.phase | escape }}</span>
+      <span class="ui horizontal {% case project.phase %}{% when 'Prototype' %}purple{% when 'Alpha' %}green{% when 'Beta'%}teal{% else %}blue{% endcase %} label">{{ project.phase | escape }}</span>{% if tab %}
+      <div class="sub header">{{ tab.name | escape }}</div>{% endif %}
     </div>
 {% endblock %}
 
-{% block 'body/main' %}{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %}{% assign tab = t %}{% endif %}{% endfor %}{% endif %}
+{% block 'body/main' %}
+{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %}{% assign tab = t %}{% endif %}{% endfor %}{% endif %}
 <!-- project -->
 
 <div id="project-tabs" class="ui blue buttons top attached">
