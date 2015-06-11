@@ -25,7 +25,10 @@ content_type: project_updates
 {% block 'header' %}{% if project_update.project.icon %}
     <img src="{{ project_update.project.icon.url | escape }}" alt="{{ project_update.project.name | escape }}" class="project-icon" />{% else %}
     <i class="bullhorn icon"></i>{% endif %}
-    <div class="content">{{ page.title | escape }}</div>
+    <div class="content">
+      {{ project_update.project.name | escape }}
+      <div class="sub header">{{ project_update.title | escape }}</div>
+    </div>
 {% endblock %}
 
 {% block 'body/main' %}
