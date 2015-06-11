@@ -30,16 +30,7 @@ content_type: projects
 {% block 'body/main' %}{% if project_tab %}{% assign project = project_tab.project %}{% endif %}{% with_scope project: project %}
 <!-- project -->
 
-<div class="ui blue stacked segment">
-  <h3 class="ui header">
-    {{ project.name | escape }}
-    <div class="sub header">{{ project.brief | escape }}</div>
-  </h3>{% if project.image %}
-  <div class="featured-image" style="background-image: url('{{ project.image.url | escape }}');"></div>{% endif %}
-
-<!-- sections -->
-
-<div id="project-tabs" class="ui blue buttons">
+<div id="project-tabs" class="ui blue buttons top attached">
   <a href="/projects/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/content-type-template' %}active{% endif %} button">About</a>{% if project.updates.size > 0 %}
   <a href="/projects/updates/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/updates/content-type-template' %}active{% endif %} button">Updates</a>{% endif %}{% if project.donations.size > 0 %}
   <a href="/projects/donations/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/donations/content-type-template' %}active{% endif %} button">Donations</a>{% endif %}{% if project.allow_comments %}
@@ -49,7 +40,13 @@ content_type: projects
 {% endfor %}
 </div>
 
-<!-- /sections -->
+<div class="ui blue stacked attached segment">
+  <h3 class="ui header">
+    {{ project.name | escape }}
+    <div class="sub header">{{ project.brief | escape }}</div>
+  </h3>{% if project.image %}
+  <div class="featured-image" style="background-image: url('{{ project.image.url | escape }}');"></div>{% endif %}
+
 {% block 'content' %}
 <div class="ui grid">{% if project.updates.size > 0 %}
 
