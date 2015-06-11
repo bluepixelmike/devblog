@@ -91,7 +91,7 @@ content_type: projects
   <div class="main-content">
   <h4 class="ui header">{% if tab %}{{ tab.name | escape }}{% else %}About{% endif %}</h4>
 {% if tab %}{{ tab.content }}{% else %}{{ project.content }}{% endif %}
-  </div>
+  </div>{% unless tab %}
 
 <!-- devs -->
 
@@ -118,7 +118,7 @@ content_type: projects
 
   <div class="extra">
 {% include 'tags_list' with tags: project.tags, tools: project.tools %}
-  </div>
+  </div>{% endunless %}
 {% endblock %}
 </div>
 
