@@ -57,7 +57,7 @@ content_type: projects
   </div>
 </div>{% endif %}
 <div class="ui comments">
-{% with_scope project: project, order_by: 'amount.desc' %}
+{% with_scope project: project %}
 {% paginate contents.project_donations by 25 %}
 {% for donation in paginate.collection %}
 {% include 'donation_list_item' with donation %}
