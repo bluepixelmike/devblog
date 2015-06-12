@@ -95,6 +95,16 @@ fields:
     inverse_of: author
     ui_enabled: false
 
+- updates:
+    label: Updates
+    type: has_many
+    required: false
+    hint: Updates written by the author
+    localized: false
+    class_name: project_updates
+    inverse_of: author
+    ui_enabled: false
+
 - tools:
     label: Tools
     type: many_to_many
