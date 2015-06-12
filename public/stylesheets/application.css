@@ -93,3 +93,16 @@ span.meta {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.ui.inverted.description {
+  color: #fff;
+}
+
+.ui.dimmer {
+  padding: 1em;
+}
+
+.ui.dimmer .center.content .ui.image {
+  margin: auto;
+  max-width: 90%;
+}
+
