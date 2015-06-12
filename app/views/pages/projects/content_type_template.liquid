@@ -55,11 +55,11 @@ content_type: projects
   <div class="featured-image" style="background-image: url('{{ project.image.url | escape }}');"></div>{% endif %}
 
 {% block 'content' %}
-<div class="ui grid">{% if project.updates.size > 0 %}
+<div class="ui stackable grid">{% if project.updates.size > 0 %}
 
 <!-- updates -->
 
-<div class="updates ten wide column">
+<div class="updates left floated left aligned ten wide column">
   <h4 class="ui header">Latest Updates</h4>
   <div class="ui divided very relaxed list">
 {% for update in project.updates %}{% if forloop.index0 < 3 %}
@@ -72,7 +72,7 @@ content_type: projects
 
 <!-- links -->
 
-<div class="links six wide column">
+<div class="links right floated left aligned six wide column">
   <h4 class="ui header">Links</h4>
   <div class="ui divided list">
 {% for link in project.links %}
