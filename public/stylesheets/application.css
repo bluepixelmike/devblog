@@ -64,8 +64,16 @@ img.project-icon, .large.featured-image {
   border-radius: 0.2857rem;
 }
 
+img.dev-icon {
+  border-radius: 50%;
+}
+
 i.icon {
   margin: 0 0 0 0.5em;
+}
+
+.header i.at.icon:only-child {
+  margin-right: 0;
 }
 
 a.start.button {
