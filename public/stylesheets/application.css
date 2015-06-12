@@ -27,6 +27,10 @@
   margin-top: 0;
 }
 
+.meta {
+  margin: 0.5em 0;
+}
+
 .image {
   padding: 1em 0;
 }
