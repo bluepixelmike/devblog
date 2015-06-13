@@ -118,3 +118,7 @@ span.meta {
   max-width: 90%;
 }
 
+.ui.segment .right.floated.left.aligned.column {
+  padding: 0 0 0.5em 1em;
+}
+

@@ -30,19 +30,18 @@ content_type: authors
 <!-- dev -->
 
 <div class="ui red segment">
-  <div class="ui stackable grid">
+
+<div class="right floated left aligned column">
 
 <!-- avatar -->
 
-<div class="left floated left aligned four wide column">
-  <img src="{% if author.avatar_type == 'Gravatar' %}{{ author.email | gravatar_url: 'd:mm', 's:150' }}{% else %}{{ author.avatar.url | escape }}{% endif %}" class="ui small avatar image" />
-</div>
+<img src="{% if author.avatar_type == 'Gravatar' %}{{ author.email | gravatar_url: 'd:mm', 's:150' }}{% else %}{{ author.avatar.url | escape }}{% endif %}" class="ui small avatar image" />
 
 <!-- /avatar -->{% if author.links.size > 0 %}
 
 <!-- links -->
 
-<div class="links right floated left aligned four wide column">
+<div id="links">
   <h4 class="ui header">Links</h4>
   <div class="ui divided list">
 {% for link in author.links %}
@@ -69,42 +68,59 @@ content_type: authors
 
 <!-- updates -->
 
-<div class="updates eight wide column">
+<div id="updates" class="eight wide column">
   <h4 class="ui header">Latest Updates</h4>
   <div class="ui divided very relaxed list">
 {% for update in author.updates %}{% if forloop.index0 < 3 %}
 {% include 'update_list_subitem' with update %}
 {% endif %}{% endfor %}
   </div>
+  <a href="/devs/{{ author._slug }}/updates"><i class="angle double right icon"></i> View all ({{ author.updates.size }})</a>
 </div>
 
 <!-- /updates -->{% endif %}{% if author.posts.size > 0 %}
 
 <!-- posts -->
 
-<div class="posts eight wide column">
+<div id="posts" class="eight wide column">
   <h4 class="ui header">Latest Posts</h4>
   <div class="ui divided very relaxed list">
 {% for post in author.posts %}{% if forloop.index0 < 3 %}
 {% include 'post_list_subitem' with post %}
 {% endif %}{% endfor %}
   </div>
+  <a href="/devs/{{ author._slug }}/posts"><i class="angle double right icon"></i> View all ({{ author.posts.size }})</a>
 </div>
 
 <!-- /posts -->{% endif %}{% if author.tutorials.size > 0 %}
 
 <!-- tutorials -->
 
- <div class="tutorials eight wide column">
+<div id="tutorials" class="eight wide column">
   <h4 class="ui header">Latest Tutorials</h4>
   <div class="ui divided very relaxed list">
 {% for tutorial in author.tutorials %}{% if forloop.index0 < 3 %}
 {% include 'tutorial_list_subitem' with tutorial %}
 {% endif %}{% endfor %}
   </div>
+  <a href="/devs/{{ author._slug }}/tutorials"><i class="angle double right icon"></i> View all ({{ author.tutorials.size }})</a>
 </div>
 
-<!-- /tutorials -->{% endif %}
+<!-- /tutorials -->{% endif %}{% if author.roles.size > 0 %}
+
+<!-- roles -->
+
+<div id="roles" class="eight wide column">
+  <h4 class="ui header">Project Roles</h4>
+  <div class="ui divided very relaxed list">
+{% for role in author.roles %}{% if forloop.index0 < 3 %}
+{% include 'project_list_subitem' with project: role.project, role %}
+{% endif %}{% endfor %}
+  </div>
+  <a href="/devs/{{ author._slug }}/roles"><i class="angle double right icon"></i> View all ({{ author.roles.size }})</a>
+</div>
+
+<!-- /roles -->{% endif %}
 
   </div>
 </div>

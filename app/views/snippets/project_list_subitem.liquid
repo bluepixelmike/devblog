@@ -3,7 +3,7 @@
 <a href="/projects/{{ project._slug }}" class="item" title="Jump to project">
   <i class="lab icon"></i>
   <div class="content">
-    <span class="title">{{ project.name | escape }}</span>
+    <span class="title">{{ project.name | escape }}{% if role %} - {{ role.role | escape }}{% endif %}</span>
     <span class="description">{{ project.brief | escape }}</span>
   </div>
 </a>
