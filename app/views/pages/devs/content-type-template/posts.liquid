@@ -1,0 +1,52 @@
+---
+title: Posts
+listed: true
+published: true
+content_type: authors
+---
+{% extends 'devs/content-type-template' %}
+
+{% block 'breadcrumbs' %}
+<div id="breadcrumbs" class="ui inverted red segment">
+  <div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <div class="divider"> / </div>
+    <a href="/devs" class="section">Devs</a>
+    <div class="divider"> / </div>
+    <a href="/devs/{{ author._slug }}" class="section">{{ author.handle | escape }}</a>
+    <div class="divider"> / </div>
+    <span class="active section">Posts</span>
+  </div>
+</div>
+{% endblock %}
+
+{% block 'header' %}
+    <img src="{% if author.avatar_type == 'Gravatar' %}{{ author.email | gravatar_url: 'd:mm', 's:60' }}{% else %}{{ author.avatar.url | escape }}{% endif %}" class="dev-icon" />
+    <div class="content">
+      {{ author.name | escape }}
+      <span class="meta"><i class="at icon"></i> {{ author.handle | escape }}</span>
+      <div class="sub header">Posts</div>
+    </div>
+{% endblock %}
+
+<!-- Pagination of has_many doesn't work with the current LocomotiveCMS.
+     See this issue for details: https://github.com/locomotivecms/engine/issues/236 -->
+{% block 'body/main' %}
+<!-- post-list -->
+
+<div class="ui stacked red segment">
+  <div class="ui divided items">
+{% with_scope author: author %}
+{% paginate contents.posts by 10 %}
+{% for post in paginate.collection %}
+{% include 'post_list_item' with post %}
+{% endfor %}
+{% include 'pagination' with paginate, color: 'red' %}
+{% endpaginate %}
+{% endwith_scope %}
+  </div>
+</div>
+
+<!-- /post-list -->
+
+{% endblock %}
