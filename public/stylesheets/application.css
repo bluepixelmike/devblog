@@ -64,6 +64,10 @@ img.project-icon, .large.featured-image {
   border-radius: 0.2857rem;
 }
 
+img.project-icon.ui.image {
+  width: 35px;
+}
+
 img.dev-icon {
   border-radius: 50%;
 }
