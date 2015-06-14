@@ -91,11 +91,11 @@ content_type: projects
   <div class="main-content">
   <h4 class="ui header">{% if tab %}{{ tab.name | escape }}{% else %}About{% endif %}</h4>
 {% if tab %}{{ tab.content }}{% else %}{{ project.content }}{% endif %}
-  </div>{% unless tab %}
+  </div>{% unless tab %}{% if project.developers.size > 0 %}
 
 <!-- devs -->
 
-<div class="devs">
+<div id="devs">
   <h4 class="ui header">Developers</h4>
   <div class="ui horizontal list">
 {% for dev in project.developers %}
