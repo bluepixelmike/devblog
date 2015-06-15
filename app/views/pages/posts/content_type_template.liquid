@@ -29,7 +29,8 @@ content_type: posts
     <span class="category"><a href="/categories/{{ post.category._slug }}"><i class="folder open outline icon"></i> {{ post.category.name | escape }}</a></span>{% endif %}{% if post.allow_comments %}
     <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="{{ fullpath | escape }}">Comments</span></a>{% endif %}
   </div>{% if post.image %}
-  <div class="featured-image" style="background-image: url('{{ post.image.url | escape }}');"></div>{% endif %}
+  <div class="featured-image" style="background-image: url('{{ post.image.url | escape }}');"></div>{% endif %}{% if post.featured %}
+  <span class="ui teal ribbon label">Featured</span>{% endif %}
   <div class="main-content">
 {{ post.content }}
   </div>

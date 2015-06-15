@@ -58,6 +58,7 @@
 
 .featured-image, .main-content, .tag.labels {
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 img.project-icon, .large.featured-image {
