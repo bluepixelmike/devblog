@@ -1,7 +1,7 @@
 <!-- entry -->
 
-<div class="item">{% if post.featured %}
-  <a href="/featured" class="ui red ribbon label">Featured</a>{% endif %}
+<div class="{% if post.featured %}featured {% endif %}item">{% if post.featured %}
+  <span class="ui teal ribbon label">Featured</span>{% endif %}
   <a href="/posts/{{ post._slug }}" class="image" title="{{ post.title | escape }}">{% if post.image %}
     <img src="{{ post.image.url }}" alt="{{ post.title | escape }}" />{% endif %}
   </a>

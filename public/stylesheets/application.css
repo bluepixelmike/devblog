@@ -126,3 +126,11 @@ span.meta {
   padding: 0 0 0.5em 1em;
 }
 
+.ui.items .featured.item .image {
+  padding-top: 3em;
+}
+
+.ui.items .featured.item .ui.image.label {
+  padding: 0.6em 0.8em 0.6em 0.5em;
+}
+
