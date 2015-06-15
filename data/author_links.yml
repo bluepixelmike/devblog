@@ -1,11 +1,9 @@
-- "link-1":
-    name: GitHub
+- "Link 1":
     author: author-1
     url: https://github.com/bluepixelmike
     icon: github
 
-- "link-2":
-    name: Website
+- "Link 2":
     author: author-1
     url: /
 
