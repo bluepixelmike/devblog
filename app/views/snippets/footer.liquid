@@ -14,6 +14,9 @@
     </div>
     <div id="site-links" class="two wide column">
       <div class="ui link list">
+{% for link in contents.site_links %}
+        <a href="{{ link.url | escape }}" class="item">{{ link.name | escape }}</a>
+{% endfor %}
       </div>
     </div>
   </div>

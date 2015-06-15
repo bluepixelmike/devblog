@@ -1,0 +1,22 @@
+name: Site Links
+slug: site_links
+description: Additional links related to the site, located in the page footer.
+label_field_name: name
+order_by: name
+order_direction: asc
+public_submission_enabled: false
+
+fields: 
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Displayed name of the link
+    localized: true
+
+- url:
+    label: URL
+    type: string
+    required: true
+    localized: false
+
