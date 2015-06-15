@@ -19,6 +19,7 @@ published: true
 
 <body>
 
+<div id="wrapper">
 <div id="top">
 {% include 'nav' %}
 
@@ -48,8 +49,6 @@ published: true
 
 {% block 'body' %}
 
-<!-- TODO: Breadcrumbs -->
-
 <!-- content -->
 
 <div class="ui page grid">
@@ -61,8 +60,11 @@ published: true
 
 <!-- /content -->
 
-<!-- TODO: Page Footer -->
 {% endblock %}
+
+</div>
+
+{% include 'footer' %}
 
 </div>
 
