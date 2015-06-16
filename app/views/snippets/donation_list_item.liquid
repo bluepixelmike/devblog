@@ -2,7 +2,7 @@
 
 <div class="comment">
   <span class="avatar">
-    <img src="{{ donation.email | gravatar_url: 'd:mm', 's:35' }}" alt="{{ donation.name | escape }}" />
+    <img src="{{ donation.email | gravatar_url: 'd:mm', 's:35' | escape }}" alt="{{ donation.name | escape }}" />
   </span>
   <div class="content">
     <span class="author">{{ donation.name | escape }}</span>

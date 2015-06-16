@@ -2,7 +2,7 @@
 
 <div class="item">
   <a href="/devs/{{ author._slug }}" class="ui tiny image" title="{{ author.handle | escape }}">
-    <img src="{% if author.avatar_type == 'Gravatar' %}{{ author.email | gravatar_url: 'd:mm', 's:80' }}{% else %}{{ author.avatar | resize: '80x80#' | escape }}{% endif %}" alt="{{ author.handle | escape }}" class="ui avatar" />
+    <img src="{% if author.avatar_type == 'Gravatar' %}{{ author.email | gravatar_url: 'd:mm', 's:80' | escape }}{% else %}{{ author.avatar | resize: '80x80#' | escape }}{% endif %}" alt="{{ author.handle | escape }}" class="ui avatar" />
   </a>
   <div class="content">
     <a href="/devs/{{ author._slug }}" class="header">

@@ -100,7 +100,7 @@ content_type: projects
   <div class="ui horizontal list">
 {% for dev in project.developers %}
     <a href="/devs/{{ dev.author._slug }}" class="ui item">
-      <img src="{% if dev.author.avatar_type == 'Gravatar' %}{{ dev.author.email | gravatar_url: 'd:mm', 's:35' }}{% else %}{{ dev.author.avatar.url | escape }}{% endif %}" class="ui avatar image" alt="{{ dev.author.handle | escape }}" />
+      <img src="{% if dev.author.avatar_type == 'Gravatar' %}{{ dev.author.email | gravatar_url: 'd:mm', 's:35' | escape }}{% else %}{{ dev.author.avatar.url | escape }}{% endif %}" class="ui avatar image" alt="{{ dev.author.handle | escape }}" />
       <div class="content">
         {{ dev.author.name | escape }}
         <div class="description">{{ dev.role | escape }}</div>
