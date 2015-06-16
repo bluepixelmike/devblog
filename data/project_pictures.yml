@@ -1,43 +1,43 @@
 - "Picture 1":
     project: "project-1"
-    image: "samples/animals_800x450.jpg"
+    image: "/samples/animals_800x450.jpg"
     caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet nisl eget venenatis semper."
 
 - "Picture 2":
     project: "project-1"
-    image: "samples/arch_800x450.jpg"
+    image: "/samples/arch_800x450.jpg"
     caption: "Integer vitae sodales nisi, et ultrices nunc. Pellentesque faucibus neque non augue condimentum, et feugiat sem porttitor."
 
 - "Picture 3":
     project: "project-1"
-    image: "samples/nature_800x450.jpg"
+    image: "/samples/nature_800x450.jpg"
 
 - "Picture 4":
     project: "project-1"
-    image: "samples/people_800x450.jpg"
+    image: "/samples/people_800x450.jpg"
     caption: "Nunc dictum laoreet placerat. Duis nec commodo justo. Aenean velit mauris, cursus at libero sit amet, suscipit dignissim massa. Nunc non ipsum a orci imperdiet ornare. In pharetra et nisl sit amet tincidunt. Fusce nec dolor enim. Nullam semper massa quis enim fermentum interdum. Cras ex tortor, viverra ut imperdiet ac, suscipit vel orci. Etiam eget placerat turpis, nec rutrum nisi."
 
 - "Picture 5":
     project: "project-1"
-    image: "samples/tech_800x450.jpg"
+    image: "/samples/tech_800x450.jpg"
     caption: "Curabitur sit amet libero hendrerit, efficitur ipsum at, gravida velit. Aliquam venenatis, risus quis consequat tempus, nisl neque imperdiet dolor, eget tincidunt lectus nisi eu dolor."
 
 - "Picture 6":
     project: "project-3"
-    image: "samples/tech_800x450.jpg"
+    image: "/samples/tech_800x450.jpg"
     caption: "Proin id ante non ante ultricies bibendum id et est. Aenean cursus dui arcu, ac sodales metus tempus sit amet."
 
 - "Picture 7":
     project: "project-4"
-    image: "samples/tech_800x450.jpg"
+    image: "/samples/tech_800x450.jpg"
     caption: "Mauris auctor pulvinar diam vitae auctor. Maecenas at dolor justo."
 
 - "Picture 8":
     project: "project-4"
-    image: "samples/nature_800x450.jpg"
+    image: "/samples/nature_800x450.jpg"
     caption: "Etiam et sem efficitur, finibus magna vel, rhoncus dui."
 
 - "Picture 9":
     project: "project-4"
-    image: "samples/arch_800x450.jpg"
+    image: "/samples/arch_800x450.jpg"
 

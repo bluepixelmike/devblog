@@ -3,7 +3,7 @@
     author: "author-1"
     allow_comments: true
     brief: "Donec vitae eleifend libero, id tristique sapien."
-    image: "samples/animals_800x450.jpg"
+    image: "/samples/animals_800x450.jpg"
     tags: ["tag-1", "tag-3"]
     content: "<p>Vivamus ut ex ullamcorper, egestas nibh eu, porttitor est. Donec luctus sed dui rhoncus interdum. Duis id sapien in quam vestibulum ultricies a non velit. Integer tempor, justo nec lacinia interdum, nisl massa accumsan tellus, ac consequat tortor enim vitae nisi. In sagittis eget ipsum at sollicitudin. Phasellus sed ipsum sed nunc sollicitudin pellentesque ut vel nibh. Quisque rhoncus tristique volutpat. Duis sapien mi, viverra sit amet gravida ac, rutrum in elit. Integer finibus felis mi. Sed mauris turpis, blandit et nibh a, congue convallis elit. Etiam sodales hendrerit dapibus. Suspendisse dignissim nec tortor id laoreet. Morbi a tristique lectus.</p>
 <p>Phasellus tincidunt enim arcu, vel hendrerit nisl dapibus sed. Etiam convallis facilisis enim, ac ullamcorper neque posuere tempor. Sed consequat eu ex ut maximus. Quisque dapibus ac arcu quis ultrices. Mauris pellentesque nulla in vulputate bibendum. Mauris sed lorem commodo, gravida risus vel, blandit leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam viverra vulputate lacus, at tristique sem viverra ut. Vestibulum id sapien eleifend, consectetur urna in, pretium libero. Curabitur vel varius massa, ut aliquet ipsum. Nullam mollis ac ipsum fringilla vehicula. Aenean sollicitudin semper elit at suscipit. Aliquam erat volutpat. Nulla congue eros eu arcu pellentesque, quis tempus lacus finibus.</p>
@@ -18,7 +18,7 @@
     author: "author-2"
     allow_comments: false
     brief: "Aliquam rutrum erat tristique erat convallis congue."
-    image: "samples/arch_800x450.jpg"
+    image: "/samples/arch_800x450.jpg"
     tags: ["tag-6"]
     content: "<p>Donec mattis consectetur magna sit amet semper. Morbi luctus tempor sodales. Suspendisse venenatis tellus pulvinar malesuada commodo. Mauris eu gravida diam. Pellentesque ut justo vehicula, consectetur tortor sit amet, tempor nisl. Duis ullamcorper diam id luctus scelerisque. Proin pulvinar libero varius, porta sem lobortis, interdum risus. Sed sollicitudin metus eu sapien pharetra, nec posuere purus pulvinar. Praesent mattis nibh arcu, sed consectetur risus dapibus et. Mauris maximus pellentesque urna scelerisque dictum. Vestibulum vitae facilisis leo, ac luctus turpis. Fusce eget nulla vitae lacus pellentesque ultricies. Integer fringilla ligula at lacus fringilla, a maximus elit mollis.</p>
 <p>Nunc eget sem quis metus aliquam vehicula et quis magna. Donec quis sem nec magna dictum varius vitae eget justo. Integer eget lectus semper, rhoncus eros quis, pretium lectus. Maecenas ac consequat odio, sed volutpat magna. Sed id dolor at urna bibendum sagittis. Quisque ut dui commodo, convallis tortor eget, consequat urna. Donec eget turpis egestas, imperdiet dui at, pharetra sem. Nullam fermentum dignissim sapien, dapibus auctor enim vehicula interdum. Duis ut commodo mauris, a faucibus lorem. Donec a nibh posuere, euismod nulla at, rutrum erat. In sodales nulla eu augue pellentesque, in venenatis diam porta. Mauris pretium porta venenatis. Donec efficitur rhoncus cursus. Cras nibh lectus, tristique ut euismod quis, tempus a sem. Aliquam nec quam odio.<p>
@@ -47,7 +47,7 @@
     author: "author-2"
     allow_comments: true
     brief: "Maecenas a ligula id sapien feugiat facilisis. Nulla facilisi."
-    image: "samples/tech_800x450.jpg"
+    image: "/samples/tech_800x450.jpg"
     tags: []
     content: "<p>Nullam nisi dolor, gravida ac nisi eu, semper scelerisque sapien. Nam auctor neque a tortor tempus feugiat. Mauris porta urna est, et dapibus elit tempus a. Vestibulum tortor nisl, semper a tristique ut, tincidunt gravida lacus. Phasellus mollis velit erat, non maximus augue sollicitudin sed. Sed porttitor leo et tortor lacinia, id posuere leo congue. Duis mollis turpis id leo pretium, ut rhoncus eros scelerisque. Vestibulum elit orci, luctus nec mauris quis, aliquet commodo nisl. Nullam viverra turpis sed efficitur porta. Praesent vitae iaculis mauris, at placerat diam. Sed a velit mollis, dictum justo quis, aliquam lacus. Curabitur scelerisque eros velit, ultrices ultrices metus fermentum in.</p>
 <p>Aliquam sed nunc placerat dui mattis fringilla eget sed orci. Nam sit amet nisl sit amet justo placerat consequat eget porttitor ligula. Quisque tristique, augue sit amet malesuada suscipit, mauris ligula gravida purus, vitae sagittis ante turpis ut tortor. Donec ac consectetur felis. Sed est leo, molestie id lacinia convallis, accumsan eget erat. Suspendisse et tellus tincidunt, scelerisque arcu eu, pharetra eros. Nullam maximus tortor id justo luctus, at suscipit metus tempor. Etiam quis libero pellentesque, bibendum est at, euismod felis. Proin bibendum ex orci, eget vestibulum dui molestie non.</p>
