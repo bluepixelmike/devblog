@@ -61,7 +61,7 @@ content_type: authors
   </div>
   <div class="extra">
 {% include 'tags_list' with tools: author.tools %}
-  </div>
+  </div>{% if author.roles.size > 0 %}
 
 <!-- roles -->
 
@@ -81,7 +81,7 @@ content_type: authors
   </div>
 </div>
 
-<!-- /roles -->
+<!-- /roles -->{% endif %}
 
   <div class="ui stackable grid">
     <div class="eight wide column">{% if author.updates.size > 0 %}
