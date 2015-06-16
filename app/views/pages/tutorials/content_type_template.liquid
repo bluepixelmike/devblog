@@ -30,7 +30,7 @@ content_type: tutorials
     <span class="category"><a href="/categories/{{ tutorial.category._slug }}"><i class="folder open outline icon"></i> {{ tutorial.category.name | escape }}</a></span>{% endif %}{% if tutorial.parts.size == 1 and tutorial.parts.first.allow_comments %}
     <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="/tutorials/parts/{{ tutorial.parts.first._slug }}">Comments</span></a>{% endif %}
   </div>{% if tutorial.image %}
-  <div class="large featured-image" style="background-image: url('{{ tutorial.image.url | escape }}');"></div>{% endif %}
+  <div class="large featured-image" style="background-image: url('{{ tutorial.image | resize: '250x85#' | escape }}');"></div>{% endif %}
   <div class="main-content">
 {{ tutorial.description }}
   </div>{% if tutorial.parts and tutorial.parts.size > 1 %}
@@ -60,7 +60,7 @@ content_type: tutorials
 
 <div class="content">
   <h4>{{ tutorial.parts.first.subtitle | escape }}</h4>{% if tutorial.parts.first.image %}
-  <div class="featured-image" style="background-image: url('{{ tutorial.parts.first.image.url | escape }}');"></div>{% endif %}
+  <div class="featured-image" style="background-image: url('{{ tutorial.parts.first.image | resize: '975x85#' | escape }}');"></div>{% endif %}
 {{ tutorial.parts.first.content }}
 </div>
 

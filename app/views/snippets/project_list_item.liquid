@@ -3,7 +3,7 @@
 <div class="{% if project.featured %}featured {% endif %}item">{% if project.featured %}
   <span class="ui blue ribbon label">Featured</span>{% endif %}
   <a href="/projects/{{ project._slug }}" class="image" title="{{ project.name | escape }}">{% if project.icon %}
-    <img src="{{ project.icon.url }}" alt="{{ project.name | escape }}" />{% endif %}
+    <img src="{{ project.icon | resize: '175x175#' | escape }}" alt="{{ project.name | escape }}" />{% endif %}
   </a>
   <div class="content">
     <a href="/projects/{{ project._slug }}" class="header"><h3>{{ project.name | escape }}</h3></a>

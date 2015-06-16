@@ -3,7 +3,7 @@
 <div class="{% if post.featured %}featured {% endif %}item">{% if post.featured %}
   <span class="ui teal ribbon label">Featured</span>{% endif %}
   <a href="/posts/{{ post._slug }}" class="image" title="{{ post.title | escape }}">{% if post.image %}
-    <img src="{{ post.image.url }}" alt="{{ post.title | escape }}" />{% endif %}
+    <img src="{{ post.image | resize: '175x100#' | escape }}" alt="{{ post.title | escape }}" />{% endif %}
   </a>
   <div class="content">
     <a href="/posts/{{ post._slug }}" class="header"><h3>{{ post.title | escape }}</h3></a>

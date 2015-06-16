@@ -2,7 +2,7 @@
 
 <div class="item">
   <a href="/updates/{{ update._slug }}" class="image" title="{{ update.title | escape }}">{% if update.image %}
-    <img src="{{ update.image.url }}" alt="{{ update.title | escape }}" />{% endif %}
+    <img src="{{ update.image | resize: '175x100#' }}" alt="{{ update.title | escape }}" />{% endif %}
   </a>
   <div class="content">
     <a href="/updates/{{ update._slug }}" class="header"><h3>{{ update.title | escape }}</h3></a>

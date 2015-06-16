@@ -21,7 +21,7 @@ content_type: projects
 {% endblock %}
 
 {% block 'header' %}{% if project.icon %}
-    <img src="{{ project.icon.url | escape }}" alt="{{ project.name | escape }}" class="project-icon" />{% else %}
+    <img src="{{ project.icon | resize: '60x60#' | escape }}" alt="{{ project.name | escape }}" class="project-icon" />{% else %}
     <i class="bullhorn icon"></i>{% endif %}
     <div class="content">
       {{ project.name | escape }}

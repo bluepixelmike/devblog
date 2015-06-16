@@ -23,7 +23,7 @@ content_type: project_updates
 {% endblock %}
 
 {% block 'header' %}{% if project_update.project.icon %}
-    <img src="{{ project_update.project.icon.url | escape }}" alt="{{ project_update.project.name | escape }}" class="project-icon" />{% else %}
+    <img src="{{ project_update.project.icon | resize: '60x60#' | escape }}" alt="{{ project_update.project.name | escape }}" class="project-icon" />{% else %}
     <i class="bullhorn icon"></i>{% endif %}
     <div class="content">
       {{ project_update.project.name | escape }}
@@ -42,7 +42,7 @@ content_type: project_updates
     <span class="project"><a href="/projects/{{ project_update.project._slug }}"><i class="lab icon"></i> {{ project_update.project.name | escape }}</a></span>{% if project_update.allow_comments %}
     <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="{{ fullpath | escape }}">Comments</span></a>{% endif %}
   </div>{% if project_update.image %}
-  <div class="featured-image" style="background-image: url('{{ project_update.image.url | escape }}');"></div>{% endif %}
+  <div class="featured-image" style="background-image: url('{{ project_update.image | resize: '975x85#' | escape }}');"></div>{% endif %}
   <div class="main-content">
 {{ project_update.content }}
   </div>

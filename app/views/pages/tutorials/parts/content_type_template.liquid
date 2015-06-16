@@ -40,7 +40,7 @@ content_type: tutorial_parts
     <span class="category"><a href="/categories/{{ tutorial_part.tutorial.category._slug }}"><i class="folder open outline icon"></i> {{ tutorial_part.tutorial.category.name | escape }}</a></span>{% endif %}{% if tutorial_part.allow_comments %}
     <a href="#comments"><i class="comments outline icon"></i> <span class="disqus-comment-count" data-disqus-identifier="{{ fullpath | escape }}">Comments</span></a>{% endif %}
   </div>{% if tutorial_part.image %}
-  <div class="featured-image" style="background-image: url('{{ tutorial_part.image.url | escape }}');"></div>{% endif %}
+  <div class="featured-image" style="background-image: url('{{ tutorial_part.image | resize: '975x85#' | escape }}');"></div>{% endif %}
   <div class="main-content">
 {{ tutorial_part.content }}
   </div>

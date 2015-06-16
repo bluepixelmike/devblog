@@ -25,7 +25,7 @@ content_type: categories
   <div class="ui divided items">
     <div class="item">
       <a href="/categories/{{ category._slug }}" class="image" title="{{ category.name | escape }}">{% if category.image %}
-        <img src="{{ category.image.url }}" alt="{{ category.name | escape }}" />{% endif %}
+        <img src="{{ category.image | resize: '175x100#' | escape }}" alt="{{ category.name | escape }}" />{% endif %}
       </a>
       <div class="content">
         <a href="/categories/{{ category._slug }}" class="header"><h3>{{ category.name | escape }}</h3></a>
