@@ -5,8 +5,8 @@
     tags: ["tag-1", "tag-3", "tag-5"]
     tools: ["language-1", "software-3", "engine-4", "framework-2"]
     allow_comments: true
-    icon: "https://placeimg.com/200/200/animals"
-    image: "https://placeimg.com/1000/600/animals"
+    icon: "samples/animals_200x200.jpg"
+    image: "samples/animals_1000x600.jpg"
     content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo posuere diam et maximus. Praesent urna lectus, venenatis ac felis sed, sollicitudin maximus massa. Cras laoreet diam eu vulputate mattis. Fusce et arcu sagittis, dictum nisl vehicula, vehicula purus. Curabitur vitae ullamcorper nulla. Suspendisse posuere orci non nunc laoreet, ut volutpat tortor elementum. Quisque quis ipsum ac elit pulvinar gravida. Aliquam iaculis nibh eget ullamcorper accumsan. Praesent quis enim efficitur, imperdiet felis eget, hendrerit dolor. Donec auctor maximus diam ut auctor. Quisque non risus sit amet tortor tristique tempus.</p>
 <p>Proin in odio quam. Nullam non aliquam metus. Donec laoreet, urna id gravida dapibus, tortor mi feugiat ipsum, eu vestibulum enim nulla vel nunc. In convallis ligula placerat, volutpat lectus at, pretium quam. Mauris at nisi at metus feugiat consequat. Phasellus consectetur interdum tortor, a scelerisque metus semper vitae. Cras tincidunt odio arcu, sit amet ultrices metus rhoncus sit amet. Aliquam convallis sem semper, sagittis nunc quis, dapibus enim. Donec convallis diam ac elit elementum semper. In rhoncus ornare rhoncus. Sed vestibulum ligula at ipsum viverra, ac suscipit ante tempus. Sed consectetur lorem eleifend lectus suscipit commodo. Curabitur aliquet sit amet neque non mollis. Nunc ut tincidunt ante. Vivamus eleifend sem quis erat gravida, id commodo purus facilisis. Proin sed dignissim erat.</p>
 <p>Curabitur vehicula magna non mauris accumsan, id volutpat mauris dapibus. Nulla risus augue, gravida vel sodales ut, pretium at mauris. Pellentesque vestibulum lorem augue, eget aliquam sem egestas in. Nullam eu eros et felis condimentum lobortis ac viverra lectus. Vivamus euismod ultrices sapien. Vivamus eu est vestibulum, condimentum erat eget, iaculis tellus. Vestibulum at pellentesque justo. Sed ut dignissim arcu, vitae condimentum nisl.</p>
@@ -21,7 +21,7 @@
     tags: ["tag-2", "tag-3", "tag-6", "tag-1"]
     tools: []
     allow_comments: true
-    icon: "https://placeimg.com/200/200/arch"
+    icon: "samples/arch_200x200.jpg"
     image: null
     content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend eros quis sodales blandit. In dignissim at nunc vitae varius. Integer sollicitudin molestie velit at pretium. Ut dapibus neque nec magna euismod, mollis elementum eros hendrerit. Sed et arcu placerat, pretium nunc eu, eleifend nibh. Fusce accumsan mauris eget lorem tempor placerat. Etiam mauris lectus, commodo eu tortor sed, vestibulum aliquam enim. Duis id lectus id nulla placerat auctor. Phasellus sit amet mi ut mauris pharetra finibus. Maecenas vestibulum nulla a arcu commodo tincidunt. Ut lacus risus, convallis a sagittis nec, tristique non ante. Ut dapibus sodales nisl, ac tempor metus egestas non. Etiam gravida lorem urna, id viverra urna cursus eu. Fusce vel finibus sapien.</p>
 <p>Donec et est vitae sem ornare viverra. Aenean eleifend elit eget sem placerat bibendum. Duis venenatis ultricies enim at commodo. Mauris ut dolor at nulla egestas rutrum. Donec pellentesque placerat odio. Aenean et finibus eros, sed porta lorem. Nulla justo nisl, rhoncus sit amet risus a, vehicula pretium erat. Quisque in tortor vitae ligula mollis dapibus. Pellentesque tincidunt elit sed nisl efficitur, a aliquam mauris vehicula. Morbi volutpat sollicitudin facilisis. Nam eu quam vitae tortor rutrum ornare sed vitae est. Maecenas elementum fermentum metus, vel placerat dolor volutpat vel.</p>
@@ -37,7 +37,7 @@
     tools: ["language-2", "language-3", "software-1"]
     allow_comments: true
     icon: null
-    image: "https://placeimg.com/1000/600/tech"
+    image: "samples/tech_1000x600.jpg"
     content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin semper quam id tincidunt. Suspendisse nec maximus est. Vivamus ac vulputate sapien. Quisque non ante sed tellus luctus laoreet sed ac eros. Etiam aliquam libero ante, non dapibus purus ultrices non. Etiam sit amet justo felis. Morbi euismod aliquam velit, eget egestas velit.</p>
 <p>Suspendisse sed arcu quis turpis malesuada ullamcorper. Maecenas ut tortor sapien. Curabitur sit amet suscipit sem. Sed molestie vitae eros in consequat. Aenean pulvinar diam blandit, imperdiet lacus vel, malesuada risus. Mauris eu venenatis turpis. In eget libero commodo eros viverra lacinia. Donec cursus fringilla maximus. Curabitur enim tellus, tristique at aliquam nec, pulvinar a lacus. Nunc nec augue sed purus aliquam ullamcorper.</p>
 <p>Vestibulum tristique tristique libero, sit amet sagittis justo interdum nec. Sed et velit porta, fringilla elit ut, sagittis leo. Pellentesque tincidunt, nibh vel fringilla pretium, augue lacus pretium nibh, in malesuada sem lorem a felis. Nullam vitae turpis ut tellus rhoncus tristique at ac magna. Vestibulum hendrerit id justo a pretium. Vivamus rhoncus blandit nunc, sed ultrices urna gravida laoreet. Ut iaculis metus in nunc commodo mattis. Fusce viverra, lorem vehicula mollis aliquam, orci augue imperdiet nulla, eget maximus augue dolor sed lorem. Aliquam a sodales erat.</p>

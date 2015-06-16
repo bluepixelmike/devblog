@@ -14,7 +14,7 @@
 - "Author 2":
     name: Average Author
     email: foobar@example.com
-    avatar: "https://placeimg.com/200/200/people"
+    avatar: "samples/people_200x200.jpg"
     avatar_type: Uploaded
     tools: ["language-2", "language-3", "language-4", "software-2", "framework-4"]
     brief: "Donec commodo rhoncus tellus. Donec facilisis eros in hendrerit molestie. Phasellus euismod dui in felis vestibulum, ut dapibus est vulputate. Nulla ultricies fermentum lacinia. Ut ac consequat mi. Sed in lectus et mi sagittis elementum sed nec purus. Duis ac massa erat. Vestibulum at metus sed eros cursus sollicitudin in sed augue."

@@ -3,7 +3,7 @@
     allow_comments: true
     featured: true
     brief: "Esse reiciendis veniam aut aut expedita exercitationem."
-    image: "https://placeimg.com/1000/300/arch"
+    image: "samples/arch_1000x300.jpg"
     category: "category-1"
     tags: ["tag-1", "tag-2", "tag-3", "tag-4"]
     tools: ["language-1", "software-2", "engine-3", "framework-4"]
@@ -23,7 +23,7 @@
     allow_comments: true
     featured: false
     brief: "Minima deserunt qui vero."
-    image: "https://placeimg.com/1000/300/animals"
+    image: "samples/animals_1000x300.jpg"
     category: "category-2"
     tags: ["tag-5", "tag-6"]
     tools: ["language-2", "language-3"]
@@ -83,7 +83,7 @@
     allow_comments: true
     featured: false
     brief: "Fuga consequatur nobis rerum qui."
-    image: "https://placeimg.com/1000/300/nature"
+    image: "samples/nature_1000x300.jpg"
     category: "category-1"
     tags: ["tag-2", "tag-3", "tag-6"]
     tools: ["language-4", "engine-1", "framework-2"]
@@ -103,7 +103,7 @@
     allow_comments: true
     featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
-    image: "https://placeimg.com/1000/300/tech"
+    image: "samples/tech_1000x300.jpg"
     category: "category-2"
     tags: ["tag-2", "tag-1", "tag-5", "tag-4", "tag-7"]
     tools: ["language-1", "language-3", "software-2", "software-4", "engine-1", "engine-4", "framework-2", "framework-3"]
@@ -163,7 +163,7 @@
     allow_comments: false
     featured: false
     brief: "Fuga consequatur nobis rerum qui."
-    image: "https://placeimg.com/1000/300/nature"
+    image: "samples/nature_1000x300.jpg"
     category: "category-1"
     tags: ["tag-9", "tag-8", "tag-7"]
     tools: ["framework-4", "engine-3", "language-1"]
@@ -183,7 +183,7 @@
     allow_comments: false
     featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
-    image: "https://placeimg.com/1000/300/arch"
+    image: "samples/arch_1000x300.jpg"
     category: "category-2"
     tags: ["tag-2", "tag-7"]
     tools: ["language-2", "software-3"]
@@ -243,7 +243,7 @@
     allow_comments: false
     featured: false
     brief: "Fuga consequatur nobis rerum qui."
-    image: "https://placeimg.com/1000/300/animals"
+    image: "samples/animals_1000x300.jpg"
     category: "category-1"
     tags: ["tag-1", "tag-2", "tag-7"]
     tools: ["engine-3", "framework-4", "framework-2"]
@@ -263,7 +263,7 @@
     allow_comments: false
     featured: false
     brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
-    image: "https://placeimg.com/1000/300/tech"
+    image: "samples/tech_1000x300.jpg"
     category: "category-2"
     tags: ["tag-7"]
     tools: ["language-1", "language-2", "software-2", "framework-3"]

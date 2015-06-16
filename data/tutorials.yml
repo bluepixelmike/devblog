@@ -1,7 +1,7 @@
 - "Tutorial 1":
     author: "author-2"
     brief: "Ipsam nobis quam commodi minima omnis velit quo."
-    image: "https://placeimg.com/640/480/arch"
+    image: "samples/arch_640x480.jpg"
     category: "category-4"
     tags: ["tag-1", "tag-2", "tag-3"]
     tools: ["language-1", "language-2"]
@@ -22,7 +22,7 @@
 - "Tutorial 3":
     author: "author-2"
     brief: "Enim sit temporibus inventore ut quia eius et."
-    image: "https://placeimg.com/640/480/tech"
+    image: "samples/tech_640x480.jpg"
     category: "category-2"
     tags: []
     tools: []
@@ -32,7 +32,7 @@
 - "Tutorial 4":
     author: "author-1"
     brief: "Aut praesentium molestiae facilis nihil ut."
-    image: "https://placeimg.com/640/480/animals"
+    image: "samples/animals_640x480.jpg"
     category: "category-1"
     tags: ["tag-1", "tag-3", "tag-4"]
     tools: ["language-4", "framework-3", "software-1", "software-2", "engine-1", "engine-2"]

@@ -1,13 +1,13 @@
 - "Category 1":
     brief: "Proin ultrices justo gravida, pretium felis ut, tempus leo. Maecenas vel auctor tellus."
-    image: "https://placeimg.com/640/480/animals"
+    image: "samples/animals_640x480.jpg"
 
 - "Category 2":
     brief: "Praesent et iaculis metus. Nulla iaculis justo libero, in aliquam erat semper quis."
 
 - "Category 3":
     brief: "Quisque lacinia vitae risus a accumsan. Duis vitae arcu lorem."
-    image: "https://placeimg.com/640/480/nature"
+    image: "samples/nature_640x480.jpg"
 
 - "Category 4":
     brief: "Donec vitae nibh ut magna mollis pellentesque. Nullam lectus nibh, aliquet ac pellentesque ac, consequat a est."
