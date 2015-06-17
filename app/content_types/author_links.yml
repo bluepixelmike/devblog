@@ -22,6 +22,7 @@ fields:
     hint: Author the link belongs to
     localized: false
     class_name: projects
+    inverse_of: links
 
 - url:
     label: URL

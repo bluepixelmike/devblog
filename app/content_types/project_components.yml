@@ -22,6 +22,7 @@ fields:
     hint: Project the component is a part of
     localized: false
     class_name: projects
+    inverse_of: components
 
 - brief:
     label: Brief
@@ -36,7 +37,7 @@ fields:
     required: true
     localized: true
     select_options:
-        en: ['Not Started', 'Designing', 'In Progress', 'Finished', 'Reworking', 'Halted']
+    - en: ['Not Started', 'Designing', 'In Progress', 'Finished', 'Reworking', 'Halted']
 
 - progress:
     label: Progress

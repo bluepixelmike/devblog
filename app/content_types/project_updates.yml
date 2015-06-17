@@ -22,6 +22,7 @@ fields:
     hint: Project the post is about
     localized: false
     class_name: projects
+    inverse_of: authors
 
 - author:
     label: Author
@@ -29,6 +30,7 @@ fields:
     required: true
     localized: false
     class_name: authors
+    inverse_of: updates
 
 - allow_comments:
     label: Comments

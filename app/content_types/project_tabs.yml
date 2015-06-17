@@ -21,6 +21,7 @@ fields:
     hint: Project the tab belongs to
     localized: true
     class_name: projects
+    inverse_of: tabs
 
 - content:
     label: Content

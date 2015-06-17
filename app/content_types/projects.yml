@@ -35,7 +35,7 @@ fields:
     hint: Development phase the project is currently in
     localized: true
     select_options:
-        en: ['Prototype', 'Alpha', 'Beta', 'Released']
+    - en: ['Prototype', 'Alpha', 'Beta', 'Released']
 
 - tags:
     label: Tags

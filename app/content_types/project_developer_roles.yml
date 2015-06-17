@@ -22,6 +22,7 @@ fields:
     hint: Role the project belongs to
     localized: false
     class_name: projects
+    inverse_of: developers
 
 - author:
     label: Developer
@@ -30,4 +31,5 @@ fields:
     hint: Developer fulfilling the role
     localized: false
     class_name: authors
+    inverse_of: roles
 

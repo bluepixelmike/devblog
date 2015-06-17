@@ -22,6 +22,7 @@ fields:
     hint: Tutorial this part is a piece of
     localized: false
     class_name: tutorials
+    inverse_of: parts
 
 - allow_comments:
     label: Comments

@@ -22,6 +22,7 @@ fields:
     hint: Author that wrote the guide
     localized: false
     class_name: authors
+    inverse_of: tutorials
 
 - featured:
     label: Featured
@@ -50,6 +51,7 @@ fields:
     required: false
     localized: false
     class_name: categories
+    inverse_of: tutorials
 
 - tags:
     label: Tags
@@ -73,7 +75,7 @@ fields:
     required: true
     localized: true
     select_options:
-        - en: ['Beginner', 'Intermediate', 'Advanced']
+    - en: ['Beginner', 'Intermediate', 'Advanced']
 
 - description:
     label: Description

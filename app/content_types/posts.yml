@@ -22,6 +22,7 @@ fields:
     hint: Author that wrote the post
     localized: false
     class_name: authors
+    inverse_of: posts
 
 - featured:
     label: Featured
@@ -57,6 +58,7 @@ fields:
     required: false
     localized: false
     class_name: categories
+    inverse_of: posts
 
 - tags:
     label: Tags
