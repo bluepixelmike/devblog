@@ -11,44 +11,51 @@ fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Name of the donor
+    required: true
+    unique: false
     localized: false
 
 - project:
     label: Project
     type: belongs_to
-    required: true
     hint: Project donated on
+    required: true
+    unique: false
     localized: false
     class_name: projects
     inverse_of: donations
+    ui_enabled: false
 
 - date:
     label: Date
     type: date
-    required: true
     hint: Date the donation was received
+    required: true
+    unique: false
     localized: false
 
 - email:
     label: Email
     type: email
-    required: true
     hint: Email address of the donor
+    required: true
+    unique: false
     localized: false
 
 - amount:
     label: Amount
     type: float
-    required: true
     hint: Amount of money donated in USD
+    required: true
+    unique: false
     localized: false
 
 - message:
     label: Message
     type: string
-    required: false
     hint: Message from the donor
+    required: false
+    unique: false
     localized: false
 

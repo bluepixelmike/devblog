@@ -11,66 +11,77 @@ fields:
 - title:
     label: Title
     type: string
-    required: true
     hint: Name of the post
+    required: true
+    unique: true
     localized: true
 
 - author:
     label: Author
     type: belongs_to
-    required: true
     hint: Author that wrote the post
+    required: true
+    unique: false
     localized: false
     class_name: authors
     inverse_of: posts
+    ui_enabled: false
 
 - featured:
     label: Featured
     type: boolean
-    required: false
     hint: Feature this post on the website
+    required: false
+    unique: false
     localized: false
 
 - allow_comments:
     label: Comments
     type: boolean
-    required: false
     hint: Allow comments on this post
+    required: false
+    unique: false
     localized: false
 
 - brief:
     label: Brief
     type: string
-    required: true
     hint: Short description of the contents of the post
+    required: true
+    unique: false
     localized: true
 
 - image:
     label: Image
     type: file
-    required: false
     hint: Featured image displayed in the post
+    required: false
+    unique: false
     localized: false
 
 - category:
     label: Category
     type: belongs_to
     required: false
+    unique: false
     localized: false
     class_name: categories
     inverse_of: posts
+    ui_enabled: true
 
 - tags:
     label: Tags
     type: tags
     required: false
+    unique: false
     localized: false
 
 - tools:
     label: Tools
     type: many_to_many
-    required: false
     hint: Tools, software, languages, etc. mentioned in this post
+    required: false
+    unique: false
     localized: false
     class_name: tools
     inverse_of: posts
@@ -80,6 +91,7 @@ fields:
     label: Content
     type: text
     required: true
+    unique: false
     localized: true
     text_formatting: html
 

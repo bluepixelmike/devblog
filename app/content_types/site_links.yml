@@ -10,13 +10,15 @@ fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Displayed name of the link
+    required: true
+    unique: true
     localized: true
 
 - url:
     label: URL
     type: string
     required: true
+    unique: true
     localized: false
 

@@ -11,58 +11,68 @@ fields:
 - title:
     label: Title
     type: string
-    required: true
     hint: Title of the post
+    required: true
+    unique: false
     localized: true
 
 - project:
     label: Project
     type: belongs_to
-    required: true
     hint: Project the post is about
+    required: true
+    unique: false
     localized: false
     class_name: projects
     inverse_of: authors
+    ui_enabled: false
 
 - author:
     label: Author
     type: belongs_to
     required: true
+    unique: false
     localized: false
     class_name: authors
     inverse_of: updates
+    ui_enabled: false
 
 - allow_comments:
     label: Comments
     type: boolean
-    required: false
     hint: Allow comments on this post
+    required: false
+    unique: false
     localized: false
 
 - brief:
     label: Brief
     type: string
-    required: true
     hint: Short preview of the contents of the post
+    required: true
+    unique: false
     localized: true
 
 - image:
     label: Image
     type: file
-    required: false
     hint: Featured image displayed in the post
+    required: false
+    unique: false
     localized: false
 
 - tags:
     label: Tags
     type: tags
     required: false
+    unique: false
     localized: false
 
 - content:
     label: Content
     type: text
     required: true
+    unique: false
     localized: true
     text_formatting: html
 

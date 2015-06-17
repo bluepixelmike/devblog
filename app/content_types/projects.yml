@@ -10,29 +10,33 @@ fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Displayed name of the project
+    required: true
+    unique: true
     localized: false
 
 - brief:
     label: Brief
     type: string
-    required: true
     hint: Short description about the project
+    required: true
+    unique: false
     localized: true
 
 - featured:
     label: Featured
     type: boolean
-    required: false
     hint: Feature this project on the website
+    required: false
+    unique: false
     localized: false
 
 - phase:
     label: Phase
     type: select
-    required: true
     hint: Development phase the project is currently in
+    required: true
+    unique: false
     localized: true
     select_options:
     - en: ['Prototype', 'Alpha', 'Beta', 'Released']
@@ -41,13 +45,15 @@ fields:
     label: Tags
     type: tags
     required: false
+    unique: false
     localized: false
 
 - tools:
     label: Tools
     type: many_to_many
-    required: false
     hint: Tools, software, languages, engines, etc. used in the project
+    required: false
+    unique: false
     localized: false
     class_name: tools
     inverse_of: projects
@@ -57,6 +63,7 @@ fields:
     label: Links
     type: has_many
     required: false
+    unique: false
     localized: false
     class_name: project_links
     inverse_of: project
@@ -65,8 +72,9 @@ fields:
 - developers:
     label: Developers
     type: has_many
-    required: false
     hint: Developers involved in the project and their role
+    required: false
+    unique: false
     localized: false
     class_name: project_developer_roles
     inverse_of: project
@@ -75,37 +83,42 @@ fields:
 - allow_comments:
     label: Comments
     type: boolean
-    required: false
     hint: Allow comments to be posted on this project
+    required: false
+    unique: false
     localized: false
 
 - icon:
     label: Icon
     type: file
-    required: false
     hint: Small image displayed whenever the project is referenced elsewhere on the site
+    required: false
+    unique: false
     localized: false
 
 - image:
     label: Image
     type: file
-    required: false
     hint: Featured image displayed on the project page
+    required: false
+    unique: false
     localized: false
 
 - content:
     label: Content
     type: text
-    required: true
     hint: Main content displayed on the project page
+    required: true
+    unique: false
     localized: false
     text_formatting: html
 
 - tabs:
     label: Tabs
     type: has_many
-    required: false
     hint: Additional content tabs displayed when viewing the project
+    required: false
+    unique: false
     localized: false
     class_name: project_tabs
     inverse_of: project
@@ -115,6 +128,7 @@ fields:
     label: Pictures
     type: has_many
     required: false
+    unique: false
     localized: false
     class_name: project_pictures
     inverse_of: project
@@ -123,8 +137,9 @@ fields:
 - components:
     label: Breakdown
     type: has_many
-    required: false
     hint: Logical parts of the project and their status
+    required: false
+    unique: false
     localized: false
     class_name: project_components
     inverse_of: project
@@ -134,6 +149,7 @@ fields:
     label: Updates
     type: has_many
     required: false
+    unique: false
     localized: false
     class_name: project_updates
     inverse_of: project
@@ -143,6 +159,7 @@ fields:
     label: Donations
     type: has_many
     required: false
+    unique: false
     localized: false
     class_name: project_donations
     inverse_of: project
@@ -151,13 +168,15 @@ fields:
 - donation_total:
     label: Donation Total
     type: float
-    required: false
     hint: Due to technical limitations, the current donation total must be manually calculated and entered here.
+    required: false
+    unique: false
     localized: false
 
 - donation_goal:
     label: Donation Goal
     type: float
     required: false
+    unique: false
     localized: false
 

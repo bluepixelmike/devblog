@@ -11,44 +11,51 @@ fields:
 - subtitle:
     label: Subtitle
     type: string
-    required: true
     hint: Name of this part of the tutorial
+    required: true
+    unique: false
     localized: true
 
 - tutorial:
     label: Tutorial
     type: belongs_to
-    required: true
     hint: Tutorial this part is a piece of
+    required: true
+    unique: false
     localized: false
     class_name: tutorials
     inverse_of: parts
+    ui_enabled: false
 
 - allow_comments:
     label: Comments
     type: boolean
-    required: false
     hint: Allow comments on this part of the tutorial
+    required: false
+    unique: false
     localized: false
 
 - brief:
     label: Brief
     type: string
-    required: true
     hint: Short explanation of content covered in this part of the tutorial
+    required: true
+    unique: false
     localized: true
 
 - image:
     label: Image
     type: file
-    required: false
     hint: Featured image displayed for this part of the tutorial
+    required: false
+    unique: false
     localized: false
 
 - content:
     label: Content
     type: text
     required: true
+    unique: false
     localized: true
     text_formatting: html
 

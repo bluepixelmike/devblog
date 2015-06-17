@@ -10,23 +10,27 @@ fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Text displayed on the tab
+    required: true
+    unique: false
     localized: true
 
 - project:
     label: Project
     type: belongs_to
-    required: false
     hint: Project the tab belongs to
+    required: false
+    unique: false
     localized: true
     class_name: projects
     inverse_of: tabs
+    ui_enabled: false
 
 - content:
     label: Content
     type: text
     required: true
+    unique: false
     localized: true
     text_formatting: html
 

@@ -11,29 +11,34 @@ fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Displayed name of the link
+    required: true
+    unique: false
     localized: true
 
 - author:
     label: Author
     type: belongs_to
-    required: true
     hint: Author the link belongs to
+    required: true
+    unique: false
     localized: false
     class_name: projects
     inverse_of: links
+    ui_enabled: false
 
 - url:
     label: URL
     type: string
     required: true
+    unique: false
     localized: false
 
 - icon:
     label: Icon
     type: string
-    required: false
     hint: "Icon type (see: http://semantic-ui.com/elements/icon.html)"
+    required: false
+    unique: false
     localized: false
 

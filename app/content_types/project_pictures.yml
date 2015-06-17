@@ -11,28 +11,33 @@ fields:
 - title:
     label: Title
     type: string
-    required: true
     hint: Name of the picture
+    required: true
+    unique: false
     localized: true
 
 - project:
     label: Project
     type: belongs_to
-    required: true
     hint: Project the picture is of
+    required: true
+    unique: false
     localized: false
     class_name: projects
     inverse_of: pictures
+    ui_enabled: false
 
 - image:
     label: Image
     type: file
     required: true
+    unique: false
     localized: false
 
 - caption:
     label: Caption
     type: string
     required: false
+    unique: false
     localized: true
 

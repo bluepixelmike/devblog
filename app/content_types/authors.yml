@@ -10,49 +10,56 @@ fields:
 - handle:
     label: Handle
     type: string
-    required: true
     hint: Preferred username
+    required: true
+    unique: true
     localized: false
 
 - name:
     label: Name
     type: string
-    required: true
     hint: Public real name
+    required: true
+    unique: false
     localized: false
 
 - email:
     label: Email
     type: email
     required: true
+    unique: true
     localized: false
 
 - avatar:
     label: Avatar
     type: file
-    required: false
     hint: Custom avatar if Avatar Type is set to "Uploaded" below
+    required: false
+    unique: false
     localized: false
 
 - avatar_type:
     label: Avatar Type
     type: select
     required: true
+    unique: false
     localized: false
     select_options: ['Gravatar', 'Uploaded']
 
 - brief:
     label: Brief
     type: string
+    hint: Short description about the author
     required: true
-    hint: Short description of the author
+    unique: false
     localized: true
 
 - content:
     label: content
     type: text
-    required: true
     hint: Main profile content
+    required: true
+    unique: false
     localized: true
     text_formatting: html
 
@@ -60,6 +67,7 @@ fields:
     label: Links
     type: has_many
     required: false
+    unique: false
     localized: false
     class_name: author_links
     inverse_of: author
@@ -68,8 +76,9 @@ fields:
 - roles:
     label: Roles
     type: has_many
-    required: false
     hint: Development role in probjects
+    required: false
+    unique: false
     localized: false
     class_name: project_developer_roles
     inverse_of: author
@@ -78,8 +87,9 @@ fields:
 - posts:
     label: Posts
     type: has_many
-    required: false
     hint: Posts written by the author
+    required: false
+    unique: false
     localized: false
     class_name: posts
     inverse_of: author
@@ -88,8 +98,9 @@ fields:
 - tutorials:
     label: Tutorials
     type: has_many
-    required: false
     hint: Tutorials written by the author
+    required: false
+    unique: false
     localized: false
     class_name: tutorials
     inverse_of: author
@@ -98,8 +109,9 @@ fields:
 - updates:
     label: Updates
     type: has_many
-    required: false
     hint: Updates written by the author
+    required: false
+    unique: false
     localized: false
     class_name: project_updates
     inverse_of: author
@@ -108,8 +120,9 @@ fields:
 - tools:
     label: Tools
     type: many_to_many
-    required: false
     hint: Tools the developer has experience with
+    required: false
+    unique: false
     localized: false
     class_name: tools
     inverse_of: authors

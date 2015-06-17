@@ -11,34 +11,39 @@ fields:
     label: Name
     type: string
     required: true
+    unique: true
     localized: false
 
 - brief:
     label: Brief
     type: string
-    required: true
     hint: Short description of the category
+    required: true
+    unique: false
     localized: true
 
 - disqus_id:
     label: Disqus ID
-    type: int
-    required: false
+    type: integer
     hint: Numerical ID of the category used by Disqus
+    required: false
+    unique: false
     localized: false
 
 - image:
     label: Image
     type: file
-    required: false
     hint: Featured image displayed by the category
+    required: false
+    unique: false
     localized: false
 
 - posts:
     label: Posts
     type: has_many
-    required: false
     hint: Posts made under this category
+    required: false
+    unique: false
     localized: false
     class_name: posts
     inverse_of: category
@@ -47,8 +52,9 @@ fields:
 - tutorials:
     label: Tutorials
     type: has_many
-    required: false
     hint: Tutorials made under this category
+    required: false
+    unique: false
     localized: false
     class_name: tutorials
     inverse_of: category

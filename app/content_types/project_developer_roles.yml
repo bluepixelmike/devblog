@@ -11,25 +11,30 @@ fields:
 - role:
     label: role
     type: string
-    required: true
     hint: Name of the role
+    required: true
+    unique: false
     localized: true
 
 - project:
     label: Project
     type: belongs_to
-    required: true
     hint: Role the project belongs to
+    required: true
+    unique: false
     localized: false
     class_name: projects
     inverse_of: developers
+    ui_enabled: false
 
 - author:
     label: Developer
     type: belongs_to
-    required: true
     hint: Developer fulfilling the role
+    required: true
+    unique: false
     localized: false
     class_name: authors
     inverse_of: roles
+    ui_enabled: false
 

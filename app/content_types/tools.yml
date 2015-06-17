@@ -10,29 +10,33 @@ fields:
 - name:
     label: Name
     type: string
-    required: true
     hint: Displayed name of the tool
+    required: true
+    unique: true
     localized: false
 
 - type:
     label: Type
     type: select
     required: true
+    unique: false
     localized: false
     select_options: ['Language', 'Software', 'Engine', 'Framework']
 
 - icon:
     label: Icon
     type: file
-    required: false
     hint: Image displayed when referencing the tool
+    required: false
+    unique: false
     localized: false
 
 - projects:
     label: Projects
     type: many_to_many
-    required: false
     hint: Projects that use the tool
+    required: false
+    unique: false
     localized: false
     class_name: projects
     inverse_of: tools
@@ -41,8 +45,9 @@ fields:
 - posts:
     label: Posts
     type: many_to_many
-    required: false
     hint: Posts that refer to the tool
+    required: false
+    unique: false
     localized: false
     class_name: posts
     inverse_of: tools
@@ -51,8 +56,9 @@ fields:
 - tutorials:
     label: Tutorials
     type: many_to_many
-    required: false
     hint: Tutorials that use or reference the tool
+    required: false
+    unique: false
     localized: false
     class_name: tutorials
     inverse_of: tools
@@ -61,8 +67,9 @@ fields:
 - authors:
     label: Authors
     type: many_to_many
-    required: false
     hint: Authors that use the tool
+    required: false
+    unique: false
     localized: false
     class_name: authors
     inverse_of: tools

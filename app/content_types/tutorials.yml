@@ -11,59 +11,69 @@ fields:
 - title:
     label: Title
     type: string
-    required: true
     hint: Name of the tutorial
+    required: true
+    unique: true
     localized: true
 
 - author:
     label: Author
     type: belongs_to
-    required: true
     hint: Author that wrote the guide
+    required: true
+    unique: false
     localized: false
     class_name: authors
     inverse_of: tutorials
+    ui_enabled: false
 
 - featured:
     label: Featured
     type: boolean
-    required: false
     hint: Feature this post on the website
+    required: false
+    unique: false
     localized: false
 
 - brief:
     label: Brief
     type: string
-    required: true
     hint: Short explanation of what the tutorial is about
+    required: true
+    unique: false
     localized: true
 
 - image:
     label: Image
     type: file
-    required: false
     hint: Featured image displayed with the tutorial
+    required: false
+    unique: false
     localized: false
 
 - category:
     label: Category
     type: belongs_to
     required: false
+    unique: false
     localized: false
     class_name: categories
     inverse_of: tutorials
+    ui_enabled: true
 
 - tags:
     label: Tags
     type: tags
     required: false
+    unique: false
     localized: false
 
 - tools:
     label: Tools
     type: many_to_many
-    required: false
     hint: Tools, software, languages, etc. used in this tutorial
+    required: false
+    unique: false
     localized: false
     class_name: tools
     inverse_of: tutorials
@@ -73,6 +83,7 @@ fields:
     label: Difficulty
     type: select
     required: true
+    unique: false
     localized: true
     select_options:
     - en: ['Beginner', 'Intermediate', 'Advanced']
@@ -80,16 +91,18 @@ fields:
 - description:
     label: Description
     type: text
-    required: true
     hint: Introductory content displayed on the entry point of the tutorial
+    required: true
+    unique: false
     localized: true
     text_formatting: html
 
 - parts:
     label: Parts
     type: has_many
-    required: true
     hint: Various parts of the tutorial
+    required: true
+    unique: false
     localized: false
     class_name: tutorial_parts
     inverse_of: tutorial
