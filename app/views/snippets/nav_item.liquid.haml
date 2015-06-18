@@ -3,8 +3,13 @@
   icon - Name of the icon to display.
 
 {% if item and item.published? and item.listed? %}
+{% if page.fullpath == item.fullpath %}{% assign active = true %}
+{% elsif page.parent and page.parent.slug != "index" and page.parent.fullpath == item.fullpath %}{% assign active = true %}
+{% elsif page.parent.parent and page.parent.parent.slug != "index" and page.parent.parent.fullpath == item.fullpath %}{% assign active = true %}
+{% else %}{% assign active = false %}
+{% endif %}
 %a{ :href  => '{% if item.slug == "index" %}/{% else %}{% path_to item %}{% endif %}',
-    :class => '{% if page.fullpath == item.fullpath %}active {% endif %}item' }
+    :class => '{% if active %}active {% endif %}item' }
   %i{ :class => '{{ icon | escape }} icon' }
   %span {{ item.title | escape }}
 {% endif %}
