@@ -40,8 +40,7 @@ fields:
     required: true
     unique: false
     localized: true
-    select_options:
-    - en: ['Not Started', 'Designing', 'In Progress', 'Finished', 'Reworking', 'Halted']
+    select_options: ['Not Started', 'Designing', 'In Progress', 'Finished', 'Reworking', 'Halted']
 
 - progress:
     label: Progress

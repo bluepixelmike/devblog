@@ -85,8 +85,7 @@ fields:
     required: true
     unique: false
     localized: true
-    select_options:
-    - en: ['Beginner', 'Intermediate', 'Advanced']
+    select_options: ['Beginner', 'Intermediate', 'Advanced']
 
 - description:
     label: Description

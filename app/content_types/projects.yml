@@ -38,8 +38,7 @@ fields:
     required: true
     unique: false
     localized: true
-    select_options:
-    - en: ['Prototype', 'Alpha', 'Beta', 'Released']
+    select_options: ['Prototype', 'Alpha', 'Beta', 'Released']
 
 - tags:
     label: Tags
