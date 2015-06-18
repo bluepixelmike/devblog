@@ -1,0 +1,15 @@
+{% for p in site.pages %}
+{% case p.slug %}
+{% when 'posts'     %}{% assign posts_page     = p %}
+{% when 'tutorials' %}{% assign tutorials_page = p %}
+{% when 'projects'  %}{% assign projects_page  = p %}
+{% when 'updates'   %}{% assign updates_page   = p %}
+{% endcase %}
+{% endfor %}
+
+#nav.ui.inverted.borderless.menu
+  {% include 'nav_item' with item: site.index,     icon: 'home'      %}
+  {% include 'nav_item' with item: posts_page,     icon: 'newspaper' %}
+  {% include 'nav_item' with item: tutorials_page, icon: 'book'      %}
+  {% include 'nav_item' with item: projects_page,  icon: 'lab'       %}
+  {% include 'nav_item' with item: updates_page,   icon: 'bullhorn'  %}

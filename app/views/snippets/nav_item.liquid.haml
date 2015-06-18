@@ -1,0 +1,9 @@
+-# Required variables:
+  item - A Page object to link to.
+  icon - Name of the icon to display.
+
+{% if item and item.published? and item.listed? %}
+%a{ :href => '{% path_to item %}', :class => '{% if page.fullpath == item.fullpath %}active {% endif %}item' }
+  %i{ :class => '{{ icon | escape }} icon' }
+  %span {{ item.title | escape }}
+{% endif %}
