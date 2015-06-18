@@ -30,10 +30,11 @@ listed: true
         {% block 'breadcrumbs' %}{% endblock %}
       -# TODO: Include heading
 
-      #content.ui.page.grid
-        .sixteen.wide.column
-          -# All primary content goes in the "content" block.
-          {% block 'content' %}{% endblock %}
+      #content
+        .ui.page.grid
+          .sixteen.wide.column
+            -# All primary content goes in the "content" block.
+            {% block 'content' %}{% endblock %}
       -# TODO
 
       #footer.ui.inverted.borderless.segment

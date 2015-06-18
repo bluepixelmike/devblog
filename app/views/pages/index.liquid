@@ -1,0 +1,87 @@
+---
+title: Home page
+published: true
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% unless page._slug == 'index' %}{{ page.title | escape }} - {% endunless %}{{ site.name | escape }}</title>
+  <meta name="keywords" value="{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}" />
+  <meta name="description" value="{% if page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}" />
+  {{ 'semantic-ui.min.css' | stylesheet_tag }}
+  {{ 'application.css' | stylesheet_tag }}
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/javascripts/semantic-ui/dimmer.js"></script>
+{% block 'html_head' %}  {{ '/feed' | auto_discovery_link_tag }}{% endblock %}
+</head>
+
+<body>
+
+<div id="wrapper">
+<div id="top">
+{% include 'nav' %}
+
+<!-- breadcrumbs -->
+{% block 'breadcrumbs' %}
+{% endblock %}
+<!-- /breadcrumbs -->
+
+<!-- header -->
+
+<div id="header" class="ui bottom segment">
+  <div class="ui page grid">
+    <div class="sixteen wide column">
+      <h2 class="ui header">
+{% block 'header' %}
+<!-- TODO: Index header -->
+{% endblock %}
+      </h2>
+    </div>
+  </div>
+</div>
+
+<!-- /header -->
+
+</div>
+<div id="content">
+
+{% block 'body' %}
+
+<!-- content -->
+
+<div class="ui page grid">
+  <div class="sixteen wide column">
+{% block 'main' %}
+{% endblock %}
+  </div>
+</div>
+
+<!-- /content -->
+
+{% endblock %}
+
+</div>
+
+{% include 'footer' %}
+
+</div>
+
+<!-- disqus-comments -->
+
+<script type="text/javascript">
+  var disqus_shortname = '{{ site.name | dasherize }}';
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>
+
+<!-- /disqus-comments -->
+
+</body>
+
+</html>
