@@ -1,5 +1,5 @@
 - "Language 1":
-    type: Language
+    color: yellow
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-1"]
     posts: ["post-1", "post-6", "post-9", "post-14"]
@@ -7,7 +7,7 @@
     authors: ["author-1"]
 
 - "Language 2":
-    type: Language
+    color: teal
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-3"]
     posts: ["post-2", "post-10", "post-14"]
@@ -15,7 +15,7 @@
     authors: ["author-2"]
 
 - "Language 3":
-    type: Language
+    color: red
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-3"]
     posts: ["post-2", "post-6", "post-16"]
@@ -23,7 +23,7 @@
     authors: ["author-2"]
 
 - "Language 4":
-    type: Language
+    color: purple
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-5"]
@@ -31,7 +31,7 @@
     authors: ["author-2"]
 
 - "Software 1":
-    type: Software
+    color: pink
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-3"]
     posts: ["post-7"]
@@ -39,7 +39,7 @@
     authors: ["author-1"]
 
 - "Software 2":
-    type: Software
+    color: orange
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-1", "post-3", "post-6", "post-14"]
@@ -47,7 +47,7 @@
     authors: ["author-2"]
 
 - "Software 3":
-    type: Software
+    color: green
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-1"]
     posts: []
@@ -55,7 +55,7 @@
     authors: []
 
 - "Software 4":
-    type: Software
+    color: blue
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-6", "post-7", "post-11"]
@@ -63,7 +63,7 @@
     authors: []
 
 - "Engine 1":
-    type: Engine
+    color: yellow
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-5", "post-6", "post-8", "post-12"]
@@ -71,7 +71,7 @@
     authors: []
 
 - "Engine 2":
-    type: Engine
+    color: teal
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-8"]
@@ -79,7 +79,7 @@
     authors: []
 
 - "Engine 3":
-    type: Engine
+    color: red
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-1", "post-9", "post-13"]
@@ -87,7 +87,7 @@
     authors: []
 
 - "Engine 4":
-    type: Engine
+    color: purple
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-1"]
     posts: ["post-6"]
@@ -95,7 +95,7 @@
     authors: ["author-1"]
 
 - "Framework 1":
-    type: Framework
+    color: pink
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: []
@@ -103,7 +103,7 @@
     authors: []
 
 - "Framework 2":
-    type: Framework
+    color: orange
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: ["project-1"]
     posts: ["post-5", "post-6", "post-11", "post-13"]
@@ -111,7 +111,7 @@
     authors: []
 
 - "Framework 3":
-    type: Framework
+    color: green
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-6", "post-12", "post-14"]
@@ -119,7 +119,7 @@
     authors: []
 
 - "Framework 4":
-    type: Framework
+    color: blue
     icon: null # Path to a file in the public/samples folder or to a remote and external file.
     projects: []
     posts: ["post-1", "post-9", "post-13"]

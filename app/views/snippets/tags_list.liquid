@@ -3,7 +3,7 @@
 <div class="ui mini tag labels">{% if tags %}{% for tag in tags %}
   <a href="/search?tag={{ tag | escape }}" class="ui label" title="{{ tag | escape }}">{{ tag | escape }}</a>
 {% endfor %}{% endif %}{% if tools %}{% for tool in tools %}
-  <a href="/tools/{{ tool._slug }}" class="ui {% case tool.type %}{% when 'Language' %}teal{% when 'Software' %}purple{% when 'Engine' %}blue{% when 'Framework' %}green{% endcase %} label" title="{{ tool.name | escape }}">{{ tool.name | escape }}</a>{% endfor %}{% endif %}
+  <a href="/tools/{{ tool._slug }}" class="ui {{ tool.color }} label" title="{{ tool.name | escape }}">{{ tool.name | escape }}</a>{% endfor %}{% endif %}
 </div>
 
 <!-- /tags -->

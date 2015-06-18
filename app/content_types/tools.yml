@@ -15,13 +15,13 @@ fields:
     unique: true
     localized: false
 
-- type:
-    label: Type
+- color:
+    label: Color
     type: select
     required: true
     unique: false
     localized: false
-    select_options: ['Language', 'Software', 'Engine', 'Framework']
+    select_options: ['blue', 'green', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow']
 
 - icon:
     label: Icon
