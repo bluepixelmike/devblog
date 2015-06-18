@@ -15,6 +15,9 @@ listed: true
     %meta{ :name    => 'description',
            :content => '{% if entry and entry.meta_description %}{{ entry.meta_description | escape }}{% elsif page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}' }
 
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '{{ "semantic-ui.min.css" | stylesheet_url | escape }}' }
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '{{ "application.css" | stylesheet_url | escape }}' }
+
     %script{ :type => 'text/javascript', :src => '{{ "jquery-1.11.3.min.js" | javascript_url | escape }}' }
     -# Pages can add additional scripts by placing them in the "javascripts" block.
     {% block 'javascripts' %}{% endblock %}
