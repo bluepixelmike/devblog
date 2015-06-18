@@ -38,7 +38,8 @@ content_type: projects
 <!-- project -->
 
 <div id="project-tabs" class="ui blue buttons top attached">
-  <a href="/projects/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/content-type-template' and tab == nil %}active{% endif %} button">About</a>{% if project.updates.size > 0 %}
+  <a href="/projects/{{ project._slug }}" class="ui {% if page.fullpath == 'projects/content-type-template' and tab == nil %}active{% endif %} button">About</a>{% if project.components.size > 0 %}
+  <a href="/projects/{{ project._slug }}/breakdown" class="ui {% if page.fullpath == 'projects/content-type-template/breakdown' %}active{% endif %} button">Breakdown</a>{% endif %}{% if project.updates.size > 0 %}
   <a href="/projects/{{ project._slug }}/updates" class="ui {% if page.fullpath == 'projects/content-type-template/updates' %}active{% endif %} button">Updates</a>{% endif %}{% if project.donations.size > 0 %}
   <a href="/projects/{{ project._slug }}/donations" class="ui {% if page.fullpath == 'projects/content-type-template/donations' %}active{% endif %} button">Donations</a>{% endif %}{% if project.allow_comments %}
   <a href="#comments" class="ui button">Comments</a>{% endif %}
