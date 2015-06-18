@@ -1,3 +1,4 @@
+{% with_scope depth: 1 %}
 {% for p in site.pages %}
 {% case p.slug %}
 {% when 'posts'     %}{% assign posts_page     = p %}
@@ -6,6 +7,7 @@
 {% when 'updates'   %}{% assign updates_page   = p %}
 {% endcase %}
 {% endfor %}
+{% endwith_scope %}
 
 #nav.ui.inverted.borderless.menu
   {% include 'nav_item' with item: site.index,     icon: 'home'      %}
