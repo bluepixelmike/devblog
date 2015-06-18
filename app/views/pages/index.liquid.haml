@@ -7,7 +7,8 @@ listed: true
 %html{ :lang => '{{ locale }}' }
 
   %head
-    %title {{ site.name | escape }}
+    -# To add a subtitle to the page, place it in the "subtitle" block.
+    %title {{ page.title | escape }}{% block 'subtitle' %}{% endblock %} - {{ site.name | escape }}
 
     %meta{ :charset => 'utf-8' }
     %meta{ :name    => 'keywords',
