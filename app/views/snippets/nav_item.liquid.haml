@@ -3,7 +3,8 @@
   icon - Name of the icon to display.
 
 {% if item and item.published? and item.listed? %}
-%a{ :href => '{% path_to item %}', :class => '{% if page.fullpath == item.fullpath %}active {% endif %}item' }
+%a{ :href  => '{% if item.slug == "index" %}/{% else %}{% path_to item %}{% endif %}',
+    :class => '{% if page.fullpath == item.fullpath %}active {% endif %}item' }
   %i{ :class => '{{ icon | escape }} icon' }
   %span {{ item.title | escape }}
 {% endif %}
