@@ -11,7 +11,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    activesupport (3.2.21)
+    activesupport (3.2.22)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     better_errors (1.0.1)
@@ -61,7 +61,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.11)
-    json (1.8.2)
+    json (1.8.3)
     less (2.2.2)
       commonjs (~> 0.2.6)
     libv8 (3.16.14.7)
@@ -72,7 +72,7 @@ GEM
     locomotivecms-liquid (2.6.0)
     locomotivecms-solid (0.2.2.1)
       locomotivecms-liquid (~> 2.6.0)
-    locomotivecms_mounter (1.5.4)
+    locomotivecms_mounter (1.5.5)
       RedCloth (~> 4.2.3)
       activesupport (~> 3.2.21)
       chronic (~> 0.10.2)
@@ -122,7 +122,7 @@ GEM
     netrc (0.7.9)
     pony (1.11)
       mail (>= 2.0)
-    rack (1.6.1)
+    rack (1.6.2)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-livereload (0.3.15)
@@ -165,7 +165,7 @@ PLATFORMS
 
 DEPENDENCIES
   locomotivecms_liquid_extensions!
-  locomotivecms_wagon
+  locomotivecms_wagon (~> 1.5)
   rb-fsevent (~> 0.9.1)
   rb-inotify (~> 0.9)
   therubyracer
