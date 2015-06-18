@@ -1,0 +1,39 @@
+---
+title: Home
+published: true
+listed: true
+---
+!!! 5
+%html{ :lang => '{{ locale }}' }
+
+  %head
+    %title {{ site.name | escape }}
+
+    %meta{ :charset => 'utf-8' }
+    %meta{ :name    => 'keywords',
+           :content => '{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}{% if entry and entry.meta_keywords %} {{ entry.meta_keywords | escape }}{% endif %}' }
+    %meta{ :name    => 'description',
+           :content => '{% if entry and entry.meta_description %}{{ entry.meta_description | escape }}{% elsif page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}' }
+
+    %script{ :type => 'text/javascript', :src => '{{ "jquery-1.11.3.min.js" | javascript_url | escape }}' }
+    -# Pages can add additional scripts by placing them in the "javascripts" block.
+    {% block 'javascripts' %}{% endblock %}
+
+  %body
+    #container
+      #header
+      -# TODO: Include nav
+      -# TODO: Include breadcrumbs
+      -# TODO: Include heading
+
+      #content.ui.page.grid
+        .sixteen.wide.column
+          -# All primary content goes in the "content" block.
+          {% block 'content' %}{% endblock %}
+      -# TODO
+
+      #footer
+      -# TODO: Include footer
+
+    -# Pages can run custom scripts after the page is loaded by including them in the "scripts" block.
+    {% block 'scripts' %}{% include 'disqus_comment_links' %}{% endblock %}
