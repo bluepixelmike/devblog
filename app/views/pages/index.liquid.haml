@@ -32,9 +32,9 @@ listed: true
           .ui.page.grid
             .sixteen.wide.column
               {% block 'heading' %}
-              {% unless parent %}
+              {% if parent %}
               {% include 'heading' %}
-              {% endunless %}
+              {% endif %}
               {% endblock %}
 
       #content
