@@ -3,6 +3,6 @@
   author - Author to create a label for
 
 %a.author-label.ui.tiny.image.label{ :href => '{% path_to author %}' }
-  %img{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:22" | escape }}{% else %}{{ author.avatar | resize: "22x22#" | escape }}{% endif %}' }
+  %img{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:22" | escape }}{% else %}{{ author.avatar | resize: "22x22#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
   :plain
     {{ author.handle | escape }}
