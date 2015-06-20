@@ -15,6 +15,9 @@
   .content
     %a.header{ :href => '{% path_to post %}' }
       %h3 {{ post.title | escape }}
+    {% if post.subtitle %}
+    %h4 {{ post.subtitle | escape }}
+    {% endif %}
 
     .meta
       {% include 'author_label' with author: post.author %}
@@ -23,7 +26,7 @@
       {% include 'disqus_link' with obj: post %}
 
     .description
-      %p {{ post.brief | escape }}
+      %p {{ post.excerpt | escape }}
 
     .extra
       {% include 'tags_list' with tags: post.tags, tools: post.tools %}

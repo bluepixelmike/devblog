@@ -1,8 +1,8 @@
 - "Post 1":
+    subtitle: "Esse reiciendis veniam aut aut expedita exercitationem."
     author: "author-1"
     allow_comments: true
     featured: true
-    brief: "Esse reiciendis veniam aut aut expedita exercitationem."
     image: "/samples/arch_1000x300.jpg"
     category: "category-1"
     tags: ["tag-1", "tag-2", "tag-3", "tag-4"]
@@ -17,12 +17,12 @@
 <p>Nullam dolor mauris, pretium dapibus condimentum at, vehicula sit amet sapien. Proin hendrerit sem eu risus dictum, sed sodales nisi varius. Fusce fermentum velit posuere hendrerit eleifend. Maecenas vitae porttitor est. Donec volutpat et lorem eget dignissim. Duis ante nisl, ultrices et risus eu, pulvinar iaculis velit. Sed diam nunc, volutpat et eros quis, sollicitudin rhoncus est. Aliquam dignissim accumsan lorem a suscipit. In hac habitasse platea dictumst. Integer ornare dapibus blandit. Suspendisse potenti. Sed hendrerit consequat ex, vitae sagittis justo egestas nec.</p>
 <p>Curabitur vestibulum fermentum dolor, eget lacinia elit sodales non. Donec interdum in risus scelerisque semper. Pellentesque lobortis risus ornare eros dignissim, vel pharetra ante pharetra. Fusce volutpat ullamcorper magna nec volutpat. Donec viverra pulvinar pharetra. Vestibulum volutpat gravida neque id elementum. Vivamus lobortis erat felis, id porta mauris vehicula eget. Quisque ullamcorper vestibulum neque, sit amet ultrices enim scelerisque ut. Proin in facilisis lacus.</p>
 <p>Ut magna nisi, convallis ut elit eu, ullamcorper tristique neque. Phasellus in viverra odio. Proin nec nisi velit. Vivamus quis rhoncus neque, sit amet euismod risus. Fusce scelerisque aliquam ex vel volutpat. Maecenas ut ultricies massa, eu fermentum enim. Sed vitae commodo massa. Morbi quam felis, fringilla non ex non, consectetur volutpat odio. Quisque nec metus in sapien fringilla gravida et eget nibh. Nulla diam arcu, bibendum ullamcorper lacus dapibus, elementum efficitur arcu. Nullam posuere scelerisque est, non porta nisl maximus nec. Quisque lorem quam, sagittis mollis ornare sed, varius et diam. Duis finibus urna non massa fringilla porttitor id eu arcu. Phasellus dapibus massa eleifend, consectetur eros eu, volutpat arcu. Proin facilisis urna ut odio suscipit fermentum.</p>"
+    excerpt: "Maecenas pretium at dolor a tincidunt. Mauris pretium, lectus sed ultrices suscipit, leo risus suscipit massa, eget consequat diam enim in magna. Aenean mollis vulputate lorem, convallis pellentesque arcu venenatis ut. Nulla facilisi. Aliquam et rhoncus turpis. Sed blandit sagittis est, ac luctus odio interdum eu. Maecenas suscipit, leo id laoreet feugiat, magna nibh ullamcorper justo, in aliquet nisi mauris sit amet quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras id fermentum mauris, quis consequat lectus. Vestibulum viverra eget velit vitae scelerisque. Sed viverra sapien malesuada mi vulputate, id vehicula ligula commodo. Mauris eu urna vitae eros gravida mattis."
 
 - "Post 2":
     author: "author-1"
     allow_comments: true
     featured: false
-    brief: "Minima deserunt qui vero."
     image: "/samples/animals_1000x300.jpg"
     category: "category-2"
     tags: ["tag-5", "tag-6"]
@@ -37,12 +37,13 @@
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi quis suscipit eros. Mauris commodo turpis a scelerisque varius. Pellentesque eleifend, velit ac semper rutrum, lorem turpis suscipit nisi, feugiat pretium nisi tellus ut erat. Curabitur consequat felis ante, ac malesuada augue tempor vel. Phasellus facilisis malesuada ex non euismod. Mauris lobortis sodales rhoncus. Nam feugiat velit nec erat ultricies, eget laoreet felis lacinia. Fusce interdum, massa in iaculis imperdiet, sapien arcu porttitor augue, vel scelerisque augue massa ac dui. Nunc ac nulla tortor. Vestibulum efficitur metus eros, vel egestas diam rhoncus non. Maecenas pulvinar sodales erat, non convallis arcu sodales nec. Donec pretium pulvinar ex eu sodales. Aliquam sed mattis tellus. Sed nec felis lectus.</p>
 <p>Sed auctor vel quam et aliquam. In quis malesuada augue. Aenean sed diam interdum, vestibulum metus non, ullamcorper sem. Nulla facilisi. Aliquam id dolor bibendum, placerat sapien vel, dignissim mi. Sed sit amet commodo nulla. Aliquam ut mauris tempus, facilisis urna id, sagittis urna. Sed egestas sem lacus. Nam sed eros eu enim consectetur faucibus. Morbi ultricies, velit id maximus ornare, mi sem hendrerit augue, sed lobortis tortor metus nec justo. Nulla interdum facilisis congue. Curabitur eu nibh aliquet, eleifend magna sed, bibendum metus. Nunc consequat, purus non placerat sodales, lorem dolor venenatis dolor, fringilla tempus dolor tellus eget neque. Morbi a congue dolor.</p>
 <p>Nam a eros non ante sagittis ornare. Nunc eget feugiat purus. Nulla dignissim pretium facilisis. Donec neque ligula, commodo vel libero sed, vehicula cursus sapien. Suspendisse viverra nibh in neque finibus placerat. Vivamus consequat nisi a viverra consequat. Sed in viverra lectus, et mollis dui.</p>"
+    excerpt: "Donec sollicitudin cursus tristique. Cras quis velit a justo facilisis ultricies. Duis gravida, ex ac tempor ornare, dolor dolor congue justo, nec malesuada felis dui eu velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel urna vitae sapien fermentum ultrices eget a enim. Donec eu convallis libero. In fermentum libero magna, nec malesuada lorem rhoncus id. Curabitur scelerisque vestibulum tortor at feugiat. Nullam euismod, felis sollicitudin venenatis euismod, lorem mauris aliquam justo, eu porta nisl ante vitae sem. Ut luctus felis dolor, ut volutpat lorem hendrerit sit amet. Aenean vitae erat rhoncus, dapibus ligula a, tincidunt diam. Quisque laoreet, libero eu finibus sodales, nibh dui mattis ligula, congue molestie tellus erat ornare quam. Vestibulum vitae rhoncus nunc."
 
 - "Post 3":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-2"
     allow_comments: true
     featured: false
-    brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
     tags: []
@@ -57,12 +58,13 @@
 <p>Quisque tristique nisi mattis diam pulvinar, in aliquam libero maximus. Curabitur facilisis velit laoreet nunc semper vehicula. Nam purus nisl, dignissim non ipsum et, ornare ultricies mauris. Maecenas euismod leo eget lobortis euismod. Praesent quis viverra justo. Vivamus sagittis, dui id molestie consequat, augue nisi dignissim nibh, eget sodales eros ante non eros. Nunc imperdiet felis non odio vehicula, id interdum massa ornare. Phasellus quis elementum eros. Aenean neque sapien, imperdiet in tincidunt non, consequat eu lectus. Sed quis sem luctus, luctus elit ac, mollis odio. Etiam orci tortor, laoreet non pretium a, tempus nec arcu. Proin tincidunt condimentum laoreet.</p>
 <p>Ut eget auctor risus. Nam vel commodo nunc. Duis eu auctor dolor. Ut ac ex sed orci condimentum malesuada quis scelerisque felis. Duis lorem lectus, fringilla vulputate neque ac, faucibus egestas arcu. Nunc hendrerit elit suscipit odio ultrices consectetur. Phasellus at felis ac orci laoreet commodo sed id tellus. Morbi justo ligula, ultrices nec sem vitae, scelerisque malesuada arcu. Morbi non finibus elit, laoreet dictum massa. Proin vitae molestie felis, a mattis ipsum. Vestibulum egestas, dolor non sodales tempor, nulla justo pulvinar eros, id sodales nulla erat vitae ligula. Quisque vel eros dapibus, vestibulum justo sit amet, varius risus. Suspendisse est nisi, tempor ut eleifend at, convallis posuere elit. Nam vel urna venenatis, interdum eros a, consectetur est. Sed scelerisque, nibh in bibendum eleifend, dui lacus tempor sem, ac scelerisque urna nunc aliquet quam. Nunc ullamcorper, tellus posuere pellentesque pellentesque, odio enim pretium risus, sed viverra lorem tellus eu nisi.</p>
 <p>Morbi dignissim vulputate massa, vitae condimentum turpis maximus eget. Ut quis lectus vitae nisl sodales iaculis eu vitae nunc. Fusce et justo est. Donec condimentum id lorem non viverra. Aliquam enim arcu, egestas eget porttitor vitae, efficitur a nibh. Suspendisse ac ipsum imperdiet, porta ligula non, eleifend nulla. Duis porttitor in odio et gravida. Morbi ultrices posuere pulvinar. Cras vel sem nibh.</p>"
+    excerpt: "Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis hendrerit ipsum eu turpis dapibus vulputate. Integer auctor semper neque vitae varius. Maecenas nulla velit, gravida ac urna vel, sollicitudin vestibulum libero. In consectetur, magna ut finibus fringilla, purus ipsum vestibulum eros, quis fringilla leo mauris vel ex. Integer ut nisi felis. Donec in consectetur enim, a tincidunt sem. Integer iaculis, lectus non eleifend blandit, ligula ipsum tempor purus, placerat consequat elit dui a tortor. In sit amet enim et urna gravida convallis."
 
 - "Post 4":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-1"
     allow_comments: true
     featured: true
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
     tags: []
@@ -77,12 +79,13 @@
 <p>Quisque eget feugiat justo. Nam nec dolor sit amet nulla fringilla semper ut eget dui. Phasellus lacinia porttitor est ac lacinia. Mauris ac dui lorem. Quisque scelerisque mauris eget rhoncus malesuada. Nulla mattis id lectus vitae convallis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere felis eu diam pulvinar, eu eleifend purus interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
 <p>Quisque hendrerit justo nisi, vitae suscipit odio semper id. Duis ac pulvinar sapien, eu dignissim nulla. Donec nec lectus eu metus interdum consectetur ac id nisl. Phasellus lobortis sapien non nisl varius faucibus. Praesent lacinia augue et purus tristique, id tempus purus tempor. Ut pretium pellentesque metus vitae tincidunt. Quisque id ipsum sed enim commodo dapibus eu vitae nunc. Phasellus aliquet pharetra dui id interdum. Sed dictum tempor hendrerit.</p>
 <p>Sed sagittis mollis turpis ac laoreet. Fusce ac ultrices magna. Morbi quis suscipit leo. Aliquam nec dolor turpis. Fusce id malesuada ante. Curabitur dolor diam, placerat mattis elementum facilisis, finibus a nibh. Nulla lacinia nibh eu sem placerat, vitae viverra nibh interdum.</p>"
+    excerpt: "Praesent gravida ultricies ante vitae viverra. Morbi ultricies ipsum quis fringilla elementum. Nullam ullamcorper lorem enim, nec suscipit libero placerat quis. Phasellus auctor felis ultricies consectetur laoreet. Aenean scelerisque lectus ut turpis porttitor, eget iaculis neque convallis. Aliquam eu porttitor nisl. Nulla tristique egestas felis in elementum. Nam viverra ex velit, vitae blandit ante dapibus sed. Curabitur at blandit libero. Integer a tempus elit. Morbi accumsan dignissim dolor lacinia egestas. Vestibulum ultrices non augue tempus dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed efficitur odio volutpat nulla dictum, tempus porta ante rutrum. Integer facilisis vestibulum consectetur."
 
 - "Post 5":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-2"
     allow_comments: true
     featured: false
-    brief: "Fuga consequatur nobis rerum qui."
     image: "/samples/nature_1000x300.jpg"
     category: "category-1"
     tags: ["tag-2", "tag-3", "tag-6"]
@@ -97,12 +100,13 @@
 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc a cursus neque. Fusce varius laoreet volutpat. Curabitur vestibulum id nunc vel imperdiet. Duis malesuada lobortis eleifend. Aliquam et ultricies lorem. Curabitur at ligula nisi. Fusce quam eros, tempus vel sapien in, vulputate mollis purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris bibendum quam vel sem bibendum consequat. Nullam ac sem magna. Ut quis ultricies lectus.</p>
 <p>Suspendisse nec ligula vulputate, consequat orci nec, fermentum velit. Sed enim nulla, vehicula nec nulla ac, congue egestas urna. Aenean at rhoncus dolor. Nullam interdum arcu ut ultricies consequat. Suspendisse et interdum ante. Pellentesque vestibulum diam vel mi condimentum, non venenatis dolor iaculis. Suspendisse lacinia metus magna, ut hendrerit turpis placerat et. Integer sapien nisl, dignissim nec pharetra eu, cursus at metus. In hac habitasse platea dictumst. Aliquam elit urna, tincidunt quis libero eget, consectetur mattis magna.</p>
 <p>Cras nunc lectus, gravida eget tempor in, ultrices id nunc. Ut dictum ornare imperdiet. Duis at laoreet nunc. Donec pretium hendrerit tortor in molestie. Praesent vestibulum, odio et sagittis euismod, eros lorem ullamcorper ligula, ut sollicitudin justo nulla eget ipsum. Fusce justo quam, dictum a vestibulum eu, cursus vel lectus. Fusce porta nec justo in vehicula. Donec non mauris cursus, blandit felis nec, pellentesque metus. Quisque dapibus dolor ut eros lacinia, a scelerisque felis volutpat. Etiam metus velit, egestas quis lectus dignissim, rhoncus lacinia nisl. Cras vitae fermentum erat, id efficitur tellus. Vivamus facilisis ligula est, quis vulputate est congue vel. Proin eleifend consequat ornare. Phasellus purus ex, consectetur eget sagittis vitae, tincidunt id nisl. Cras interdum rutrum turpis, eget faucibus ligula tristique sed.</p>"
+    excerpt: "Duis iaculis tincidunt orci in venenatis. Aenean urna odio, condimentum sit amet eleifend vitae, interdum at erat. Aliquam eu vulputate neque. Maecenas arcu orci, pharetra non tellus ut, aliquet aliquam enim. Fusce elementum ante dolor, id pulvinar mauris malesuada ac. Vestibulum ut euismod eros, ac gravida urna. Phasellus pharetra enim quis risus consectetur lobortis. Mauris euismod justo sed sapien aliquam, nec euismod nulla dignissim. Vivamus mattis dictum ante vel volutpat. Fusce vel vestibulum ipsum. Proin non magna nisl. Curabitur dictum augue vel magna pulvinar, sit amet condimentum lacus pulvinar. Aliquam hendrerit magna vel dapibus scelerisque."
 
 - "Post 6":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-2"
     allow_comments: true
     featured: false
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "/samples/tech_1000x300.jpg"
     category: "category-2"
     tags: ["tag-2", "tag-1", "tag-5", "tag-4", "tag-7"]
@@ -117,12 +121,13 @@
 <p>Mauris quis blandit nibh. Cras sollicitudin feugiat erat id imperdiet. Maecenas ullamcorper eros ex, sed blandit arcu fermentum vitae. Phasellus quis cursus purus, ac pellentesque nulla. Sed at interdum elit. Sed et urna vitae dui mattis rutrum. Donec ultrices placerat erat a pellentesque. Pellentesque aliquet rutrum nunc ut aliquam.</p>
 <p>Cras eu est elementum, scelerisque velit in, semper leo. Nullam mollis dignissim rutrum. Nunc ac eleifend elit. Etiam id auctor enim. Cras dapibus placerat libero id fringilla. Vivamus vitae quam arcu. Pellentesque eu cursus nisi. Phasellus condimentum maximus nulla sit amet fringilla. In vehicula, eros et dapibus sagittis, turpis enim commodo elit, quis tempor diam velit sed tortor. Nunc at turpis tellus. Vivamus posuere orci nec neque efficitur, quis condimentum est cursus. Vivamus mattis magna at est gravida scelerisque. Ut quis tortor dui. Proin mattis at felis vitae imperdiet. Mauris diam augue, interdum gravida volutpat sed, faucibus eu quam.</p>
 <p>Nulla eu pellentesque mi, sed condimentum diam. Etiam tincidunt est arcu, sed iaculis tellus tincidunt ut. Praesent pellentesque, justo id venenatis pretium, diam ex gravida elit, eu pretium mauris metus id eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam nunc nunc, dignissim nec posuere non, dictum at leo. Curabitur sagittis, mi eu pellentesque consequat, turpis erat congue est, at porttitor tortor orci eget urna. Pellentesque gravida placerat orci, viverra rutrum augue hendrerit non. Nullam est neque, commodo eu hendrerit id, aliquet ut quam. Cras molestie purus urna, nec luctus ipsum rutrum ut. Etiam in mauris eget sapien pellentesque vestibulum. Aliquam at erat sit amet nunc commodo congue ac euismod nisi. Sed luctus erat a sem viverra molestie. Etiam porta aliquam congue. Etiam sit amet ornare tortor. Fusce id lorem ut augue ultricies tincidunt sed consequat tortor. Integer mauris libero, luctus quis ex id, facilisis placerat mauris.</p>"
+    excerpt: "Ut nec cursus nisi. Duis porttitor vitae risus vel commodo. Sed sed lectus quis tellus rhoncus consequat nec id leo. Pellentesque sagittis metus vitae velit varius commodo. Nam tempus velit ac erat tristique, eleifend ultrices tellus fermentum. Morbi vel lacinia dolor. Donec et posuere nisl. Nam at condimentum ipsum. Praesent imperdiet porta eros, non fringilla magna vehicula non. Sed mauris tortor, ornare eget eros non, condimentum porta neque. Vivamus fringilla diam at accumsan egestas. Maecenas pellentesque mauris mi. Phasellus id scelerisque dolor, a laoreet nunc."
 
 - "Post 7":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-1"
     allow_comments: true
     featured: true
-    brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
     tags: []
@@ -137,12 +142,13 @@
 <p>Curabitur ante tellus, lacinia vel dui ac, viverra iaculis magna. Quisque faucibus sed velit sed euismod. Curabitur sed porttitor lacus. Nulla facilisi. Curabitur a eros eu lectus interdum posuere id euismod ex. Mauris at velit nibh. Praesent vitae massa in nisi rhoncus tristique a dignissim orci.</p>
 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi laoreet ipsum at massa porta, nec finibus orci ultricies. Proin sit amet elit nec velit porttitor pulvinar. Quisque ullamcorper bibendum venenatis. Sed pellentesque justo sapien, in mattis turpis vestibulum in. Nam hendrerit malesuada eros a semper. Sed ac laoreet velit, eget rhoncus lectus. Donec auctor in purus eu euismod. Etiam sed arcu sit amet diam eleifend fermentum id non ex. Nulla sed pellentesque ipsum.</p>
 <p>Aliquam sodales nisi at orci pharetra, quis egestas dui porta. Maecenas quis semper quam, in suscipit lorem. In hac habitasse platea dictumst. Duis urna felis, blandit vitae posuere id, feugiat id lacus. Duis dictum enim non fringilla congue. Curabitur cursus turpis sit amet lorem volutpat dapibus. Nam vel mi rhoncus, mattis mauris ut, varius odio. Curabitur quis leo quis diam eleifend viverra quis sed dui.</p>"
+    excerpt: "Morbi vitae mauris purus. Integer in sapien vitae lorem pellentesque pellentesque consequat ut urna. Nullam cursus ut sapien sed finibus. Duis id vehicula ante. Maecenas a suscipit purus, sit amet faucibus nulla. Etiam lorem nisl, pellentesque eu auctor eu, convallis sit amet tellus. Cras erat felis, commodo ut sem bibendum, consequat suscipit nibh. Quisque augue ipsum, dictum nec metus ut, fermentum dictum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat nibh ac turpis posuere tristique. Vestibulum commodo libero non ex hendrerit, in ullamcorper nisl porta. In eu tellus quis risus dictum varius. Vivamus a ultrices velit."
 
 - "Post 8":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-1"
     allow_comments: true
     featured: false
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
     tags: ["tag-1", "tag-3", "tag-5", "tag-7"]
@@ -157,12 +163,13 @@
 <p>Fusce vulputate lorem sodales gravida lobortis. Integer malesuada, orci blandit dictum ultrices, tortor ligula laoreet neque, eu blandit mi magna sed lectus. Vivamus eget ultricies orci. Integer eleifend vehicula suscipit. Aenean ultrices, justo at finibus sodales, dui diam cursus tortor, ac sodales tellus ante a diam. Morbi porta, dui ac vulputate feugiat, orci nisi feugiat lacus, nec eleifend tellus nisl non orci. Cras id mattis velit. Phasellus rutrum dictum libero, in scelerisque magna. Quisque consectetur lobortis nulla quis efficitur.</p>
 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris purus mauris, dictum nec maximus non, mollis a tellus. Maecenas aliquam interdum vulputate. Mauris varius ex eu auctor congue. Quisque ultricies sodales dignissim. Nam a ante ac dolor euismod sodales sollicitudin iaculis arcu. Pellentesque vehicula libero a tellus fermentum tempus. Duis rutrum quam eget bibendum finibus. In rhoncus imperdiet magna ac convallis. Nam condimentum est ac quam porttitor sagittis. Nunc nec rutrum quam. Donec nisi elit, aliquam sit amet dui sit amet, semper ultricies mi. Aenean eu arcu efficitur, cursus orci vel, pharetra diam. Mauris pharetra velit ac nisl sagittis, a mattis nisl pharetra. Phasellus congue nisi tincidunt elementum iaculis.</p>
 <p>Sed lacus sapien, sodales commodo dolor quis, porttitor dignissim urna. In hac habitasse platea dictumst. Vivamus eget viverra orci. Cras nunc ligula, condimentum ut auctor non, sagittis in ante. Praesent posuere urna sit amet faucibus accumsan. Nulla finibus leo vel laoreet auctor. Ut ultrices mauris non libero maximus, a vestibulum elit sodales.</p>"
+    excerpt: "Vivamus placerat tellus vel nisl pellentesque, eget semper libero fringilla. Aliquam erat volutpat. Donec nec leo quis massa ornare mattis. In quam odio, iaculis in ornare et, iaculis vitae tortor. Sed malesuada tortor sit amet erat convallis, ut feugiat odio blandit. Aliquam et dui enim. Nam consequat egestas fringilla. Curabitur odio nibh, finibus at mattis nec, elementum id odio. Morbi faucibus, est a convallis ultricies, erat lorem luctus est, vel efficitur nibh mauris vel ipsum. Donec sed arcu laoreet, tempus ex eu, facilisis dolor. Phasellus ligula dui, lacinia at justo eu, ullamcorper faucibus eros."
 
 - "Post 9":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-2"
     allow_comments: false
     featured: false
-    brief: "Fuga consequatur nobis rerum qui."
     image: "/samples/nature_1000x300.jpg"
     category: "category-1"
     tags: ["tag-9", "tag-8", "tag-7"]
@@ -177,12 +184,13 @@
 <p>Sed sed aliquam magna, ut hendrerit ante. Nam erat leo, dignissim vitae dictum eget, tempor eu ex. Quisque tristique vel nunc id sodales. Maecenas condimentum in lorem vel hendrerit. Suspendisse pharetra a neque suscipit imperdiet. Ut posuere elit id quam dapibus vulputate. Sed congue nisi non ex sagittis posuere. Sed condimentum velit sit amet metus venenatis ultrices. Maecenas non urna vitae odio porta finibus. Aliquam interdum turpis id lorem tristique, ut faucibus augue faucibus. Ut laoreet ac quam vitae blandit. Cras elementum, dolor at egestas mattis, mi magna efficitur tortor, semper lobortis tellus quam in neque. Aenean quis egestas lorem.</p>
 <p>Praesent sit amet dapibus elit, non accumsan nunc. Duis justo erat, interdum in placerat eget, fringilla vitae ipsum. Proin et consectetur urna, nec convallis risus. Nullam a lacus maximus, dignissim sem id, imperdiet mauris. Donec convallis tristique tortor. Praesent sodales laoreet vestibulum. Mauris tincidunt justo mauris, ut commodo magna hendrerit a. Suspendisse ac dolor lectus. Donec varius magna ut velit sagittis, vitae varius justo commodo. Sed cursus varius porta.</p>
 <p>Morbi efficitur lectus eget turpis commodo volutpat. In pellentesque velit tristique dolor vestibulum, id varius erat pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vulputate, velit quis mattis gravida, ante mi faucibus ante, non ultricies ante sapien at massa. Proin pellentesque sed leo sit amet scelerisque. Donec vel dictum ligula. Aliquam erat volutpat.</p>"
+    excerpt: "Sed ex neque, tempor at justo eu, tristique facilisis nisl. Proin pulvinar lectus non ultricies molestie. Mauris pulvinar velit non ligula lobortis pulvinar. Etiam lorem elit, sollicitudin tempor mauris vel, fermentum volutpat urna. Quisque ultricies, felis in tincidunt bibendum, urna est congue urna, vel mollis orci sapien sit amet nisi. Vestibulum et vulputate ligula. Maecenas quis tortor felis. Donec maximus fermentum ultrices. Praesent sed sem ligula. Nunc turpis enim, facilisis vitae tincidunt vitae, porta id velit. Pellentesque in metus volutpat, vehicula risus in, pellentesque dolor. Nullam id est tempus, aliquet libero in, porttitor sapien."
 
 - "Post 10":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-1"
     allow_comments: false
     featured: false
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "/samples/arch_1000x300.jpg"
     category: "category-2"
     tags: ["tag-2", "tag-7"]
@@ -197,12 +205,13 @@
 <p>Nam euismod neque id nisi dapibus, non congue neque sodales. Phasellus euismod sed ex non consequat. Curabitur et semper ipsum. In ut placerat arcu. Nam porttitor quis purus et ornare. Suspendisse imperdiet augue purus, iaculis iaculis nisi commodo at. Nunc at sem nisl.</p>
 <p>Donec sem magna, blandit non sem hendrerit, mollis laoreet purus. Etiam tempus purus ex, eget interdum elit porttitor sit amet. Suspendisse elementum, magna non posuere consequat, turpis sapien aliquet magna, et ultricies enim ex ac felis. Suspendisse eu augue nec metus euismod pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer rhoncus neque ornare metus elementum pellentesque. Maecenas sit amet lectus at mi rhoncus finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tincidunt bibendum semper. Vivamus facilisis ligula quis mattis rutrum. Aliquam velit felis, imperdiet eu iaculis quis, commodo vel felis. Maecenas enim mauris, varius ut neque a, ultrices posuere leo. Vestibulum finibus sollicitudin mauris. Integer vel tortor in nisi convallis elementum. Vivamus aliquet leo sem, in pretium nisl iaculis tristique.</p>
 <p>In hac habitasse platea dictumst. Integer eget ultricies eros. Vivamus varius ex vel augue consectetur efficitur. Mauris eu luctus est. Aliquam sit amet consequat lacus, ac blandit augue. Maecenas consectetur lectus imperdiet mauris viverra, et venenatis risus vulputate. Sed quis velit scelerisque, aliquam erat vitae, sollicitudin nisl. Maecenas pulvinar porttitor leo, id sagittis metus ullamcorper a. Phasellus at vestibulum lectus, at consectetur ante.</p>"
+    excerpt: "Pellentesque vel elit sit amet urna scelerisque tincidunt eget tempus ipsum. Duis ullamcorper faucibus urna et venenatis. Maecenas tempus consectetur dui ut pulvinar. Nunc gravida felis nec lacus mollis fermentum. Phasellus volutpat condimentum quam quis luctus. Maecenas posuere ante sed venenatis lobortis. Curabitur facilisis pellentesque lacus quis vulputate. Aenean tincidunt ligula eget nulla semper tempor."
 
 - "Post 11":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-2"
     allow_comments: false
     featured: false
-    brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
     tags: []
@@ -217,12 +226,13 @@
 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum et libero nec dui ullamcorper sodales. Suspendisse non condimentum nibh. Curabitur porta ultrices ligula, viverra luctus sapien posuere ac. Ut bibendum nisl urna, at consectetur odio porta id. Nulla facilisis ex eu libero auctor, id bibendum erat lobortis. Pellentesque placerat nunc non nulla feugiat, vitae elementum mi scelerisque. Proin rhoncus, lacus a facilisis vehicula, elit ex fermentum diam, in commodo est quam a ligula. Donec vel tellus cursus, lobortis erat pretium, ullamcorper nisi. Etiam tempus feugiat lorem in sodales.</p>
 <p>Phasellus a egestas ante. Vivamus placerat, nulla non faucibus sodales, purus ex pellentesque lorem, eu pellentesque libero sapien eu sem. Nullam id quam pellentesque, euismod tellus id, lacinia justo. Ut maximus in nulla ac dignissim. Pellentesque dui nisl, varius eget diam vel, tincidunt laoreet ipsum. Quisque venenatis ornare blandit. Sed condimentum suscipit leo in iaculis. Donec tincidunt sem vel dolor convallis, id venenatis orci imperdiet.</p>
 <p>Mauris nulla nunc, interdum et posuere a, aliquet sit amet massa. Cras ipsum metus, aliquet sed posuere vel, bibendum sed velit. Sed placerat ante dui. Curabitur fringilla erat at consectetur pellentesque. Sed aliquet bibendum eleifend. Mauris sagittis tortor lacinia lacus euismod porttitor. Pellentesque ornare purus velit, eu sodales orci pharetra in. Aenean fermentum pharetra erat, quis semper ipsum venenatis ut. Donec at eros vestibulum, sodales ante eleifend, egestas ligula. Cras varius enim ac orci mattis accumsan.</p>"
+    excerpt: "Proin posuere aliquam massa. Etiam libero dolor, suscipit sit amet magna a, fringilla tempus est. Mauris id elit sed erat pharetra porta eget a erat. Nulla facilisi. Nam ac eleifend mi, ac blandit turpis. Curabitur ut nibh suscipit turpis congue elementum sed id ipsum. Suspendisse faucibus in ante eu consectetur. Quisque gravida gravida neque, vitae iaculis risus porttitor quis. Sed commodo, leo ac commodo scelerisque, lectus massa aliquet libero, et dapibus nisi enim ut ligula. Duis sit amet faucibus dui. Ut imperdiet viverra rutrum. Cras venenatis interdum consequat. Sed congue non nisl in tincidunt. Cras sit amet egestas sapien. Proin justo tellus, ultricies in arcu eu, tristique efficitur justo."
 
 - "Post 12":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-2"
     allow_comments: false
     featured: false
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
     tags: ["tag-3", "tag-5", "tag-6"]
@@ -237,12 +247,13 @@
 <p>Nam posuere at mi a dictum. Duis pulvinar mauris nisi, at rutrum lorem accumsan accumsan. Ut in consequat massa, sed faucibus eros. Pellentesque eget varius lectus, ac scelerisque ipsum. Aliquam tempor lectus et lacus tincidunt laoreet. Quisque augue sapien, faucibus vitae condimentum ut, pellentesque sed turpis. Phasellus vehicula et tellus a ornare. Morbi ornare commodo augue viverra finibus. Vestibulum lacinia ultrices magna, ac mollis neque sagittis at. Aenean non hendrerit velit.</p>
 <p>Integer pharetra lectus at posuere pellentesque. Nunc luctus odio eu tempus suscipit. Aenean eros elit, rhoncus in mauris et, cursus lacinia eros. Duis fermentum egestas ligula, a suscipit nisl consequat et. Cras vitae leo vulputate ex pharetra accumsan. Nullam faucibus felis id diam fermentum tincidunt. Mauris placerat euismod placerat. Vivamus urna nisl, auctor eu imperdiet tincidunt, fringilla eu nulla.</p>
 <p>Vestibulum ultrices, ipsum quis maximus interdum, lorem sem eleifend magna, ut scelerisque nisi ligula a quam. Donec tempus tortor in dui aliquet tristique. Sed sagittis magna tellus, quis eleifend mi venenatis vel. Vestibulum bibendum est quis tellus vulputate, non tempus elit consequat. Nam sit amet cursus dolor, eget commodo mauris. Phasellus imperdiet at eros quis rutrum. Vestibulum risus erat, varius ac lectus a, ullamcorper sagittis tortor. Nulla facilisi. Maecenas facilisis, justo quis pretium dapibus, dui purus gravida magna, mattis iaculis augue tellus ac erat. Ut nec pellentesque justo.</p>"
+    excerpt: "Nullam vitae cursus est. Vivamus ac velit leo. Quisque scelerisque libero nec lacus aliquam, eu lacinia nisl efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eros arcu, sagittis sed enim ac, porta commodo eros. Nunc fermentum lectus eget sagittis convallis. Phasellus est velit, gravida quis nisl eget, ornare convallis mi. Nullam pellentesque elementum neque, vel dapibus ipsum ullamcorper quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed mollis arcu felis. Integer nibh nulla, auctor ac velit sed, sagittis viverra nibh. In ut nunc eget elit lacinia fringilla. Sed at urna porta, aliquet felis eu, auctor diam. Nullam eget faucibus odio. Integer turpis lacus, venenatis id vehicula quis, ornare nec mi."
 
 - "Post 13":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-1"
     allow_comments: false
     featured: false
-    brief: "Fuga consequatur nobis rerum qui."
     image: "/samples/animals_1000x300.jpg"
     category: "category-1"
     tags: ["tag-1", "tag-2", "tag-7"]
@@ -257,12 +268,13 @@
 <p>Curabitur auctor ipsum risus, et tempor tellus rhoncus fermentum. Vivamus semper massa sapien, semper blandit odio commodo vel. Maecenas mollis sapien vitae accumsan pellentesque. Phasellus iaculis arcu at euismod consectetur. Morbi molestie sapien lacus, at faucibus ex rhoncus vel. Nulla hendrerit auctor massa imperdiet fermentum. Pellentesque ut laoreet lectus, a vehicula ante. Suspendisse dictum metus a posuere egestas.</p>
 <p>Praesent gravida magna nisl, ut commodo diam sollicitudin eu. Donec purus sapien, tempus at dignissim vehicula, faucibus at ipsum. Nulla placerat justo commodo est accumsan convallis. Phasellus aliquam tellus non ornare dictum. Pellentesque egestas libero maximus dolor finibus, a fermentum dolor accumsan. Morbi tincidunt, tortor non lobortis pellentesque, velit dui luctus sapien, ac interdum dui ante vel dolor. Ut maximus nibh quis odio porta, nec blandit velit lacinia. Donec vitae arcu tristique, imperdiet nisl a, facilisis neque.</p>
 <p>Nulla sit amet felis turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin eros justo, mattis nec elit ac, facilisis eleifend urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ornare diam non nibh mollis, ac auctor metus ultricies. Pellentesque sit amet dictum ante, viverra accumsan mi. Nam feugiat dui felis, vel rhoncus enim aliquet sit amet.</p>"
+    excerpt: "Praesent gravida magna nisl, ut commodo diam sollicitudin eu. Donec purus sapien, tempus at dignissim vehicula, faucibus at ipsum. Nulla placerat justo commodo est accumsan convallis. Phasellus aliquam tellus non ornare dictum. Pellentesque egestas libero maximus dolor finibus, a fermentum dolor accumsan. Morbi tincidunt, tortor non lobortis pellentesque, velit dui luctus sapien, ac interdum dui ante vel dolor. Ut maximus nibh quis odio porta, nec blandit velit lacinia. Donec vitae arcu tristique, imperdiet nisl a, facilisis neque."
 
 - "Post 14":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-2"
     allow_comments: false
     featured: false
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: "/samples/tech_1000x300.jpg"
     category: "category-2"
     tags: ["tag-7"]
@@ -277,12 +289,13 @@
 <p>Donec venenatis rhoncus quam sed laoreet. Integer at odio at diam vehicula varius. Nunc rhoncus nulla pretium tristique porttitor. Donec ultricies eget leo et efficitur. Nullam sed venenatis diam, in sollicitudin nulla. Aenean posuere magna sit amet felis fermentum rhoncus. Nulla massa tortor, convallis rhoncus risus id, mattis mollis ex. Cras ut malesuada justo, ut scelerisque ligula. Nulla dignissim diam neque, fermentum ornare risus convallis nec. Aenean quis tortor in orci eleifend laoreet. Donec condimentum vehicula nisi, id consequat nulla vestibulum eget.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id dolor eget arcu ultricies ornare mollis ut orci. Integer vitae tempor massa, nec rhoncus nunc. Quisque faucibus aliquam cursus. Cras vel nibh quis felis bibendum ullamcorper a sit amet massa. Aenean dolor turpis, suscipit at convallis non, feugiat ac arcu. Morbi quis libero urna.</p>
 <p>Donec sit amet gravida dui, at efficitur dui. Proin hendrerit, risus eu commodo vehicula, dui erat fringilla nisl, eget elementum tellus dolor et arcu. Donec gravida, massa ac convallis bibendum, felis lacus convallis elit, sit amet condimentum nisi urna vel augue. Vestibulum fringilla risus et lacus bibendum, sit amet mattis diam posuere. Donec a euismod enim, eget tincidunt nibh. In elementum aliquam ipsum, ut semper metus porta at. Pellentesque sed elit at eros hendrerit placerat in vitae lectus.</p>"
+    excerpt: "Proin posuere, odio non hendrerit porta, magna purus lobortis erat, sed placerat nulla urna non sapien. Quisque finibus tempus varius. Maecenas ornare et nibh ac luctus. Sed accumsan, ex in tristique congue, nisl massa vulputate ex, non sollicitudin turpis turpis vel nunc. Cras ac tincidunt ante, malesuada eleifend ante. Aenean eu justo sollicitudin, pellentesque risus eget, malesuada ipsum. Mauris at mauris in magna ultrices elementum. Sed quis nunc orci. Praesent consequat lacinia odio, eget auctor lacus rutrum in. Maecenas congue porta mi, nec congue lorem fringilla id."
 
 - "Post 15":
+    subtitle: "Fuga consequatur nobis rerum qui."
     author: "author-2"
     allow_comments: false
     featured: false
-    brief: "Fuga consequatur nobis rerum qui."
     image: null
     category: "category-3"
     tags: ["tag-6", "tag-3"]
@@ -297,12 +310,13 @@
 <p>Sed egestas tempus sem, a porta magna tristique ut. Mauris volutpat euismod libero quis euismod. Phasellus ultricies arcu felis, ac gravida neque elementum malesuada. Pellentesque porttitor, nunc in laoreet commodo, ligula tellus egestas mi, vel semper sem libero eu nunc. Aenean leo sem, congue sit amet varius a, congue ac felis. Vestibulum vel placerat magna, eu ultrices metus. Nunc sed eros eget enim commodo commodo eget quis arcu.</p>
 <p>Nulla eu commodo erat. Morbi purus nisi, vestibulum non est nec, tempus pharetra diam. Duis nec efficitur nisl, a vulputate lectus. In hac habitasse platea dictumst. Nunc id libero eros. Suspendisse potenti. Donec et libero quam.</p>
 <p>Ut rutrum gravida nunc ac interdum. Nam venenatis metus massa, quis eleifend justo vulputate eu. Nulla augue odio, bibendum eget fringilla sit amet, laoreet ut quam. Fusce ut tempus nisi. Aliquam iaculis et nibh in pulvinar. Duis sed mattis lorem. Aliquam ac rutrum quam. Vivamus a nunc in ipsum vehicula accumsan vitae sit amet massa. Donec molestie semper felis in iaculis. Quisque vestibulum tristique enim nec luctus. Sed eu lorem vel purus vulputate imperdiet in a enim.</p>"
+    excerpt: "Integer vulputate mauris a ipsum posuere tempus. Praesent tincidunt tempus ipsum, id dapibus tellus dictum lobortis. Vestibulum risus enim, dignissim at aliquam non, elementum pulvinar augue. Nulla eleifend egestas risus et euismod. Sed bibendum a sapien vitae imperdiet. Fusce sapien enim, ornare in leo sed, bibendum iaculis leo. Suspendisse vel sollicitudin urna. Curabitur facilisis sit amet lacus ut auctor. Duis ut egestas tellus. Vestibulum nec eros consectetur velit tincidunt pulvinar in at purus. Cras dictum vestibulum nibh id efficitur. Sed vel placerat enim. Proin aliquet justo sapien, vitae vulputate ipsum maximus id."
 
 - "Post 16":
+    subtitle: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     author: "author-1"
     allow_comments: false
     featured: false
-    brief: "Veniam voluptatem enim qui qui vel molestias quibusdam qui."
     image: null
     category: "category-4"
     tags: ["tag-5"]
@@ -317,4 +331,5 @@
 <p>Curabitur euismod elit posuere viverra suscipit. Etiam consectetur eros odio, ut ornare purus malesuada nec. Ut eu tristique ex. Duis facilisis velit sit amet purus efficitur, vel consequat elit vulputate. Duis bibendum lacus eu dolor scelerisque vulputate quis ut elit. Nulla a magna et sem venenatis vulputate. Quisque nisl sem, lacinia non diam nec, facilisis maximus lectus. Donec vitae luctus ligula. Ut ullamcorper imperdiet turpis ac pretium. Etiam blandit diam ut mollis auctor. Maecenas ut diam fringilla, pellentesque ligula eu, vehicula diam. Ut congue ex sit amet cursus porta. Nulla commodo at nisi ut rutrum.</p>
 <p>Ut ornare venenatis eleifend. Fusce a dui varius, tempus mi et, pretium ante. Cras quam turpis, finibus vestibulum neque quis, imperdiet iaculis neque. Nam accumsan ultricies tellus et venenatis. Vestibulum ut lobortis neque, ac sagittis massa. Proin tempor, dui eget auctor ornare, urna magna tristique augue, vitae consectetur augue nibh varius turpis. Aliquam ac purus sed justo vehicula vestibulum eu quis ex. Vivamus vel ligula mi. Phasellus ullamcorper eget tellus quis scelerisque. Suspendisse id consectetur velit. Donec aliquet leo nec diam rhoncus, ut tincidunt leo bibendum. Donec tincidunt leo eu lectus facilisis, ut semper mauris rutrum. Curabitur non odio vitae lectus dapibus placerat dapibus quis libero.</p>
 <p>Morbi laoreet pretium nibh, ac dignissim ligula convallis vel. Ut eu fermentum elit, auctor consectetur tortor. Aliquam arcu est, ullamcorper in augue id, blandit consequat urna. Curabitur venenatis commodo nunc in tempor. Mauris aliquet, nulla eu eleifend aliquam, metus sapien convallis ex, et pretium urna arcu non leo. Morbi elementum, enim sit amet finibus egestas, nibh tellus posuere nisi, ac auctor nisi odio sed augue. Nulla venenatis diam a odio volutpat cursus. Donec ultricies hendrerit nulla. Etiam eget metus nec dui commodo dignissim. Donec vel placerat justo.</p>"
+    excerpt: "Pellentesque bibendum vehicula scelerisque. Nam quis venenatis elit. Duis vulputate libero purus, eu malesuada velit dapibus a. Nunc at mauris vel nibh euismod mattis. Nam molestie tincidunt erat, quis auctor ante iaculis a. Pellentesque congue tortor risus, at tempor mi accumsan at. Integer ante massa, suscipit malesuada risus nec, luctus viverra purus. Quisque quis magna egestas, vulputate felis ac, blandit turpis. Etiam sagittis vehicula erat eu aliquet. Nam sodales mauris ac euismod sodales. Curabitur auctor lacinia nisl, varius maximus justo porta eu. Sed ac efficitur nulla, a vestibulum elit. Nam purus quam, convallis ac enim ut, lacinia consectetur nisi. Morbi tincidunt, neque sed ultrices sollicitudin, massa ante aliquam massa, eget rutrum dui est a justo. Sed quam justo, cursus at hendrerit eget, faucibus vel lorem."
 

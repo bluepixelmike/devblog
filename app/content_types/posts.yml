@@ -16,6 +16,14 @@ fields:
     unique: true
     localized: true
 
+- subtitle:
+    label: Subtitle
+    type: string
+    hint: Short description of the contents of the post
+    required: false
+    unique: false
+    localized: true
+
 - author:
     label: Author
     type: belongs_to
@@ -42,14 +50,6 @@ fields:
     required: false
     unique: false
     localized: false
-
-- brief:
-    label: Brief
-    type: string
-    hint: Short description of the contents of the post
-    required: true
-    unique: false
-    localized: true
 
 - image:
     label: Image
@@ -94,4 +94,12 @@ fields:
     unique: false
     localized: true
     text_formatting: html
+
+- excerpt:
+    label: Excerpt
+    type: text
+    hint: Snippet of text from the post
+    required: true
+    unique: false
+    localized: true
 
