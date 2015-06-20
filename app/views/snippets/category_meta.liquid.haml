@@ -1,0 +1,9 @@
+-# Link to a category in the meta-section of a listing entry.
+-# Required variables:
+  category - Category object to link to
+
+{% if category %}
+%a.category{ :href => '{% path_to category %}' }
+  %i.folder.open.outline.icon
+  %span {{ category.name | escape }}
+{% endif %}

@@ -1,0 +1,17 @@
+-# Displays a list of tags and tools.
+-# Optional variables:
+  tags  - List of tag strings
+  tools - List of tool objects
+
+.ui.mini.tag.labels
+  {% if tags %}
+  {% for tag in tags %}
+  %a.ui.label{ :href => '/search?tag={{ tag | escape }}', :title => '{{ tag | escape }}' } {{ tag | escape }}
+  {% endfor %}
+  {% endif %}
+
+  {% if tools %}
+  {% for tool in tools %}
+  %a{ :href => '{% path_to tool %}', :class => 'ui {{ tool.color }} label', :title => '{{ tool.name | escape }}' } {{ tool.name | escape }}
+  {% endfor %}
+  {% endif %}

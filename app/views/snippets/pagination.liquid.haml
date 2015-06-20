@@ -1,0 +1,34 @@
+-# Displays page selector links.
+-# Required variables:
+  paginate - Pagination object
+  color    - Color of the active page link
+
+{% if paginate.total_pages > 1 %}
+#pagination.item.centered.aligned
+  .ui.tiny.buttons
+
+    {% if paginate.previous %}
+    %a.ui.icon.button{ :href => '{{ paginate.previous.url | escape }}' }
+      %i.left.chevron.icon
+    {% else %}
+    %span.ui.disabled.icon.button
+      %i.left.chevron.icon
+    {% endif %}
+
+    {% for p in paginate.parts %}
+    {% if p.is_link %}
+    %a.ui.button{ :href => '{{ p.url | escape }}' } {{ p.title | escape }}
+    {% else %}
+    %span{ :class => '{% if forloop.index == paginate.current_page %}active {{ color }}{% else %}disabled{% endif %} ui button' } {{ p.title | escape }}
+    {% endif %}
+    {% endfor %}
+
+    {% if paginate.next %}
+    %a.ui.right.icon.button{ :href => '{{ paginate.next.url | escape }}' }
+      %i.right.chevron.icon
+    {% else %}
+    %span.ui.disabled.right.icon.button
+      %i.right.chevron.icon
+    {% endif %}
+
+{% endif %}

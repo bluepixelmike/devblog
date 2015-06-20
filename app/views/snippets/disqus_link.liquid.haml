@@ -1,0 +1,9 @@
+-# Displays a link to the comments section of an object.
+-# Required variables:
+  obj - Object that can have comments
+
+{% if obj.allow_comments %}
+%a.comments-link{ :href => '{% path_to obj %}#comments' }
+  %i.comments.outline.icon
+  %span.disqus-comment-count{ :data => { :disqus_identifier => '{% path_to obj %}' } } Comments
+{% endif %}

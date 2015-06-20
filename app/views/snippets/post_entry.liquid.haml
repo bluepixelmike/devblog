@@ -1,0 +1,29 @@
+-# Full listing entry for a post.
+-# Required variables:
+  post - Post to display information about
+
+%div{ :class => '{% if post.featured %}featured {% endif %}item' }
+  {% if post.featured %}
+  %span.ui.teal.ribbon.label Featured
+  {% endif %}
+
+  %a.image{ :href => '{% path_to post %}', :title => '{{ post.title | escape }}' }
+    {% if post.image %}
+    %img{ :src => '{{ post.image | resize: "175x100#" | escape }}', :alt => '{{ post.title | escape }}' }
+    {% endif %}
+
+  .content
+    %a.header{ :href => '{% path_to post %}' }
+      %h3 {{ post.title | escape }}
+
+    .meta
+      {% include 'author_label' with author: post.author %}
+      {% include 'post_date' with date: post.created_at %}
+      {% include 'category_meta' with category: post.category %}
+      {% include 'disqus_link' with obj: post %}
+
+    .description
+      %p {{ post.brief | escape }}
+
+    .extra
+      {% include 'tags_list' with tags: post.tags, tools: post.tools %}

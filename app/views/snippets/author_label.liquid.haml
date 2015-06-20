@@ -1,0 +1,8 @@
+-# Displays a small label with the author's handle and avatar.
+-# Required variables:
+  author - Author to create a label for
+
+%a.author-label.ui.tiny.image.label{ :href => '{% path_to author %}' }
+  %img{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:22" | escape }}{% else %}{{ author.avatar | resize: "22x22#" | escape }}{% endif %}' }
+  :plain
+    {{ author.handle | escape }}

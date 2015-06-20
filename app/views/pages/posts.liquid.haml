@@ -1,0 +1,28 @@
+---
+title: Posts
+listed: true
+published: true
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+#breadcrumbs.ui.inverted.teal.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'content' %}
+{% block 'main' %}
+#post-listing.ui.stacked.teal.segment
+  {% paginate contents.posts by 10 %}
+  .ui.relaxed.divided.items
+    {% for post in paginate.collection %}
+    {% include 'post_entry' with post %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'teal' %}
+    {% endpaginate %}
+{% endblock %}
+-# TODO: Featured posts
+{% endblock %}

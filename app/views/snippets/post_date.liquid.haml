@@ -1,0 +1,8 @@
+-# Inserts the date and icon.
+-# Required variables:
+  date - Date (and time) to display
+
+%span.date
+  %i.calendar.outline.icon
+  :plain
+    {{ date | localized_date: '%A, %B %d, %Y' | escape }}
