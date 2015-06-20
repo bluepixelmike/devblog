@@ -60,9 +60,14 @@ html, body {
   text-align: center;
 }
 
-#header.segment {
+#heading.segment {
   border-radius: 0;
   margin-top: 0;
+  padding: 0;
+}
+
+h1 .sub.header, h2 .sub.header, h3 .sub.header, h4 .sub.header, h5 .sub.header, h6 .sub.header {
+  display: block;
 }
 
 .meta {
@@ -115,7 +120,7 @@ i.icon {
   margin: 0 0 0 0.5em;
 }
 
-.header i.at.icon:only-child {
+.heading i.at.icon:only-child {
   margin-right: 0;
 }
 

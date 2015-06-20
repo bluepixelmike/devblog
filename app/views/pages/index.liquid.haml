@@ -28,7 +28,14 @@ listed: true
       #header
         {% include 'nav' %}
         {% block 'breadcrumbs' %}{% endblock %}
-      -# TODO: Include heading
+        #heading.ui.bottom.segment
+          .ui.page.grid
+            .sixteen.wide.column
+              {% block 'heading' %}
+              {% unless parent %}
+              {% include 'heading' %}
+              {% endunless %}
+              {% endblock %}
 
       #content
         .ui.page.grid

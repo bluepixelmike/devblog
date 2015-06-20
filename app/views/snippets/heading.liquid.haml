@@ -1,0 +1,19 @@
+-# Dislays the page heading that has the page title, subtitle, and icon or image.
+-# Optional variables:
+  image    - Image to display in the heading (overrides icon)
+  icon     - Name of the icon to display in the heading
+  subtitle - Sub-text to display under the title
+
+.ui.header
+  {% if image %}
+  %img{ :src => '{{ image | resize: "60x60#" | escape }}', :alt => '{{ page.title | escape }}' }
+  {% elsif icon %}
+  %i{ :class => '{{ icon }} icon' }
+  {% endif %}
+  .content
+    %h2
+      :plain
+        {{ page.title | escape }}
+      {% if subtitle %}
+      %span.sub.header {{ subtitle | escape }}
+      {% endif %}
