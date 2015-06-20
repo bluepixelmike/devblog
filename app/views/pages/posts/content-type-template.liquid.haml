@@ -17,11 +17,10 @@ content_type: posts
     %span.active.section {{ page.title | escape }}
 {% endblock %}
 
+{% block 'heading' %}{% include 'heading' with icon: 'newspaper', subtitle: entry.subtitle %}{% endblock %}
+
 {% block 'content/main' %}
 #post.ui.teal.segment
-  %h3 {{ post.title | escape }}
-  %h4 {{ post.subtitle | escape }}
-
   .meta
     {% include 'author_label' with author: post.author %}
     {% include 'post_date' with date: post.created_at %}

@@ -13,6 +13,8 @@ published: true
     %span.active.section {{ page.title | escape }}
 {% endblock %}
 
+{% block 'heading' %}{% include 'heading' with icon: 'newspaper' %}{% endblock %}
+
 {% block 'content' %}
 {% block 'main' %}
 #post-listing.ui.stacked.teal.segment
