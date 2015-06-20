@@ -1,0 +1,14 @@
+-# Displays a segment containing the comments for an entry.
+-# Required variables:
+  obj   - Entry to display comments for
+  color - Color of the segment
+
+#comments{ :class => 'ui {{ color }} segment' }
+  {% if obj.allow_comments %}
+  {% include 'disqus' with obj %}
+  {% else %}
+  %span.muted
+    %i.lock.icon
+    :plain
+      Comments have been disabled for this entry.
+  {% endif %}
