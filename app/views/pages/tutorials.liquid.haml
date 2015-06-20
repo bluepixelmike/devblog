@@ -1,0 +1,30 @@
+---
+title: Tutorials
+listed: true
+published: true
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+#breadcrumbs.ui.inverted.green.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'book' %}{% endblock %}
+
+{% block 'content' %}
+{% block 'main' %}
+#post-listing.ui.stacked.green.segment
+  {% paginate contents.tutorials by 5 %}
+  .ui.relaxed.divided.items
+    {% for tutorial in paginate.collection %}
+    {% include 'tutorial_entry' with tutorial %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'green' %}
+    {% endpaginate %}
+{% endblock %}
+-# TODO: Featured tutorials
+{% endblock %}

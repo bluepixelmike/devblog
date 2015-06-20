@@ -1,0 +1,38 @@
+-# Full listing entry for a tutorial.
+-# Required variables:
+  tutorial - Tutorial to display information about
+
+%div{ :class => '{% if tutorial.featured %}featured {% endif %}item' }
+  {% if tutorial.featured %}
+  %span.ui.green.ribbon.label Featured
+  {% endif %}
+
+  %a.image{ :href => '{% path_to tutorial %}', :title => '{{ tutorial.title | escape }}' }
+    {% if tutorial.image %}
+    %img{ :src => '{{ tutorial.image | resize: "175x100#" | escape }}', :alt => '{{ tutorial.title | escape }}' }
+    {% endif %}
+
+  .content
+    %a.header{ :href => '{% path_to tutorial %}' }
+      %h3 {{ tutorial.title | escape }}
+
+    .meta
+      {% include 'author_label' with author: tutorial.author %}
+      {% include 'post_date' with date: tutorial.created_at %}
+      {% include 'category_meta' with category: tutorial.category %}
+      {% if tutorial.parts.size == 1 %}
+      {% include 'disqus_link' with obj: tutorial.parts.first %}
+      {% endif %}
+
+    .description
+      %p {{ tutorial.brief | escape }}
+
+    .extra
+      {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
+
+      {% if tutorial.parts.size > 1 %}
+      .ui.divided.very.relaxed.ordered.list
+        {% for part in tutorial.parts %}
+        {% include 'tutorial_part_entry' with part %}
+        {% endfor %}
+      {% endif %}

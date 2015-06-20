@@ -1,0 +1,8 @@
+-# Displays a preview of a tutorial part.
+-# Required variables:
+  part - Tutorial part to display
+
+%a.item{ :href => '{% path_to part %}' }
+  .content
+    %span.title {{ part.subtitle | escape }}
+    %span.description {{ part.brief | escape }}
