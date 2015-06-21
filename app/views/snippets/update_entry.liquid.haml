@@ -18,6 +18,8 @@
     .meta
       {% include 'author_label' with author: update.author %}
       {% include 'post_date' with date: update.created_at %}
+      {% include 'project_meta' with project: update.project %}
+      {% include 'category_meta' with category: update.category %}
       {% include 'disqus_link' with obj: update %}
 
     .description

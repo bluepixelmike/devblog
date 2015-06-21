@@ -1,0 +1,9 @@
+-# Link to a project in the meta-section of a listing entry.
+-# Required variables:
+  project - Project object to link to
+
+{% if project %}
+%a.project{ :href => '{% path_to project %}' }
+  %i.lab.icon
+  %span {{ project.name | escape }}
+{% endif %}

@@ -1,0 +1,49 @@
+---
+title: View Update
+listed: true
+published: true
+content_type: project_updates
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'projects' %}{% assign projects_page = site.pages.first %}{% endwith_scope %}
+{% assign project = project_update.project %}
+#breadcrumbs.ui.inverted.blue.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to projects_page %}' } {{ projects_page.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to project %}' } {{ project.name | escape }}
+    .divider /
+    -# TODO: Localize
+    %a.section{ :href => '{% path_to project %}/updates' } Updates
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'bullhorn', subtitle: entry.subtitle %}{% endblock %}
+
+{% block 'content/main' %}
+#post.ui.blue.segment
+  .meta
+    {% include 'author_label' with author: project_update.author %}
+    {% include 'post_date' with date: project_update.created_at %}
+    {% include 'project_meta' with project: project_update.project %}
+    {% include 'category_meta' with category: project_update.category %}
+    {% include 'disqus_link' with obj: project_update %}
+
+  {% if project_update.image %}
+  .featured-image{ :style => 'background-image: url({{ project_update.image | resize: "975x85#" | escape }});' }
+  {% endif %}
+
+  .main-content
+    :plain
+      {{ project_update.content }}
+
+  .extra
+    {% include 'tags_list' with tags: project_update.tags %}
+
+{% include 'comments' with color: 'blue' %}
+{% endblock %}
