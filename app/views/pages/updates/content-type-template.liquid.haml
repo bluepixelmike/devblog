@@ -23,7 +23,7 @@ content_type: project_updates
     %span.active.section {{ page.title | escape }}
 {% endblock %}
 
-{% block 'heading' %}{% include 'heading' with icon: 'bullhorn', subtitle: entry.subtitle %}{% endblock %}
+{% block 'heading' %}{% include 'heading' with icon: 'bullhorn', subtitle: entry.subtitle, image: entry.project.icon  %}{% endblock %}
 
 {% block 'content/main' %}
 #post.ui.blue.segment
@@ -46,4 +46,6 @@ content_type: project_updates
     {% include 'tags_list' with tags: project_update.tags %}
 
 {% include 'comments' with color: 'blue' %}
+
+-# TODO: About the project
 {% endblock %}
