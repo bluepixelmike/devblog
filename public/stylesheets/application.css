@@ -17,8 +17,6 @@ html, body {
 }
 
 #content {
-  display: table-row;
-  padding-bottom: 220px;
   height: auto;
 }
 
