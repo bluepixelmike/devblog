@@ -61,6 +61,17 @@ fields:
     unique: false
     localized: false
 
+
+- category:
+    label: Category
+    type: belongs_to
+    required: false
+    unique: false
+    localized: false
+    class_name: categories
+    inverse_of: updates
+    ui_enabled: true
+
 - tags:
     label: Tags
     type: tags

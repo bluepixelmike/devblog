@@ -49,6 +49,17 @@ fields:
     inverse_of: category
     ui_enabled: false
 
+- updates:
+    label: Updates
+    type: has_many
+    hint: Updates made under this category
+    required: false
+    unique: false
+    localized: false
+    class_name: project_updates
+    inverse_of: category
+    ui_enabled: false
+
 - tutorials:
     label: Tutorials
     type: has_many

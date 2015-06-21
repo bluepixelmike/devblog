@@ -4,6 +4,7 @@
     author: "author-1"
     allow_comments: true
     image: "/samples/animals_800x450.jpg"
+    category: "category-3"
     tags: ["tag-1", "tag-3"]
     content: "<p>Vivamus ut ex ullamcorper, egestas nibh eu, porttitor est. Donec luctus sed dui rhoncus interdum. Duis id sapien in quam vestibulum ultricies a non velit. Integer tempor, justo nec lacinia interdum, nisl massa accumsan tellus, ac consequat tortor enim vitae nisi. In sagittis eget ipsum at sollicitudin. Phasellus sed ipsum sed nunc sollicitudin pellentesque ut vel nibh. Quisque rhoncus tristique volutpat. Duis sapien mi, viverra sit amet gravida ac, rutrum in elit. Integer finibus felis mi. Sed mauris turpis, blandit et nibh a, congue convallis elit. Etiam sodales hendrerit dapibus. Suspendisse dignissim nec tortor id laoreet. Morbi a tristique lectus.</p>
 <p>Phasellus tincidunt enim arcu, vel hendrerit nisl dapibus sed. Etiam convallis facilisis enim, ac ullamcorper neque posuere tempor. Sed consequat eu ex ut maximus. Quisque dapibus ac arcu quis ultrices. Mauris pellentesque nulla in vulputate bibendum. Mauris sed lorem commodo, gravida risus vel, blandit leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam viverra vulputate lacus, at tristique sem viverra ut. Vestibulum id sapien eleifend, consectetur urna in, pretium libero. Curabitur vel varius massa, ut aliquet ipsum. Nullam mollis ac ipsum fringilla vehicula. Aenean sollicitudin semper elit at suscipit. Aliquam erat volutpat. Nulla congue eros eu arcu pellentesque, quis tempus lacus finibus.</p>
@@ -35,6 +36,7 @@
     project: "project-2"
     author: "author-1"
     allow_comments: true
+    category: "category-2"
     tags: ["tag-2", "tag-7", "tag-9"]
     content: "<p>Etiam porta dignissim mi, eu dapibus ipsum condimentum sit amet. Donec consectetur dolor pellentesque quam efficitur, nec lacinia orci viverra. Vestibulum justo lacus, convallis in dignissim eu, blandit non turpis. Phasellus imperdiet elit non magna imperdiet ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam neque lorem, congue mattis ipsum a, vehicula hendrerit est. Vivamus eleifend, nisi vel dictum semper, elit felis rutrum felis, eget varius nibh nulla id arcu. Etiam dictum arcu dui, vel consequat augue venenatis eget. Vivamus venenatis molestie dui et pretium. Praesent sed purus eget est aliquet venenatis sed at lectus. Sed sagittis sem vitae lacus eleifend accumsan. Pellentesque massa tortor, sollicitudin ac nulla vel, tincidunt ultrices arcu. Donec ut tincidunt odio.</p>
 <p>Sed suscipit eros eros, eget lobortis elit molestie at. Nulla quis accumsan felis. Maecenas a viverra erat. Etiam nec lacus feugiat, tempus dui vitae, imperdiet lacus. In erat lorem, hendrerit id eleifend sit amet, mollis nec tellus. Nunc vestibulum sapien et neque luctus laoreet. Vestibulum condimentum metus vitae lacinia egestas. Duis maximus blandit massa id bibendum.</p>
@@ -51,6 +53,7 @@
     author: "author-2"
     allow_comments: true
     image: "/samples/tech_800x450.jpg"
+    category: "category-2"
     tags: []
     content: "<p>Nullam nisi dolor, gravida ac nisi eu, semper scelerisque sapien. Nam auctor neque a tortor tempus feugiat. Mauris porta urna est, et dapibus elit tempus a. Vestibulum tortor nisl, semper a tristique ut, tincidunt gravida lacus. Phasellus mollis velit erat, non maximus augue sollicitudin sed. Sed porttitor leo et tortor lacinia, id posuere leo congue. Duis mollis turpis id leo pretium, ut rhoncus eros scelerisque. Vestibulum elit orci, luctus nec mauris quis, aliquet commodo nisl. Nullam viverra turpis sed efficitur porta. Praesent vitae iaculis mauris, at placerat diam. Sed a velit mollis, dictum justo quis, aliquam lacus. Curabitur scelerisque eros velit, ultrices ultrices metus fermentum in.</p>
 <p>Aliquam sed nunc placerat dui mattis fringilla eget sed orci. Nam sit amet nisl sit amet justo placerat consequat eget porttitor ligula. Quisque tristique, augue sit amet malesuada suscipit, mauris ligula gravida purus, vitae sagittis ante turpis ut tortor. Donec ac consectetur felis. Sed est leo, molestie id lacinia convallis, accumsan eget erat. Suspendisse et tellus tincidunt, scelerisque arcu eu, pharetra eros. Nullam maximus tortor id justo luctus, at suscipit metus tempor. Etiam quis libero pellentesque, bibendum est at, euismod felis. Proin bibendum ex orci, eget vestibulum dui molestie non.</p>
