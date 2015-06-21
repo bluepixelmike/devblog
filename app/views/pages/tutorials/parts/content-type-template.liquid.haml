@@ -1,0 +1,63 @@
+---
+title: View Tutorial Part
+listed: true
+published: true
+content_type: tutorial_parts
+---
+{% extends 'tutorials/content-type-template' %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %}
+{% assign tutorial = tutorial_part.tutorial %}
+#breadcrumbs.ui.inverted.green.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to tutorials_page %}' } {{ tutorials_page.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to tutorial %}' } {{ tutorial.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'newspaper', title: tutorial_part.tutorial.title, subtitle: tutorial_part.subtitle %}{% endblock %}
+
+{% block 'content/main/part' %}
+.content
+  {% if tutorial_part.image %}
+  .featured-image{ :style => 'background-image: url({{ tutorial_part.image | resize: "975x85#" | escape }});' }
+  {% endif %}
+  :plain
+    {{ tutorial_part.content }}
+
+-# A bit of wtf ahead.
+#pagination
+  -# Iterate through each part.
+  {% for part in tutorial_part.tutorial.parts %}
+  -# We only want to produce the links once on the current part.
+  {% if part._slug == tutorial_part._slug %}
+  -# Generate the previous link if there's a previous part.
+    If this loop has been through at least one iteration, then 'previous' is defined.
+    Otherwise, 'previous' will be nil, which means there isn't a previous part.
+  {% if previous %}
+  %a.ui.green.icon.button{ :href => '/tutorials/parts/{{ tutorial_part.tutorial.parts[previous]._slug }}' }
+    %i.left.chevron.icon
+    -# TODO: Localize
+    :plain
+      Previous
+  {% endif %}
+  -# Only add the next link if we're not on the last part.
+  {% unless forloop.last %}
+  %a.ui.right.green.icon.button{ :href => '/tutorials/parts/{{ tutorial_part.tutorial.parts[forloop.index]._slug }}' }
+    -# TODO: Localize
+    :plain
+      Next
+    %i.right.chevron.icon
+  {% endunless %}
+  {% endif %}
+  -# Made it through an iteration, assign 'previous' to the current index.
+  {% assign previous = forloop.index0 %}
+  {% endfor %}
+{% endblock %}
+
+{% block 'content/main/comments' %}{% include 'comments' with color: 'green', category: entry.tutorial.category %}{% endblock %}

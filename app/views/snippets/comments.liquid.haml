@@ -1,8 +1,10 @@
 -# Displays a segment containing the comments for an entry.
 -# Required variables:
-  obj   - Entry to display comments for
   color - Color of the segment
+-# Optional variables:
+  obj - Entry to display comments for (defaults to 'entry')
 
+{% unless obj %}{% assign obj = entry %}{% endunless %}
 #comments{ :class => 'ui {{ color }} segment' }
   {% if obj.allow_comments %}
   {% include 'disqus' with obj %}

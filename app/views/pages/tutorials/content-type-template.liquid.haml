@@ -26,6 +26,10 @@ content_type: tutorials
 {% endblock %}
 
 {% block 'content/main' %}
+{% unless tutorial %}
+{% assign tutorial = entry.tutorial %}
+{% endunless %}
+
 #tutorial.ui.green.segment
   .meta
     {% include 'difficulty_label' with difficulty: tutorial.difficulty %}
@@ -36,15 +40,15 @@ content_type: tutorials
     {% include 'disqus_link' with obj: tutorial.parts.first, target: tutorial %}
     {% endif %}
 
-  {% if tutorial.image %}
-  .large.featured-image{ :style => 'background-image: url({{ tutorial.image | resize: "250x85#" | escape }});' }
-  {% endif %}
-
   {% if tutorial.featured %}
   %span.ui.green.ribbon.label Featured
   {% endif %}
 
   {% block 'part' %}
+
+  {% if tutorial.image %}
+  .large.featured-image{ :style => 'background-image: url({{ tutorial.image | resize: "250x85#" | escape }});' }
+  {% endif %}
 
   .main-content
     :plain
@@ -77,7 +81,7 @@ content_type: tutorials
   .ui.left.attached.rail
     .ui.ordered.vertical.steps
       {% for part in tutorial.parts %}
-      %a.step{ :href => '{% path_to part %}' }
+      %a{ :href => '{% path_to part %}', :class => '{% if part._slug == entry._slug %}active {% endif %}step' }
         .content
           %span.title {{ part.subtitle | escape }}
           %br/

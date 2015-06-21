@@ -2,6 +2,7 @@
 -# Optional variables:
   image    - Image to display in the heading (overrides icon)
   icon     - Name of the icon to display in the heading
+  title    - Main heading text
   subtitle - Sub-text to display under the title
 
 .ui.header
@@ -13,7 +14,7 @@
   .content
     %h2
       :plain
-        {{ page.title | escape }}
+        {% if title %}{{ title | escape }}{% else %}{{ page.title | escape }}{% endif %}
       {% if subtitle %}
       %span.sub.header {{ subtitle | escape }}
       {% endif %}
