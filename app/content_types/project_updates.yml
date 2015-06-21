@@ -16,6 +16,14 @@ fields:
     unique: false
     localized: true
 
+- subtitle:
+    label: Subtitle
+    type: string
+    hint: Short preview of the contents of the post
+    required: true
+    unique: false
+    localized: true
+
 - project:
     label: Project
     type: belongs_to
@@ -45,14 +53,6 @@ fields:
     unique: false
     localized: false
 
-- brief:
-    label: Brief
-    type: string
-    hint: Short preview of the contents of the post
-    required: true
-    unique: false
-    localized: true
-
 - image:
     label: Image
     type: file
@@ -75,4 +75,12 @@ fields:
     unique: false
     localized: true
     text_formatting: html
+
+- excerpt:
+    label: Excerpt
+    type: text
+    hint: Snippet of text from the main content
+    required: true
+    unique: false
+    localized: true
 

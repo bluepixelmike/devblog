@@ -1,0 +1,30 @@
+---
+title: Updates
+listed: true
+published: true
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+#breadcrumbs.ui.inverted.blue.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'bullhorn' %}{% endblock %}
+
+{% block 'content' %}
+{% block 'main' %}
+#update-listing.ui.stacked.blue.segment
+  {% paginate contents.project_updates by 10 %}
+  .ui.relaxed.divided.items
+    {% for update in paginate.collection %}
+    {% include 'update_entry' with update %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'blue' %}
+    {% endpaginate %}
+{% endblock %}
+-# TODO: Featured projects
+{% endblock %}
