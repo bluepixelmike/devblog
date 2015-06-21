@@ -1,0 +1,5 @@
+-# Displays a difficulty label.
+-# Required variables:
+  difficulty - Difficulty text
+
+%span{ :class => 'ui horizontal {% case difficulty %}{% when "Beginner" %}blue{% when "Intermediate" %}purple{% else %}red{% endcase %} label' } {{ difficulty | escape }}

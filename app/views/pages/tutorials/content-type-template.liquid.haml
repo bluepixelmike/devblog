@@ -1,0 +1,93 @@
+---
+title: Preview Tutorial
+listed: true
+published: true
+content_type: tutorials
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.green.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to tutorials_page %}' } {{ tutorials_page.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}
+{% if tutorial.parts.size == 1 %}
+{% include 'heading' with icon: 'newspaper', subtitle: tutorial.parts.first.subtitle %}
+{% else %}
+{% include 'heading' with icon: 'newspaper' %}
+{% endif %}
+{% endblock %}
+
+{% block 'content/main' %}
+#tutorial.ui.green.segment
+  .meta
+    {% include 'difficulty_label' with difficulty: tutorial.difficulty %}
+    {% include 'author_label' with author: tutorial.author %}
+    {% include 'post_date' with date: tutorial.created_at %}
+    {% include 'category_meta' with category: tutorial.category %}
+    {% if tutorial.parts.size == 1 %}
+    {% include 'disqus_link' with obj: tutorial.parts.first, target: tutorial %}
+    {% endif %}
+
+  {% if tutorial.image %}
+  .large.featured-image{ :style => 'background-image: url({{ tutorial.image | resize: "250x85#" | escape }});' }
+  {% endif %}
+
+  {% if tutorial.featured %}
+  %span.ui.green.ribbon.label Featured
+  {% endif %}
+
+  {% block 'part' %}
+
+  .main-content
+    :plain
+      {{ tutorial.description }}
+
+  {% if tutorial.parts.size > 1 %}
+  {% assign first_part = tutorial.parts.first %}
+  %a.small.ui.green.start.button{ :href => '{% path_to first_part %}' }
+    -# TODO: Localize
+    :plain
+      Start
+    %i.chevron.right.icon
+  {% endif %}
+
+  {% if tutorial.parts.size == 1 %}
+  .content
+    {% if tutorial.parts.first.image %}
+    .featured-image{ :style => 'background-image: url({{ tutorial.parts.first.image | resize: "975x85#" | escape }});' }
+    {% endif %}
+    :plain
+      {{ tutorial.parts.first.content }}
+  {% endif %}
+
+  {% endblock %}
+
+  .extra
+    {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
+
+  {% if tutorial.parts.size > 1 %}
+  .ui.left.attached.rail
+    .ui.ordered.vertical.steps
+      {% for part in tutorial.parts %}
+      %a.step{ :href => '{% path_to part %}' }
+        .content
+          %span.title {{ part.subtitle | escape }}
+          %br/
+          %span.description {{ part.brief | escape }}
+      {% endfor %}
+  {% endif %}
+
+{% block 'comments' %}
+{% if tutorial.parts.size == 1 %}
+{% include 'comments' with obj: tutorial.parts.first, color: 'green', category: tutorial.category %}
+{% endif %}
+{% endblock %}
+{% endblock %}

@@ -2,13 +2,14 @@
 -# Required variables:
   obj - Object to display comments for
 
+{% unless category %}{% assign category = obj.category %}{% endunless %}
 #disqus_thread
 %script{ :type => 'text/javascript' }
   :plain
     var disqus_shortname   = '{{ site.name | dasherize }}';
     var disqus_id          = '{% path_to obj %}';
-    var disqus_title       = '{{ page.title | escape }}';{% if obj.category and obj.category.disqus_id %}
-    var disqus_category_id = '{{ obj.category.disqus_id | escape }}';{% endif %}
+    var disqus_title       = '{{ page.title | escape }}';{% if category and category.disqus_id %}
+    var disqus_category_id = '{{ category.disqus_id | escape }}';{% endif %}
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
