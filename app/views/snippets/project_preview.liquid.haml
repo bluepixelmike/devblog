@@ -1,0 +1,7 @@
+%a.item{ :href => '{% path_to project %}' }
+  %i.bullhorn.icon
+  .content
+    %span.title {{ project.name | escape }}
+    %br/
+    %span.meta {{ project.created_at | localized_date: '%A, %B %d, %Y' | escape }}
+    %span.description {{ project.brief | escape }}

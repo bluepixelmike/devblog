@@ -1,0 +1,30 @@
+---
+title: Tools
+listed: true
+published: true
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+#breadcrumbs.ui.inverted.purple.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'configure' %}{% endblock %}
+
+{% block 'content' %}
+{% block 'main' %}
+#post-listing.ui.stacked.purple.segment
+  {% paginate contents.tools by 5 %}
+  .ui.relaxed.divided.items
+    {% for tool in paginate.collection %}
+    {% include 'tool_entry' with tool %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'purple' %}
+    {% endpaginate %}
+{% endblock %}
+-# TODO: Featured projects
+{% endblock %}

@@ -1,0 +1,44 @@
+-# Full listing entry for a tool.
+-# Required variables:
+  tool - Tool to display information about
+
+.item
+  .content
+    %a.header{ :href => '{% path_to tool %}' }
+      %h3 {{ tool.name | escape }}
+
+    .meta
+      {% include 'item_count' with text: 'post',     icon: 'newspaper', count: tool.posts.size     %}
+      {% include 'item_count' with text: 'tutorial', icon: 'book',      count: tool.tutorials.size %}
+      {% include 'item_count' with text: 'project',  icon: 'lab',       count: tool.projects.size  %}
+      {% include 'item_count' with text: 'dev',      icon: 'user',      count: tool.authors.size   %}
+
+    .extra
+      .ui.divided.very.relaxed.list
+        -# Posts
+        {% for i in (0..1) %}
+        {% if tool.posts[i] %}
+        {% include 'post_preview' with post: tool.posts[i] %}
+        {% endif %}
+        {% endfor %}
+
+        -# Tutorials
+        {% for i in (0..1) %}
+        {% if tool.tutorials[i] %}
+        {% include 'tutorial_preview' with tutorial: tool.tutorials[i] %}
+        {% endif %}
+        {% endfor %}
+
+        -# Projects
+        {% for i in (0..1) %}
+        {% if tool.projects[i] %}
+        {% include 'project_preview' with project: tool.projects[i] %}
+        {% endif %}
+        {% endfor %}
+
+        -# Authors
+        {% for i in (0..1) %}
+        {% if tool.authors[i] %}
+        {% include 'author_preview' with author: tool.authors[i] %}
+        {% endif %}
+        {% endfor %}
