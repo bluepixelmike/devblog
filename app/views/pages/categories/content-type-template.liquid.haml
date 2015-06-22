@@ -1,0 +1,49 @@
+---
+title: View Category
+listed: true
+published: true
+content_type: categories
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'categories' %}{% assign categories_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.yellow.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to categories_page %}' } {{ categories_page.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'open folder outline', subtitle: category.brief %}{% endblock %}
+
+{% block 'content/main' %}
+#post.ui.teal.segment
+  .meta
+    {% include 'item_count' with text: 'post',     icon: 'newspaper', count: category.posts.size     %}
+    {% include 'item_count' with text: 'tutorial', icon: 'book',      count: category.tutorials.size %}
+    {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: category.updates.size   %}
+
+  {% if category.image %}
+  .featured-image{ :style => 'background-image: url({{ category.image | resize: "975x85#" | escape }});' }
+  {% endif %}
+
+  .main-content
+    .ui.divided.very.relaxed.list
+      -# Posts
+      {% for post in category.posts %}
+      {% include 'post_preview' with post %}
+      {% endfor %}
+
+      -# Tutorials
+      {% for tutorial in category.tutorials %}
+      {% include 'tutorial_preview' with tutorial %}
+      {% endfor %}
+
+      -# Updates
+      {% for update in category.updates %}
+      {% include 'update_preview' with update %}
+      {% endfor %}
+{% endblock %}
