@@ -1,0 +1,51 @@
+---
+title: View Tool
+listed: true
+published: true
+content_type: tools
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'tools' %}{% assign tools_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.purple.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to tools_page %}' } {{ tools_page.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'configure', image: tool.icon %}{% endblock %}
+
+{% block 'content/main' %}
+#post.ui.purple.segment
+  .meta
+    {% include 'item_count' with text: 'post',     icon: 'newspaper', count: tool.posts.size     %}
+    {% include 'item_count' with text: 'tutorial', icon: 'book',      count: tool.tutorials.size %}
+    {% include 'item_count' with text: 'project',  icon: 'lab',       count: tool.projects.size  %}
+    {% include 'item_count' with text: 'dev',      icon: 'user',      count: tool.authors.size   %}
+
+  .main-content
+    .ui.divided.very.relaxed.list
+      -# Posts
+      {% for post in tool.posts %}
+      {% include 'post_preview' with post %}
+      {% endfor %}
+
+      -# Tutorials
+      {% for tutorial in tool.tutorials %}
+      {% include 'tutorial_preview' with tutorial %}
+      {% endfor %}
+
+      -# Projects
+      {% for project in tool.projects %}
+      {% include 'project_preview' with project %}
+      {% endfor %}
+
+      -# Authors
+      {% for author in tool.authors %}
+      {% include 'author_preview' with author %}
+      {% endfor %}
+{% endblock %}
