@@ -19,7 +19,7 @@
     {% if p.is_link %}
     %a.ui.button{ :href => '{{ p.url | escape }}' } {{ p.title | escape }}
     {% else %}
-    %span{ :class => '{% if forloop.index == paginate.current_page %}active {{ color }}{% else %}disabled{% endif %} ui button' } {{ p.title | escape }}
+    %span{ :class => '{% if forloop.index == paginate.current_page %}active {{ color }}{% else %}disabled{% endif %} ui button' } {{ p.title }}
     {% endif %}
     {% endfor %}
 
