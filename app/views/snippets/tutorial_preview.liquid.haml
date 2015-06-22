@@ -1,0 +1,14 @@
+%a.item{ :href => '{% path_to tutorial %}' }
+  %i.book.icon
+  .content
+    %span.title {{ tutorial.title | escape }}
+    {% if tutorial.featured %}
+    %span.ui.mini.label
+      %i.star.icon
+      -# TODO: Localize
+      :plain
+        Featured
+    {% endif %}
+    %br/
+    %span.meta {{ tutorial.created_at | localized_date: '%A, %B %d, %Y' | escape }}
+    %span.description {{ tutorial.brief | escape }}

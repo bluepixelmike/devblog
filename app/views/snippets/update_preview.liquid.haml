@@ -1,0 +1,9 @@
+%a.item{ :href => '{% path_to update %}' }
+  %i.bullhorn.icon
+  .content
+    %span.title {{ update.title | escape }}
+    %br/
+    %span.meta {{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }}
+    {% if update.subtitle %}
+    %span.description {{ update.subtitle | escape }}
+    {% endif %}

@@ -1,0 +1,44 @@
+-# Full listing entry for a category.
+-# Required variables:
+  category - Category to display information about
+
+.item
+  %a.image{ :href => '{% path_to category %}', :title => '{{ category.name | escape }}' }
+    {% if category.image %}
+    %img{ :src => '{{ category.image | resize: "175x100#" | escape }}', :alt => '{{ category.name | escape }}' }
+    {% endif %}
+
+  .content
+    %a.header{ :href => '{% path_to category %}' }
+      %h3 {{ category.name | escape }}
+
+    .meta
+      {% include 'item_count' with text: 'post',     icon: 'newspaper', count: category.posts.size     %}
+      {% include 'item_count' with text: 'tutorial', icon: 'book',      count: category.tutorials.size %}
+      {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: category.updates.size   %}
+
+    .description
+      %p {{ category.brief | escape }}
+
+    .extra
+      .ui.divided.very.relaxed.list
+        -# Posts
+        {% for i in (0..1) %}
+        {% if category.posts[i] %}
+        {% include 'post_preview' with post: category.posts[i] %}
+        {% endif %}
+        {% endfor %}
+
+        -# Tutorials
+        {% for i in (0..1) %}
+        {% if category.tutorials[i] %}
+        {% include 'tutorial_preview' with tutorial: category.tutorials[i] %}
+        {% endif %}
+        {% endfor %}
+
+        -# Updates
+        {% for i in (0..1) %}
+        {% if category.updates[i] %}
+        {% include 'update_preview' with update: category.updates[i] %}
+        {% endif %}
+        {% endfor %}

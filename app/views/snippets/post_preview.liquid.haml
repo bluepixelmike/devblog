@@ -1,0 +1,16 @@
+%a.item{ :href => '{% path_to post %}' }
+  %i.newspaper.icon
+  .content
+    %span.title {{ post.title | escape }}
+    {% if post.featured %}
+    %span.ui.mini.label
+      %i.star.icon
+      -# TODO: Localize
+      :plain
+        Featured
+    {% endif %}
+    %br/
+    %span.meta {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }}
+    {% if post.subtitle %}
+    %span.description {{ post.subtitle | escape }}
+    {% endif %}

@@ -1,0 +1,11 @@
+-# Display a meta count.
+-# Required variables:
+  count - Number of items
+  text  - Item being counted
+
+{% if count > 0 %}
+%span.count
+  %i{ :class => '{{ icon | escape }} icon' }
+  :plain
+    {{ count }} {{ text | escape }}{% if count != 1 %}s{% endif %}
+{% endif %}

@@ -1,0 +1,7 @@
+%a.item{ :href => '{% path_to author %}' }
+  %i.user.icon
+  .content
+    %span.title {{ author.handle | escape }}
+    %br/
+    %span.meta {{ author.name | escape }}
+    %span.description {{ author.brief | escape }}
