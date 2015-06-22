@@ -20,7 +20,7 @@ content_type: tools
 {% block 'heading' %}{% include 'heading' with icon: 'configure', image: tool.icon %}{% endblock %}
 
 {% block 'content/main' %}
-#post.ui.purple.segment
+#tool.ui.purple.segment
   .meta
     {% include 'item_count' with text: 'post',     icon: 'newspaper', count: tool.posts.size     %}
     {% include 'item_count' with text: 'tutorial', icon: 'book',      count: tool.tutorials.size %}

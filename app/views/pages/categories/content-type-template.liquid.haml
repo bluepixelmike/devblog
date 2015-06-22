@@ -20,7 +20,7 @@ content_type: categories
 {% block 'heading' %}{% include 'heading' with icon: 'open folder outline', subtitle: category.brief %}{% endblock %}
 
 {% block 'content/main' %}
-#post.ui.teal.segment
+#category.ui.yellow.segment
   .meta
     {% include 'item_count' with text: 'post',     icon: 'newspaper', count: category.posts.size     %}
     {% include 'item_count' with text: 'tutorial', icon: 'book',      count: category.tutorials.size %}

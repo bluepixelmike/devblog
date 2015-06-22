@@ -26,7 +26,7 @@ content_type: project_updates
 {% block 'heading' %}{% include 'heading' with icon: 'bullhorn', subtitle: entry.subtitle, image: entry.project.icon  %}{% endblock %}
 
 {% block 'content/main' %}
-#post.ui.blue.segment
+#update.ui.blue.segment
   .meta
     {% include 'author_label' with author: project_update.author %}
     {% include 'post_date' with date: project_update.created_at %}
