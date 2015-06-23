@@ -1,0 +1,43 @@
+---
+title: Dev Tutorials
+listed: true
+published: true
+content_type: authors
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
+{% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.red.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to authors_page %}' } {{ authors_page.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to author %}' } {{ author.handle | escape }}
+    .divider /
+    %span.active.section {{ tutorials_page.title | escape }}
+{% endblock %}
+
+{% block 'heading/sub' %}
+{% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %}
+%span.sub.header {{ tutorials_page.title | escape }}
+{% endblock %}
+
+{% block 'content/main' %}
+#dev.ui.red.stacked.segment
+  .ui.relaxed.divided.items
+    -# Pagination of has_many doesn't work with the current LocomotiveCMS.
+      See this issue for details: https://github.com/locomotivecms/engine/issues/236
+    {% with_scope author: author %}
+    {% paginate contents.tutorials by 5 %}
+    {% for tutorial in paginate.collection %}
+    {% include 'tutorial_entry' with tutorial %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'red' %}
+    {% endpaginate %}
+    {% endwith_scope %}
+
+-# TODO: Featured tutorials, latest tutorials
+{% endblock %}

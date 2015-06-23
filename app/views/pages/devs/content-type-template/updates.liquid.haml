@@ -1,0 +1,43 @@
+---
+title: Dev Updates
+listed: true
+published: true
+content_type: authors
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
+{% with_scope fullpath: 'updates' %}{% assign updates_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.red.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to authors_page %}' } {{ authors_page.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to author %}' } {{ author.handle | escape }}
+    .divider /
+    %span.active.section {{ updates_page.title | escape }}
+{% endblock %}
+
+{% block 'heading/sub' %}
+{% with_scope fullpath: 'updates' %}{% assign updates_page = site.pages.first %}{% endwith_scope %}
+%span.sub.header {{ updates_page.title | escape }}
+{% endblock %}
+
+{% block 'content/main' %}
+#dev.ui.red.stacked.segment
+  .ui.relaxed.divided.items
+    -# Pagination of has_many doesn't work with the current LocomotiveCMS.
+      See this issue for details: https://github.com/locomotivecms/engine/issues/236
+    {% with_scope author: author %}
+    {% paginate contents.project_updates by 10 %}
+    {% for update in paginate.collection %}
+    {% include 'update_entry' with update %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'red' %}
+    {% endpaginate %}
+    {% endwith_scope %}
+
+-# TODO: Latest updates
+{% endblock %}
