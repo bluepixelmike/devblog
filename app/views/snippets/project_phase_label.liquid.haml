@@ -1,0 +1,1 @@
+%span{ :class => 'ui horizontal {% case phase %}{% when "Prototype" %}purple{% when "Alpha" %}green{% when "Beta" %}teal{% else %}blue{% endcase %} label' } {{ phase | escape }}

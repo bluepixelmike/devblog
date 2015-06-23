@@ -1,0 +1,35 @@
+-# Full listing entry for a project.
+-# Required variables:
+  project - Project to display information about
+
+%div{ :class => '{% if project.featured %}featured {% endif %}item' }
+  {% if project.featured %}
+  %span.ui.blue.ribbon.label Featured
+  {% endif %}
+
+  %a.image{ :href => '{% path_to project %}', :title => '{{ project.name | escape }}' }
+    {% if project.icon %}
+    %img{ :src => '{{ project.icon | resize: "175x175#" | escape }}', :alt => '{{ project.name | escape }}' }
+    {% endif %}
+
+  .content
+    %a.header{ :href => '{% path_to project %}' }
+      %h3 {{ project.name | escape }}
+
+    .meta
+      {% include 'project_phase_label' with phase: project.phase %}
+      {% include 'updates_meta' with project %}
+      {% include 'disqus_link' with obj: project %}
+
+    .description
+      %p {{ project.brief | escape }}
+
+    .extra
+      {% include 'tags_list' with tags: project.tags, tools: project.tools %}
+
+      {% if project.updates.size > 1 %}
+      .ui.divided.very.relaxed.list
+        {% for update in project.updates %}
+        {% include 'update_preview' with update %}
+        {% endfor %}
+      {% endif %}
