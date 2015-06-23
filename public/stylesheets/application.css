@@ -118,7 +118,7 @@ i.icon {
   margin: 0 0 0 0.5em;
 }
 
-.heading i.at.icon:only-child {
+span i.at.icon, .ui.header .content h2 span i.at.icon {
   margin-right: 0;
 }
 

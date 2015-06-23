@@ -1,0 +1,29 @@
+---
+title: Developers
+listed: true
+published: true
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+#breadcrumbs.ui.inverted.red.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'user' %}{% endblock %}
+
+{% block 'content' %}
+{% block 'main' %}
+#post-listing.ui.stacked.red.segment
+  {% paginate contents.authors by 10 %}
+  .ui.relaxed.divided.items
+    {% for author in paginate.collection %}
+    {% include 'author_entry' with author %}
+    {% endfor %}
+    {% include 'pagination' with paginate, color: 'red' %}
+    {% endpaginate %}
+{% endblock %}
+{% endblock %}

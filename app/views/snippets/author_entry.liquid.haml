@@ -1,0 +1,24 @@
+.item
+  %a.ui.tiny.image{ :href => '{% path_to author %}' }
+    %img.ui.avatar{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:80" | escape }}{% else %}{{ author.avatar | resize: "80x80#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
+
+  .content
+    %a.header{ :href => '{% path_to author %}' }
+      %h3
+        :plain
+          {{ author.name | escape }}
+        %span.meta
+          %i.at.icon
+          :plain
+            {{ author.handle | escape }}
+
+    .meta
+      {% include 'item_count' with text: 'post',     icon: 'newspaper', count: author.posts.size     %}
+      {% include 'item_count' with text: 'tutorial', icon: 'book',      count: author.tutorials.size %}
+      {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: author.updates.size   %}
+
+    .description
+      %p {{ author.brief | escape }}
+
+    .extra
+      {% include 'tags_list' with tools: author.tools %}

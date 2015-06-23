@@ -1,0 +1,124 @@
+---
+title: View Profile
+listed: true
+published: true
+content_type: authors
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.red.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to authors_page %}' } {{ authors_page.title | escape }}
+    .divider /
+    %span.active.section {{ page.title | escape }}
+{% endblock %}
+
+{% block 'heading' %}
+.ui.header
+  %img.dev-icon{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:60" | escape }}{% else %}{{ author.avatar | resize: "60x60#" | escape }}{% endif %}' }
+  .content
+    %h2
+      :plain
+        {{ author.name | escape }}
+      %span.meta
+        %i.at.icon
+        :plain
+          {{ author.handle | escape }}
+{% endblock %}
+
+{% block 'content/main' %}
+#dev.ui.red.segment
+  .right.floated.left.aligned.column
+    %img.ui.small.avatar.image{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:150" | escape }}{% else %}{{ author.avatar | resize: "150x150#" | escape }}{% endif %}' }
+    {% include 'links_list' with links: author.links %}
+
+  {% block 'part' %}
+  .main-content
+    {{ author.content }}
+
+  .extra
+    {% include 'tags_list' with tools: author.tools %}
+
+  {% if author.roles.size > 0 %}
+  #roles
+    -# TODO: Localize
+    %h4.ui.header Roles
+
+    .ui.horizontal.list
+      {% for role in author.roles %}
+      {% assign project = role.project %}
+      %a.ui.item{ :href => '{% path_to project %}' }
+        {% if project.icon %}
+        %img.project-icon.ui.image{ :src => '{{ project.icon | resize: "35x35#" | escape }}', :alt => '{{ project.name | escape }}' }
+        {% else %}
+        %i.lab.icon
+        {% endif %}
+
+        .content
+          %span {{ project.name | escape }}
+          .description {{ role.role | escape }}
+      {% endfor %}
+  {% endif %}
+
+  .ui.stackable.grid
+    {% if author.updates.size > 0 and author.tutorials.size > 0 %}
+    .eight.wide.column
+      {% if author.updates.size > 0 %}
+      #updates
+        -# TODO: Localize
+        %h4.ui.header Latest Updates
+        .ui.divided.very.relaxed.list
+          {% for i in (0..2) %}
+          {% if author.updates[i] %}
+          {% include 'update_preview' with update: author.updates[i] %}
+          {% endif %}
+          {% endfor %}
+        %a{ :href => '{% path_to author %}/updates' }
+          %i.angle.double.right.icon
+          -# TODO: Localize
+          :plain
+            View all ({{ author.updates.size }})
+      {% endif %}
+
+      {% if author.tutorials.size > 0 %}
+      #tutorials
+        -# TODO: Localize
+        %h4.ui.header Latest Tutorials
+        .ui.divided.very.relaxed.list
+          {% for i in (0..2) %}
+          {% if author.tutorials[i] %}
+          {% include 'tutorial_preview' with tutorial: author.tutorials[i] %}
+          {% endif %}
+          {% endfor %}
+        %a{ :href => '{% path_to author %}/tutorials' }
+          %i.angle.double.right.icon
+          -# TODO: Localize
+          :plain
+            View all ({{ author.tutorials.size }})
+      {% endif %}
+    {% endif %}
+
+    {% if author.posts.size > 0 %}
+    .eight.wide.column
+      #posts
+        -# TODO: Localize
+        %h4.ui.header Latest Posts
+        .ui.divided.very.relaxed.list
+          {% for i in (0..4) %}
+          {% if author.posts[i] %}
+          {% include 'post_preview' with post: author.posts[i] %}
+          {% endif %}
+          {% endfor %}
+        %a{ :href => '{% path_to author %}/posts' }
+          %i.angle.double.right.icon
+          -# TODO: Localize
+          :plain
+            View all ({{ author.posts.size }})
+    {% endif %}
+
+  {% endblock %}
+{% endblock %}

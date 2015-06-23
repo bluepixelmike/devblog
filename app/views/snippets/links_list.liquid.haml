@@ -1,0 +1,9 @@
+#links
+  %h4.ui.header Links
+  .ui.divided.list
+    {% for link in links %}
+    %a.item{ :href => '{{ link.url | escape }}' }
+      %i{ :class => '{% if link.icon %}{{ link.icon | escape }}{% else %}linkify{% endif %} icon' }
+      :plain
+        {{ link.name | escape }}
+    {% endfor %}
