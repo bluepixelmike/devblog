@@ -6,6 +6,8 @@ content_type: authors
 ---
 {% extends parent %}
 
+{% block 'subtitle' %}{% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %} / {{ tutorials_page.title | escape }}{% endblock %}
+
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
 {% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %}
