@@ -1,0 +1,58 @@
+---
+title: Tags
+listed: false
+published: true
+---
+{% extends parent %}
+
+{% block 'breadcrumbs' %}
+{% if params['tag'] %}{% assign tag = params['tag'] %}{% endif %}
+#breadcrumbs.ui.inverted.orange.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %span.section {{ page.title | escape }}
+    {% if tag %}
+    .divider /
+    %span.active.section {{ tag | escape }}
+    {% endif %}
+{% endblock %}
+
+{% block 'heading' %}{% include 'heading' with icon: 'tags', subtitle: params['tag'] %}{% endblock %}
+
+{% block 'content' %}
+{% if params['tag'] %}
+{% assign tag = params['tag'] %}
+#tag-listing.ui.orange.segment
+  {% with_scope tags: tag %}
+  .meta
+    {% include 'item_count' with text: 'post',     icon: 'newspaper', count: contents.posts.size           %}
+    {% include 'item_count' with text: 'tutorial', icon: 'book',      count: contents.tutorials.size       %}
+    {% include 'item_count' with text: 'project',  icon: 'lab',       count: contents.projects.size        %}
+    {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: contents.project_updates.size %}
+
+  .ui.divided.very.relaxed.list
+
+    -# Posts
+    {% for post in contents.posts %}
+    {% include 'post_preview' with post %}
+    {% endfor %}
+
+    -# Tutorials
+    {% for tutorial in contents.tutorials %}
+    {% include 'tutorial_preview' with tutorial %}
+    {% endfor %}
+
+    -# Projects
+    {% for project in contents.projects %}
+    {% include 'project_preview' with project %}
+    {% endfor %}
+
+    -# Updates
+    {% for update in contents.project_updates %}
+    {% include 'update_preview' with update %}
+    {% endfor %}
+
+  {% endwith_scope %}
+{% endif %}
+{% endblock %}

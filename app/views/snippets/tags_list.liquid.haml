@@ -6,7 +6,7 @@
 .ui.mini.tag.labels
   {% if tags %}
   {% for tag in tags %}
-  %a.ui.label{ :href => '/search?tag={{ tag | escape }}', :title => '{{ tag | escape }}' } {{ tag | escape }}
+  %a.ui.label{ :href => '/tags?tag={{ tag | escape }}', :title => '{{ tag | escape }}' } {{ tag | escape }}
   {% endfor %}
   {% endif %}
 
