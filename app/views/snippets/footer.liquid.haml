@@ -13,7 +13,9 @@
     .ui.link.list
       {% with_scope depth: 1 %}
       {% for p in site.pages %}
+      {% if p.listed? and p.published? %}
       %a.item{ :href => '{% path_to p %}' } {{ p.title | escape }}
+      {% endif %}
       {% endfor %}
       {% endwith_scope %}
 
