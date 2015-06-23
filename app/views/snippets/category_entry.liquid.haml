@@ -15,6 +15,7 @@
     .meta
       {% include 'item_count' with text: 'post',     icon: 'newspaper', count: category.posts.size     %}
       {% include 'item_count' with text: 'tutorial', icon: 'book',      count: category.tutorials.size %}
+      {% include 'item_count' with text: 'project',  icon: 'lab',       count: category.projects.size  %}
       {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: category.updates.size   %}
 
     .description
@@ -33,6 +34,13 @@
         {% for i in (0..1) %}
         {% if category.tutorials[i] %}
         {% include 'tutorial_preview' with tutorial: category.tutorials[i] %}
+        {% endif %}
+        {% endfor %}
+
+        -# Projects
+        {% for i in (0..1) %}
+        {% if category.projects[i] %}
+        {% include 'project_preview' with project: category.projects[i] %}
         {% endif %}
         {% endfor %}
 

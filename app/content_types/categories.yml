@@ -60,6 +60,17 @@ fields:
     inverse_of: category
     ui_enabled: false
 
+- projects:
+    label: Projects
+    type: has_many
+    hint: Projects made under this category
+    required: false
+    unique: false
+    localized: false
+    class_name: projects
+    inverse_of: category
+    ui_enabled: false
+
 - tutorials:
     label: Tutorials
     type: has_many

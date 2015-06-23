@@ -42,6 +42,11 @@ content_type: categories
       {% include 'tutorial_preview' with tutorial %}
       {% endfor %}
 
+      -# Projects
+      {% for project in category.projects %}
+      {% include 'project_preview' with project %}
+      {% endfor %}
+
       -# Updates
       {% for update in category.updates %}
       {% include 'update_preview' with update %}

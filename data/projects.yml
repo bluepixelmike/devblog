@@ -2,6 +2,7 @@
     brief: "Proin in odio quam. Nullam non aliquam metus. Donec laoreet, urna id gravida dapibus, tortor mi feugiat ipsum, eu vestibulum enim nulla vel nunc. In convallis ligula placerat, volutpat lectus at, pretium quam."
     featured: true
     phase: Prototype
+    category: "category-1"
     tags: ["tag-1", "tag-3", "tag-5"]
     tools: ["language-1", "software-3", "engine-4", "framework-2"]
     allow_comments: true
@@ -18,6 +19,7 @@
 - "Project 2":
     brief: "Curabitur vehicula magna non mauris accumsan, id volutpat mauris dapibus. Nulla risus augue, gravida vel sodales ut, pretium at mauris."
     phase: Alpha
+    category: "category-3"
     tags: ["tag-2", "tag-3", "tag-6", "tag-1"]
     tools: []
     allow_comments: true
@@ -48,6 +50,7 @@
 - "Project 4":
     brief: "Morbi eget posuere ligula. Curabitur sagittis ut risus vel maximus. Suspendisse potenti. Donec consequat aliquet tellus, id imperdiet mi tempus ac."
     phase: Released
+    category: "category-3"
     tags: ["tag-1", "tag-3", "tag-5"]
     tools: []
     allow_comments: false

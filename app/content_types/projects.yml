@@ -40,6 +40,16 @@ fields:
     localized: true
     select_options: ['Prototype', 'Alpha', 'Beta', 'Released']
 
+- category:
+    label: Category
+    type: belongs_to
+    required: false
+    unique: false
+    localized: false
+    class_name: categories
+    inverse_of: projects
+    ui_enabled: true
+
 - tags:
     label: Tags
     type: tags
