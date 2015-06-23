@@ -47,5 +47,6 @@ listed: true
       #footer.ui.inverted.borderless.segment
         {% include 'footer' %}
 
+    {% include 'disqus_comment_links' %}
     -# Pages can run custom scripts after the page is loaded by including them in the "scripts" block.
-    {% block 'scripts' %}{% include 'disqus_comment_links' %}{% endblock %}
+    {% block 'scripts' %}{% endblock %}

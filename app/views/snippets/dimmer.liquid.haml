@@ -1,0 +1,30 @@
+#img-dimmer.ui.page.dimmer
+  .center.content
+    %h2.ui.inverted.header
+    %img.ui.image{ :alt => 'Preview image' }
+    %span.ui.inverted.description
+
+%script{ :type => 'text/javascript' }
+  :plain
+    var dimmer         = $('#img-dimmer');
+    var dimmer_title   = $('#img-dimmer .content h2');
+    var dimmer_image   = $('#img-dimmer .content img');
+    var dimmer_caption = $('#img-dimmer .content .description');
+
+    dimmer.click(function() {
+      dimmer.dimmer('hide');
+    });
+
+    $('#images .ui.images a').click(function() {
+      var link    = $(this);
+      var title   = link.data('title');
+      var image   = link.data('image');
+      var caption = link.data('caption');
+
+      dimmer_title.html(title);
+      dimmer_image.prop('src', image);
+      dimmer_caption.html(caption);
+
+      dimmer.dimmer('show');
+      return false;
+    });

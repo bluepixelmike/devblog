@@ -1,0 +1,164 @@
+---
+title: View Project
+listed: true
+published: true
+content_type: projects
+---
+{% extends parent %}
+
+{% block 'subtitle' %}{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %} / {{ t.name | escape }}{% endif %}{% endfor %}{% endif %}{% endblock %}
+
+{% block 'javascripts' %}
+%script{ :type => 'text/javascript', :src => '{{ "semantic-ui/dimmer.js" | javascript_url | escape }}' }
+{% endblock %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'projects' %}{% assign projects_page = site.pages.first %}{% endwith_scope %}
+{% if params['tab'] %}
+{% for t in project.tabs %}
+{% if t._slug == params['tab'] %}
+{% assign tab = t %}
+{% endif %}
+{% endfor %}
+{% endif %}
+#breadcrumbs.ui.inverted.blue.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to projects_page %}' } {{ projects_page.title | escape }}
+    .divider /
+    {% if tab %}
+    %a.section{ :href => '{% path_to project %}' } {{ project.name | escape }}
+    .divider /
+    %span.active.section {{ tab.name | escape }}
+    {% else %}
+    %span.active.section {{ page.title | escape }}
+    {% endif %}
+{% endblock %}
+
+{% block 'heading' %}
+{% if params['tab'] %}
+{% for t in project.tabs %}
+{% if t._slug == params['tab'] %}
+{% assign tab = t %}
+{% endif %}
+{% endfor %}
+{% endif %}
+.ui.header
+  {% if project.icon %}
+  %img{ :src => '{{ project.icon | resize: "60x60#" | escape }}', :alt => '{{ project.name | escape }}' }
+  {% else %}
+  %i.lab.icon
+  {% endif %}
+  .content
+    %h2
+      :plain
+        {{ project.name | escape }}
+      {% include 'project_phase_label' with phase: project.phase %}
+      {% if tab %}
+      %span.sub.header {{ tab.name | escape }}
+      {% endif %}
+{% endblock %}
+
+{% block 'content/main' %}
+{% if params['tab'] %}
+{% for t in project.tabs %}
+{% if t._slug == params['tab'] %}
+{% assign tab = t %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+#tabs.ui.blue.buttons.top.attached
+  %a{ :href => '{% path_to project %}', :class => 'ui {% if page.fullpath == "projects/content-type-template" and tab == nil %}active{% endif %} button' } About
+  {% if project.components.size > 0 %}
+  %a{ :href => '{% path_to project %}/breakdown', :class => 'ui {% if page.fullpath == "projects/content-type-template/breakdown" %}active{% endif %} button' } Breakdown
+  {% endif %}
+  {% if project.updates.size > 0 %}
+  %a{ :href => '{% path_to project %}/updates', :class => 'ui {% if page.fullpath == "projects/content-type-template/updates" %}active{% endif %} button' } Updates
+  {% endif %}
+  {% if project.donations.size > 0 %}
+  %a{ :href => '{% path_to project %}/donations', :class => 'ui {% if page.fullpath == "projects/content-type-template/donations" %}active{% endif %} button' } Donations
+  {% endif %}
+  {% if project.allow_comments %}
+  %a.ui.button{ :href => '#comments' } Comments
+  {% endif %}
+  {% for t in project.tabs %}
+  %a{ :href => '{% path_to project %}?tab={{ t._slug }}', :class => 'ui {% if tab and tab._slug == t._slug %}active{% endif %} button' } {{ t.name | escape }}
+  {% endfor %}
+
+#project.ui.blue.stacked.attached.segment
+  %p {{ project.brief | escape }}
+
+  {% if project.image %}
+  .featured-image{ :style => 'background-image: url({{ project.image | resize: "975x85#" | escape }});' }
+  {% endif %}
+
+  {% block 'part' %}
+  .ui.stackable.grid
+
+    {% if project.updates.size > 0 %}
+    #updates.left.floated.left.aligned.ten.wide.column
+      -# TODO: Localize
+      %h4.ui.header Latest Updates
+      .ui.divided.very.relaxed.list
+        {% for i in (0..2) %}
+        {% if project.updates[i] %}
+        {% include 'update_preview' with update: project.updates[i] %}
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% if project.links.size > 0 %}
+    #links.right.floated.left.aligned.six.wide.column
+      {% include 'links_list' with links: project.links %}
+    {% endif %}
+
+  .main-content
+    {% if tab %}
+    {{ tab.content }}
+    {% else %}
+    {{ project.content }}
+    {% endif %}
+
+  {% unless tab %}
+  -# Don't display devs, images, and extra in tab view.
+
+  {% if project.developers.size > 0 %}
+  #devs
+    {% with_scope fullpath: 'devs' %}{% assign devs_page = site.pages.first %}{% endwith_scope %}
+    %h4.ui.headers {{ devs_page.title | escape }}
+    .ui.horizontal.list
+      {% for dev in project.developers %}
+      {% assign author = dev.author %}
+      %a.ui.item{ :href => '{% path_to author %}' }
+        %img.ui.avatar.image{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:35" | escape }}{% else %}{{ author.avatar | resize: "35x35#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
+        .content
+          :plain
+            {{ author.name | escape }}
+          .description {{ dev.role | escape }}
+      {% endfor %}
+  {% endif %}
+
+  {% if project.pictures.size > 0 %}
+  #images
+    -# TODO: Localize
+    %h4.ui.header Images
+    .ui.small.images
+      {% for pic in project.pictures %}
+      %a.ui.image{ :href => '{{ pic.image.url | escape }}', :data => { :title => '{{ pic.title | escape }}', :image => '{{ pic.image.url | escape }}', :caption => '{{ pic.caption | escape }}' } }
+        %img{ :src => '{{ pic.image | resize: "150x85#" | escape }}', :alt => '{{ pic.title | escape }}' }
+      {% endfor %}
+  {% endif %}
+
+  .extra
+    {% include 'tags_list' with tags: project.tags, tools: project.tools %}
+
+  {% endunless %}
+
+  {% endblock %}
+
+{% include 'comments' with target: project, color: 'blue' %}
+{% endblock %}
+
+{% block 'scripts' %}{% include 'dimmer' %}{% endblock %}
