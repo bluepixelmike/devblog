@@ -55,9 +55,11 @@ content_type: projects
       :plain
         {{ project.name | escape }}
       {% include 'project_phase_label' with phase: project.phase %}
+      {% block 'sub' %}
       {% if tab %}
       %span.sub.header {{ tab.name | escape }}
       {% endif %}
+      {% endblock %}
 {% endblock %}
 
 {% block 'content/main' %}
@@ -84,7 +86,7 @@ content_type: projects
   %a.ui.button{ :href => '#comments' } Comments
   {% endif %}
   {% for t in project.tabs %}
-  %a{ :href => '{% path_to project %}?tab={{ t._slug }}', :class => 'ui {% if tab and tab._slug == t._slug %}active{% endif %} button' } {{ t.name | escape }}
+  %a{ :href => '{% path_to project %}?tab={{ t._slug }}', :class => 'ui {% if tab and tab._slug == t._slug and page.fullpath == "projects/content-type-template" %}active{% endif %} button' } {{ t.name | escape }}
   {% endfor %}
 
 #project.ui.blue.stacked.attached.segment

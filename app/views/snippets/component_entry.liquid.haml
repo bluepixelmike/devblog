@@ -1,0 +1,38 @@
+{% if component.state == "Not Started" or component.progress < 0 %}
+{% assign progress = 0 %}
+{% elsif component.state == "Finished" or component.progress > 100 %}
+{% assign progress = 100 %}
+{% else %}
+{% assign progress = component.progress %}
+{% endif %}
+
+{% case component.state %}
+{% when "Not Started" %}{% assign color = "purple" %}{% assign active = ""       %}{% assign icon = "wait"           %}
+{% when "Designing"   %}{% assign color = "teal"   %}{% assign active = "active" %}{% assign icon = "idea"           %}
+{% when "In Progress" %}{% assign color = "blue"   %}{% assign active = "active" %}{% assign icon = "circle notched" %}
+{% when "Finished"    %}{% assign color = "green"  %}{% assign active = ""       %}{% assign icon = "checkmark"      %}
+{% when "Reworking"   %}{% assign color = "orange" %}{% assign active = "active" %}{% assign icon = "history"        %}
+{% when "Halted"      %}{% assign color = "red"    %}{% assign active = ""       %}{% assign icon = "remove"         %}
+{% endcase %}
+
+.item
+  .content
+    %h3
+      :plain
+        {{ component.name | escape }}
+      %span{ :class => 'ui pointing left {{ color }} label' }
+        %i{ :class => '{{ icon }} icon' }
+        :plain
+          {{ component.state | escape }}
+
+    .meta
+      %div{ :class => 'ui basic {{ active }} {{ color }} progress', :data => { :percent => '{{ progress }}' } }
+        .bar{ :style => 'width: {{ progress | percentage }};' }
+          .progress {{ progress | percentage: "precision: 0" }}
+
+    .description
+      %p {{ component.brief | escape }}
+
+    {% if component.details %}
+    .extra {{ component.details | escape }}
+    {% endif %}

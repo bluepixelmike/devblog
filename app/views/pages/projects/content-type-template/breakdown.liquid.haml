@@ -1,0 +1,33 @@
+---
+title: Project Breakdown
+listed: true
+published: true
+content_type: projects
+---
+{% extends parent %}
+
+{% block 'subtitle' %} / Breakdown{% endblock %}
+
+{% block 'breadcrumbs' %}
+{% with_scope fullpath: 'projects' %}{% assign projects_page = site.pages.first %}{% endwith_scope %}
+#breadcrumbs.ui.inverted.blue.segment
+  .ui.breadcrumb
+    %a.section{ :href => '/' } {{ site.index.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to projects_page %}' } {{ projects_page.title | escape }}
+    .divider /
+    %a.section{ :href => '{% path_to project %}' } {{ project.name | escape }}
+    .divider /
+    %span.active.section Breakdown
+{% endblock %}
+
+{% block 'heading/sub' %}
+%span.sub.header Breakdown
+{% endblock %}
+
+{% block 'content/main/part' %}
+.ui.relaxed.divided.items
+  {% for component in project.components %}
+  {% include 'component_entry' with component %}
+  {% endfor %}
+{% endblock %}

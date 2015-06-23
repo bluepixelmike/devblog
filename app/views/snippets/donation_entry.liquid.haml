@@ -1,0 +1,12 @@
+.comment
+  %span.avatar
+    %img{ :src => '{{ donation.email | gravatar_url: "d:mm", "s:36" | escape }}', :alt => '{{ donation.name | escape }}' }
+  .content
+    %span.author {{ donation.name | escape }}
+    .metadata
+      {% include 'post_date' with date: donation.date %}
+    .text
+      %span.amount {{ donation.amount | money }}
+      {% if donation.message %}
+      %p {{ donation.message | escape }}
+      {% endif %}
