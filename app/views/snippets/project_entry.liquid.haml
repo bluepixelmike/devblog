@@ -41,11 +41,12 @@
         {% for t in project.tabs %}
         %a.button{ :href => '{% path_to project %}?tab={{ t._slug }}' } {{ t.name | escape }}
         {% endfor %}
-      {% include 'tags_list' with tags: project.tags, tools: project.tools %}
 
-      {% if project.updates.size > 1 %}
+      {% if project.updates.size > 0 %}
       .ui.divided.very.relaxed.list
         {% for update in project.updates %}
         {% include 'update_preview' with update %}
         {% endfor %}
       {% endif %}
+
+      {% include 'tags_list' with tags: project.tags, tools: project.tools %}
