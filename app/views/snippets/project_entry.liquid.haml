@@ -25,6 +25,22 @@
       %p {{ project.brief | escape }}
 
     .extra
+      .compact.ui.basic.tiny.buttons
+        {% if project.components.size > 0 %}
+        %a.button{ :href => '{% path_to project %}/breakdown' } Breakdown
+        {% endif %}
+        {% if project.updates.size > 0 %}
+        %a.button{ :href => '{% path_to project %}/updates' } Updates
+        {% endif %}
+        {% if project.donations.size > 0 %}
+        %a.button{ :href => '{% path_to project %}/donations' } Donations
+        {% endif %}
+        {% if project.allow_comments %}
+        %a.button{ :href => '{% path_to project %}#comments' } Comments
+        {% endif %}
+        {% for t in project.tabs %}
+        %a.button{ :href => '{% path_to project %}?tab={{ t._slug }}' } {{ t.name | escape }}
+        {% endfor %}
       {% include 'tags_list' with tags: project.tags, tools: project.tools %}
 
       {% if project.updates.size > 1 %}
