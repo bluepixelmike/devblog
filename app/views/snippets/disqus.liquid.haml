@@ -6,7 +6,7 @@
 #disqus_thread
 %script{ :type => 'text/javascript' }
   :plain
-    var disqus_shortname   = '{{ site.name | dasherize }}';
+    var disqus_shortname   = '{{ site.seo_title | dasherize }}';
     var disqus_id          = '{% path_to obj %}';
     var disqus_title       = '{{ page.title | escape }}';{% if category and category.disqus_id %}
     var disqus_category_id = '{{ category.disqus_id | escape }}';{% endif %}

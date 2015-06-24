@@ -30,7 +30,7 @@ response_type: application/atom+xml
   {% endif %}
   {% endfor %}
 
-  %title {{ site.seo_title | escape }}
+  %title {{ site.name | escape }}
   {% block 'subtitle' %}{% endblock %}
   %id http://{{ host | escape }}{{ fullpath | escape }}
   {% include 'feed_time' with updated: last_updated %}
