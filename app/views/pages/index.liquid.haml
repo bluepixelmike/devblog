@@ -39,6 +39,8 @@ listed: true
               {% block 'heading' %}
               {% if parent %}
               {% include 'heading' %}
+              {% else %}
+              .ui.header {{ site.name | escape }}
               {% endif %}
               {% endblock %}
 
@@ -46,8 +48,18 @@ listed: true
         .ui.page.grid
           .sixteen.wide.column
             -# All primary content goes in the "content" block.
-            {% block 'content' %}{% endblock %}
-      -# TODO
+            {% block 'content' %}
+            .ui.segment
+              {% editable_text 'homepage', format: 'html', hint: 'Homepage content' %}
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan mollis convallis. Aenean bibendum pulvinar laoreet. Integer quis pellentesque nibh. Quisque sodales euismod felis, vitae fringilla est rhoncus eleifend. Ut finibus convallis diam, sed venenatis tellus porttitor non. Donec ac enim at mauris ornare maximus. Etiam et porta nisl. Ut aliquam pellentesque fringilla. Nullam molestie tellus augue, in dictum libero lobortis et. Fusce nec nunc est. Pellentesque consequat tellus ac suscipit imperdiet. Integer id orci vulputate, fermentum ipsum at, congue nibh. Nullam consequat ac lorem eu imperdiet. Fusce dui enim, ornare iaculis nunc vitae, vulputate blandit mi. Morbi condimentum felis non ligula porta, eget molestie purus porttitor.</p>
+              <p>Nulla convallis, sem eu ultricies blandit, ex eros gravida lacus, vel gravida lorem leo sed dolor. Donec scelerisque velit risus, eu consequat massa convallis a. Ut congue sapien in aliquam dapibus. Duis ultrices est felis, non egestas justo placerat vehicula. Nam quis molestie mi. Quisque quam erat, hendrerit et accumsan eu, sollicitudin non nibh. Duis volutpat sagittis diam quis interdum. Curabitur congue dictum mi. Nullam posuere, velit ut posuere tristique, ante dui gravida libero, sed commodo metus est sit amet arcu. Nunc posuere a nunc ac venenatis. Sed ac erat quis dolor lobortis scelerisque. Ut malesuada tortor eget porttitor feugiat. In pharetra tristique dui, ac aliquet lectus pulvinar sed. Integer imperdiet orci ipsum, a imperdiet nisi tincidunt nec. Morbi ac erat sit amet purus consectetur pellentesque facilisis et ipsum. Pellentesque at condimentum nisl.</p>
+              <p>Praesent vel faucibus felis. Donec lacinia vitae magna venenatis hendrerit. Cras feugiat sagittis vulputate. Nulla imperdiet lorem eu ornare dictum. In aliquam dapibus tellus vitae vulputate. Curabitur nec nisl fringilla, semper nisl vel, dictum nisi. Fusce vitae nibh justo. Pellentesque aliquam tincidunt velit, sed ullamcorper neque malesuada sit amet. Praesent tempus dui odio, sed venenatis nibh dignissim eu.</p>
+              <p>Proin bibendum dui sed est dictum, non laoreet nisl iaculis. Pellentesque eget est vitae lectus pulvinar posuere et sit amet odio. Maecenas posuere rutrum tellus, nec dictum augue consequat blandit. Praesent vitae dictum mauris, sit amet gravida nunc. Ut at ex nibh. Fusce et dolor sit amet tellus facilisis eleifend non at urna. Aenean mollis nisl in quam tristique, ut mattis elit mollis. Pellentesque ac fringilla orci, ut porta diam. Mauris at mauris commodo, congue elit ut, lacinia elit.</p>
+              <p>Integer vestibulum hendrerit neque eu elementum. Fusce lacinia sed nisl et maximus. Ut dignissim arcu vel dui posuere, nec porttitor eros cursus. Curabitur leo turpis, tempor vitae gravida sed, efficitur et erat. Integer euismod sem sed sagittis tincidunt. Vivamus blandit sed orci at hendrerit. Nulla facilisi. Sed finibus, mauris id posuere sagittis, turpis mi eleifend quam, vel tempus orci sapien accumsan neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              <p>Vivamus dignissim lorem dolor, vel sollicitudin nunc mollis interdum. Nulla cursus erat non nulla sollicitudin, ac lacinia augue feugiat. In non lacus eleifend, tempor diam in, egestas purus. Nunc ac varius nunc. Etiam non accumsan turpis, vel venenatis justo. Duis at sapien vel enim tempor condimentum vel eu odio. Quisque pretium luctus felis, sit amet posuere orci luctus ornare. In et erat congue, tempus tellus in, faucibus risus. Ut fringilla et justo ut tincidunt. Proin efficitur tellus a nibh tempus accumsan.</p>
+              <p>Maecenas iaculis turpis in quam volutpat, vel cursus turpis condimentum. Duis bibendum ante quis faucibus congue. Duis eget ante metus. Duis imperdiet augue eu massa tempor, id pulvinar dui scelerisque. Nulla facilisi. Pellentesque pretium turpis vel nibh porta accumsan. Cras fermentum ornare posuere. Quisque sed vulputate nisi. Nulla vel urna euismod, congue tellus et, vestibulum leo. Fusce non consequat orci, nec fermentum metus. Nunc id velit in dolor sagittis rhoncus.</p>
+              {% endeditable_text %}
+            {% endblock %}
 
       #related
         .ui.centered.grid
