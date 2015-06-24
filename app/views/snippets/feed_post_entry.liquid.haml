@@ -1,0 +1,10 @@
+%entry
+  %title {{ post.title | escape }}
+  <link href='http://{{ host | escape }}{% path_to post %}' rel='alternate' />
+  %id http://{{ host | escape }}{% path_to post %}
+  {% include 'feed_time' with updated: post.updated_at, published: post.created_at %}
+  {% include 'feed_author' with author: post.author %}
+  %summary {% if post.subtitle %}{{ post.subtitle | escape }}{% else %}{{ post.excerpt | escape }}{% endif %}
+  {% if post.category %}
+  <category term='{{ post.category._slug }}' label='{{ post.category.name | escape }}' />
+  {% endif %}

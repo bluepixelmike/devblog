@@ -1,0 +1,72 @@
+---
+title: Site Feed
+listed: false
+published: true
+response_type: application/atom+xml
+---
+!!! XML
+%feed{ :xmlns => 'http://www.w3.org/2005/Atom' }
+
+  -# Compute the last update time by aggregating all updated_at values.
+  {% assign last_updated = 0 %}
+  {% for post in contents.posts %}
+  {% if post.updated_at > last_updated %}
+  {% assign last_updated = post.updated_at %}
+  {% endif %}
+  {% endfor %}
+  {% for part in contents.tutorial_parts %}
+  {% if part.updated_at > last_updated %}
+  {% assign last_updated = part.updated_at %}
+  {% endif %}
+  {% endfor %}
+  {% for update in contents.project_updates %}
+  {% if update.updated_at > last_updated %}
+  {% assign last_updated = update.updated_at %}
+  {% endif %}
+  {% endfor %}
+  {% for project in contents.projects %}
+  {% if project.updated_at > last_updated %}
+  {% assign last_updated = project.updated_at %}
+  {% endif %}
+  {% endfor %}
+
+  %title {{ site.seo_title | escape }}
+  {% block 'subtitle' %}{% endblock %}
+  %id http://{{ host | escape }}{{ fullpath | escape }}
+  {% include 'feed_time' with updated: last_updated %}
+  <link href='http://{{ host | escape }}' />
+  <link href='http://{{ host | escape }}{{ fullpath | escape }}' rel='self' />
+
+  {% for author in contents.authors %}
+  {% include 'feed_author' with author %}
+  {% endfor %}
+
+  {% block 'entries' %}
+
+  -# Posts
+  {% for post in contents.posts %}
+  {% if forloop.index0 < 10 %}
+  {% include 'feed_post_entry' with post %}
+  {% endif %}
+  {% endfor %}
+
+  -# Updates
+  {% for update in contents.project_updates %}
+  {% if forloop.index0 < 10 %}
+  {% include 'feed_update_entry' with update %}
+  {% endif %}
+  {% endfor %}
+
+  -# Tutorials
+  {% for tutorial in contents.tutorials %}
+  {% if forloop.index0 < 10 %}
+  {% include 'feed_tutorial_entry' with tutorial %}
+  {% endif %}
+  {% endfor %}
+
+  -# Projects
+  {% for project in contents.projects %}
+  {% include 'feed_project_entry' with project %}
+  {% endfor %}
+
+  {% endblock %}

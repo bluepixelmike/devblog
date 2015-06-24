@@ -1,0 +1,18 @@
+-# Compute the last time any part of the tutorial was updated.
+{% assign last_updated = tutorial.updated_at %}
+{% for part in tutorial.parts %}
+{% if part.updated_at > last_updated %}
+{% assign last_updated = part.updated_at %}
+{% endif %}
+{% endfor %}
+
+%entry
+  %title {{ tutorial.title | escape }}
+  <link href='http://{{ host | escape }}{% path_to tutorial %}' rel='alternate' />
+  %id http://{{ host | escape }}{% path_to tutorial %}
+  {% include 'feed_time' with updated: last_updated, published: tutorial.created_at %}
+  {% include 'feed_author' with author: tutorial.author %}
+  %summary {{ tutorial.brief | escape }}
+  {% if tutorial.category %}
+  <category term='{{ tutorial.category._slug }}' label='{{ tutorial.category.name | escape }}' />
+  {% endif %}

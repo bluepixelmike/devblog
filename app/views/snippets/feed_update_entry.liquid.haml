@@ -1,0 +1,12 @@
+{% assign project = update.project %}
+%entry
+  %title {{ update.title | escape }}
+  <link href='http://{{ host | escape }}{% path_to update %}' rel='alternate' />
+  <link href='http://{{ host | escape }}{% path_to project %}' rel='related' />
+  %id http://{{ host | escape }}{% path_to update %}
+  {% include 'feed_time' with updated: update.updated_at, published: update.created_at %}
+  {% include 'feed_author' with author: update.author %}
+  %summary {% if update.subtitle %}{{ update.subtitle | escape }}{% else %}{{ update.excerpt | escape }}{% endif %}
+  {% if post.category %}
+  <category term='{{ update.category._slug }}' label='{{ update.category.name | escape }}' />
+  {% endif %}

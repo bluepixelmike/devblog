@@ -1,0 +1,22 @@
+-# Compute the last time any part of the project was updated.
+{% assign last_updated = project.updated_at %}
+{% for tab in project.tabs %}
+{% if tab.updated_at > last_updated %}
+{% assign last_updated = tab.updated_at %}
+{% endif %}
+{% endfor %}
+
+%entry
+  %title {{ project.name | escape }}
+  <link href='http://{{ host | escape }}{% path_to project %}' rel='alternate' />
+  -# Some sort of weird bug happening here.
+    Using 'path_to project' again always results in 'project-3'.
+  %id http://{{ host | escape }}/projects/{{ project._slug }}
+  {% include 'feed_time' with updated: last_updated, published: project.created_at %}
+  {% for role in project.developers %}
+  {% include 'feed_author' with author: role.author %}
+  {% endfor %}
+  %summary {{ project.brief | escape }}
+  {% if project.category %}
+  <category term='{{ project.category._slug }}' label='{{ project.category.name | escape }}' />
+  {% endif %}
