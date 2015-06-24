@@ -9,7 +9,8 @@ content_type: projects
 {% block 'subtitle' %}{% if params['tab'] %}{% for t in project.tabs %}{% if t._slug == params['tab'] %} / {{ t.name | escape }}{% endif %}{% endfor %}{% endif %}{% endblock %}
 
 {% block 'feed' %}
-%link{ :rel => 'alternate', :type => 'application/atom+xml', :href => '{{ fullpath | escape }}/feed' }
+{% assign subfeed = project %}
+%link{ :rel => 'alternate', :type => 'application/atom+xml', :href => '{% path_to project %}/feed' }
 {% endblock %}
 
 {% block 'javascripts' %}

@@ -19,7 +19,13 @@
   {% include 'nav_item' with item: updates_page,   icon: 'bullhorn'  %}
 
   .right.menu
+    {% if subfeed %}
+    %a.item{ :href  => '{% path_to subfeed %}/feed' }
+      %i.rss.icon
+      %span {{ page.title | escape }} Feed
+    {% else %}
     -# Lucky~
       feed_page gets dropped in from previous assignment on page. No additional logic needed.
     {% unless feed_page %}{% with_scope fullpath: 'feed' %}{% assign feed_page = site.pages.first %}{% endwith_scope %}{% endunless %}
     {% include 'nav_item' with item: feed_page, icon: 'rss' %}
+    {% endif %}
