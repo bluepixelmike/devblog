@@ -100,19 +100,20 @@ content_type: projects
   .ui.stackable.grid
 
     {% if project.updates.size > 0 %}
-    #updates.left.floated.left.aligned.ten.wide.column
-      -# TODO: Localize
-      %h4.ui.header Latest Updates
-      .ui.divided.very.relaxed.list
-        {% for i in (0..2) %}
-        {% if project.updates[i] %}
-        {% include 'update_preview' with update: project.updates[i] %}
-        {% endif %}
-        {% endfor %}
+    .left.floated.left.aligned.ten.wide.column
+      #updates
+        -# TODO: Localize
+        %h4.ui.header Latest Updates
+        .ui.divided.very.relaxed.list
+          {% for i in (0..2) %}
+          {% if project.updates[i] %}
+          {% include 'update_preview' with update: project.updates[i] %}
+          {% endif %}
+          {% endfor %}
     {% endif %}
 
     {% if project.links.size > 0 %}
-    #links.right.floated.left.aligned.six.wide.column
+    .right.floated.left.aligned.six.wide.column
       {% include 'links_list' with links: project.links %}
     {% endif %}
 

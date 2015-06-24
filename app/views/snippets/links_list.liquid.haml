@@ -1,3 +1,4 @@
+{% if links and links.size > 0 %}
 #links
   %h4.ui.header Links
   .ui.divided.list
@@ -7,3 +8,4 @@
       :plain
         {{ link.name | escape }}
     {% endfor %}
+{% endif %}
