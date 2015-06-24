@@ -19,7 +19,7 @@ content_type: authors
 
 {% block 'heading' %}
 .ui.header
-  %img.dev-icon{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:60" | escape }}{% else %}{{ author.avatar | resize: "60x60#" | escape }}{% endif %}' }
+  %img.dev-icon{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:60" | escape }}{% else %}{{ author.avatar | resize: "60x60#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
   .content
     %h2
       :plain
@@ -34,7 +34,7 @@ content_type: authors
 {% block 'content/main' %}
 #dev.ui.red.segment
   .right.floated.left.aligned.column
-    %img.ui.small.avatar.image{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:150" | escape }}{% else %}{{ author.avatar | resize: "150x150#" | escape }}{% endif %}' }
+    %img.ui.small.avatar.image{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:150" | escape }}{% else %}{{ author.avatar | resize: "150x150#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
     {% include 'links_list' with links: author.links %}
 
   .main-content
