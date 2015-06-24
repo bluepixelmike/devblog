@@ -21,6 +21,10 @@ content_type: posts
 
 {% block 'content/main' %}
 #post.ui.teal.segment
+
+  .ui.right.rail
+    {% include 'author_blurb' with author: post.author %}
+
   .meta
     {% include 'author_label' with author: post.author %}
     {% include 'post_date' with date: post.created_at %}
@@ -61,6 +65,4 @@ content_type: posts
     {% endif %}
 
 {% include 'comments' with color: 'teal' %}
-
--# TODO: About the author
 {% endblock %}

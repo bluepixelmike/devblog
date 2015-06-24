@@ -1,0 +1,21 @@
+.ui.red.card
+  %a.content{ :href => '{% path_to author %}' }
+    %img.author-avatar.ui.image.left.floated{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:80" | escape }}{% else %}{{ author.avatar | resize: "80x80#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
+    .header {{ author.name | escape }}
+    .meta
+      %i.at.icon
+      :plain
+        {{ author.handle | escape }}
+    .description
+      %p {{ author.brief | escape }}
+
+  {% if author.links.size > 0 %}
+  .extra.content
+    .horizontal.links.list
+      {% for link in author.links %}
+      %a.item{ :href => '{{ link.url | escape }}' }
+        %i{ :class => '{% if link.icon %}{{ link.icon | escape }}{% else %}linkify{% endif %} icon' }
+        :plain
+          {{ link.name | escape }}
+      {% endfor %}
+  {% endif %}
