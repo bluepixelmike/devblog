@@ -1,0 +1,19 @@
+-# Smaller preview of the update for "related" items.
+-# Required variables:
+  update - Update to display information about
+
+.ui.blue.card
+  %a.content{ :href => '{% path_to update %}' }
+    .header
+      :plain
+        {{ update.title | escape }}
+      {% if update.subtitle %}
+      .sub.header {{ update.subtitle | escape }}
+      {% endif %}
+    .meta {{ update.created_at | localized_date: '%A, %B %d, %Y' | escape }} ({{ update.created_at | distance_of_time_in_words }})
+    .description
+      %p {{ update.excerpt | truncatewords: 25 | escape }}
+
+  .extra.content
+    {% include 'project_meta' with project: update.project %}
+    {% include 'disqus_link' with obj: update %}

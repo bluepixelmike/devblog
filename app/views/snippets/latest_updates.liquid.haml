@@ -1,0 +1,12 @@
+{% if contents.project_updates.size > 0 %}
+.ui.header
+  %i.bullhorn.icon
+  :plain
+    Latest Updates
+.ui.horizontal.cards
+  {% for update in contents.project_updates %}
+  {% if forloop.index0 < 5 %}
+  {% include 'update_blurb' with update %}
+  {% endif %}
+  {% endfor %}
+{% endif %}

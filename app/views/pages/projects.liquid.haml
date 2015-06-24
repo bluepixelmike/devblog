@@ -35,5 +35,8 @@ published: true
   {% endif %}
   {% endpaginate %}
 {% endblock %}
--# TODO: Latest updates
+{% endblock %}
+
+{% block 'related' %}
+{% include 'latest_updates' %}
 {% endblock %}
