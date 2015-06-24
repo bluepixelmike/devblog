@@ -1,0 +1,21 @@
+---
+title: Project Feed
+listed: false
+published: true
+response_type: application/atom+xml
+content_type: projects
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+
+-# Updates
+{% for update in project.updates %}
+{% if forloop.index0 < 10 %}
+{% include 'feed_update_entry' with update %}
+{% endif %}
+{% endfor %}
+
+{% endblock %}

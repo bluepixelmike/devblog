@@ -1,0 +1,15 @@
+---
+title: Projects Feed
+listed: false
+published: true
+response_type: application/atom+xml
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+{% for project in contents.projects %}
+{% include 'feed_project_entry' with project %}
+{% endfor %}
+{% endblock %}

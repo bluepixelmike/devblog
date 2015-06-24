@@ -1,0 +1,15 @@
+---
+title: Post Feed
+listed: false
+published: true
+response_type: application/atom+xml
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+{% for post in contents.posts %}
+{% include 'feed_post_entry' with post %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,40 @@
+---
+title: Category Feed
+listed: false
+published: true
+response_type: application/atom+xml
+content_type: categories
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+
+-# Posts
+{% for post in category.posts %}
+{% if forloop.index0 < 10 %}
+{% include 'feed_post_entry' with post %}
+{% endif %}
+{% endfor %}
+
+-# Updates
+{% for update in category.updates %}
+{% if forloop.index0 < 10 %}
+{% include 'feed_update_entry' with update %}
+{% endif %}
+{% endfor %}
+
+-# Tutorials
+{% for tutorial in category.tutorials %}
+{% if forloop.index0 < 10 %}
+{% include 'feed_tutorial_entry' with tutorial %}
+{% endif %}
+{% endfor %}
+
+-# Projects
+{% for project in category.projects %}
+{% include 'feed_project_entry' with project %}
+{% endfor %}
+
+{% endblock %}

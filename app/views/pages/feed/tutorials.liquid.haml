@@ -1,0 +1,15 @@
+---
+title: Tutorials Feed
+listed: false
+published: true
+response_type: application/atom+xml
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+{% for tutorial in contents.tutorials %}
+{% include 'feed_tutorial_entry' with tutorial %}
+{% endfor %}
+{% endblock %}

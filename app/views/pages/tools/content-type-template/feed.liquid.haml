@@ -1,0 +1,33 @@
+---
+title: Tool Feed
+listed: false
+published: true
+response_type: application/atom+xml
+content_type: tools
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+
+-# Posts
+{% for post in tool.posts %}
+{% if forloop.index0 < 10 %}
+{% include 'feed_post_entry' with post %}
+{% endif %}
+{% endfor %}
+
+-# Tutorials
+{% for tutorial in tool.tutorials %}
+{% if forloop.index0 < 10 %}
+{% include 'feed_tutorial_entry' with tutorial %}
+{% endif %}
+{% endfor %}
+
+-# Projects
+{% for project in tool.projects %}
+{% include 'feed_project_entry' with project %}
+{% endfor %}
+
+{% endblock %}

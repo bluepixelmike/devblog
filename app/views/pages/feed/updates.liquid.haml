@@ -1,0 +1,15 @@
+---
+title: Updates Feed
+listed: false
+published: true
+response_type: application/atom+xml
+---
+{% extends 'feed' %}
+
+{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+
+{% block 'entries' %}
+{% for update in contents.project_updates %}
+{% include 'feed_update_entry' with update %}
+{% endfor %}
+{% endblock %}
