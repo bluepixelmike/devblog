@@ -49,6 +49,13 @@ listed: true
             {% block 'content' %}{% endblock %}
       -# TODO
 
+      #related
+        .ui.centered.grid
+          .fourteen.wide.column
+            {% block 'related' %}
+            {% include 'featured_posts' %}
+            {% endblock %}
+
       #footer.ui.inverted.borderless.segment
         {% include 'footer' %}
 

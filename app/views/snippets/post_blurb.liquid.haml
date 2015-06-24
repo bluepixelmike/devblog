@@ -1,0 +1,21 @@
+-# Smaller preview of the post for "related" items.
+-# Required variables:
+  post - Post to display information about
+
+.ui.teal.card
+  %a.content{ :href => '{% path_to post %}' }
+    .header
+      :plain
+        {{ post.title | escape }}
+      {% if post.subtitle %}
+      .sub.header {{ post.subtitle | escape }}
+      {% endif %}
+    .meta {{ post.created_at | localized_date: '%A, %B %d, %Y' | escape }} ({{ post.created_at | distance_of_time_in_words }})
+    .description
+      %p {{ post.excerpt | truncatewords: 25 | escape }}
+
+  {% if post.category or post.allow_comments %}
+  .extra.content
+    {% include 'category_meta' with category: post.category %}
+    {% include 'disqus_link' with obj: post %}
+  {% endif %}

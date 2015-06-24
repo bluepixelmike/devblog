@@ -1,0 +1,9 @@
+{% with_scope featured: true %}
+{% if contents.posts.size > 0 %}
+.ui.header Featured Posts
+.ui.horizontal.cards
+  {% for post in contents.posts %}
+  {% include 'post_blurb' with post %}
+  {% endfor %}
+{% endif %}
+{% endwith_scope %}

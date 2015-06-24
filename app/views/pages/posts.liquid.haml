@@ -35,5 +35,8 @@ published: true
   {% endif %}
   {% endpaginate %}
 {% endblock %}
--# TODO: Featured posts
+{% endblock %}
+
+{% block 'related' %}
+{% include 'featured_posts' %}
 {% endblock %}
