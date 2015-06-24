@@ -5,6 +5,11 @@ published: true
 ---
 {% extends parent %}
 
+{% block 'feed' %}
+{% with_scope fullpath: 'feed/updates' %}{% assign feed_page = site.pages.first %}{% endwith_scope %}
+%link{ :rel => 'alternate', :type => 'application/atom+xml', :href => '{% path_to feed_page %}' }
+{% endblock %}
+
 {% block 'breadcrumbs' %}
 #breadcrumbs.ui.inverted.blue.segment
   .ui.breadcrumb

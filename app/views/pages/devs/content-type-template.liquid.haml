@@ -6,6 +6,10 @@ content_type: authors
 ---
 {% extends parent %}
 
+{% block 'feed' %}
+%link{ :rel => 'alternate', :type => 'application/atom+xml', :href => '{{ fullpath | escape }}/feed' }
+{% endblock %}
+
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
 #breadcrumbs.ui.inverted.red.segment
