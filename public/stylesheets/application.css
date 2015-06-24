@@ -25,7 +25,7 @@ html, body {
   height: 1px;
 }
 
-#footer a {
+#footer .segment a {
   color: rgba(255, 255, 255, 0.4);
 }
 
