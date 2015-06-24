@@ -61,18 +61,18 @@ listed: true
               {% endeditable_text %}
             {% endblock %}
 
-      #related
-        .ui.centered.grid
-          .fourteen.wide.column
-            {% block 'related' %}
-            {% include 'latest_posts' %}
-            {% include 'latest_updates' %}
-            {% include 'featured_projects' %}
-            {% include 'featured_tutorials' %}
-            {% endblock %}
-
-      #footer.ui.inverted.borderless.segment
-        {% include 'footer' %}
+      #footer
+        #related
+          .ui.centered.grid
+            .fourteen.wide.column
+              {% block 'related' %}
+              {% include 'latest_posts' %}
+              {% include 'latest_updates' %}
+              {% include 'featured_projects' %}
+              {% include 'featured_tutorials' %}
+              {% endblock %}
+        .ui.inverted.borderless.segment
+          {% include 'footer' %}
 
     {% include 'disqus_comment_links' %}
     -# Pages can run custom scripts after the page is loaded by including them in the "scripts" block.
