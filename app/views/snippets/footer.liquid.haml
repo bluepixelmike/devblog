@@ -1,13 +1,10 @@
 -# Footer section for all pages on the site.
 
 .ui.stackable.grid
-  {% capture 'site_logo_url' %}
-  {% editable_file 'site_logo', hint: 'Site-wide logo displayed in the page footer.' %}
-  {% endeditable_file %}
-  {% endcapture %}
+  {% editable_file 'site_logo', hint: 'Site-wide logo displayed in the page footer.' %}{% endeditable_file %}
   #logo.center.aligned.four.wide.column
     %a{ :href => '/' }
-      %img.ui.center.aligned.image{ :src => '{% if site_logo_url != "" %}{{ site_logo_url | resize: "250x150#" | escape }}{% else %}{{ "logo_placeholder.png" | theme_image_url | escape }}{% endif %}', :alt => '{{ site.name | escape }}' }
+      %img.ui.center.aligned.image{ :src => '{% if site_logo %}{{ site_logo | resize: "250x150#" | escape }}{% else %}{{ "logo_placeholder.png" | theme_image_url | escape }}{% endif %}', :alt => '{{ site.name | escape }}' }
 
   #site-nav.two.wide.column
     .ui.link.list
