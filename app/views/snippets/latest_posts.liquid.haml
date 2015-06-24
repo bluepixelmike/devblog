@@ -1,0 +1,12 @@
+{% if contents.posts.size > 0 %}
+.ui.header
+  %i.newspaper.icon
+  :plain
+    Latest Posts
+.ui.horizontal.cards
+  {% for post in contents.posts %}
+  {% if forloop.index0 < 5 %}
+  {% include 'post_blurb' with post %}
+  {% endif %}
+  {% endfor %}
+{% endif %}

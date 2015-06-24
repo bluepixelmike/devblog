@@ -35,5 +35,8 @@ published: true
   {% endif %}
   {% endpaginate %}
 {% endblock %}
--# TODO: Featured tutorials
+{% endblock %}
+
+{% block 'related' %}
+{% include 'featured_tutorials' %}
 {% endblock %}

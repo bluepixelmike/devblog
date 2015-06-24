@@ -1,0 +1,12 @@
+{% with_scope featured: true %}
+{% if contents.tutorials.size > 0 %}
+.ui.header
+  %i.book.icon
+  :plain
+    Featured Tutorials
+.ui.horizontal.cards
+  {% for tutorial in contents.tutorials %}
+  {% include 'tutorial_blurb' with tutorial %}
+  {% endfor %}
+{% endif %}
+{% endwith_scope %}

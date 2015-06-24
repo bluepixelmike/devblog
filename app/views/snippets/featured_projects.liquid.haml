@@ -1,0 +1,12 @@
+{% with_scope featured: true %}
+{% if contents.projects.size > 0 %}
+.ui.header
+  %i.lab.icon
+  :plain
+    Featured Projects
+.ui.horizontal.cards
+  {% for project in contents.projects %}
+  {% include 'project_blurb' with project %}
+  {% endfor %}
+{% endif %}
+{% endwith_scope %}

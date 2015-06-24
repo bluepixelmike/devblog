@@ -30,5 +30,8 @@ published: true
   {% endif %}
   {% endpaginate %}
 {% endblock %}
--# TODO: Featured projects
+{% endblock %}
+
+{% block 'related' %}
+{% include 'featured_projects' %}
 {% endblock %}

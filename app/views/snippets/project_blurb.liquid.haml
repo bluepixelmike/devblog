@@ -1,0 +1,20 @@
+.ui.blue.card
+  %a.content{ :href => '{% path_to project %}' }
+    {% if project.icon %}
+    %img.project-icon.left.floated{ :src => '{{ project.icon | resize: "80x80#" | escape }}', :alt => '{{ project.name | escape }}' }
+    {% endif %}
+    .header {{ project.name | escape }}
+    .meta
+    .description
+      %p {{ project.brief | escape }}
+
+  {% if project.links.size > 0 %}
+  .extra.content
+    .horizontal.links.list
+      {% for link in project.links %}
+      %a.item{ :href => '{{ link.url | escape }}' }
+        %i{ :class => '{% if link.icon %}{{ link.icon | escape }}{% else %}linkify{% endif %} icon' }
+        :plain
+          {{ link.name | escape }}
+      {% endfor %}
+  {% endif %}

@@ -1,0 +1,17 @@
+-# Smaller preview of the tutorial for "related" items.
+-# Required variables:
+  tutorial - Tutorial to display information about
+
+.ui.green.card
+  %a.content{ :href => '{% path_to tutorial %}' }
+    .header
+      :plain
+        {{ tutorial.title | escape }}
+    .meta {{ tutorial.created_at | localized_date: '%A, %B %d, %Y' | escape }} ({{ tutorial.created_at | distance_of_time_in_words }})
+    .description
+      %p {{ tutorial.brief | escape }}
+
+  {% if tutorial.category %}
+  .extra.content
+    {% include 'category_meta' with category: tutorial.category %}
+  {% endif %}

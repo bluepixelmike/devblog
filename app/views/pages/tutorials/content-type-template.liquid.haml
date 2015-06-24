@@ -31,6 +31,10 @@ content_type: tutorials
 {% endunless %}
 
 #tutorial.ui.green.segment
+
+  .ui.right.rail
+    {% include 'author_blurb' with author: tutorial.author %}
+
   .meta
     {% include 'difficulty_label' with difficulty: tutorial.difficulty %}
     {% include 'author_label' with author: tutorial.author %}

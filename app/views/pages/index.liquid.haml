@@ -53,8 +53,10 @@ listed: true
         .ui.centered.grid
           .fourteen.wide.column
             {% block 'related' %}
-            {% include 'featured_posts' %}
+            {% include 'latest_posts' %}
             {% include 'latest_updates' %}
+            {% include 'featured_projects' %}
+            {% include 'featured_tutorials' %}
             {% endblock %}
 
       #footer.ui.inverted.borderless.segment

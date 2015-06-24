@@ -104,6 +104,7 @@ h1 .sub.header, h2 .sub.header, h3 .sub.header, h4 .sub.header, h5 .sub.header, 
 
 img.project-icon, .large.featured-image {
   border-radius: 0.2857rem;
+  padding: 0;
 }
 
 img.project-icon.ui.image {
@@ -112,6 +113,10 @@ img.project-icon.ui.image {
 
 img.dev-icon {
   border-radius: 50%;
+}
+
+img.project-icon.left.floated {
+  margin: 0 0.5em 0.5em 0;
 }
 
 i.icon {

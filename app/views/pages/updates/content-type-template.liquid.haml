@@ -27,6 +27,11 @@ content_type: project_updates
 
 {% block 'content/main' %}
 #update.ui.blue.segment
+
+  .ui.right.rail
+    {% include 'project_blurb' with project: project_update.project %}
+    {% include 'author_blurb' with author: project_update.author %}
+
   .meta
     {% include 'author_label' with author: project_update.author %}
     {% include 'post_date' with date: project_update.created_at %}
