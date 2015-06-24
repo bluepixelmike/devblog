@@ -19,12 +19,16 @@ published: true
 {% block 'main' %}
 #post-listing.ui.stacked.purple.segment
   {% paginate contents.tools by 5 %}
+  {% if paginate.current_page > paginate.total_pages or contents.tools.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for tool in paginate.collection %}
     {% include 'tool_entry' with tool %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'purple' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 -# TODO: Featured projects
 {% endblock %}

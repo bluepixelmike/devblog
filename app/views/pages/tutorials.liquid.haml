@@ -24,12 +24,16 @@ published: true
 {% block 'main' %}
 #post-listing.ui.stacked.green.segment
   {% paginate contents.tutorials by 5 %}
+  {% if paginate.current_page > paginate.total_pages or contents.tutorials.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for tutorial in paginate.collection %}
     {% include 'tutorial_entry' with tutorial %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'green' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 -# TODO: Featured tutorials
 {% endblock %}

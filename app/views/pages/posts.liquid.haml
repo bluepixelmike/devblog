@@ -24,12 +24,16 @@ published: true
 {% block 'main' %}
 #post-listing.ui.stacked.teal.segment
   {% paginate contents.posts by 10 %}
+  {% if paginate.current_page > paginate.total_pages or contents.posts.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for post in paginate.collection %}
     {% include 'post_entry' with post %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'teal' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 -# TODO: Featured posts
 {% endblock %}

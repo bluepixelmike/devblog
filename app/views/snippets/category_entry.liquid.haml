@@ -21,6 +21,9 @@
     .description
       %p {{ category.brief | escape }}
 
+    {% if category.posts.size == 0 and category.tutorials.size == 0 and category.projects.size == 0 and category.updates.size == 0 %}
+    {% include 'empty' %}
+    {% else %}
     .extra
       .ui.divided.very.relaxed.list
         -# Posts
@@ -50,3 +53,4 @@
         {% include 'update_preview' with update: category.updates[i] %}
         {% endif %}
         {% endfor %}
+    {% endif %}

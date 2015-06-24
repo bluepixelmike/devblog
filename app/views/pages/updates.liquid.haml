@@ -24,12 +24,16 @@ published: true
 {% block 'main' %}
 #update-listing.ui.stacked.blue.segment
   {% paginate contents.project_updates by 10 %}
+  {% if paginate.current_page > paginate.total_pages or contents.project_updates.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for update in paginate.collection %}
     {% include 'update_entry' with update %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'blue' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 -# TODO: Featured projects
 {% endblock %}

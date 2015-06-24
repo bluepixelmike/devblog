@@ -19,12 +19,16 @@ published: true
 {% block 'main' %}
 #post-listing.ui.stacked.yellow.segment
   {% paginate contents.categories by 5 %}
+  {% if paginate.current_page > paginate.total_pages or contents.categories.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for category in paginate.collection %}
     {% include 'category_entry' with category %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'yellow' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 -# TODO: Featured posts
 {% endblock %}

@@ -19,11 +19,15 @@ published: true
 {% block 'main' %}
 #post-listing.ui.stacked.red.segment
   {% paginate contents.authors by 10 %}
+  {% if paginate.current_page > paginate.total_pages or contents.authors.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for author in paginate.collection %}
     {% include 'author_entry' with author %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'red' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 {% endblock %}

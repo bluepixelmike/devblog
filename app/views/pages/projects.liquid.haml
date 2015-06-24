@@ -24,12 +24,16 @@ published: true
 {% block 'main' %}
 #post-listing.ui.stacked.blue.segment
   {% paginate contents.projects by 5 %}
+  {% if paginate.current_page > paginate.total_pages or contents.projects.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.relaxed.divided.items
     {% for project in paginate.collection %}
     {% include 'project_entry' with project %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'blue' %}
-    {% endpaginate %}
+  {% endif %}
+  {% endpaginate %}
 {% endblock %}
 -# TODO: Latest updates
 {% endblock %}

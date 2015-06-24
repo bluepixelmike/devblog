@@ -34,10 +34,14 @@ content_type: authors
       See this issue for details: https://github.com/locomotivecms/engine/issues/236
     {% with_scope author: author %}
     {% paginate contents.project_updates by 10 %}
+    {% if paginate.current_page > paginate.total_pages or author.updates.size == 0 %}
+    {% include 'empty' %}
+    {% else %}
     {% for update in paginate.collection %}
     {% include 'update_entry' with update %}
     {% endfor %}
     {% include 'pagination' with paginate, color: 'red' %}
+    {% endif %}
     {% endpaginate %}
     {% endwith_scope %}
 

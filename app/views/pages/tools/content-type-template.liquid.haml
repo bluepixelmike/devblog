@@ -32,6 +32,9 @@ content_type: tools
     {% include 'item_count' with text: 'project',  icon: 'lab',       count: tool.projects.size  %}
     {% include 'item_count' with text: 'dev',      icon: 'user',      count: tool.authors.size   %}
 
+  {% if tool.posts.size == 0 and tool.tutorials.size == 0 and tool.projects.size == 0 and tool.authors.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .main-content
     .ui.divided.very.relaxed.list
       -# Posts
@@ -53,4 +56,5 @@ content_type: tools
       {% for author in tool.authors %}
       {% include 'author_preview' with author %}
       {% endfor %}
+  {% endif %}
 {% endblock %}

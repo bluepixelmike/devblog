@@ -31,7 +31,7 @@ content_type: projects
     .value
       %i.currency.icon
       :plain
-        {{ project.donation_total | money }}
+        {{ project.donation_total | default: 0 | money }}
     .label Total
   {% if project.donation_goal %}
   .statistic

@@ -31,6 +31,9 @@ published: true
     {% include 'item_count' with text: 'project',  icon: 'lab',       count: contents.projects.size        %}
     {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: contents.project_updates.size %}
 
+  {% if contents.posts.size == 0 and contents.tutorials.size == 0 and contents.projects.size == 0 and contents.project_updates == 0 %}
+  {% include 'empty' %}
+  {% else %}
   .ui.divided.very.relaxed.list
 
     -# Posts
@@ -53,6 +56,7 @@ published: true
     {% include 'update_preview' with update %}
     {% endfor %}
 
+  {% endif %}
   {% endwith_scope %}
 {% endif %}
 {% endblock %}

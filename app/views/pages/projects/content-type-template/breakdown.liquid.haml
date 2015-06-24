@@ -27,7 +27,11 @@ content_type: projects
 
 {% block 'content/main/part' %}
 .ui.relaxed.divided.items
+  {% if project.components.size == 0 %}
+  {% include 'empty' %}
+  {% else %}
   {% for component in project.components %}
   {% include 'component_entry' with component %}
   {% endfor %}
+  {% endif %}
 {% endblock %}
