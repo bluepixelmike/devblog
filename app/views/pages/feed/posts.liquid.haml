@@ -6,7 +6,9 @@ response_type: application/atom+xml
 ---
 {% extends 'feed' %}
 
-{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+{% block 'subtitle' %}
+%subtitle {{ page.title | escape }}
+{% endblock %}
 
 {% block 'entries' %}
 {% for post in contents.posts %}

@@ -7,7 +7,9 @@ content_type: projects
 ---
 {% extends 'feed' %}
 
-{% block 'subtitle' %}{{ page.title | escape }}{% endblock %}
+{% block 'subtitle' %}
+%subtitle {{ page.title | escape }}
+{% endblock %}
 
 {% block 'entries' %}
 
