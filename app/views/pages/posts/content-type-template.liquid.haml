@@ -42,7 +42,23 @@ content_type: posts
   .extra
     {% include 'tags_list' with tags: post.tags, tools: post.tools %}
 
--# TODO: Previous and next links
+  .links
+    {% assign prev_entry = post.previous %}
+    {% if prev_entry %}
+    .left.floated.column
+      %a{ :href => '{% path_to prev_entry %}' }
+        %i.angle.double.left.icon
+        :plain
+          {{ prev_entry.title | escape }}
+    {% endif %}
+    {% assign next_entry = post.next %}
+    {% if next_entry %}
+    .right.floated.column
+      %a{ :href => '{% path_to next_entry %}' }
+        :plain
+          {{ next_entry.title | escape }}
+        %i.angle.double.right.icon
+    {% endif %}
 
 {% include 'comments' with color: 'teal' %}
 

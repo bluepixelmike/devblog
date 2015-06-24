@@ -45,6 +45,26 @@ content_type: project_updates
   .extra
     {% include 'tags_list' with tags: project_update.tags %}
 
+  .links
+    {% with_scope project: project_update.project %}
+    {% assign prev_entry = project_update.previous %}
+    {% if prev_entry %}
+    .left.floated.column
+      %a{ :href => '{% path_to prev_entry %}' }
+        %i.angle.double.left.icon
+        :plain
+          {{ prev_entry.title | escape }}
+    {% endif %}
+    {% assign next_entry = project_update.next %}
+    {% if next_entry %}
+    .right.floated.column
+      %a{ :href => '{% path_to next_entry %}' }
+        :plain
+          {{ next_entry.title | escape }}
+        %i.angle.double.right.icon
+    {% endif %}
+    {% endwith_scope %}
+
 {% include 'comments' with color: 'blue' %}
 
 -# TODO: About the project
