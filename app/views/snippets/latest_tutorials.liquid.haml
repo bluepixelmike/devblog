@@ -1,0 +1,12 @@
+{% if contents.tutorials.size > 0 %}
+.ui.header
+  %i.book.icon
+  :plain
+    Latest Tutorials
+.ui.horizontal.cards
+  {% for tutorial in contents.tutorials %}
+  {% if forloop.index0 < 5 %}
+  {% include 'tutorial_blurb' with tutorial %}
+  {% endif %}
+  {% endfor %}
+{% endif %}

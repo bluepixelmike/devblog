@@ -45,5 +45,8 @@ content_type: authors
     {% endpaginate %}
     {% endwith_scope %}
 
--# TODO: Latest updates
+{% endblock %}
+
+{% block 'related' %}
+{% include 'latest_updates' %}
 {% endblock %}

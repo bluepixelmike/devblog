@@ -45,5 +45,9 @@ content_type: authors
     {% endpaginate %}
     {% endwith_scope %}
 
--# TODO: Featured tutorials, latest tutorials
+{% endblock %}
+
+{% block 'related' %}
+{% include 'featured_tutorials' %}
+{% include 'latest_tutorials' %}
 {% endblock %}
