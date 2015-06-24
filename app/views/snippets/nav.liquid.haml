@@ -17,3 +17,9 @@
   {% include 'nav_item' with item: tutorials_page, icon: 'book'      %}
   {% include 'nav_item' with item: projects_page,  icon: 'lab'       %}
   {% include 'nav_item' with item: updates_page,   icon: 'bullhorn'  %}
+
+  .right.menu
+    -# Lucky~
+      feed_page gets dropped in from previous assignment on page. No additional logic needed.
+    {% unless feed_page %}{% with_scope fullpath: 'feed' %}{% assign feed_page = site.pages.first %}{% endwith_scope %}{% endunless %}
+    {% include 'nav_item' with item: feed_page, icon: 'rss' %}

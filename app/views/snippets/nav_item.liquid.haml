@@ -3,7 +3,7 @@
   item - A Page object to link to.
   icon - Name of the icon to display.
 
-{% if item and item.published? and item.listed? %}
+{% if item and item.published? %}
 {% if page.fullpath == item.fullpath %}{% assign active = true %}
 {% elsif page.parent and page.parent.slug != "index" and page.parent.fullpath == item.fullpath %}{% assign active = true %}
 {% elsif page.parent.parent and page.parent.parent.slug != "index" and page.parent.parent.fullpath == item.fullpath %}{% assign active = true %}
