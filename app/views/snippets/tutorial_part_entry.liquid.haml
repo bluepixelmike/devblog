@@ -2,7 +2,8 @@
 -# Required variables:
   part - Tutorial part to display
 
-%a.item{ :href => '{% path_to part %}' }
+{% assign parent_tutorial = part.tutorial %}
+%a.item{ :href => '{% path_to parent_tutorial %}?page={{ forloop.index }}' }
   .content
     %span.title {{ part.subtitle | escape }}
     %span.description {{ part.brief | escape }}

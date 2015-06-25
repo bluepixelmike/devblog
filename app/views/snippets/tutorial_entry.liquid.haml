@@ -21,7 +21,7 @@
       {% include 'post_date' with date: tutorial.created_at %}
       {% include 'category_meta' with category: tutorial.category %}
       {% if tutorial.parts.size == 1 %}
-      {% include 'disqus_link' with obj: tutorial.parts.first, target: tutorial %}
+      {% include 'disqus_link' with obj: tutorial.parts.first, target: tutorial, page_num: 1 %}
       {% endif %}
 
     .description

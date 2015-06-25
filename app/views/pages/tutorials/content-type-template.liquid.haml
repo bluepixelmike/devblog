@@ -6,29 +6,41 @@ content_type: tutorials
 ---
 {% extends parent %}
 
+{% block 'subtitle' %}{% if params['page'] %}{% with_scope tutorial: tutorial %}{% paginate contents.tutorial_parts by 1 %} / {{ paginate.collection.first.subtitle | escape }}{% endpaginate %}{% endwith_scope %}{% endif %}{% endblock %}
+
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'tutorials' %}{% assign tutorials_page = site.pages.first %}{% endwith_scope %}
+{% if params['page'] %}{% with_scope tutorial: tutorial %}{% paginate contents.tutorial_parts by 1 %}{% assign part = paginate.collection.first %}{% endpaginate %}{% endwith_scope %}{% endif %}
 #breadcrumbs.ui.inverted.green.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
     %a.section{ :href => '{% path_to tutorials_page %}' } {{ tutorials_page.title | escape }}
     .divider /
+    {% if part %}
+    %a.section{ :href => '{% path_to tutorial %}' } {{ tutorial.title | escape }}
+    .divider /
+    %span.active.section {{ part.subtitle | escape }}
+    {% else %}
     %span.active.section {{ page.title | escape }}
+    {% endif %}
 {% endblock %}
 
 {% block 'heading' %}
 {% if tutorial.parts.size == 1 %}
-{% include 'heading' with icon: 'newspaper', subtitle: tutorial.parts.first.subtitle %}
+{% include 'heading' with icon: 'book', subtitle: tutorial.parts.first.subtitle %}
 {% else %}
-{% include 'heading' with icon: 'newspaper' %}
+{% if params['page'] %}{% with_scope tutorial: tutorial %}{% paginate contents.tutorial_parts by 1 %}
+{% include 'heading' with icon: 'book', subtitle: paginate.collection.first.subtitle %}
+{% endpaginate %}{% endwith_scope %}
+{% else %}
+{% include 'heading' with icon: 'book' %}
+{% endif %}
 {% endif %}
 {% endblock %}
 
 {% block 'content/main' %}
-{% unless tutorial %}
-{% assign tutorial = entry.tutorial %}
-{% endunless %}
+{% if params['page'] %}{% with_scope tutorial: tutorial %}{% paginate contents.tutorial_parts by 1 %}{% assign tutorial_part = paginate.collection.first %}{% endpaginate %}{% endwith_scope %}{% endif %}
 
 #tutorial.ui.green.segment
 
@@ -41,14 +53,15 @@ content_type: tutorials
     {% include 'post_date' with date: tutorial.created_at %}
     {% include 'category_meta' with category: tutorial.category %}
     {% if tutorial.parts.size == 1 %}
-    {% include 'disqus_link' with obj: tutorial.parts.first, target: tutorial %}
+    {% include 'disqus_link' with obj: tutorial.parts.first, target: tutorial, page_num: 1 %}
     {% endif %}
 
   {% if tutorial.featured %}
   %span.ui.green.ribbon.label Featured
   {% endif %}
 
-  {% block 'part' %}
+  -# Tutorial preview
+  {% unless tutorial_part %}
 
   {% if tutorial.image %}
   .large.featured-image{ :style => 'background-image: url({{ tutorial.image | resize: "250x85#" | escape }});' }
@@ -59,8 +72,7 @@ content_type: tutorials
       {{ tutorial.description }}
 
   {% if tutorial.parts.size > 1 %}
-  {% assign first_part = tutorial.parts.first %}
-  %a.small.ui.green.start.button{ :href => '{% path_to first_part %}' }
+  %a.small.ui.green.start.button{ :href => '{% path_to tutorial %}?page=1' }
     -# TODO: Localize
     :plain
       Start
@@ -68,15 +80,49 @@ content_type: tutorials
   {% endif %}
 
   {% if tutorial.parts.size == 1 %}
+  {% assign tutorial_part = tutorial.parts.first %}
   .content
-    {% if tutorial.parts.first.image %}
-    .featured-image{ :style => 'background-image: url({{ tutorial.parts.first.image | resize: "975x85#" | escape }});' }
+    {% if tutorial_part.image %}
+    .featured-image{ :style => 'background-image: url({{ tutorial_part.image | resize: "975x85#" | escape }});' }
     {% endif %}
     :plain
-      {{ tutorial.parts.first.content }}
+      {{ tutorial_part.content }}
   {% endif %}
 
-  {% endblock %}
+  -# Tutorial part
+  {% else %}
+
+  .content
+    {% if tutorial_part.image %}
+    .featured-image{ :style => 'background-image: url({{ tutorial_part.image | resize: "975x85#" | escape }});' }
+    {% endif %}
+    :plain
+      {{ tutorial_part.content }}
+
+  #pagination
+    {% with_scope tutorial: tutorial %}
+    {% paginate contents.tutorial_parts by 1 %}
+
+    {% if paginate.previous %}
+    %a.ui.green.icon.button{ :href => '{% path_to tutorial %}?page={{ paginate.previous_page }}' }
+      %i.left.chevron.icon
+      -# TODO: Localize
+      :plain
+        Previous
+    {% endif %}
+
+    {% if paginate.next %}
+    %a.ui.right.green.icon.button{ :href => '{% path_to tutorial %}?page={{ paginate.next_page }}' }
+      -# TODO: Localize
+      :plain
+        Next
+      %i.right.chevron.icon
+    {% endif %}
+
+    {% endpaginate %}
+    {% endwith_scope %}
+
+  {% endunless %}
 
   .extra
     {% include 'tags_list' with tags: tutorial.tags, tools: tutorial.tools %}
@@ -85,7 +131,7 @@ content_type: tutorials
   .ui.left.attached.rail
     .ui.ordered.vertical.steps
       {% for part in tutorial.parts %}
-      %a{ :href => '{% path_to part %}', :class => '{% if part._slug == entry._slug %}active {% endif %}step' }
+      %a{ :href => '{% path_to tutorial %}?page={{ forloop.index }}', :class => '{% if tutorial_part and part._slug == tutorial_part._slug %}active {% endif %}step' }
         .content
           %span.title {{ part.subtitle | escape }}
           %br/
@@ -93,9 +139,7 @@ content_type: tutorials
       {% endfor %}
   {% endif %}
 
-{% block 'comments' %}
-{% if tutorial.parts.size == 1 %}
-{% include 'comments' with obj: tutorial.parts.first, color: 'green', category: tutorial.category %}
+{% if tutorial_part %}
+{% include 'comments' with obj: tutorial_part, color: 'green', category: tutorial.category, target: fullpath, subtitle: tutorial_part.subtitle %}
 {% endif %}
-{% endblock %}
 {% endblock %}
