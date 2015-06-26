@@ -31,7 +31,7 @@ content_type: categories
     {% include 'item_count' with text: 'tutorial', icon: 'book',      count: category.tutorials.size %}
     {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: category.updates.size   %}
 
-  {% if category.image %}
+  {% if category.image and category.image.url %}
   .featured-image{ :style => 'background-image: url({{ category.image | resize: "975x85#" | escape }});' }
   {% endif %}
 

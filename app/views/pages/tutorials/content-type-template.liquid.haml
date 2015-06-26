@@ -63,7 +63,7 @@ content_type: tutorials
   -# Tutorial preview
   {% unless tutorial_part %}
 
-  {% if tutorial.image %}
+  {% if tutorial.image and tutorial.image.url %}
   .large.featured-image{ :style => 'background-image: url({{ tutorial.image | resize: "250x85#" | escape }});' }
   {% endif %}
 
@@ -82,7 +82,7 @@ content_type: tutorials
   {% if tutorial.parts.size == 1 %}
   {% assign tutorial_part = tutorial.parts.first %}
   .content
-    {% if tutorial_part.image %}
+    {% if tutorial_part.image and tutorial_part.image.url %}
     .featured-image{ :style => 'background-image: url({{ tutorial_part.image | resize: "975x85#" | escape }});' }
     {% endif %}
     :plain
@@ -93,7 +93,7 @@ content_type: tutorials
   {% else %}
 
   .content
-    {% if tutorial_part.image %}
+    {% if tutorial_part.image and tutorial_part.image.url %}
     .featured-image{ :style => 'background-image: url({{ tutorial_part.image | resize: "975x85#" | escape }});' }
     {% endif %}
     :plain

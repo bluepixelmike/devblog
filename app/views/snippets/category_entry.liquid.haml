@@ -4,7 +4,7 @@
 
 .item
   %a.image{ :href => '{% path_to category %}', :title => '{{ category.name | escape }}' }
-    {% if category.image %}
+    {% if category.image and category.image.url %}
     %img{ :src => '{{ category.image | resize: "175x100#" | escape }}', :alt => '{{ category.name | escape }}' }
     {% endif %}
 

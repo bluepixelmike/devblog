@@ -39,7 +39,7 @@ content_type: project_updates
     {% include 'category_meta' with category: project_update.category %}
     {% include 'disqus_link' with obj: project_update %}
 
-  {% if project_update.image %}
+  {% if project_update.image and project_update.image.url %}
   .featured-image{ :style => 'background-image: url({{ project_update.image | resize: "975x85#" | escape }});' }
   {% endif %}
 

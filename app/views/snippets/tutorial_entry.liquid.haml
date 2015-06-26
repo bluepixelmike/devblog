@@ -8,7 +8,7 @@
   {% endif %}
 
   %a.image{ :href => '{% path_to tutorial %}', :title => '{{ tutorial.title | escape }}' }
-    {% if tutorial.image %}
+    {% if tutorial.image and tutorial.image.url %}
     %img{ :src => '{{ tutorial.image | resize: "175x100#" | escape }}', :alt => '{{ tutorial.title | escape }}' }
     {% endif %}
 

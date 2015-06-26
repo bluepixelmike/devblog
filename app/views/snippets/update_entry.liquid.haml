@@ -4,7 +4,7 @@
 
 .item
   %a.image{ :href => '{% path_to update %}', :title => '{{ update.title | escape }}' }
-    {% if update.image %}
+    {% if update.image and update.image.url %}
     %img{ :src => '{{ update.image | resize: "175x100#" | escape }}', :alt => '{{ update.title | escape }}' }
     {% endif %}
 

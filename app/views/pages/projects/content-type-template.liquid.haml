@@ -50,7 +50,7 @@ content_type: projects
 {% endfor %}
 {% endif %}
 .ui.header
-  {% if project.icon %}
+  {% if project.icon and project.icon.url %}
   %img{ :src => '{{ project.icon | resize: "60x60#" | escape }}', :alt => '{{ project.name | escape }}' }
   {% else %}
   %i.lab.icon
@@ -97,7 +97,7 @@ content_type: projects
 #project.ui.blue.stacked.attached.segment
   %p {{ project.brief | escape }}
 
-  {% if project.image %}
+  {% if project.image and project.image.url %}
   .featured-image{ :style => 'background-image: url({{ project.image | resize: "975x85#" | escape }});' }
   {% endif %}
 

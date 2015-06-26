@@ -31,7 +31,7 @@ content_type: posts
     {% include 'category_meta' with category: post.category %}
     {% include 'disqus_link' with obj: post %}
 
-  {% if post.image %}
+  {% if post.image and post.image.url %}
   .featured-image{ :style => 'background-image: url({{ post.image | resize: "975x85#" | escape }});' }
   {% endif %}
 
