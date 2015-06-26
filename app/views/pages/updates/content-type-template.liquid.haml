@@ -9,7 +9,7 @@ content_type: project_updates
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'projects' %}{% assign projects_page = site.pages.first %}{% endwith_scope %}
 {% assign project = project_update.project %}
-#breadcrumbs.ui.inverted.blue.segment
+#breadcrumbs.ui.inverted.pink.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -26,7 +26,7 @@ content_type: project_updates
 {% block 'heading' %}{% include 'heading' with icon: 'bullhorn', subtitle: entry.subtitle, image: entry.project.icon  %}{% endblock %}
 
 {% block 'content/main' %}
-#update.ui.blue.segment
+#update.ui.pink.segment
 
   .ui.right.rail
     {% include 'project_blurb' with project: project_update.project %}
@@ -70,7 +70,7 @@ content_type: project_updates
     {% endif %}
     {% endwith_scope %}
 
-{% include 'comments' with color: 'blue' %}
+{% include 'comments' with color: 'pink' %}
 
 -# TODO: About the project
 {% endblock %}
