@@ -6,7 +6,7 @@ published: true
 {% extends parent %}
 
 {% block 'breadcrumbs' %}
-#breadcrumbs.ui.inverted.red.segment
+#breadcrumbs.ui.inverted.purple.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -17,7 +17,7 @@ published: true
 
 {% block 'content' %}
 {% block 'main' %}
-#post-listing.ui.stacked.red.segment
+#post-listing.ui.stacked.purple.segment
   {% paginate contents.authors by 10 %}
   {% if paginate.current_page > paginate.total_pages or contents.authors.size == 0 %}
   {% include 'empty' %}

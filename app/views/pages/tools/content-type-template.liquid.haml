@@ -13,7 +13,7 @@ content_type: tools
 
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'tools' %}{% assign tools_page = site.pages.first %}{% endwith_scope %}
-#breadcrumbs.ui.inverted.purple.segment
+#breadcrumbs.ui.inverted.pink.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -25,7 +25,7 @@ content_type: tools
 {% block 'heading' %}{% include 'heading' with icon: 'configure', image: tool.icon %}{% endblock %}
 
 {% block 'content/main' %}
-#tool.ui.purple.segment
+#tool.ui.pink.segment
   .meta
     {% include 'item_count' with text: 'post',     icon: 'newspaper', count: tool.posts.size     %}
     {% include 'item_count' with text: 'tutorial', icon: 'book',      count: tool.tutorials.size %}

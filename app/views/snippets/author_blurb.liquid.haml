@@ -1,4 +1,4 @@
-.ui.red.card
+.ui.purple.card
   %a.content{ :href => '{% path_to author %}' }
     %img.author-avatar.ui.image.left.floated{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:80" | escape }}{% else %}{{ author.avatar | resize: "80x80#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
     .header {{ author.name | escape }}

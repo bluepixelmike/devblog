@@ -11,7 +11,7 @@ content_type: authors
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
 {% with_scope fullpath: 'updates' %}{% assign updates_page = site.pages.first %}{% endwith_scope %}
-#breadcrumbs.ui.inverted.red.segment
+#breadcrumbs.ui.inverted.purple.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -28,7 +28,7 @@ content_type: authors
 {% endblock %}
 
 {% block 'content/main' %}
-#dev.ui.red.stacked.segment
+#dev.ui.purple.stacked.segment
   .ui.relaxed.divided.items
     -# Pagination of has_many doesn't work with the current LocomotiveCMS.
       See this issue for details: https://github.com/locomotivecms/engine/issues/236

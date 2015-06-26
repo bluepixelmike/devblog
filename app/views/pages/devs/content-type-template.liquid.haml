@@ -13,7 +13,7 @@ content_type: authors
 
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'devs' %}{% assign authors_page = site.pages.first %}{% endwith_scope %}
-#breadcrumbs.ui.inverted.red.segment
+#breadcrumbs.ui.inverted.purple.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -37,7 +37,7 @@ content_type: authors
 {% endblock %}
 
 {% block 'content/main' %}
-#dev.ui.red.segment
+#dev.ui.purple.segment
   .right.floated.left.aligned.column
     %img.ui.small.avatar.image{ :src => '{% if author.avatar_type == "Gravatar" %}{{ author.email | gravatar_url: "d:mm", "s:150" | escape }}{% else %}{{ author.avatar | resize: "150x150#" | escape }}{% endif %}', :alt => '{{ author.handle | escape }}' }
     {% include 'links_list' with links: author.links %}

@@ -6,7 +6,7 @@ published: true
 {% extends parent %}
 
 {% block 'breadcrumbs' %}
-#breadcrumbs.ui.inverted.purple.segment
+#breadcrumbs.ui.inverted.pink.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -17,7 +17,7 @@ published: true
 
 {% block 'content' %}
 {% block 'main' %}
-#post-listing.ui.stacked.purple.segment
+#post-listing.ui.stacked.pink.segment
   {% paginate contents.tools by 5 %}
   {% if paginate.current_page > paginate.total_pages or contents.tools.size == 0 %}
   {% include 'empty' %}
@@ -26,7 +26,7 @@ published: true
     {% for tool in paginate.collection %}
     {% include 'tool_entry' with tool %}
     {% endfor %}
-    {% include 'pagination' with paginate, color: 'purple' %}
+    {% include 'pagination' with paginate, color: 'pink' %}
   {% endif %}
   {% endpaginate %}
 {% endblock %}

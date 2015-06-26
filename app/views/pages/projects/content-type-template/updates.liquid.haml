@@ -11,7 +11,7 @@ content_type: projects
 {% block 'breadcrumbs' %}
 {% with_scope fullpath: 'projects' %}{% assign projects_page = site.pages.first %}{% endwith_scope %}
 {% with_scope fullpath: 'updates' %}{% assign updates_page = site.pages.first %}{% endwith_scope %}
-#breadcrumbs.ui.inverted.pink.segment
+#breadcrumbs.ui.inverted.red.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -39,7 +39,7 @@ content_type: projects
   {% for update in paginate.collection %}
   {% include 'update_entry' with update %}
   {% endfor %}
-  {% include 'pagination' with paginate, color: 'pink' %}
+  {% include 'pagination' with paginate, color: 'red' %}
   {% endif %}
   {% endpaginate %}
   {% endwith_scope %}

@@ -11,7 +11,7 @@ published: true
 {% endblock %}
 
 {% block 'breadcrumbs' %}
-#breadcrumbs.ui.inverted.pink.segment
+#breadcrumbs.ui.inverted.red.segment
   .ui.breadcrumb
     %a.section{ :href => '/' } {{ site.index.title | escape }}
     .divider /
@@ -22,7 +22,7 @@ published: true
 
 {% block 'content' %}
 {% block 'main' %}
-#update-listing.ui.stacked.pink.segment
+#update-listing.ui.stacked.red.segment
   {% paginate contents.project_updates by 10 %}
   {% if paginate.current_page > paginate.total_pages or contents.project_updates.size == 0 %}
   {% include 'empty' %}
@@ -31,7 +31,7 @@ published: true
     {% for update in paginate.collection %}
     {% include 'update_entry' with update %}
     {% endfor %}
-    {% include 'pagination' with paginate, color: 'pink' %}
+    {% include 'pagination' with paginate, color: 'red' %}
   {% endif %}
   {% endpaginate %}
 {% endblock %}
