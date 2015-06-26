@@ -22,7 +22,7 @@ published: true
 
 {% block 'content' %}
 {% block 'main' %}
-#post-listing.ui.stacked.blue.segment
+#project.ui.stacked.blue.segment
   {% paginate contents.projects by 5 %}
   {% if paginate.current_page > paginate.total_pages or contents.projects.size == 0 %}
   {% include 'empty' %}
