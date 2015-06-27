@@ -3,7 +3,7 @@
 
 %script{ :type => 'text/javascript' }
   :plain
-    var disqus_shortname = '{{ site.seo_title | dasherize }}';
+    var disqus_shortname = '{{ site.seo_title | downcase | dasherize }}';
     (function () {
       var s = document.createElement('script'); s.async = true;
       s.type = 'text/javascript';
