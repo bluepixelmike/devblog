@@ -110,5 +110,15 @@ listed: true
             {% endblock %}
 
     {% include 'disqus_comment_links' %}
+    {% capture 'tracking_id' %}{% editable_text 'google_analytics_tracking_id', format: 'raw', rows: 1, hint: 'UA-######', fixed: true %}{% endeditable_text %}{% endcapture %}
+    %script{ :type => 'text/javascript' }
+      :plain
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ tracking_id | escape }}', 'auto');
+        ga('send', 'pageview');
     -# Pages can run custom scripts after the page is loaded by including them in the "scripts" block.
     {% block 'scripts' %}{% endblock %}
