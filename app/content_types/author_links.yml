@@ -23,7 +23,7 @@ fields:
     required: true
     unique: false
     localized: false
-    class_name: projects
+    class_name: authors
     inverse_of: links
     ui_enabled: false
 
