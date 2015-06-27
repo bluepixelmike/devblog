@@ -75,10 +75,10 @@ listed: true
         .ui.inverted.borderless.segment
           .ui.stackable.grid
             {% block 'footer' %}
-            {% capture 'logo' %}{% editable_file 'logo', hint: 'Site-wide logo displayed in the page footer.', fixed: true %}{% endeditable_file %}{% endcapture %}
+            {% capture 'logo_url' %}{% editable_file 'logo', hint: 'Site-wide logo displayed in the page footer.', fixed: true %}{% endeditable_file %}{% endcapture %}
             #logo.center.aligned.four.wide.column
               %a{ :href => '/' }
-                %img.ui.center.aligned{ :src => '{% if logo %}{{ logo | resize: "240x100#" | escape }}{% else %}{{ "logo_placeholder.png" | theme_image_url | escape }}{% endif %}', :alt => '{{ site.name | escape }}' }
+                %img.ui.center.aligned{ :src => '{% if logo_url %}{{ logo_url | resize: "240x100#" | escape }}{% else %}{{ "logo_placeholder.png" | theme_image_url | escape }}{% endif %}', :alt => '{{ site.name | escape }}' }
 
             #site-nav.two.wide.column
               %span Site Links
