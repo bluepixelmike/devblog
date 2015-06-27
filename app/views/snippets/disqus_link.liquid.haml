@@ -5,7 +5,6 @@
   target - Object to link to if different from `obj`
 
 {% if obj.allow_comments %}
-{% unless target %}{% assign target = obj %}{% endunless %}
 %a.comments-link{ :href => '{% path_to target %}#comments' }
   %i.comments.outline.icon
   {% if target and page_num %}
