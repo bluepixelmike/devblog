@@ -8,7 +8,7 @@ response_type: application/atom+xml
 %feed{ :xmlns => 'http://www.w3.org/2005/Atom' }
 
   -# Compute the last update time by aggregating all updated_at values.
-  {% assign last_updated = 0 %}
+  {% assign last_updated = today %}
   {% for post in contents.posts %}
   {% if post.updated_at > last_updated %}
   {% assign last_updated = post.updated_at %}
