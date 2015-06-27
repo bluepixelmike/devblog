@@ -33,4 +33,5 @@
   .two.wide.column
 
   .six.wide.column
-    {% editable_text 'text', format: 'html', rows: 3, hint: 'Footer text.', block: 'Footer' %}Site powered by <a href="http://www.locomotivecms.com/">LocomotiveCMS</a>.{% endeditable_text %}
+    {% editable_text 'text', format: 'html', rows: 3, hint: 'Footer text.', block: 'Footer' %}<p>Site powered by <a href="http://www.locomotivecms.com/">LocomotiveCMS</a>.<p>{% endeditable_text %}
+    %p &copy; {{ today | date: '%Y' }} {{ site.name | escape }}
