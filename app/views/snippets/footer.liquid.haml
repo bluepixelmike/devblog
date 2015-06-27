@@ -6,9 +6,11 @@
   {% endcapture %}
   #logo.center.aligned.four.wide.column
     %a{ :href => '/' }
-      %img.ui.center.aligned.image{ :src => '{% if logo and logo.url %}{{ site_logo | resize: "250x150#" | escape }}{% else %}{{ "logo_placeholder.png" | theme_image_url | escape }}{% endif %}', :alt => '{{ site.name | escape }}' }
+      %img.ui.center.aligned{ :src => '{% if logo and logo.url %}{{ site_logo | resize: "240x110#" | escape }}{% else %}{{ "logo_placeholder.png" | theme_image_url | escape }}{% endif %}', :alt => '{{ site.name | escape }}' }
 
   #site-nav.two.wide.column
+    %span Site Links
+    %hr
     .ui.link.list
       {% with_scope depth: 1 %}
       {% for p in site.pages %}
@@ -19,10 +21,14 @@
       {% endwith_scope %}
 
   #site-links.two.wide.column
+    {% if contents.site_links.size > 0 %}
+    %span Network
+    %hr
     .ui.link.list
       {% for link in contents.site_links %}
       %a.item{ :href => '{{ link.url | escape }}' } {{ link.name | escape }}
       {% endfor %}
+    {% endif %}
 
   .two.wide.column
 
