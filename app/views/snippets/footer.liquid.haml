@@ -2,7 +2,7 @@
 
 .ui.stackable.grid
   {% capture 'site_logo' %}
-  {% editable_file 'logo', hint: 'Site-wide logo displayed in the page footer.' %}{% endeditable_file %}
+  {% editable_file 'logo', hint: 'Site-wide logo displayed in the page footer.', block: 'Footer' %}{% endeditable_file %}
   {% endcapture %}
   #logo.center.aligned.four.wide.column
     %a{ :href => '/' }
@@ -23,3 +23,8 @@
       {% for link in contents.site_links %}
       %a.item{ :href => '{{ link.url | escape }}' } {{ link.name | escape }}
       {% endfor %}
+
+  .two.wide.column
+
+  .six.wide.column
+    {% editable_text 'text', format: 'html', rows: 3, hint: 'Footer text.', block: 'Footer' %}Site powered by <a href="http://www.locomotivecms.com/">LocomotiveCMS</a>.{% endeditable_text %}
