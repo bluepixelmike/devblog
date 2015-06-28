@@ -19,30 +19,30 @@
     .extra
       .ui.divided.very.relaxed.list
         -# Posts
-        {% for i in (0..1) %}
-        {% if tool.posts[i] %}
-        {% include 'post_preview' with post: tool.posts[i] %}
+        {% for post in tool.posts %}
+        {% if forloop.index0 < 2 %}
+        {% include 'post_preview' with post %}
         {% endif %}
         {% endfor %}
 
         -# Tutorials
-        {% for i in (0..1) %}
-        {% if tool.tutorials[i] %}
-        {% include 'tutorial_preview' with tutorial: tool.tutorials[i] %}
+        {% for tutorial in tool.tutorials %}
+        {% if forloop.index0 < 2 %}
+        {% include 'tutorial_preview' with tutorial %}
         {% endif %}
         {% endfor %}
 
         -# Projects
-        {% for i in (0..1) %}
-        {% if tool.projects[i] %}
-        {% include 'project_preview' with project: tool.projects[i] %}
+        {% for project in tool.projects %}
+        {% if forloop.index0 < 2 %}
+        {% include 'project_preview' with project %}
         {% endif %}
         {% endfor %}
 
         -# Authors
-        {% for i in (0..1) %}
-        {% if tool.authors[i] %}
-        {% include 'author_preview' with author: tool.authors[i] %}
+        {% for author in tool.authors %}
+        {% if forloop.index0 < 2 %}
+        {% include 'author_preview' with author %}
         {% endif %}
         {% endfor %}
     {% endif %}

@@ -77,9 +77,9 @@ content_type: authors
         -# TODO: Localize
         %h4.ui.header Latest Updates
         .ui.divided.very.relaxed.list
-          {% for i in (0..2) %}
-          {% if author.updates[i] %}
-          {% include 'update_preview' with update: author.updates[i] %}
+          {% for update in author.updates %}
+          {% if forloop.index0 < 2 %}
+          {% include 'update_preview' with update %}
           {% endif %}
           {% endfor %}
         %a{ :href => '{% path_to author %}/updates' }
@@ -94,9 +94,9 @@ content_type: authors
         -# TODO: Localize
         %h4.ui.header Latest Tutorials
         .ui.divided.very.relaxed.list
-          {% for i in (0..2) %}
-          {% if author.tutorials[i] %}
-          {% include 'tutorial_preview' with tutorial: author.tutorials[i] %}
+          {% for tutorial in author.tutorials %}
+          {% if forloop.index0 < 2 %}
+          {% include 'tutorial_preview' with tutorial %}
           {% endif %}
           {% endfor %}
         %a{ :href => '{% path_to author %}/tutorials' }
@@ -113,9 +113,9 @@ content_type: authors
         -# TODO: Localize
         %h4.ui.header Latest Posts
         .ui.divided.very.relaxed.list
-          {% for i in (0..4) %}
-          {% if author.posts[i] %}
-          {% include 'post_preview' with post: author.posts[i] %}
+          {% for post in author.posts %}
+          {% if forloop.index0 < 5 %}
+          {% include 'post_preview' with post %}
           {% endif %}
           {% endfor %}
         %a{ :href => '{% path_to author %}/posts' }

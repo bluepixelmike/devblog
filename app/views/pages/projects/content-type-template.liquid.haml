@@ -110,9 +110,9 @@ content_type: projects
         -# TODO: Localize
         %h4.ui.header Latest Updates
         .ui.divided.very.relaxed.list
-          {% for i in (0..2) %}
-          {% if project.updates[i] %}
-          {% include 'update_preview' with update: project.updates[i] %}
+          {% for update in project.updates %}
+          {% if forlop.index0 < 3 %}
+          {% include 'update_preview' with update %}
           {% endif %}
           {% endfor %}
     {% endif %}

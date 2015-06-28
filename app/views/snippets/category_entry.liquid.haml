@@ -27,30 +27,30 @@
     .extra
       .ui.divided.very.relaxed.list
         -# Posts
-        {% for i in (0..1) %}
-        {% if category.posts[i] %}
-        {% include 'post_preview' with post: category.posts[i] %}
+        {% for post in category.posts %}
+        {% if forloop.index0 < 2 %}
+        {% include 'post_preview' with post %}
         {% endif %}
         {% endfor %}
 
         -# Tutorials
-        {% for i in (0..1) %}
-        {% if category.tutorials[i] %}
-        {% include 'tutorial_preview' with tutorial: category.tutorials[i] %}
+        {% for tutorial in category.tutorials %}
+        {% if forloop.index0 < 2 %}
+        {% include 'tutorial_preview' with tutorial %}
         {% endif %}
         {% endfor %}
 
         -# Projects
-        {% for i in (0..1) %}
-        {% if category.projects[i] %}
-        {% include 'project_preview' with project: category.projects[i] %}
+        {% for project in category.projects %}
+        {% if forloop.index0 < 2 %}
+        {% include 'project_preview' with project %}
         {% endif %}
         {% endfor %}
 
         -# Updates
-        {% for i in (0..1) %}
-        {% if category.updates[i] %}
-        {% include 'update_preview' with update: category.updates[i] %}
+        {% for update in category.updates %}
+        {% if forloop.index0 < 2 %}
+        {% include 'update_preview' with update %}
         {% endif %}
         {% endfor %}
     {% endif %}
