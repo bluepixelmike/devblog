@@ -8,7 +8,7 @@ listed: true
 
   %head
     -# To add a subtitle to the page, place it in the "subtitle" block.
-    %title {% if parent %}{{ page.title | escape }}{% endif %}{% block 'subtitle' %}{% endblock %}{% if parent %} - {% endif %}{{ site.name | escape }}
+    %title {% if page.parent %}{{ page.title | escape }}{% endif %}{% block 'subtitle' %}{% endblock %}{% if page.parent %} - {% endif %}{{ site.name | escape }}
 
     %meta{ :charset => 'utf-8' }
     %meta{ :name    => 'keywords',
@@ -35,7 +35,7 @@ listed: true
           .ui.page.grid
             .sixteen.wide.column
               {% block 'heading' %}
-              {% if parent %}
+              {% if page.parent %}
               {% include 'heading' %}
               {% else %}
               .ui.header {{ site.name | escape }}
