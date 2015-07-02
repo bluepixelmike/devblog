@@ -15,6 +15,8 @@ listed: true
            :content => '{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}{% if entry and entry.meta_keywords %} {{ entry.meta_keywords | escape }}{% endif %}' }
     %meta{ :name    => 'description',
            :content => '{% if entry and entry.meta_description %}{{ entry.meta_description | escape }}{% elsif page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}' }
+    %meta{ :name    => 'viewport',
+           :content => 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
 
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '{{ "semantic-ui.min.css" | stylesheet_url | escape }}' }
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '{{ "application.css" | stylesheet_url | escape }}' }
