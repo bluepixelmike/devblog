@@ -35,9 +35,6 @@
         {% if project.donations.size > 0 %}
         %a.button{ :href => '{% path_to project %}/donations' } Donations
         {% endif %}
-        {% if project.allow_comments %}
-        %a.button{ :href => '{% path_to project %}#comments' } Comments
-        {% endif %}
         {% for t in project.tabs %}
         %a.button{ :href => '{% path_to project %}?tab={{ t._slug }}' } {{ t.name | escape }}
         {% endfor %}
