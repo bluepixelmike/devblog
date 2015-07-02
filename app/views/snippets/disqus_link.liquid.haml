@@ -5,7 +5,7 @@
   target - Object to link to if different from `obj`
 
 {% if obj.allow_comments %}
-%a.comments-link{ :href => '{% path_to target %}#comments' }
+%a.comments-link{ :href => '{% path_to obj %}#comments' }
   %i.comments.outline.icon
   {% if target and page_num %}
   %span.disqus-comment-count{ :data => { :disqus_identifier => '{% path_to target %}?page={{ page_num }}' } } Comments
