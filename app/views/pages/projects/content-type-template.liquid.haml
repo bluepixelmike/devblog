@@ -166,7 +166,7 @@ content_type: projects
 
   {% endblock %}
 
-{% include 'comments' with target: project, color: 'blue' %}
+{% include 'comments' with obj: project, color: 'blue' %}
 {% endblock %}
 
 {% block 'scripts' %}{% include 'dimmer' %}{% endblock %}
