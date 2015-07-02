@@ -2,7 +2,7 @@
   %i.lab.icon
   .content
     %span.title {{ project.name | escape }}
-    {% if post.featured %}
+    {% if project.featured %}
     %span.ui.mini.label
       %i.star.icon
       -# TODO: Localize
@@ -10,5 +10,4 @@
         Featured
     {% endif %}
     %br/
-    %span.meta {{ project.created_at | localized_date: '%A, %B %d, %Y' | escape }}
     %span.description {{ project.brief | escape }}
