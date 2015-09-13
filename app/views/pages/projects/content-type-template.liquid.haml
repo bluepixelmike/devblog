@@ -111,7 +111,7 @@ content_type: projects
         %h4.ui.header Latest Updates
         .ui.divided.very.relaxed.list
           {% for update in project.updates %}
-          {% if forlop.index0 < 3 %}
+          {% if forloop.index0 < 3 %}
           {% include 'update_preview' with update %}
           {% endif %}
           {% endfor %}
