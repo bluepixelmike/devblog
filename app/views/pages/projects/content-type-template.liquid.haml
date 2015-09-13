@@ -95,7 +95,7 @@ content_type: projects
   {% endfor %}
 
 #project.ui.blue.stacked.attached.segment
-  %p {{ project.brief | escape }}
+  %h3 {{ project.brief | escape }}
 
   {% if project.image and project.image.url %}
   .featured-image{ :style => 'background-image: url({{ project.image | resize: "975x85#" | escape }});' }
