@@ -70,7 +70,7 @@ content_type: authors
   {% endif %}
 
   .ui.stackable.grid
-    {% if author.updates.size > 0 and author.tutorials.size > 0 %}
+    {% if author.updates.size > 0 or author.tutorials.size > 0 %}
     .eight.wide.column
       {% if author.updates.size > 0 %}
       #updates
