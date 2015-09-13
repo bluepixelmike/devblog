@@ -166,10 +166,11 @@ content_type: projects
 
   {% endblock %}
 
+{% capture disqus_target %}/projects/{{ project._slug }}{% endcapture %}
 {% if page.fullpath == "projects/content_type_template/updates" %}
-{% include 'comments' with obj: project, color: 'red' %}
+{% include 'comments' with target: disqus_target, color: 'red' %}
 {% else %}
-{% include 'comments' with obj: project, color: 'blue' %}
+{% include 'comments' with target: disqus_target, color: 'blue' %}
 {% endif %}
 {% endblock %}
 
