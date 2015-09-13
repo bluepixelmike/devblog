@@ -10,7 +10,7 @@ content_type: projects
 
 {% block 'feed' %}
 {% assign subfeed = project %}
-%link{ :rel => 'alternate', :type => 'application/atom+xml', :href => '{% path_to project %}/feed' }
+%link{ :rel => 'alternate', :type => 'application/atom+xml', :href => '/projects/{{ project._slug }}/feed' }
 {% endblock %}
 
 {% block 'javascripts' %}
@@ -33,7 +33,7 @@ content_type: projects
     %a.section{ :href => '{% path_to projects_page %}' } {{ projects_page.title | escape }}
     .divider /
     {% if tab %}
-    %a.section{ :href => '{% path_to project %}' } {{ project.name | escape }}
+    %a.section{ :href => '/projects/{{ project._slug }}' } {{ project.name | escape }}
     .divider /
     %span.active.section {{ tab.name | escape }}
     {% else %}
@@ -77,21 +77,21 @@ content_type: projects
 {% endif %}
 
 #tabs{ :class => 'ui {% if page.fullpath == "projects/content_type_template/updates" %}red{% else %}blue{% endif %} buttons top attached' }
-  %a{ :href => '{% path_to project %}', :class => 'ui {% if page.fullpath == "projects/content_type_template" and tab == nil %}active{% endif %} button' } About
+  %a{ :href => '/projects/{{ project._slug }}', :class => 'ui {% if page.fullpath == "projects/content_type_template" and tab == nil %}active{% endif %} button' } About
   {% if project.components.size > 0 %}
-  %a{ :href => '{% path_to project %}/breakdown', :class => 'ui {% if page.fullpath == "projects/content_type_template/breakdown" %}active{% endif %} button' } Breakdown
+  %a{ :href => '/projects/{{ project._slug }}/breakdown', :class => 'ui {% if page.fullpath == "projects/content_type_template/breakdown" %}active{% endif %} button' } Breakdown
   {% endif %}
   {% if project.updates.size > 0 %}
-  %a{ :href => '{% path_to project %}/updates', :class => 'ui {% if page.fullpath == "projects/content_type_template/updates" %}active{% endif %} button' } Updates
+  %a{ :href => '/projects/{{ project._slug }}/updates', :class => 'ui {% if page.fullpath == "projects/content_type_template/updates" %}active{% endif %} button' } Updates
   {% endif %}
   {% if project.donations.size > 0 %}
-  %a{ :href => '{% path_to project %}/donations', :class => 'ui {% if page.fullpath == "projects/content_type_template/donations" %}active{% endif %} button' } Donations
+  %a{ :href => '/projects/{{ project._slug }}/donations', :class => 'ui {% if page.fullpath == "projects/content_type_template/donations" %}active{% endif %} button' } Donations
   {% endif %}
   {% if project.allow_comments %}
   %a.ui.button{ :href => '#comments' } Comments
   {% endif %}
   {% for t in project.tabs %}
-  %a{ :href => '{% path_to project %}?tab={{ t._slug }}', :class => 'ui {% if tab and tab._slug == t._slug and page.fullpath == "projects/content_type_template" %}active{% endif %} button' } {{ t.name | escape }}
+  %a{ :href => '/projects/{{ project._slug }}?tab={{ t._slug }}', :class => 'ui {% if tab and tab._slug == t._slug and page.fullpath == "projects/content_type_template" %}active{% endif %} button' } {{ t.name | escape }}
   {% endfor %}
 
 #project{ :class => 'ui {% if page.fullpath == "projects/content_type_template/updates" %}red{% else %}blue{% endif %} stacked attached segment' }

@@ -17,7 +17,7 @@ content_type: projects
     .divider /
     %a.section{ :href => '{% path_to projects_page %}' } {{ projects_page.title | escape }}
     .divider /
-    %a.section{ :href => '{% path_to project %}' } {{ project.name | escape }}
+    %a.section{ :href => '/projects/{{ project._slug }}' } {{ project.name | escape }}
     .divider /
     %span.active.section {{ updates_page.title | escape }}
 {% endblock %}

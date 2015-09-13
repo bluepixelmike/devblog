@@ -2,7 +2,7 @@
 %entry
   %title {{ update.title | escape }}
   <link href='http://{{ host | escape }}{% path_to update %}' rel='alternate' />
-  <link href='http://{{ host | escape }}{% path_to project %}' rel='related' />
+  <link href='http://{{ host | escape }}/projects/{{ project._slug }}' rel='related' />
   %id http://{{ host | escape }}{% path_to update %}
   {% include 'feed_time' with updated: update.updated_at, published: update.created_at %}
   {% include 'feed_author' with author: update.author %}

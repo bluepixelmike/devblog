@@ -7,13 +7,13 @@
   %span.ui.blue.ribbon.label Featured
   {% endif %}
 
-  %a.image{ :href => '{% path_to project %}', :title => '{{ project.name | escape }}' }
+  %a.image{ :href => '/projects/{{ project._slug }}', :title => '{{ project.name | escape }}' }
     {% if project.icon and project.icon.url %}
     %img{ :src => '{{ project.icon | resize: "175x175#" | escape }}', :alt => '{{ project.name | escape }}' }
     {% endif %}
 
   .content
-    %a.header{ :href => '{% path_to project %}' }
+    %a.header{ :href => '/projects/{{ project._slug }}' }
       %h3 {{ project.name | escape }}
 
     .meta
@@ -27,16 +27,16 @@
     .extra
       .compact.ui.basic.tiny.buttons
         {% if project.components.size > 0 %}
-        %a.button{ :href => '{% path_to project %}/breakdown' } Breakdown
+        %a.button{ :href => '/projects/{{ project._slug }}/breakdown' } Breakdown
         {% endif %}
         {% if project.updates.size > 0 %}
-        %a.button{ :href => '{% path_to project %}/updates' } Updates
+        %a.button{ :href => '/projects/{{ project._slug }}/updates' } Updates
         {% endif %}
         {% if project.donations.size > 0 %}
-        %a.button{ :href => '{% path_to project %}/donations' } Donations
+        %a.button{ :href => '/projects/{{ project._slug }}/donations' } Donations
         {% endif %}
         {% for t in project.tabs %}
-        %a.button{ :href => '{% path_to project %}?tab={{ t._slug }}' } {{ t.name | escape }}
+        %a.button{ :href => '/projects/{{ project._slug }}?tab={{ t._slug }}' } {{ t.name | escape }}
         {% endfor %}
 
       {% if project.updates.size > 0 %}

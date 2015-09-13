@@ -3,7 +3,7 @@
   project - Project object to link to
 
 {% if project.updates.size > 0 %}
-%a.project{ :href => '{% path_to project %}/updates' }
+%a.project{ :href => '/projects/{{ project._slug }}/updates' }
   %i.bullhorn.icon
   %span {{ project.updates.size }} update{% if project.updates.size != 1 %}s{% endif %}
 {% endif %}

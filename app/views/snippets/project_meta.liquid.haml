@@ -3,7 +3,7 @@
   project - Project object to link to
 
 {% if project %}
-%a.project{ :href => '{% path_to project %}' }
+%a.project{ :href => '/projects/{{ project._slug }}' }
   %i.lab.icon
   %span {{ project.name | escape }}
 {% endif %}

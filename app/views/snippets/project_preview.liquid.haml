@@ -1,4 +1,4 @@
-%a.item{ :href => '{% path_to project %}' }
+%a.item{ :href => '/projects/{{ project._slug }}' }
   %i.lab.icon
   .content
     %span.title {{ project.name | escape }}

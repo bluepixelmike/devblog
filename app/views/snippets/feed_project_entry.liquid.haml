@@ -8,7 +8,7 @@
 
 %entry
   %title {{ project.name | escape }}
-  <link href='http://{{ host | escape }}{% path_to project %}' rel='alternate' />
+  <link href='http://{{ host | escape }}/projects/{{ project._slug }}' rel='alternate' />
   -# Some sort of weird bug happening here.
     Using 'path_to project' again always results in 'project-3'.
   %id http://{{ host | escape }}/projects/{{ project._slug }}
