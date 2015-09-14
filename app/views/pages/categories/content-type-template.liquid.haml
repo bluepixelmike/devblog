@@ -29,13 +29,14 @@ content_type: categories
   .meta
     {% include 'item_count' with text: 'post',     icon: 'newspaper', count: category.posts.size     %}
     {% include 'item_count' with text: 'tutorial', icon: 'book',      count: category.tutorials.size %}
+    {% include 'item_count' with text: 'project',  icon: 'lab',       count: category.projects.size  %}
     {% include 'item_count' with text: 'update',   icon: 'bullhorn',  count: category.updates.size   %}
 
   {% if category.image and category.image.url %}
   .featured-image{ :style => 'background-image: url({{ category.image | resize: "975x85#" | escape }});' }
   {% endif %}
 
-  {% if category.posts.size == 0 and category.tutorials.size == 0 and category.updates.size == 0 %}
+  {% if category.posts.size == 0 and category.tutorials.size == 0 and category.projects.size == 0 and category.updates.size == 0 %}
   {% include 'empty' %}
   {% else %}
   .main-content
