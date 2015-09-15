@@ -12,7 +12,7 @@ listed: true
 
     %meta{ :charset => 'utf-8' }
     %meta{ :name    => 'keywords',
-           :content => '{{ site.meta_keywords | escape }}{% if page.meta_keywords %} {{ page.meta_keywords | escape }}{% endif %}{% if entry and entry.meta_keywords %} {{ entry.meta_keywords | escape }}{% endif %}' }
+           :content => '{{ site.meta_keywords | escape }}{% if page.meta_keywords %}, {{ page.meta_keywords | escape }}{% endif %}{% if entry and entry.meta_keywords %}, {{ entry.meta_keywords | escape }}{% endif %}' }
     %meta{ :name    => 'description',
            :content => '{% if entry and entry.meta_description %}{{ entry.meta_description | escape }}{% elsif page.meta_description %}{{ page.meta_description | escape }}{% else %}{{ site.meta_description | escape }}{% endif %}' }
     %meta{ :name    => 'viewport',
