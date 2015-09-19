@@ -7,7 +7,7 @@
 %script{ :type => 'text/javascript' }
   :plain
     var disqus_shortname   = '{{ site.seo_title | downcase | dasherize }}';
-    var disqus_id          = '{% if target %}{{ target | escape }}{% else %}{% path_to obj %}{% endif %}';
+    var disqus_identifier  = '{% if target %}{{ target | escape }}{% else %}{% path_to obj %}{% endif %}';
     var disqus_title       = '{{ page.title | escape }}{% if subtitle %} - {{ subtitle | escape }}{% endif %}';{% if category and category.disqus_id %}
     var disqus_category_id = '{{ category.disqus_id | escape }}';{% endif %}
     (function() {
